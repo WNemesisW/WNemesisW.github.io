@@ -14,7 +14,7 @@ Education
 * University of Jyväskylä, PhD Student from 08/2020 
 * Jyväskylä university of applied sciences. Master's Degree Programme in Information Technology, Cyber Security, (MEng) 2019
 * Karelia university of applied sciences, Master's Degree Programme in Technology Competence Management, (MEng) 2014
-* The Degree Programme in Information Technology, Telecommunications Engineering, (BEng) 2007
+* Karelia university of applied sciences, The Degree Programme in Information Technology, Telecommunications Engineering, (BEng) 2007
 
 
 Work experience
