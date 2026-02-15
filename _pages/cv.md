@@ -27,7 +27,7 @@ At NGIT, my role is twofold: I focus on empowering and supporting our internal t
 * Cyber Defense Center Lead
 Finnair Oy, September 2024 – August 2025 
 
-* Group Manager
+* Technical Situation Awareness Center, Group Manager
 Kela, April 2021 – August 2024
 
 * Senior Information Security Consultant	
