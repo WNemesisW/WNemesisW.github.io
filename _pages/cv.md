@@ -9,16 +9,14 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
+### Education
 * University of Jyväskylä, PhD Student from 08/2020 
 * Jyväskylä university of applied sciences. Master's Degree Programme in Information Technology, Cyber Security, (MEng) 2019
 * Karelia university of applied sciences, Master's Degree Programme in Technology Competence Management, (MEng) 2014
 * Karelia university of applied sciences, The Degree Programme in Information Technology, Telecommunications Engineering, (BEng) 2007
 
 
-Work experience
-======
+### Work experience
 * Chief Operating Officer
 NGIT Oy, September 2025 – 
 
@@ -42,13 +40,6 @@ BLC Oy, November 2009 – May 2016
 * Project Engineer
 Controlmatic Oy Ltd, January 2007 – Novempber 2009
   
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+
 
 
