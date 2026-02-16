@@ -20,7 +20,7 @@ redirect_from:
 
 
 ### Work experience
-* Chief Operating Officer
+* Chief Operating Officer, Current role
 NGIT Oy
 
 At NGIT, my role is twofold: I focus on empowering and supporting our internal teams to succeed, while also working directly with clients in a consulting capacity to help them achieve their goals.
