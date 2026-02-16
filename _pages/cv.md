@@ -20,28 +20,21 @@ redirect_from:
 
 
 ### Work experience
-* Chief Operating Officer (Current Role)
-NGIT Oy
+- **Chief Operating Officer (Current Role), NGIT Oy**
 
-At NGIT, my role is twofold: I focus on empowering and supporting our internal teams to succeed, while also working directly with clients in a consulting capacity to help them achieve their goals.
+    At NGIT, my role is twofold: I focus on empowering and supporting our internal teams to succeed, while also working directly with clients in a consulting capacity to help them achieve their goals.
 
-* Cyber Defense Center Lead
-Finnair Oy
+- Cyber Defense Center Lead, Finnair Oy
 
-* Technical Situation Awareness Center, Group Manager
-Kela
+- Technical Situation Awareness Center, Group Manager, Kela
 
-* Senior Information Security Consultant	
-Huld Oy
+- Senior Information Security Consultant, Huld Oy
 
-* Group and Information Security Manager	
-Istekki Oy
+- Group and Information Security Manager, Istekki Oy
 
-* System Specialist
-BLC Oy
+- System Specialist, BLC Oy
 
-* Project Engineer
-Controlmatic Oy Ltd
+- Project Engineer, Controlmatic Oy Ltd
   
 
 
