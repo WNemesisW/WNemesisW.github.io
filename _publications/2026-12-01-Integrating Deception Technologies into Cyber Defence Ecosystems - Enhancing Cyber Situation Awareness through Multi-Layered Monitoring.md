@@ -1,11 +1,11 @@
 ---
-title: "COMING: Integrating Deception Technologies into Cyber Defence Ecosystems: Enhancing Cyber Situation Awareness through Multi-Layered Monitoring"
+title: "COMING SOON: Integrating Deception Technologies into Cyber Defence Ecosystems: Enhancing Cyber Situation Awareness through Multi-Layered Monitoring"
 collection: publications
 category: conferences
 permalink: /publication/2026-12-01-Integrating Deception Technologies into Cyber Defence Ecosystems - Enhancing Cyber Situation Awareness through Multi-Layered Monitoring
 excerpt: 'ACCEPTED'
 date: 2026-01-15
-venue: 'WorldCIST 2026'
+#venue: 'WorldCIST'
 #paperurl: 'none'
 citation: 'Ihanus, Kokkonen, Mikkonen'
 ---

@@ -1,12 +1,12 @@
 ---
-title: "Analysis of Cyber Incident - The Role of the Deception Technologies"
+title: "COMING SOON: Analysis of Cyber Incident - The Role of the Deception Technologies"
 collection: publications
 category: conferences
 permalink: /publication/2026-12-01-Analysis of Cyber Incident - The Role of the Deception Technologies
 excerpt: 'IN REVIEW'
 date: 2026-03-15
-venue: ''
-paperurl: 'none'
+#venue: ''
+#paperurl: 'none'
 citation: 'Ihanus, Kokkonen, Sarjakivi, Mikkonen'
 ---
 
