@@ -22,7 +22,7 @@ redirect_from:
 ### Work experience
 - **Chief Operating Officer (Current Role), NGIT Oy**
 
-    At NGIT, my role is twofold: I focus on empowering and supporting our internal teams to succeed, while also working directly with clients in a consulting capacity to help them achieve their goals.
+    At NGIT, my role is twofold: I focus on supporting our internal teams to succeed, while also working directly with clients in a consulting capacity to help them achieve their goals.
 
 - Cyber Defense Center Lead, Finnair Oy
 
