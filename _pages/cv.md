@@ -13,35 +13,35 @@ redirect_from:
 
 
 ### Education
-* University of Jyväskylä, PhD Student from 08/2020 
-* Jyväskylä university of applied sciences. Master's Degree Programme in Information Technology, Cyber Security, (MEng) 2019
-* Karelia university of applied sciences, Master's Degree Programme in Technology Competence Management, (MEng) 2014
-* Karelia university of applied sciences, The Degree Programme in Information Technology, Telecommunications Engineering, (BEng) 2007
+* University of Jyväskylä, PhD Student from 2020 
+* Jyväskylä university of applied sciences. Master's Degree Programme in Information Technology, Cyber Security, (MEng)
+* Karelia university of applied sciences, Master's Degree Programme in Technology Competence Management, (MEng)
+* Karelia university of applied sciences, The Degree Programme in Information Technology, Telecommunications Engineering, (BEng)
 
 
 ### Work experience
 * Chief Operating Officer
-NGIT Oy, September 2025 – 
+NGIT Oy
 
 At NGIT, my role is twofold: I focus on empowering and supporting our internal teams to succeed, while also working directly with clients in a consulting capacity to help them achieve their goals.
 
 * Cyber Defense Center Lead
-Finnair Oy, September 2024 – August 2025 
+Finnair Oy
 
 * Technical Situation Awareness Center, Group Manager
-Kela, April 2021 – August 2024
+Kela
 
 * Senior Information Security Consultant	
-Huld Oy, August 2019 – May 2021 
+Huld Oy
 
 * Group and Information Security Manager	
-Istekki Oy, May 2016 – August 2019
+Istekki Oy
 
 * System Specialist
-BLC Oy, November 2009 – May 2016
+BLC Oy
 
 * Project Engineer
-Controlmatic Oy Ltd, January 2007 – Novempber 2009
+Controlmatic Oy Ltd
   
 
 
