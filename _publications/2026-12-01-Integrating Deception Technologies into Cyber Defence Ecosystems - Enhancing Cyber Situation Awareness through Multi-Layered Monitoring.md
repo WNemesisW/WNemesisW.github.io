@@ -6,7 +6,7 @@ permalink: /publication/2026-12-01-Integrating Deception Technologies into Cyber
 excerpt: 'ACCEPTED'
 date: 2026-01-15
 venue: 'WorldCIST 2026'
-paperurl: 'none'
+#paperurl: 'none'
 citation: 'Ihanus, Kokkonen, Mikkonen'
 ---
 
