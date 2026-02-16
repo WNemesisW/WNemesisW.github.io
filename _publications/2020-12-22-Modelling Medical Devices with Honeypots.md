@@ -5,7 +5,7 @@ category: conferences
 permalink: /publication/2020-12-22-Modelling Medical Devices with Honeypots
 excerpt: ''
 date: 2022-12-22
-venue: 'Lecture Notes in Computer Science ((LNCCN,volume 12525))'
+venue: 'Springer, Cham'
 paperurl: 'https://doi.org/10.1007/978-3-030-65726-0_26'
 citation: 'Ihanus, J., Kokkonen, T. (2020). Modelling Medical Devices with Honeypots. In: Galinina, O., Andreev, S., Balandin, S., Koucheryavy, Y. (eds) Internet of Things, Smart Spaces, and Next Generation Networks and Systems. NEW2AN ruSMART 2020 2020. Lecture Notes in Computer Science(), vol 12525. Springer, Cham. https://doi.org/10.1007/978-3-030-65726-0_26'
 ---
