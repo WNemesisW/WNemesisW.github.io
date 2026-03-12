@@ -1,0 +1,45 @@
+---
+title: 'Defining Situation Awareness'
+date: 2026-03-12
+permalink: /posts/2026/03/SA/
+tags:
+  - Situation Awareness
+---
+The more I talk about situation awareness (SA), the more I find myself drawn into conversations about the term. The most common challenge I face is the question of whether it is **'situation awareness'** or **'situational awareness'**. This issue can be approached from a semantic, terminological or conceptual perspective. However, I will address this issue by making a subjective decision on this matter. This does not mean that the decision is right or wrong, or that it should be followed. It is simply my own decision.
+
+So, what do we have on the table? The terms that one most commonly encounters in SA research are:
+- Situation Awareness
+- Situational Awareness
+- Situation Assesment 
+- Situational Picture
+- Common Operational Picture
+
+Where do we get with this?
+
+## My point of view
+The terms **situation awareness** and **situational awareness** are often used interchangeably, but they can be distinguished linguistically and conceptually. Situation awareness refers to awareness of a specific situation, meaning an understanding of what is happening in a particular operational context. In contrast, situational awareness refers to a type of cognitive capability that enables individuals or teams to perceive, comprehend, and anticipate developments in dynamic environments. The concept of situation awareness was formalized by Mica R. Endsley, who defined it as the **(1) perception** of environmental elements, the **(2) comprehension** of their meaning, and the **(3) projection** of their future status. Thus, *situational awareness describes the cognitive process or capability*, whereas situation awareness can be interpreted as the *resulting understanding of a particular situation*. This distinction helps separate the **general cognitive ability** to **understand situations from the awareness of a specific operational state**.
+
+## Definitions
+To conclude all the terms on the table, here is the full list of definitions and their connection.
+- **Situation awareness** refers to the understanding of elements within an *operational environment*, their relationships, and their implications for achieving goals and making decisions.
+- **Situational awareness** is a *cognitive state* describing an individual’s perception and understanding of the elements in the environment and the projection of their status into the near future.
+- **Situation Assessment** refers to the analytical *process* of interpreting available information to determine the current state of the operational environment and the significance of observed events.
+- A **Situational Picture** is a structured representation or visualization of the operational environment created by integrating and processing information from multiple sources.
+- A **Common Operational Picture (COP)** is a *shared*, standardized display of operational information that provides multiple stakeholders with a consistent view of the operational environment.
+
+While not all the terms are always needed, the connection between them is presented as follows:
+
+**Situational Picture → COP → Situation Assessment → Situational Awareness → Situation Awareness**
+
+## Why does any of this matter?
+From a simple man's perspective, the importance of defining these terms lies in the structure they create. When developing the components of SA and the relationships and interactions between them, clear definitions of the components are crucial. This structure is more than welcome when dealing with an issue the size of an elephant. I think this is one of the key elements of developing effective **cyber situation awareness**.
+
+## Final thoughts
+I would like to remind you that this is my subjective decision, which is supported by some academic research and confirmation bias. However, as someone who is committed to continuous learning, I want to be challenged. You can find my LinkedIn profile on the front page if you want to get in touch.
+
+
+
+* Endsley, M. R. (1995). Toward a theory of situation awareness in dynamic systems. Human Factors, 37(1), 32–64.
+* United States Department of Defence, U.S. Department of Defense. (2010). Joint Publication 1-02: Department of Defense Dictionary of Military and Associated Terms.
+* Kott, A. (2014). Towards Fundamental Science of Cyber Situation Awareness. In Cyber Defense and Situational Awareness. Springer.
+------
