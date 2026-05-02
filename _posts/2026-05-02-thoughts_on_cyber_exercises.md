@@ -5,8 +5,6 @@ permalink: /posts/2026/03/Thoughts_on_Cyber_Exercises/
 tags:
   - Situation Awareness, Cyber Exercise
 ---
-# Thoughts on Cyber Exercises, Time Compression, and Situation Awareness
-
 Throughout my career, I have had the opportunity to participate in a wide range of cyber exercises. Most recently, I took part in a large-scale multinational exercise. As a strong advocate of situation awareness, one design choice consistently stands out across these environments: **time compression**.
 
 Within a limited exercise window, blue teams are exposed to a dense sequence of attacks, incidents, and coordination tasks — far more tightly packed than in real-world operations. The reason is practical: very few organizations can afford to run multi-week exercises. Compression is necessary.
