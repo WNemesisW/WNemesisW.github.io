@@ -9,7 +9,7 @@ Throughout my career, I have had the opportunity to participate in a wide range 
 
 Within a limited exercise window, blue teams are exposed to a dense sequence of attacks, incidents, and coordination tasks — far more tightly packed than in real-world operations. The reason is practical: very few organizations can afford to run multi-week exercises. Compression is necessary.
 
-## The Challenge
+# The Challenge
 
 Time compression comes with a cost—especially when viewed through the lens of developing situation awareness. When time is compressed, two recurring challenges emerge:
 
@@ -19,7 +19,7 @@ Time compression comes with a cost—especially when viewed through the lens of 
 - **Operational awareness and reporting drift apart**  
   Decision-making and reporting become separate activities. They are often weakly connected — or even contradictory.
 
-## Why Does This Happen?
+# Why Does This Happen?
 
 A useful starting point is Mica Endsley’s model of situation awareness in dynamic systems, which I have referenced in several previous blogs. Endsley (1995) defines situation awareness as a three-level process:
 
@@ -55,7 +55,7 @@ This is not a process failure. It is a cognitive constraint.
 
 In effect, they reduce the size of the “situation” to something that fits within human cognitive limits.
 
-## A Question for Exercise Design
+# A Question for Exercise Design
 
 First, it is important to remember that the goal of these exercises is not to avoid hitting a wall, but to understand how hard we will hit it. Pushing teams to their limits is intentional and necessary.
 
@@ -63,6 +63,7 @@ However, it would be interesting to explore whether reducing time compression by
 
 This could enable training for more prolonged, long-term conflict scenarios, rather than focusing solely on isolated critical incidents.
 
+# References
 
 - Endsley, M. R. (1995). *Toward a Theory of Situation Awareness in Dynamic Systems*. Human Factors.  
 
