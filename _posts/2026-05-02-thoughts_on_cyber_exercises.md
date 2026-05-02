@@ -33,18 +33,18 @@ This is where Nelson Cowan provides critical insight.
 
 Cowan (2000) demonstrates that the human focus of attention is limited to roughly **3–5 meaningful units (“chunks”) at a time**. When the number of incoming stimuli exceeds this limit, the ability to process information meaningfully degrades rapidly. Time compression directly increases the rate of incoming stimuli, eventually leading to cognitive saturation.
 
-In Endsley’s terms:
+**In Endsley’s terms:**
 - Level 1 (perception) may still function — data is visible  
 - Level 2 (comprehension) collapses — meaning cannot be formed  
 - Level 3 (projection) becomes nearly impossible  
 
-In Cowan’s terms:
+**In Cowan’s terms:**
 - The number of active elements exceeds the capacity of attention  
 - The system cannot maintain a coherent internal representation  
 
 Under high time compression, teams are forced — implicitly — to make a trade-off:
 
-**Either act fast, or understand deeply — but not both at the same time.**
+***Either act fast, or understand deeply — but not both at the same time.***
 
 This is not a process failure. It is a cognitive constraint.
 
