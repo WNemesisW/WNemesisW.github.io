@@ -1,0 +1,121 @@
+---
+layout: default
+---
+{% comment %}
+  CV page layout (11/2026). The content lives in the front matter of
+  _pages/cv.md: eyebrow, heading, role, intro, facts, career, experience,
+  experience_earlier, research, education, exercises and expertise.
+  Dates are left out on purpose; the full CV is available on request.
+{% endcomment %}
+<div class="ih-cv">
+
+  <section class="ih-container ih-cv-hero">
+    <div class="ih-cv-hero__text">
+      {% if page.eyebrow %}<p class="ih-eyebrow">{{ page.eyebrow }}</p>{% endif %}
+      <h1 class="ih-cv-hero__title">{{ page.heading | default: site.author.name }}</h1>
+      {% if page.role %}<p class="ih-cv-hero__role">{{ page.role }}</p>{% endif %}
+      {% if page.intro %}<p class="ih-cv-hero__lead">{{ page.intro }}</p>{% endif %}
+      {% if page.facts %}
+      <dl class="ih-facts">
+        {% for f in page.facts %}<div class="ih-facts__item"><dt>{{ f.label }}</dt><dd>{{ f.value }}</dd></div>{% endfor %}
+      </dl>
+      {% endif %}
+    </div>
+    <div class="ih-cv-hero__figure">
+      {% include ih-portrait.html size="sm" %}
+    </div>
+  </section>
+
+  {% if page.career %}
+  <section class="ih-path" aria-label="{{ page.career_label | default: 'Career path' }}">
+    <div class="ih-container ih-path__inner">
+      <p class="ih-eyebrow">{{ page.career_label | default: "Career path" }}</p>
+      <ol class="ih-path__steps">
+        {% for s in page.career %}
+        <li class="ih-path__step{% if forloop.last %} ih-path__step--now{% endif %}">
+          <p class="ih-path__title">{{ s.title }}</p>
+          {% if s.text %}<p class="ih-path__text">{{ s.text }}</p>{% endif %}
+          {% if s.orgs %}<p class="ih-meta ih-path__orgs">{{ s.orgs }}</p>{% endif %}
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </section>
+  {% endif %}
+
+  <div class="ih-container ih-cv-body">
+
+    {% if page.experience %}
+    <section class="ih-cv-row" id="experience">
+      <h2 class="ih-cv-row__title">Experience</h2>
+      <div class="ih-cv-row__content">
+        <ol class="ih-timeline">
+          {% for e in page.experience %}
+          <li class="ih-timeline__item{% if e.current %} ih-timeline__item--current{% endif %}">
+            <div class="ih-timeline__head">
+              <h3 class="ih-timeline__role">{{ e.role }}</h3>
+              {% if e.current %}<span class="ih-badge ih-badge--free">Current</span>{% endif %}
+            </div>
+            <p class="ih-timeline__org">{{ e.org }}</p>
+            {% if e.text %}<p class="ih-timeline__text">{{ e.text }}</p>{% endif %}
+          </li>
+          {% endfor %}
+        </ol>
+        {% if page.experience_earlier %}<p class="ih-timeline__earlier"><span class="ih-meta">Earlier</span>{{ page.experience_earlier }}</p>{% endif %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if page.research or page.education %}
+    <section class="ih-cv-row" id="education">
+      <h2 class="ih-cv-row__title">{{ page.education_label | default: "Research and education" }}</h2>
+      <div class="ih-cv-row__content">
+        {% if page.research %}
+        <div class="ih-cv-research">
+          <p class="ih-eyebrow">{{ page.research.label | default: "Doctoral research" }}</p>
+          <h3 class="ih-cv-research__title">{{ page.research.title }}</h3>
+          <p class="ih-cv-research__text">{{ page.research.text }}</p>
+          {% if page.research.link_url %}<a class="ih-link" href="{{ page.research.link_url | relative_url }}">{{ page.research.link_title }}{% include ih-arrow.html %}</a>{% endif %}
+        </div>
+        {% endif %}
+        {% if page.education %}
+        <ul class="ih-edu">
+          {% for d in page.education %}
+          <li class="ih-edu__item">
+            <p class="ih-edu__degree">{{ d.degree }}</p>
+            <p class="ih-edu__school">{{ d.school }}</p>
+            {% if d.note %}<span class="ih-badge ih-badge--accepted">{{ d.note }}</span>{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if page.exercises %}
+    <section class="ih-cv-row" id="exercises">
+      <h2 class="ih-cv-row__title">{{ page.exercises_label | default: "Cyber exercises" }}</h2>
+      <div class="ih-cv-row__content ih-cv-cards">
+        {% for x in page.exercises %}
+        <article class="ih-card">
+          {% if x.org %}<p class="ih-meta">{{ x.org }}</p>{% endif %}
+          <h3 class="ih-card__title">{{ x.title }}</h3>
+          <p class="ih-card__text">{{ x.text }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if page.expertise %}
+    <section class="ih-cv-row" id="expertise">
+      <h2 class="ih-cv-row__title">Expertise</h2>
+      <div class="ih-cv-row__content">
+        <ul class="ih-chips">{% for t in page.expertise %}<li class="ih-chip">{{ t }}</li>{% endfor %}</ul>
+      </div>
+    </section>
+    {% endif %}
+
+  </div>
+</div>

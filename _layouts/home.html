@@ -3,8 +3,9 @@ layout: default
 ---
 {% comment %}
   Home page layout (11/2026 refresh). The content lives in the front matter
-  of _pages/about.md: eyebrow, intro, buttons, highlights, sections,
-  interests_label and interests. Latest posts and publications are listed
+  of _pages/about.md: eyebrow, intro, buttons, highlights (with optional
+  highlights_label and highlights_style: "themes" for text instead of
+  figures), sections, interests_label and interests. Latest posts and publications are listed
   automatically.
 {% endcomment %}
 <div class="ih-home">
@@ -23,23 +24,13 @@ layout: default
       {% endif %}
     </div>
     <div class="ih-hero__figure">
-      <div class="ih-portrait">
-        <svg class="ih-portrait__rings" viewBox="0 0 360 360" aria-hidden="true" focusable="false">
-          <circle class="ih-ring" cx="180" cy="180" r="178"></circle>
-          <circle class="ih-ring" cx="180" cy="180" r="146"></circle>
-          <circle class="ih-ring" cx="180" cy="180" r="114" stroke-dasharray="2 6"></circle>
-          <path d="M180 2 A178 178 0 0 1 334.1 91" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-          <circle cx="334.1" cy="91" r="5" fill="currentColor"></circle>
-          <circle cx="53.6" cy="253" r="4" fill="currentColor" fill-opacity="0.7"></circle>
-          <circle cx="81.3" cy="123" r="3.5" fill="currentColor" fill-opacity="0.5"></circle>
-        </svg>
-        <img class="ih-portrait__img" src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="{{ site.author.name }}" width="600" height="600">
-      </div>
+      {% include ih-portrait.html %}
     </div>
   </section>
 
   {% if page.highlights %}
-  <section class="ih-highlights" aria-label="Highlights">
+  <section class="ih-highlights{% if page.highlights_style %} ih-highlights--{{ page.highlights_style }}{% endif %}" aria-label="{{ page.highlights_label | default: 'Highlights' }}">
+    {% if page.highlights_label %}<div class="ih-container ih-highlights__head"><p class="ih-eyebrow">{{ page.highlights_label }}</p></div>{% endif %}
     <div class="ih-container ih-highlights__grid">
       {% for h in page.highlights %}
       <div class="ih-highlight"><span class="ih-highlight__value">{{ h.value }}</span><span class="ih-highlight__label">{{ h.label }}</span></div>
