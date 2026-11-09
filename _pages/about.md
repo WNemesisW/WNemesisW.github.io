@@ -1,14 +1,14 @@
 ---
 permalink: /
 title: "Cyber situation awareness in research and practice"
-excerpt: "Jouni Ihanus – doctoral researcher and cyber security practitioner working on cyber situation awareness and deception technologies."
+excerpt: "Jouni Ihanus – PhD candidate and cyber security practitioner working on cyber situation awareness and deception technologies."
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-I am a doctoral researcher in cyber security at the University of Jyväskylä and a practitioner with almost twenty years in networks and cyber defence – first building networks, then leading the teams that make sense of what happens in them. One question runs through both my research and my practice: why is it so difficult to turn the data we already have into genuine understanding?
+I am a PhD candidate in cyber security at the University of Jyväskylä and a practitioner with almost twenty years in networks and cyber defence – first building networks, then leading the teams that make sense of what happens in them. One question runs through both my research and my practice: why is it so difficult to turn the data we already have into genuine understanding?
 
 ## Research
 My doctoral research examines how deception technologies – honeypots, honeytokens and other low-false-positive sensors – can be integrated into cyber defence ecosystems as structured sources of cyber situation awareness. Following the Design Science Research paradigm, I develop and evaluate models and implementation concepts for security operations. The dissertation is expected to be completed in 2027. → [Publications](/publications/)
