@@ -54,10 +54,19 @@ layout: default
 
   {% if page.interests %}
   <section class="ih-container ih-band-wrap">
+    {% if page.interests.first %}
+    <div class="ih-band ih-band--list">
+      <p class="ih-band__label"><span class="ih-dot" aria-hidden="true"></span>{{ page.interests_label | default: "Current interests" }}</p>
+      <ul class="ih-band__list">
+        {% for item in page.interests %}<li class="ih-band__item">{{ item }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% else %}
     <div class="ih-band">
       <p class="ih-band__label"><span class="ih-dot" aria-hidden="true"></span>{{ page.interests_label | default: "Current interests" }}</p>
       <p class="ih-band__text">{{ page.interests }}</p>
     </div>
+    {% endif %}
   </section>
   {% endif %}
 

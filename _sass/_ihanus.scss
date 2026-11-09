@@ -272,6 +272,11 @@ a:hover { color: var(--global-link-color-hover); }
 .ih-band__label { margin: 0; flex: 0 0 auto; display: inline-flex; align-items: center; gap: 10px; font-family: var(--ih-font-mono); font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ih-band-accent); }
 .ih-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--ih-band-accent); }
 .ih-band__text { margin: 0; flex: 1 1 520px; min-width: 0; font-family: var(--ih-font-head); font-weight: 500; font-size: 24px; line-height: 1.4; letter-spacing: -0.01em; text-wrap: pretty; }
+.ih-band--list { align-items: flex-start; }
+.ih-band--list .ih-band__label { padding-top: 8px; }
+.ih-band__list { flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 18px; margin: 0; padding: 0; list-style: none; }
+.ih-band__item { margin: 0; font-family: var(--ih-font-head); font-weight: 500; font-size: 22px; line-height: 1.4; letter-spacing: -0.01em; text-wrap: pretty; }
+.ih-band__item + .ih-band__item { padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, 0.16); }
 
 .ih-latest { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 48px; padding-top: 48px; padding-bottom: 40px; }
 .ih-latest > div { min-width: 0; }
@@ -409,6 +414,8 @@ a:hover { color: var(--global-link-color-hover); }
   .ih-card { padding: 24px; }
   .ih-band { padding: 28px 24px; }
   .ih-band__text { font-size: 20px; }
+  .ih-band__item { font-size: 19px; }
+  .ih-band--list .ih-band__label { padding-top: 0; }
   .ih-latest { grid-template-columns: 1fr; }
   .ih-year__label { flex-basis: 100%; font-size: 22px; }
   .ih-pub { padding: 20px; }

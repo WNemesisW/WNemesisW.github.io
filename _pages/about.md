@@ -37,5 +37,7 @@ sections:
   - title: "Exercises and teaching"
     text: "Cyber exercises offer a controlled setting for observing decision-making under pressure. I have taken part in NATO CCDCOE's Locked Shields four times, leading different functional areas, and I am co-organiser and scenario lead of ERIK, the annual cyber exercise of the National Defence Training Association of Finland (MPK). At Savonia University of Applied Sciences I teach a master's-level course on communication and influence in comprehensive security."
 interests_label: "Current interests"
-interests: "I am particularly interested in how AI can support the analysis of security data so that it becomes useful for decision-making. A closely related question, in a more concrete setting, is how the situational picture during a cyber exercise can be developed to support exercise control."
+interests:
+  - "How AI can support the analysis of security data so that it becomes useful for decision-making."
+  - "How the situational picture during a cyber exercise can be developed to support exercise control."
 ---
