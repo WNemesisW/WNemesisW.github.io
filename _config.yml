@@ -24,7 +24,7 @@ repository               : "WNemesisW/WNemesisW.github.io"
 author:
   # Biographic information
   avatar           : "jouni-ihanus.jpg"
-  avatar_credit    : # e.g. "Photo: Name / Organisation" when the portrait is not your own
+  avatar_credit    : "Photo: CyberChess 2026 / CERT.LV" # shown in the footer of pages with the portrait
   name             : "Jouni Ihanus"
   pronouns         : # example: "she/her"  
   bio              : "Because situation awareness matters."
