@@ -179,6 +179,8 @@ exclude:
   - CHANGELOG
   - Capfile
   - config
+  - CONTRIBUTING.md
+  - docker-compose.yaml
   - Dockerfile
   - Gemfile
   - Gruntfile.js
@@ -190,6 +192,7 @@ exclude:
   - package.json*
   - Rakefile
   - README
+  - README.md
   - tmp
   - vendor
 keep_files:
