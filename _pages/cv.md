@@ -15,8 +15,6 @@ intro: "My initial passion was telecommunications engineering, which gradually e
 facts:
   - label: "Based in"
     value: "Kuopio, Finland"
-  - label: "Languages"
-    value: "Finnish (native), English (excellent)"
   - label: "Research focus"
     value: "Cyber situation awareness"
 
