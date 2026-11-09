@@ -1,0 +1,101 @@
+---
+layout: default
+---
+{% comment %}
+  Home page layout (11/2026 refresh). The content lives in the front matter
+  of _pages/about.md: eyebrow, intro, buttons, highlights, sections,
+  interests_label and interests. Latest posts and publications are listed
+  automatically.
+{% endcomment %}
+<div class="ih-home">
+
+  <section class="ih-container ih-hero">
+    <div class="ih-hero__text">
+      {% if page.eyebrow %}<p class="ih-eyebrow">{{ page.eyebrow }}</p>{% endif %}
+      <h1 class="ih-hero__title">{{ page.title }}</h1>
+      {% if page.intro %}<p class="ih-hero__lead">{{ page.intro }}</p>{% endif %}
+      {% if page.buttons %}
+      <div class="ih-actions">
+        {% for b in page.buttons %}
+        <a class="ih-btn{% if forloop.first %} ih-btn--primary{% endif %}" href="{{ b.url | relative_url }}">{{ b.title }}{% if forloop.first %}{% include ih-arrow.html %}{% endif %}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    <div class="ih-hero__figure">
+      <div class="ih-portrait">
+        <svg class="ih-portrait__rings" viewBox="0 0 360 360" aria-hidden="true" focusable="false">
+          <circle class="ih-ring" cx="180" cy="180" r="178"></circle>
+          <circle class="ih-ring" cx="180" cy="180" r="146"></circle>
+          <circle class="ih-ring" cx="180" cy="180" r="114" stroke-dasharray="2 6"></circle>
+          <path d="M180 2 A178 178 0 0 1 334.1 91" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+          <circle cx="334.1" cy="91" r="5" fill="currentColor"></circle>
+          <circle cx="53.6" cy="253" r="4" fill="currentColor" fill-opacity="0.7"></circle>
+          <circle cx="81.3" cy="123" r="3.5" fill="currentColor" fill-opacity="0.5"></circle>
+        </svg>
+        <img class="ih-portrait__img" src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="{{ site.author.name }}" width="600" height="600">
+      </div>
+    </div>
+  </section>
+
+  {% if page.highlights %}
+  <section class="ih-highlights" aria-label="Highlights">
+    <div class="ih-container ih-highlights__grid">
+      {% for h in page.highlights %}
+      <div class="ih-highlight"><span class="ih-highlight__value">{{ h.value }}</span><span class="ih-highlight__label">{{ h.label }}</span></div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.sections %}
+  <section class="ih-container ih-cards">
+    {% for s in page.sections %}
+    <article class="ih-card">
+      <p class="ih-card__num">{{ forloop.index | prepend: '0' }}</p>
+      <h2 class="ih-card__title">{{ s.title }}</h2>
+      <p class="ih-card__text">{{ s.text }}</p>
+      {% if s.link_url %}<a class="ih-link" href="{{ s.link_url | relative_url }}">{{ s.link_title }}{% include ih-arrow.html %}</a>{% endif %}
+    </article>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if page.interests %}
+  <section class="ih-container ih-band-wrap">
+    <div class="ih-band">
+      <p class="ih-band__label"><span class="ih-dot" aria-hidden="true"></span>{{ page.interests_label | default: "Current interests" }}</p>
+      <p class="ih-band__text">{{ page.interests }}</p>
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="ih-container ih-latest" id="latest">
+    <div>
+      <h2 class="ih-latest__title">Writing</h2>
+      <ul class="ih-list">
+        {% for post in site.posts limit: 3 %}
+        <li class="ih-list__item">
+          <span class="ih-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <a class="ih-list__link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      <a class="ih-link" href="{{ '/year-archive/' | relative_url }}">All writing{% include ih-arrow.html %}</a>
+    </div>
+    <div>
+      <h2 class="ih-latest__title">Latest publications</h2>
+      <ul class="ih-list">
+        {% assign latest_pubs = site.publications | sort: "date" | reverse %}
+        {% for pub in latest_pubs limit: 3 %}
+        <li class="ih-list__item">
+          <span class="ih-meta">{% if pub.venue_short %}{{ pub.venue_short }}{% else %}{{ pub.date | date: "%Y" }}{% endif %}{% if pub.status %}<span class="ih-badge ih-badge--accepted">Accepted</span>{% endif %}</span>
+          <a class="ih-list__link" href="{{ pub.url | relative_url }}">{{ pub.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      <a class="ih-link" href="{{ '/publications/' | relative_url }}">All publications{% include ih-arrow.html %}</a>
+    </div>
+  </section>
+
+</div>

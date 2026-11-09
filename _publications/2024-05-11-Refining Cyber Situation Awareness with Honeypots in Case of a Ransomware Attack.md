@@ -8,6 +8,10 @@ date: 2024-05-11
 venue: 'WorldCIST 2024 (Lecture Notes in Networks and Systems, vol. 985)'
 paperurl: 'https://urn.fi/URN:NBN:fi:jyu-202502252230'
 citation: 'Ihanus, J., Kokkonen, T., Hämäläinen, T. (2024). Refining Cyber Situation Awareness with Honeypots in Case of a Ransomware Attack. In: Rocha, Á., Adeli, H., Dzemyda, G., Moreira, F., Poniszewska-Marańda, A. (eds) Good Practices and New Perspectives in Information Systems and Technologies. WorldCIST 2024. Lecture Notes in Networks and Systems, vol 985. Springer, Cham. https://doi.org/10.1007/978-3-031-60215-3_10'
+authors: 'Ihanus, J., Kokkonen, T. & Hämäläinen, T.'
+venue_short: 'WorldCIST 2024'
+doi: '10.1007/978-3-031-60215-3_10'
+freeurl: 'https://urn.fi/URN:NBN:fi:jyu-202502252230'
 ---
 
 

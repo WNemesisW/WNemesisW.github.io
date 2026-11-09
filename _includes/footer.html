@@ -1,7 +1,11 @@
 {% include base_path %}
-
-<footer class="page__footer">
-  <div class="page__footer-copyright">
-    © {{ site.time | date: '%Y' }} {{ site.name | default: site.title }} · <a href="{{ base_path }}/terms/">Privacy</a> · <a href="{{ base_path }}/feed.xml">RSS</a>
-  </div>
-</footer>
+<div class="ih-container ih-footer__inner">
+  <p class="ih-footer__meta">© {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}{% if site.author.location %} · {{ site.author.location }}{% endif %}{% if page.layout == "home" and site.author.avatar_credit %} · {{ site.author.avatar_credit }}{% endif %}</p>
+  <nav class="ih-footer__nav" aria-label="Footer">
+    {% if site.author.email %}<a href="mailto:{{ site.author.email }}">Email</a>{% endif %}
+    {% if site.author.linkedin %}<a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>{% endif %}
+    {% if site.author.orcid %}<a href="{{ site.author.orcid }}">ORCID</a>{% endif %}
+    <a href="{{ base_path }}/terms/">Privacy</a>
+    <a href="{{ base_path }}/feed.xml">RSS</a>
+  </nav>
+</div>

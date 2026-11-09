@@ -8,6 +8,9 @@ date: 2025-06-25
 venue: '24th European Conference on Cyber Warfare and Security (ECCWS 2025)'
 paperurl: https://doi.org/10.34190/eccws.24.1.3540
 citation: 'Sarjakivi, P., Ihanus, J., & Moilanen, P. (2025). Demonstration and Evaluation of Defensive Cyber Operations Decision-Making Model. In C. Lipps, & B. Han (Eds.), Proceedings of the 24th European Conference on Cyber Warfare and Security (pp. 628-637). Academic Conferences International. Proceedings of the European Conference on Cyber Warfare and Security, 24. https://doi.org/10.34190/eccws.24.1.3540'
+authors: 'Sarjakivi, P., Ihanus, J. & Moilanen, P.'
+venue_short: 'ECCWS 2025'
+doi: '10.34190/eccws.24.1.3540'
 ---
 
 

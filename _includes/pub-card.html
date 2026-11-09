@@ -1,0 +1,19 @@
+{% comment %}
+  Publication card (11/2026 refresh). Expects `post` (a publication).
+  Optional front matter: authors, venue, status, doi, freeurl, openaccess,
+  paperurl, citation.
+{% endcomment %}
+<article class="ih-pub">
+  <div class="ih-pub__meta">
+    {% if post.venue %}<span>{{ post.venue }}</span>{% endif %}
+    {% if post.status %}<span class="ih-badge ih-badge--accepted">{{ post.status }}</span>{% endif %}
+    {% if post.openaccess %}<span class="ih-badge ih-badge--free">Open access</span>{% elsif post.freeurl %}<span class="ih-badge ih-badge--free">Free version</span>{% endif %}
+  </div>
+  <h3 class="ih-pub__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+  {% if post.authors %}<p class="ih-pub__authors">{{ post.authors | replace: "Ihanus, J.", "<strong>Ihanus, J.</strong>" }}</p>{% endif %}
+  <div class="ih-pub__actions">
+    {% if post.freeurl %}<a href="{{ post.freeurl }}">Free version{% include ih-arrow.html %}</a>{% elsif post.openaccess and post.paperurl %}<a href="{{ post.paperurl }}">Read paper{% include ih-arrow.html %}</a>{% endif %}
+    {% if post.doi %}<a class="ih-pub__doi" href="https://doi.org/{{ post.doi }}">DOI</a>{% endif %}
+    {% if post.citation %}<details class="ih-cite"><summary>Cite</summary><p>{{ post.citation }}</p></details>{% endif %}
+  </div>
+</article>

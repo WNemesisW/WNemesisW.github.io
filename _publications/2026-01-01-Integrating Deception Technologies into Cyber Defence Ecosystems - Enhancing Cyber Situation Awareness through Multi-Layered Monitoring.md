@@ -8,6 +8,9 @@ date: 2026-01-01
 venue: 'WorldCIST 2026 (Lecture Notes in Networks and Systems, vol. 2091)'
 paperurl: 'https://doi.org/10.1007/978-3-032-32029-2_5'
 citation: 'Ihanus, J., Kokkonen, T., & Mikkonen, T. (2026). Integrating Deception Technologies into Cyber Defence Ecosystems: Enhancing Cyber Situation Awareness through Multi-layered Monitoring. In A. Rocha, H. Adeli, & F. Moreira (Eds.), Recent Trends and Challenges in Information Systems and Technologies: WorldCIST 2026, Volume 1 (pp. 51–65). Springer Nature Switzerland. Lecture Notes in Networks and Systems, vol 2091. https://doi.org/10.1007/978-3-032-32029-2_5'
+authors: 'Ihanus, J., Kokkonen, T. & Mikkonen, T.'
+venue_short: 'WorldCIST 2026'
+doi: '10.1007/978-3-032-32029-2_5'
 ---
 
 

@@ -8,6 +8,10 @@ date: 2024-06-21
 venue: '23rd European Conference on Cyber Warfare and Security (ECCWS 2024)'
 paperurl: https://doi.org/10.34190/eccws.23.1.2270
 citation: 'Sarjakivi, P., Ihanus, J., & Moilanen, P. (2024). Using Wargaming to Model Cyber Defense Decision-Making : Observation-Based Research in Locked Shields. In M. Lehto, & M. Karjalainen (Eds.), Proceedings of the 23rd European Conference on Cyber Warfare and Security (23, pp. 457-464). Academic Conferences International Ltd. Proceedings of the European Conference on Cyber Warfare and Security. https://doi.org/10.34190/eccws.23.1.2270'
+authors: 'Sarjakivi, P., Ihanus, J. & Moilanen, P.'
+venue_short: 'ECCWS 2024'
+doi: '10.34190/eccws.23.1.2270'
+openaccess: true
 ---
 
 

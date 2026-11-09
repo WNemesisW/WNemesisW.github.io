@@ -7,6 +7,7 @@ excerpt: "Ensuring the ability to analyse and gain Cyber Situation Awareness (CS
 date: 2026-01-01
 status: 'Accepted for publication'
 citation: 'Ihanus, J., Kokkonen, T., Sarjakivi, P., & Mikkonen, T. (accepted). Analysis of Cyber Incident – The Role of the Deception Technologies.'
+authors: 'Ihanus, J., Kokkonen, T., Sarjakivi, P. & Mikkonen, T.'
 ---
 
 

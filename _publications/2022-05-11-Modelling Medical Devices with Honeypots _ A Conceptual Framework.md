@@ -8,6 +8,9 @@ date: 2022-05-11
 venue: 'WorldCIST 2022 (Lecture Notes in Networks and Systems, vol. 468)'
 paperurl: 'https://doi.org/10.1007/978-3-031-04826-5_15'
 citation: 'Ihanus, J., Kokkonen, T., Hämäläinen, T. (2022). Modelling Medical Devices with Honeypots: A Conceptual Framework. In: Rocha, A., Adeli, H., Dzemyda, G., Moreira, F. (eds) Information Systems and Technologies. WorldCIST 2022. Lecture Notes in Networks and Systems, vol 468. Springer, Cham. https://doi.org/10.1007/978-3-031-04826-5_15'
+authors: 'Ihanus, J., Kokkonen, T. & Hämäläinen, T.'
+venue_short: 'WorldCIST 2022'
+doi: '10.1007/978-3-031-04826-5_15'
 ---
 
 
