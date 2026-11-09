@@ -1,7 +1,9 @@
 ---
 title: 'Thoughts on Cyber Exercises, Time Compression, and Situation Awareness'
 date: 2026-05-02
-permalink: /posts/2026/03/Thoughts_on_Cyber_Exercises/
+permalink: /posts/2026/05/Thoughts_on_Cyber_Exercises/
+redirect_from:
+  - /posts/2026/03/Thoughts_on_Cyber_Exercises/
 tags:
   - Situation Awareness
   - Cyber Exercise
