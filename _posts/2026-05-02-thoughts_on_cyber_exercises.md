@@ -3,7 +3,8 @@ title: 'Thoughts on Cyber Exercises, Time Compression, and Situation Awareness'
 date: 2026-05-02
 permalink: /posts/2026/03/Thoughts_on_Cyber_Exercises/
 tags:
-  - Situation Awareness, Cyber Exercise
+  - Situation Awareness
+  - Cyber Exercise
 ---
 Throughout my career, I have had the opportunity to participate in a wide range of cyber exercises. Most recently, I took part in a large-scale multinational exercise. As a strong advocate of situation awareness, one design choice consistently stands out across these environments: **time compression**.
 
