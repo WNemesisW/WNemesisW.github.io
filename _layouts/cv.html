@@ -30,7 +30,7 @@ layout: default
   <section class="ih-path" aria-label="{{ page.career_label | default: 'Career path' }}">
     <div class="ih-container ih-path__inner">
       <p class="ih-eyebrow">{{ page.career_label | default: "Career path" }}</p>
-      <ol class="ih-path__steps">
+      <ol class="ih-path__steps" style="--ih-steps: {{ page.career | size }};">
         {% for s in page.career %}
         <li class="ih-path__step{% if forloop.last %} ih-path__step--now{% endif %}">
           <p class="ih-path__title">{{ s.title }}</p>
