@@ -40,4 +40,5 @@ interests_label: "Current interests"
 interests:
   - "How AI can support the analysis of security data so that it becomes useful for decision-making."
   - "How the situational picture during a cyber exercise can be developed to support exercise control."
+  - "Where the limits of current local language models lie when they are used for situation awareness and the analysis of fragmented data."
 ---
