@@ -27,7 +27,7 @@ highlights:
     label: "How defensive decisions are made under time pressure, studied through exercises and wargaming."
 sections:
   - title: "Doctoral research"
-    text: "My dissertation examines how deception technologies – honeypots, honeytokens and other low-false-positive sensors – can be integrated into cyber defence ecosystems as structured sources of cyber situation awareness. Following the Design Science Research paradigm, I develop and evaluate models and implementation concepts for security operations. The dissertation is expected to be completed in 2027."
+    text: "My dissertation examines how deception technologies – honeypots, honeytokens and other low-false-positive sensors – can be integrated into cyber defence ecosystems as structured sources of cyber situation awareness. Following the Design Science Research paradigm, I develop models and implementation concepts for security operations. The dissertation is expected to be completed in 2027."
     link_title: "Publications"
     link_url: "/publications/"
   - title: "Practice"
