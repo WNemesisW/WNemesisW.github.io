@@ -23,7 +23,7 @@ repository               : "WNemesisW/WNemesisW.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "jouni-ihanus.jpg"
   name             : "Jouni Ihanus"
   pronouns         : # example: "she/her"  
   bio              : "Because situation awareness matters."
@@ -143,7 +143,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
+og_image                 : "jouni-ihanus.jpg" # Social media default site image
 og_description           :  # Social media default site image description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
