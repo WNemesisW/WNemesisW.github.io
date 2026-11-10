@@ -7,6 +7,48 @@ redirect_from:
 tags:
   - Situation Awareness
   - Cyber Exercise
+
+# Texts of the figures (rendered by _includes/ih-flow.html and ih-strips.html)
+figures:
+  levels:
+    lane_a: "Situation awareness (Endsley, 1995)"
+    lane_b: "Under high time compression"
+    caption: "Endsley’s three levels of situation awareness, and what happens to each of them under high time compression."
+    steps:
+      - label: "Level 1"
+        title: "Perception"
+        text: "of relevant elements"
+        view: "May still function: data is visible."
+      - label: "Level 2"
+        title: "Comprehension"
+        text: "of their meaning"
+        view: "Collapses: meaning cannot be formed."
+      - label: "Level 3"
+        title: "Projection"
+        text: "of future states"
+        view: "Becomes nearly impossible."
+  window:
+    cells: 24
+    heading: "Focus of attention: roughly 3–&#8288;5 chunks at a time (Cowan)"
+    legend_window: "Time window a team considers"
+    legend_event: "Event"
+    unit: "in the window"
+    axis: "Time →"
+    caption: "A schematic illustration, not measured data: the same eight events at a real-world pace, under time compression, and after the team has reduced the size of the situation."
+    rows:
+      - label: "Real-world operations"
+        events: [2, 5, 8, 11, 14, 17, 20, 23]
+        window: [7, 18]
+        note: "Events are spread out, and the window stays within the limit."
+      - label: "Exercise with time compression"
+        events: [9, 10, 11, 12, 13, 14, 15, 16]
+        window: [7, 18]
+        over: true
+        note: "The same events arrive in less time, and the same window now exceeds the limit."
+      - label: "How teams cope"
+        events: [9, 10, 11, 12, 13, 14, 15, 16]
+        window: [11, 14]
+        note: "A narrower time window and a subset of signals fit again, but the rest of the situation is left out."
 ---
 Throughout my career, I have had the opportunity to participate in a wide range of cyber exercises. Most recently, I took part in a large-scale multinational exercise. As a strong advocate of situation awareness, one design choice consistently stands out across these environments: **time compression**.
 
@@ -41,6 +83,8 @@ Cowan (2000) demonstrates that the human focus of attention is limited to roughl
 - Level 2 (comprehension) collapses — meaning cannot be formed  
 - Level 3 (projection) becomes nearly impossible  
 
+{% include ih-flow.html number=1 figure=page.figures.levels %}
+
 **In Cowan’s terms:**
 - The number of active elements exceeds the capacity of attention  
 - The system cannot maintain a coherent internal representation  
@@ -57,6 +101,8 @@ This is not a process failure. It is a cognitive constraint.
 - They ignore or postpone broader synthesis  
 
 In effect, they reduce the size of the “situation” to something that fits within human cognitive limits.
+
+{% include ih-strips.html number=2 figure=page.figures.window %}
 
 # A Question for Exercise Design
 
