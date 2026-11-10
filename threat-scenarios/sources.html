@@ -9,30 +9,43 @@ permalink: /threat-scenarios/sources.html
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sources and Shodan queries</title>
+<script>(function () { var t; try { t = localStorage.getItem("theme"); } catch (e) {} if (t !== "dark" && t !== "light") { t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-theme", t); })();</script>
 <style>
-:root { --bg: #05070d; --panel: rgba(15, 23, 39, .86); --line: rgba(148, 163, 184, .14); --ink: #e6edf7; --ink-2: #b4c1d4; --muted: #7c8aa3; --accent: #22d3ee; --vio: #a78bfa; --open: #f87171; }
+:root { --bg: #05070d; --panel: rgba(15, 23, 39, .86); --card-1: rgba(15, 23, 39, .97); --card-2: rgba(10, 16, 28, .97); --tbl: rgba(11, 17, 30, .6);
+  --line: rgba(148, 163, 184, .14); --ink: #e6edf7; --ink-2: #b4c1d4; --muted: #7c8aa3; --accent: #22d3ee; --vio: #a78bfa; --open: #f87171;
+  --shadow: rgba(0, 0, 0, .35); --g1: rgba(34, 211, 238, .08); --g2: rgba(167, 139, 250, .07); color-scheme: dark; }
+html[data-theme="light"] { --bg: #f5f7fb; --panel: rgba(255, 255, 255, .92); --card-1: #ffffff; --card-2: #f8fafc; --tbl: rgba(255, 255, 255, .8);
+  --line: rgba(15, 23, 42, .10); --ink: #0f172a; --ink-2: #334155; --muted: #64748b; --accent: #0e7490; --vio: #7c3aed; --open: #dc2626;
+  --shadow: rgba(15, 23, 42, .08); --g1: rgba(8, 145, 178, .06); --g2: rgba(124, 58, 237, .05); color-scheme: light; }
 * { box-sizing: border-box; }
 body { margin: 0; color: var(--ink); font: 15px/1.55 Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  background: radial-gradient(1000px 480px at 8% -8%, rgba(34, 211, 238, .08), transparent 62%), radial-gradient(800px 420px at 100% 0%, rgba(167, 139, 250, .07), transparent 60%), var(--bg); min-height: 100vh; }
+  background: radial-gradient(1000px 480px at 8% -8%, var(--g1), transparent 62%), radial-gradient(800px 420px at 100% 0%, var(--g2), transparent 60%), var(--bg); min-height: 100vh; }
 main { max-width: 1000px; margin: 0 auto; padding: 22px 16px 48px; }
 .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
 .top a { font-size: 13px; color: var(--accent); text-decoration: none; }
-.top .lang { font-weight: 600; letter-spacing: .06em; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; }
-.top .lang:hover { color: var(--ink); }
+.tools { display: flex; gap: 8px; align-items: center; }
+.top .lang, .theme { font: inherit; font-size: 12px; font-weight: 600; letter-spacing: .06em; color: var(--muted); background: var(--panel); border: 1px solid var(--line);
+  border-radius: 999px; padding: 3px 12px; cursor: pointer; }
+.theme { display: inline-grid; place-items: center; padding: 4px 9px; }
+.theme svg { width: 15px; height: 15px; }
+html[data-theme="dark"] .t-moon, html[data-theme="light"] .t-sun { display: none; }
+.top .lang:hover, .theme:hover { color: var(--ink); }
 h1 { font-size: 26px; line-height: 1.2; font-weight: 650; letter-spacing: -.015em; margin: 0 0 16px; }
 h2 { font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 34px 0 10px; }
 .notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1px; border-radius: 18px; overflow: hidden;
-  background: linear-gradient(135deg, rgba(34, 211, 238, .45), rgba(167, 139, 250, .45)); padding: 1px; box-shadow: 0 14px 40px rgba(0, 0, 0, .35); }
-.notes div { background: linear-gradient(180deg, rgba(15, 23, 39, .97), rgba(10, 16, 28, .97)); padding: 16px 18px; }
+  background: linear-gradient(135deg, rgba(34, 211, 238, .45), rgba(167, 139, 250, .45)); padding: 1px; box-shadow: 0 14px 40px var(--shadow); }
+.notes div { background: linear-gradient(180deg, var(--card-1), var(--card-2)); padding: 16px 18px; }
 .notes b { display: block; font-size: 14px; margin-bottom: 4px; }
 .notes span { display: block; font-size: 13px; color: var(--ink-2); line-height: 1.45; }
-.tbl { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: rgba(11, 17, 30, .6); }
-table { width: 100%; border-collapse: collapse; min-width: 640px; }
+.tbl { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--tbl); }
+table { width: 100%; border-collapse: collapse; min-width: 720px; }
 th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 13.5px; }
 th { color: var(--muted); font-weight: 600; font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; }
 tr:last-child td { border-bottom: 0; }
 td a { color: var(--ink); font-weight: 600; text-decoration: none; } td a:hover { color: var(--accent); }
-td .r { display: block; color: var(--muted); font-size: 12px; }
+td .r { display: block; color: var(--ink-2); font-size: 12px; margin-top: 2px; }
+td .why { display: block; color: var(--muted); font-size: 11.5px; line-height: 1.4; margin-top: 2px; max-width: 360px; }
+td .st { font-weight: 600; } td .st-vahva { color: var(--accent); } td .st-heikko { color: var(--open); }
 td.p { font-variant-numeric: tabular-nums; white-space: nowrap; }
 td.p code { display: block; font: 11.5px ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: var(--muted); white-space: nowrap; }
 td.w { color: var(--ink-2); }
@@ -44,28 +57,27 @@ footer { margin-top: 30px; font-size: 12px; color: var(--muted); }
 </head>
 <body>
 <main>
-<div class="top"><a href="./?lang=en">← Back to the map</a><a class="lang" href="lahteet.html" hreflang="fi">FI</a></div>
+<div class="top"><a href="./?lang=en">← Back to the map</a><div class="tools"><a class="lang" href="lahteet.html" hreflang="fi">FI</a><button type="button" class="theme" id="theme" aria-label="Toggle theme"><svg class="t-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button></div></div>
 <h1>Sources and Shodan queries</h1>
 <div class="notes"><div><b>What the number means</b><span>The number of open services visible in Shodan in Finland on 10 Nov 2026. One result is a service at an address and port, not an identified device.</span></div><div><b>Some are honeypots</b><span>About 15–25% of internet-exposed industrial control systems are decoys (Mladenov et al. 2025). The numbers have not been adjusted.</span></div><div><b>A protocol does not reveal the sector</b><span>The link to risks is the author&#x27;s assessment. A Modbus device can be at a water utility, in a building or on a farm.</span></div><div><b>A single query, not a trend</b><span>The query was run once with the scope country:FI. The numbers can be reproduced with the same query in Shodan.</span></div></div>
 <h2>Protocols queried</h2>
-<div class="tbl"><table><thead><tr><th>Protocol</th><th>Port</th><th>Why it should not be exposed</th><th>Results</th></tr></thead><tbody>
-<tr><td><a href="https://en.wikipedia.org/wiki/Modbus" target="_blank" rel="noopener noreferrer">Modbus ↗</a><span class="r">Water supply disruptions</span></td><td class="p">502</td><td class="w">Industrial PLC protocol without authentication; reads and writes process values.</td><td class="n">433</td></tr>
-<tr><td><a href="https://en.wikipedia.org/wiki/Simatic_S7" target="_blank" rel="noopener noreferrer">S7 ↗</a><span class="r">Water supply disruptions</span></td><td class="p">102</td><td class="w">Siemens PLC protocol; allows control and programming over the network.</td><td class="n">378</td></tr>
-<tr><td><a href="https://en.wikipedia.org/wiki/Virtual_Network_Computing" target="_blank" rel="noopener noreferrer">VNC ↗</a><span class="r">Water supply disruptions</span></td><td class="p">5900</td><td class="w">Remote screen access, also on industrial operator panels; often weakly protected.</td><td class="n">2,488</td></tr>
-<tr><td><a href="https://en.wikipedia.org/wiki/Teltonika" target="_blank" rel="noopener noreferrer">Teltonika ↗</a><span class="r">Water supply disruptions</span></td><td class="p">–<code>http.title:Teltonika</code></td><td class="w">Management page of an industrial remote access router; a path into automation networks.</td><td class="n">1,408</td></tr>
-<tr><td><a href="https://en.wikipedia.org/wiki/IEC_60870-5" target="_blank" rel="noopener noreferrer">IEC 104 ↗</a><span class="r">Major power outage or shortage</span></td><td class="p">2404</td><td class="w">Power grid telecontrol protocol without encryption or authentication.</td><td class="n">439</td></tr>
-<tr><td><a href="https://www.rapid7.com/blog/post/2015/01/22/the-internet-of-gas-station-tank-gauges/" target="_blank" rel="noopener noreferrer">ATG ↗</a><span class="r">Major fuel availability disruption</span></td><td class="p">10001<code>I20100</code></td><td class="w">Fuel tank level gauging; answers commands without authentication.</td><td class="n">18</td></tr>
-<tr><td><a href="https://en.wikipedia.org/wiki/BACnet" target="_blank" rel="noopener noreferrer">BACnet ↗</a><span class="r">Terrorist or violent attack</span></td><td class="p">47808</td><td class="w">Building and data center automation protocol without authentication.</td><td class="n">65</td></tr>
-<tr><td><a href="https://en.wikipedia.org/wiki/DICOM" target="_blank" rel="noopener noreferrer">DICOM ↗</a><span class="r">Antimicrobial resistance</span></td><td class="p">–<code>&quot;DICOM Server Response&quot;</code></td><td class="w">Medical imaging archive; may expose patient data.</td><td class="n">60</td></tr>
-<tr><td><a href="https://en.wikipedia.org/wiki/MikroTik" target="_blank" rel="noopener noreferrer">Winbox ↗</a><span class="r">Communications network disruptions</span></td><td class="p">8291</td><td class="w">MikroTik router management port; widely exploited in attacks.</td><td class="n">1,857</td></tr>
-<tr><td><a href="https://en.wikipedia.org/wiki/TR-069" target="_blank" rel="noopener noreferrer">TR-069 ↗</a><span class="r">Communications network disruptions</span></td><td class="p">7547</td><td class="w">ISP remote management of customer equipment; used in mass device takeovers.</td><td class="n">37,473</td></tr>
-<tr><td><a href="https://en.wikipedia.org/wiki/MongoDB" target="_blank" rel="noopener noreferrer">MongoDB ↗</a><span class="r">Disruption of data availability</span></td><td class="p">27017</td><td class="w">Database exposed directly to the internet; a common target of leaks and extortion.</td><td class="n">1,649</td></tr>
-<tr><td><a href="https://en.wikipedia.org/wiki/PostgreSQL" target="_blank" rel="noopener noreferrer">PostgreSQL ↗</a><span class="r">Disruption of data availability</span></td><td class="p">5432</td><td class="w">Database exposed directly to the internet; open to password guessing.</td><td class="n">6,959</td></tr>
-<tr><td><a href="https://en.wikipedia.org/wiki/Server_Message_Block" target="_blank" rel="noopener noreferrer">SMB ↗</a><span class="r">Disruption of data availability</span></td><td class="p">445</td><td class="w">Windows file sharing; a known spreading route for ransomware.</td><td class="n">9,926</td></tr>
-<tr><td><a href="https://en.wikipedia.org/wiki/Remote_Desktop_Protocol" target="_blank" rel="noopener noreferrer">RDP ↗</a><span class="r">Skilled labor availability</span></td><td class="p">3389</td><td class="w">Windows Remote Desktop; a common initial access route for ransomware.</td><td class="n">11,650</td></tr>
-<tr><td><a href="https://en.wikipedia.org/wiki/Real-Time_Streaming_Protocol" target="_blank" rel="noopener noreferrer">RTSP ↗</a><span class="r">Terrorist or violent attack</span></td><td class="p">554</td><td class="w">Camera video streams; may show video without a password.</td><td class="n">2,630</td></tr>
+<div class="tbl"><table><thead><tr><th>Protocol and link to risk</th><th>Port</th><th>Why it should not be exposed</th><th>Results</th></tr></thead><tbody>
+<tr><td><a href="https://en.wikipedia.org/wiki/Modbus" target="_blank" rel="noopener noreferrer">Modbus ↗</a><span class="r">Water supply disruptions</span><span class="why"><span class="st st-kohtalainen">moderate</span> · PDF p. 90: The assessment names cyberattacks as a cause of water supply disruption; Modbus is a common PLC protocol, also in other sectors.</span></td><td class="p">502</td><td class="w">Industrial PLC protocol without authentication; reads and writes process values.</td><td class="n">433</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/Simatic_S7" target="_blank" rel="noopener noreferrer">S7 ↗</a><span class="r">Water supply disruptions</span><span class="why"><span class="st st-kohtalainen">moderate</span> · PDF p. 90: Cyberattacks as a cause of water supply disruption; Siemens PLCs are common in process automation, also in other sectors.</span></td><td class="p">102</td><td class="w">Siemens PLC protocol; allows control and programming over the network.</td><td class="n">378</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/Virtual_Network_Computing" target="_blank" rel="noopener noreferrer">VNC ↗</a><span class="r">Disruption of data availability</span><span class="why"><span class="st st-kohtalainen">moderate</span> · PDF p. 86: Per the assessment, breaches degrade data availability; VNC gives remote access to systems.</span></td><td class="p">5900</td><td class="w">Remote screen access, also on industrial operator panels; often weakly protected.</td><td class="n">2,488</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/Teltonika" target="_blank" rel="noopener noreferrer">Teltonika ↗</a><span class="r">Water supply disruptions</span><span class="why"><span class="st st-kohtalainen">moderate</span> · PDF p. 90: Cyberattacks and telecom disruptions as causes in water supply; remote access routers connect distributed sites such as pumping stations.</span></td><td class="p">–<code>http.title:Teltonika</code></td><td class="w">Management page of an industrial remote access router; a path into automation networks.</td><td class="n">1,408</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/IEC_60870-5" target="_blank" rel="noopener noreferrer">IEC 104 ↗</a><span class="r">Major power outage or shortage</span><span class="why"><span class="st st-vahva">strong</span> · PDF p. 94: Per the assessment, cyberattacks can manipulate grid operating systems; IEC 104 is the power grid telecontrol protocol.</span></td><td class="p">2404</td><td class="w">Power grid telecontrol protocol without encryption or authentication.</td><td class="n">439</td></tr>
+<tr><td><a href="https://www.rapid7.com/blog/post/2015/01/22/the-internet-of-gas-station-tank-gauges/" target="_blank" rel="noopener noreferrer">ATG ↗</a><span class="r">Major fuel availability disruption</span><span class="why"><span class="st st-vahva">strong</span> · PDF p. 109: Per the assessment, cyber influence can disrupt fuel storage and distribution; ATGs gauge fuel station tanks.</span></td><td class="p">10001<code>I20100</code></td><td class="w">Fuel tank level gauging; answers commands without authentication.</td><td class="n">18</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/BACnet" target="_blank" rel="noopener noreferrer">BACnet ↗</a><span class="r">Disruption of data availability</span><span class="why"><span class="st st-heikko">weak</span> · PDF p. 87: The assessment names data centers as attack targets; their cooling and power are run by building automation. Most BACnet devices are in other buildings.</span></td><td class="p">47808</td><td class="w">Building and data center automation protocol without authentication.</td><td class="n">65</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/DICOM" target="_blank" rel="noopener noreferrer">DICOM ↗</a><span class="r">Antimicrobial resistance</span><span class="why"><span class="st st-kohtalainen">moderate</span> · PDF p. 62: Per the assessment, disruptions to digital healthcare and cyberattacks hamper diagnostics and endanger resistance control.</span></td><td class="p">–<code>&quot;DICOM Server Response&quot;</code></td><td class="w">Medical imaging archive; may expose patient data.</td><td class="n">60</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/MikroTik" target="_blank" rel="noopener noreferrer">Winbox ↗</a><span class="r">Communications network disruptions</span><span class="why"><span class="st st-kohtalainen">moderate</span> · PDF p. 82: Per the assessment, cyberattacks and device faults can stop networks; Winbox is a router management port.</span></td><td class="p">8291</td><td class="w">MikroTik router management port; widely exploited in attacks.</td><td class="n">1,857</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/TR-069" target="_blank" rel="noopener noreferrer">TR-069 ↗</a><span class="r">Communications network disruptions</span><span class="why"><span class="st st-vahva">strong</span> · PDF p. 82: Per the assessment, cyberattacks can degrade communications services; TR-069 is ISP remote management of customer equipment.</span></td><td class="p">7547</td><td class="w">ISP remote management of customer equipment; used in mass device takeovers.</td><td class="n">37,473</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/MongoDB" target="_blank" rel="noopener noreferrer">MongoDB ↗</a><span class="r">Disruption of data availability</span><span class="why"><span class="st st-vahva">strong</span> · PDF p. 86: Per the assessment, ransomware can lock databases and servers.</span></td><td class="p">27017</td><td class="w">Database exposed directly to the internet; a common target of leaks and extortion.</td><td class="n">1,649</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/PostgreSQL" target="_blank" rel="noopener noreferrer">PostgreSQL ↗</a><span class="r">Disruption of data availability</span><span class="why"><span class="st st-vahva">strong</span> · PDF p. 86: Per the assessment, ransomware can lock databases and servers.</span></td><td class="p">5432</td><td class="w">Database exposed directly to the internet; open to password guessing.</td><td class="n">6,959</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/Server_Message_Block" target="_blank" rel="noopener noreferrer">SMB ↗</a><span class="r">Disruption of data availability</span><span class="why"><span class="st st-vahva">strong</span> · PDF p. 86: Per the assessment, malware and breaches can block access to data; SMB is a ransomware spreading route.</span></td><td class="p">445</td><td class="w">Windows file sharing; a known spreading route for ransomware.</td><td class="n">9,926</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/Remote_Desktop_Protocol" target="_blank" rel="noopener noreferrer">RDP ↗</a><span class="r">Disruption of data availability</span><span class="why"><span class="st st-vahva">strong</span> · PDF p. 86: Per the assessment, breaches and ransomware block access to data; RDP is a common initial access route.</span></td><td class="p">3389</td><td class="w">Windows Remote Desktop; a common initial access route for ransomware.</td><td class="n">11,650</td></tr>
 </tbody></table></div>
-<p class="excl">Services that are public by design (NTP, BGP, DNS, SIP, IKE, AD FS, H.323, SMTP, WordPress, SAP) were also queried for comparison but are not shown on the map. The product queries Fronius, Danfoss, VSAT did not identify devices (0 results).</p>
+<p class="excl">Services that are public by design (NTP, BGP, DNS, SIP, IKE, AD FS, H.323, SMTP, WordPress, SAP) were also queried for comparison but are not shown on the map. The product queries Fronius, Danfoss, VSAT did not identify devices (0 results). RTSP was not linked to any risk because the assessment does not support a link.</p>
 <h2>Sources</h2>
 <ul>
 <li>Ministry of the Interior of Finland (2026). <a href="https://urn.fi/URN:ISBN:978-952-324-888-5">Kansallinen riskiarvio 2026</a> [National Risk Assessment 2026], in Finnish. Publications of the Ministry of the Interior 2026:22.</li>
@@ -82,6 +94,7 @@ footer { margin-top: 30px; font-size: 12px; color: var(--muted); }
 </ul>
 <footer>Shodan data: Shodan® (shodan.io); Shodan owns the data and holds its copyright. Icons: Lucide (ISC license).</footer>
 </main>
+<script>document.getElementById("theme").addEventListener("click", function () { var h = document.documentElement, t = h.getAttribute("data-theme") === "dark" ? "light" : "dark"; h.setAttribute("data-theme", t); try { localStorage.setItem("theme", t); } catch (e) {} });</script>
 {% endraw %}{% include analytics-providers/custom.html %}
 </body>
 </html>

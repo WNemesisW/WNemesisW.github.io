@@ -156,6 +156,9 @@ a:hover { color: var(--global-link-color-hover); }
   cursor: pointer;
 }
 .greedy-nav .hidden-links { background: var(--ih-surface); border-color: var(--ih-line); }
+/* Separator and project link to the right of the theme toggle (threat scenario map). */
+.greedy-nav .visible-links .ih-nav-sep { padding: 0 4px 0 18px; }
+.greedy-nav .visible-links .ih-nav-sep:after { content: ""; display: inline-block; width: 1px; height: 24px; vertical-align: middle; background: var(--ih-line-strong); }
 
 /* ---------- Inner pages: no sidebar, centred reading column ---------- */
 #main { max-width: 1120px; margin-top: 48px; padding-left: 24px; padding-right: 24px; }
