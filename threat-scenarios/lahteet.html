@@ -1,0 +1,87 @@
+---
+layout: null
+sitemap: false
+permalink: /threat-scenarios/lahteet.html
+---
+{% raw %}<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lähteet ja Shodan-haut</title>
+<style>
+:root { --bg: #05070d; --panel: rgba(15, 23, 39, .86); --line: rgba(148, 163, 184, .14); --ink: #e6edf7; --ink-2: #b4c1d4; --muted: #7c8aa3; --accent: #22d3ee; --vio: #a78bfa; --open: #f87171; }
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); font: 15px/1.55 Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: radial-gradient(1000px 480px at 8% -8%, rgba(34, 211, 238, .08), transparent 62%), radial-gradient(800px 420px at 100% 0%, rgba(167, 139, 250, .07), transparent 60%), var(--bg); min-height: 100vh; }
+main { max-width: 1000px; margin: 0 auto; padding: 22px 16px 48px; }
+.top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.top a { font-size: 13px; color: var(--accent); text-decoration: none; }
+.top .lang { font-weight: 600; letter-spacing: .06em; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; }
+.top .lang:hover { color: var(--ink); }
+h1 { font-size: 26px; line-height: 1.2; font-weight: 650; letter-spacing: -.015em; margin: 0 0 16px; }
+h2 { font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 34px 0 10px; }
+.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1px; border-radius: 18px; overflow: hidden;
+  background: linear-gradient(135deg, rgba(34, 211, 238, .45), rgba(167, 139, 250, .45)); padding: 1px; box-shadow: 0 14px 40px rgba(0, 0, 0, .35); }
+.notes div { background: linear-gradient(180deg, rgba(15, 23, 39, .97), rgba(10, 16, 28, .97)); padding: 16px 18px; }
+.notes b { display: block; font-size: 14px; margin-bottom: 4px; }
+.notes span { display: block; font-size: 13px; color: var(--ink-2); line-height: 1.45; }
+.tbl { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: rgba(11, 17, 30, .6); }
+table { width: 100%; border-collapse: collapse; min-width: 640px; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 13.5px; }
+th { color: var(--muted); font-weight: 600; font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; }
+tr:last-child td { border-bottom: 0; }
+td a { color: var(--ink); font-weight: 600; text-decoration: none; } td a:hover { color: var(--accent); }
+td .r { display: block; color: var(--muted); font-size: 12px; }
+td.p { font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.p code { display: block; font: 11.5px ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: var(--muted); white-space: nowrap; }
+td.w { color: var(--ink-2); }
+td.n { text-align: right; white-space: nowrap; font-weight: 650; color: var(--open); font-variant-numeric: tabular-nums; }
+.excl { font-size: 13px; color: var(--muted); margin: 10px 2px 0; }
+ul { margin: 0; padding-left: 18px; } li { color: var(--ink-2); margin: 6px 0; font-size: 14px; } li a { color: var(--accent); }
+footer { margin-top: 30px; font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+<div class="top"><a href="./?lang=fi">← Takaisin karttaan</a><a class="lang" href="sources.html" hreflang="en">EN</a></div>
+<h1>Lähteet ja Shodan-haut</h1>
+<div class="notes"><div><b>Mitä luku kertoo</b><span>Shodanissa näkyvien avoimien palvelujen määrä Suomessa 10.11.2026. Yksi osuma on palvelu osoitteessa ja portissa, ei yksilöity laite.</span></div><div><b>Osa on honeypotteja</b><span>Noin 15–25 % internetiin näkyvistä teollisuusjärjestelmistä on syöttejä (Mladenov ym. 2025). Lukuja ei ole korjattu.</span></div><div><b>Protokolla ei kerro toimialaa</b><span>Liitos riskeihin on tekijän arvio. Modbus-laite voi olla vesilaitoksella, kiinteistössä tai maatilalla.</span></div><div><b>Kertahaku, ei trendi</b><span>Haku tehtiin kerran rajauksella country:FI. Luvut voi toistaa samalla haulla Shodanissa.</span></div></div>
+<h2>Haetut protokollat</h2>
+<div class="tbl"><table><thead><tr><th>Protokolla</th><th>Portti</th><th>Miksi sen ei pitäisi näkyä</th><th>Osumia</th></tr></thead><tbody>
+<tr><td><a href="https://fi.wikipedia.org/wiki/Modbus" target="_blank" rel="noopener noreferrer">Modbus ↗</a><span class="r">Vesihuollon häiriöt</span></td><td class="p">502</td><td class="w">Teollisuuden ohjauslogiikoiden protokolla ilman tunnistautumista; lukee ja kirjoittaa prosessin arvoja.</td><td class="n">433</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/Simatic_S7" target="_blank" rel="noopener noreferrer">S7 ↗</a><span class="r">Vesihuollon häiriöt</span></td><td class="p">102</td><td class="w">Siemensin logiikoiden protokolla; mahdollistaa ohjauksen ja ohjelmoinnin verkon yli.</td><td class="n">378</td></tr>
+<tr><td><a href="https://fi.wikipedia.org/wiki/VNC" target="_blank" rel="noopener noreferrer">VNC ↗</a><span class="r">Vesihuollon häiriöt</span></td><td class="p">5900</td><td class="w">Etäkäyttönäkymä, myös teollisuuden käyttöpaneeleissa; usein heikosti suojattu.</td><td class="n">2 488</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/Teltonika" target="_blank" rel="noopener noreferrer">Teltonika ↗</a><span class="r">Vesihuollon häiriöt</span></td><td class="p">–<code>http.title:Teltonika</code></td><td class="w">Teollisuuden etäyhteysreitittimen hallintasivu; väylä automaatioverkkoon.</td><td class="n">1 408</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/IEC_60870-5" target="_blank" rel="noopener noreferrer">IEC 104 ↗</a><span class="r">Sähköjakelun suurhäiriö tai sähköpula</span></td><td class="p">2404</td><td class="w">Sähköverkon kaukokäytön protokolla ilman salausta tai tunnistautumista.</td><td class="n">439</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/Tank_gauging" target="_blank" rel="noopener noreferrer">ATG ↗</a><span class="r">Polttoaineiden saatavuuden suurhäiriö</span></td><td class="p">10001<code>I20100</code></td><td class="w">Polttoainesäiliöiden pinnanmittaus; vastaa komentoihin ilman tunnistautumista.</td><td class="n">18</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/BACnet" target="_blank" rel="noopener noreferrer">BACnet ↗</a><span class="r">Terroristinen tai väkivaltainen isku</span></td><td class="p">47808</td><td class="w">Kiinteistö- ja konesaliautomaation protokolla ilman tunnistautumista.</td><td class="n">65</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/DICOM" target="_blank" rel="noopener noreferrer">DICOM ↗</a><span class="r">Mikrobilääkeresistenssi</span></td><td class="p">–<code>&quot;DICOM Server Response&quot;</code></td><td class="w">Lääketieteellisten kuvien arkisto; voi paljastaa potilastietoja.</td><td class="n">60</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/MikroTik" target="_blank" rel="noopener noreferrer">Winbox ↗</a><span class="r">Viestintäverkkojen häiriöt</span></td><td class="p">8291</td><td class="w">MikroTik-reitittimien hallintaportti; laajasti hyödynnetty hyökkäyksissä.</td><td class="n">1 857</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/TR-069" target="_blank" rel="noopener noreferrer">TR-069 ↗</a><span class="r">Viestintäverkkojen häiriöt</span></td><td class="p">7547</td><td class="w">Operaattorin päätelaitteiden etähallinta; käytetty laitteiden massakaappauksissa.</td><td class="n">37 473</td></tr>
+<tr><td><a href="https://fi.wikipedia.org/wiki/MongoDB" target="_blank" rel="noopener noreferrer">MongoDB ↗</a><span class="r">Tiedon käytettävyyden häiriintyminen</span></td><td class="p">27017</td><td class="w">Tietokanta suoraan internetissä; tietovuotojen ja kiristyksen yleinen kohde.</td><td class="n">1 649</td></tr>
+<tr><td><a href="https://fi.wikipedia.org/wiki/PostgreSQL" target="_blank" rel="noopener noreferrer">PostgreSQL ↗</a><span class="r">Tiedon käytettävyyden häiriintyminen</span></td><td class="p">5432</td><td class="w">Tietokanta suoraan internetissä; altis salasanojen arvailulle.</td><td class="n">6 959</td></tr>
+<tr><td><a href="https://fi.wikipedia.org/wiki/Server_Message_Block" target="_blank" rel="noopener noreferrer">SMB ↗</a><span class="r">Tiedon käytettävyyden häiriintyminen</span></td><td class="p">445</td><td class="w">Windowsin tiedostojako; kiristyshaittaohjelmien tunnettu levitysreitti.</td><td class="n">9 926</td></tr>
+<tr><td><a href="https://en.wikipedia.org/wiki/Remote_Desktop_Protocol" target="_blank" rel="noopener noreferrer">RDP ↗</a><span class="r">Osaavan työvoiman saatavuus</span></td><td class="p">3389</td><td class="w">Windowsin etätyöpöytä; yleinen kiristyshaittaohjelmien sisäänpääsyreitti.</td><td class="n">11 650</td></tr>
+<tr><td><a href="https://fi.wikipedia.org/wiki/RTSP" target="_blank" rel="noopener noreferrer">RTSP ↗</a><span class="r">Terroristinen tai väkivaltainen isku</span></td><td class="p">554</td><td class="w">Kameroiden videovirta; voi näyttää kuvaa ilman salasanaa.</td><td class="n">2 630</td></tr>
+</tbody></table></div>
+<p class="excl">Vertailuna haettiin myös tarkoituksella julkiset palvelut (NTP, BGP, DNS, SIP, IKE, AD FS, H.323, SMTP, WordPress, SAP), joita ei näytetä kartalla. Tuotehaut Fronius, Danfoss, VSAT eivät tunnistaneet laitteita (0 osumaa).</p>
+<h2>Lähteet</h2>
+<ul>
+<li>Sisäministeriö (2026). <a href="https://urn.fi/URN:ISBN:978-952-324-888-5">Kansallinen riskiarvio 2026</a>. Sisäministeriön julkaisuja 2026:22.</li>
+<li>Mladenov, M., Erdődi, L. &amp; Smaragdakis, G. (2025). <a href="https://gsmaragd.github.io/publications/EuroSP2025-ICS/EuroSP2025-ICS.pdf">All that Glitters is not Gold: Uncovering Exposed Industrial Control Systems and Honeypots in the Wild</a>. IEEE EuroS&amp;P 2025.</li>
+<li>CISA (2023). <a href="https://www.cisa.gov/resources-tools/programs/resilience-planning-program/infrastructure-dependency-primer/learn" target="_blank" rel="noopener noreferrer">Infrastructure Dependency Primer</a>.</li>
+<li>Euroopan parlamentti ja neuvosto (2022). <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022L2555" target="_blank" rel="noopener noreferrer">Direktiivi (EU) 2022/2555 (NIS2)</a>.</li>
+<li>NATO (2026). <a href="https://www.nato.int/en/about-us/official-texts-and-resources/official-texts/2026/09/15/2026-resilience-baseline-requirements" target="_blank" rel="noopener noreferrer">2026 Resilience Baseline Requirements</a>.</li>
+<li>World Economic Forum (2026). <a href="https://reports.weforum.org/docs/WEF_Global_Risks_Report_2026.pdf" target="_blank" rel="noopener noreferrer">Global Risks Report 2026</a>.</li>
+<li>Valtioneuvosto (2024). <a href="https://valtioneuvosto.fi/paatokset/paatos?decisionId=2322" target="_blank" rel="noopener noreferrer">Valtioneuvoston päätös huoltovarmuuden tavoitteista</a>.</li>
+<li>Valtioneuvosto (2025). <a href="https://urn.fi/URN:ISBN:978-952-383-817-8" target="_blank" rel="noopener noreferrer">Yhteiskunnan turvallisuusstrategia</a>.</li>
+<li>Traficom (2026). <a href="https://traficom.fi/sites/default/files/media/file/Radiotaajuuspaiva17032026RonoJuurakkoLehikoinen.pdf" target="_blank" rel="noopener noreferrer">Taajuuksien toimintavarmuus ja varautuminen (esitys)</a>.</li>
+<li>U.S. Department of Energy (2021). <a href="https://www.energy.gov/ceser/colonial-pipeline-cyber-incident" target="_blank" rel="noopener noreferrer">Colonial Pipeline Cyber Incident</a>.</li>
+<li>Oxford Institute for Energy Studies (2024). <a href="https://www.oxfordenergy.org/?p=46996" target="_blank" rel="noopener noreferrer">Finland and the Baltics without the Balticconnector</a>.</li>
+</ul>
+<footer>Shodan-tiedot: Shodan® (shodan.io); aineiston omistus ja tekijänoikeudet kuuluvat Shodanille. Ikonit: Lucide (ISC-lisenssi).</footer>
+</main>
+{% endraw %}{% include analytics-providers/custom.html %}
+</body>
+</html>
