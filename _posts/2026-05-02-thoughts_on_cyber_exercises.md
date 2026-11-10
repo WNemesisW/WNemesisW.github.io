@@ -76,7 +76,7 @@ In cyber operations, we often assume that improving visibility (Level 1) will na
 
 This is where Nelson Cowan provides critical insight.
 
-Cowan (2000) demonstrates that the human focus of attention is limited to roughly **3–5 meaningful units (“chunks”) at a time**. When the number of incoming stimuli exceeds this limit, the ability to process information meaningfully degrades rapidly. Time compression directly increases the rate of incoming stimuli, eventually leading to cognitive saturation.
+Cowan (2001) demonstrates that the human focus of attention is limited to roughly **3–5 meaningful units (“chunks”) at a time**. When the number of incoming stimuli exceeds this limit, the ability to process information meaningfully degrades rapidly. Time compression directly increases the rate of incoming stimuli, eventually leading to cognitive saturation.
 
 **In Endsley’s terms:**
 - Level 1 (perception) may still function — data is visible  
@@ -118,6 +118,6 @@ This could enable training for more prolonged, long-term conflict scenarios, rat
 
   https://doi.org/10.1518/001872095779049543
 
-- Cowan, N. (2000). *The Magical Number 4 in Short-Term Memory: A Reconsideration of Mental Storage Capacity*. Behavioral and Brain Sciences.  
+- Cowan, N. (2001). *The Magical Number 4 in Short-Term Memory: A Reconsideration of Mental Storage Capacity*. Behavioral and Brain Sciences.  
 
   https://doi.org/10.1017/S0140525X01003922
