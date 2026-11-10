@@ -1,8 +1,22 @@
 {% if post.read_time %}
-  {% assign words = post.content | strip_html | number_of_words %}
+  {% assign read_source = post.content %}
 {% elsif page.read_time %}
-  {% assign words = page.content | strip_html | number_of_words %}
+  {% assign read_source = page.content %}
 {% endif %}
+{% comment %} Figures built with the ih-fig includes are left out of the count: their labels are not running text. {% endcomment %}
+{% if read_source contains '<!-- /ih-fig -->' %}
+  {% assign read_parts = read_source | split: '<div class="ih-fig">' %}
+  {% assign read_source = '' %}
+  {% for read_part in read_parts %}
+    {% if forloop.first %}
+      {% assign read_source = read_part %}
+    {% else %}
+      {% assign read_rest = read_part | split: '<!-- /ih-fig -->' | last %}
+      {% assign read_source = read_source | append: read_rest %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% assign words = read_source | strip_html | number_of_words %}
 
 {% if site.words_per_minute %}
   {% if words < 180 %}

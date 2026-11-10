@@ -1,0 +1,51 @@
+{%- comment -%}
+  Figure for posts: rows of events on a shared time line, each row with a
+  highlighted window. A schematic, not a chart of measured data.
+  Usage in a post: include ih-strips.html with number=1 and
+  figure=page.figures.NAME.
+  The texts live in the post's front matter: cells (length of the time
+  line, 24 by default), heading, legend_window, legend_event, unit, axis,
+  caption and rows (label, events as cell numbers, window as first and
+  last cell, over set to true when the row exceeds the limit, note). The
+  number of events inside the window is counted here. No blank lines
+  below, so that Markdown passes the block through untouched.
+{%- endcomment -%}
+{%- assign f = include.figure -%}
+{%- assign cells = f.cells | default: 24 -%}
+<div class="ih-fig">
+<figure>
+<div class="ih-fig__panel">
+<div class="ih-strips" style="--ih-cells: {{ cells }};">
+{%- if f.heading %}
+<div class="ih-strips__heading">{{ f.heading }}</div>
+{%- endif %}
+<div class="ih-strips__legend" aria-hidden="true">
+<span class="ih-strips__key"><span class="ih-strips__swatch ih-strips__swatch--win"></span>{{ f.legend_window }}</span>
+<span class="ih-strips__key"><span class="ih-strips__swatch ih-strips__swatch--dot"></span>{{ f.legend_event }}</span>
+</div>
+{%- for r in f.rows -%}
+{%- assign w0 = r.window[0] -%}
+{%- assign w1 = r.window[1] -%}
+{%- assign wend = w1 | plus: 1 -%}
+{%- assign n = 0 -%}
+{%- for e in r.events -%}{%- if e >= w0 and e <= w1 -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endfor %}
+<div class="ih-strips__row{% if r.over %} ih-strips__row--over{% endif %}">
+<div class="ih-strips__head"><span class="ih-strips__label">{{ r.label }}</span><span class="ih-strips__count">{{ n }} {{ f.unit }}</span></div>
+<div class="ih-strips__track" aria-hidden="true">
+<span class="ih-strips__win" style="--s: {{ w0 }}; --e: {{ wend }};"></span>
+{%- for e in r.events -%}
+<span class="ih-strips__dot{% if e >= w0 and e <= w1 %} ih-strips__dot--in{% endif %}" style="--c: {{ e }};"></span>
+{%- endfor %}
+</div>
+<div class="ih-strips__note">{{ r.note }}</div>
+</div>
+{%- endfor %}
+{%- if f.axis %}
+<div class="ih-strips__axis" aria-hidden="true">{{ f.axis }}</div>
+{%- endif %}
+</div>
+</div>
+<figcaption><span class="ih-fig__num">Figure {{ include.number }}</span>{{ f.caption }}</figcaption>
+</figure>
+<!-- /ih-fig -->
+</div>

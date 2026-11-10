@@ -1,0 +1,30 @@
+{%- comment -%}
+  Figure for posts: rows that read from left to right and end in a
+  highlighted cell.
+  Usage in a post: include ih-matrix.html with number=3 and
+  figure=page.figures.NAME.
+  The texts live in the post's front matter: columns (three headings),
+  caption and rows (from, via, source, to). No blank lines below, so that
+  Markdown passes the block through untouched.
+{%- endcomment -%}
+{%- assign f = include.figure -%}
+<div class="ih-fig">
+<figure>
+<div class="ih-fig__panel">
+<div class="ih-matrix">
+<div class="ih-matrix__head" aria-hidden="true">{%- for h in f.columns -%}<span>{{ h }}</span>{%- endfor -%}</div>
+<ol class="ih-matrix__rows">
+{%- for r in f.rows %}
+<li class="ih-matrix__row">
+<div class="ih-matrix__cell"><span class="ih-matrix__label">{{ f.columns[0] }}</span><span class="ih-matrix__text"><span class="ih-matrix__n" aria-hidden="true">{{ forloop.index }}</span>{{ r.from }}</span><svg class="ih-fig__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></div>
+<div class="ih-matrix__cell"><span class="ih-matrix__label">{{ f.columns[1] }}</span><span class="ih-matrix__text">{{ r.via }}</span>{%- if r.source -%}<span class="ih-matrix__src">{{ r.source }}</span>{%- endif -%}<svg class="ih-fig__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></div>
+<div class="ih-matrix__cell ih-matrix__cell--need"><span class="ih-matrix__label">{{ f.columns[2] }}</span><span class="ih-matrix__text">{{ r.to }}</span></div>
+</li>
+{%- endfor %}
+</ol>
+</div>
+</div>
+<figcaption><span class="ih-fig__num">Figure {{ include.number }}</span>{{ f.caption }}</figcaption>
+</figure>
+<!-- /ih-fig -->
+</div>

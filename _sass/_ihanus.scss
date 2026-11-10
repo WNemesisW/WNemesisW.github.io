@@ -172,7 +172,7 @@ a:hover { color: var(--global-link-color-hover); }
 #main .archive { max-width: 880px; }
 
 .page__title { font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 16px; }
-.page__content { font-size: 17px; line-height: 1.7; }
+.page__content { font-size: 17px; line-height: 1.7; overflow-wrap: break-word; } /* long reference URLs wrap on narrow screens */
 .page__content h2 { font-size: 26px; margin-top: 48px; }
 .page__content h3 { font-size: 21px; margin-top: 32px; }
 .page__content p, .page__content li { text-wrap: pretty; }
@@ -390,6 +390,89 @@ a:hover { color: var(--global-link-color-hover); }
 .ih-chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
 .ih-chip { margin: 0; padding: 8px 16px; border: 1px solid var(--ih-line-strong); border-radius: 999px; background: var(--ih-surface); font-size: 14.5px; font-weight: 500; line-height: 1.4; color: var(--global-text-color); }
 
+/* ---------- Figures in posts ---------- */
+/* Built as HTML rather than images, so the text stays readable on small screens and follows the light and dark theme. */
+.ih-fig { margin: 40px 0; }
+.ih-fig > figure { display: block; margin: 0; }
+.ih-fig .ih-fig__panel { padding: 24px; border: 1px solid var(--ih-line); border-radius: 16px; background: var(--ih-surface); }
+.ih-fig figcaption { margin: 14px 0 0; font-family: var(--ih-font-body); font-size: 14px; line-height: 1.55; color: var(--ih-muted); }
+.ih-fig .ih-fig__num { margin-right: 10px; font-family: var(--ih-font-mono); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ih-accent); }
+.ih-fig .ih-fig__arrow { position: absolute; left: 100%; top: 50%; width: 16px; height: 16px; margin: -8px 0 0 6px; color: var(--ih-accent); }
+
+/* Flow: a chain of steps (lane a) with a separate note under each step (lane b). */
+.ih-fig .ih-flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-columns: repeat(var(--ih-steps, 4), minmax(0, 1fr)); column-gap: 28px; row-gap: 10px; }
+.ih-fig .ih-flow__lane { grid-column-start: 1; grid-column-end: -1; font-family: var(--ih-font-mono); font-size: 12px; font-weight: 500; line-height: 1.4; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ih-muted); }
+.ih-fig .ih-flow__lane--a { grid-row: 1; color: var(--ih-accent); }
+.ih-fig .ih-flow__lane--b { grid-row: 3; margin-top: 16px; }
+.ih-fig .ih-flow__step,
+.ih-fig .ih-flow__view { display: flex; flex-direction: column; gap: 4px; grid-column: var(--d); padding: 14px; border-radius: 12px; }
+.ih-fig .ih-flow__step { position: relative; grid-row: 2; border: 1px solid var(--ih-line-strong); border-top: 3px solid var(--ih-accent); background: var(--global-bg-color); }
+.ih-fig .ih-flow__view { grid-row: 4; border: 1px dashed var(--ih-line-strong); }
+.ih-fig .ih-flow__label { font-family: var(--ih-font-mono); font-size: 11.5px; font-weight: 500; line-height: 1.4; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ih-muted); }
+.ih-fig .ih-flow__title { font-family: var(--ih-font-head); font-size: 16px; font-weight: 600; line-height: 1.3; color: var(--global-text-color); }
+.ih-fig .ih-flow__text { font-size: 14px; line-height: 1.5; color: var(--ih-muted); }
+.ih-fig .ih-flow__view .ih-flow__text { color: var(--global-text-color); }
+/* Stacked flow: the steps stay under each other on wide screens too (long chains). */
+.ih-fig .ih-flow--stack { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); column-gap: 20px; row-gap: 26px; }
+.ih-fig .ih-flow--stack .ih-flow__lane--a { grid-column-start: 1; grid-column-end: 2; grid-row: 1; margin-bottom: -14px; }
+.ih-fig .ih-flow--stack .ih-flow__lane--b { grid-column-start: 2; grid-column-end: 3; grid-row: 1; margin-top: 0; margin-bottom: -14px; }
+.ih-fig .ih-flow--stack .ih-flow__step { grid-column: 1; grid-row: var(--m); justify-content: center; }
+.ih-fig .ih-flow--stack .ih-flow__view { grid-column: 2; grid-row: var(--m); }
+.ih-fig .ih-flow--stack .ih-flow__view--plain { justify-content: center; }
+.ih-fig .ih-flow--stack .ih-fig__arrow { left: 16px; top: 100%; margin: 5px 0 0; transform: rotate(90deg); }
+
+/* Matrix: rows that read from left to right, ending in the highlighted cell. */
+.ih-fig .ih-matrix__head,
+.ih-fig .ih-matrix__row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 28px; }
+.ih-fig .ih-matrix__head { padding-bottom: 12px; }
+.ih-fig .ih-matrix__head span { font-family: var(--ih-font-mono); font-size: 12px; font-weight: 500; line-height: 1.4; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ih-muted); }
+.ih-fig .ih-matrix__head span:last-child { color: var(--ih-accent); }
+.ih-fig .ih-matrix__rows { margin: 0; padding: 0; list-style: none; }
+.ih-fig .ih-matrix__row { margin: 0; padding: 16px 0; border-top: 1px solid var(--ih-line); }
+.ih-fig .ih-matrix__row:last-child { padding-bottom: 0; }
+.ih-fig .ih-matrix__cell { position: relative; display: flex; flex-direction: column; gap: 6px; font-size: 14.5px; line-height: 1.5; color: var(--global-text-color); }
+.ih-fig .ih-matrix__label { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.ih-fig .ih-matrix__n { margin-right: 10px; font-family: var(--ih-font-mono); font-size: 12px; font-weight: 500; color: var(--ih-accent); }
+.ih-fig .ih-matrix__src { font-family: var(--ih-font-mono); font-size: 12px; line-height: 1.5; color: var(--ih-muted); }
+.ih-fig .ih-matrix__cell--need { justify-content: center; padding: 14px 16px; border-radius: 12px; background: var(--ih-free-bg); font-family: var(--ih-font-head); font-size: 16px; font-weight: 600; line-height: 1.3; color: var(--ih-free-fg); }
+
+/* Compare: two things side by side, row by row. */
+.ih-fig .ih-compare__head,
+.ih-fig .ih-compare__row { display: grid; grid-template-columns: 104px minmax(0, 1fr) minmax(0, 1fr); column-gap: 28px; }
+.ih-fig .ih-compare__head { padding-bottom: 18px; }
+.ih-fig .ih-compare__side { position: relative; display: flex; flex-direction: column; gap: 4px; padding: 14px; border: 1px solid var(--ih-line-strong); border-top: 3px solid var(--ih-accent); border-radius: 12px; background: var(--global-bg-color); }
+.ih-fig .ih-compare__side:first-child { grid-column: 2; }
+.ih-fig .ih-compare__label,
+.ih-fig .ih-compare__key { font-family: var(--ih-font-mono); font-size: 11.5px; font-weight: 500; line-height: 1.4; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ih-muted); }
+.ih-fig .ih-compare__title { font-family: var(--ih-font-head); font-size: 18px; font-weight: 600; line-height: 1.3; color: var(--global-text-color); }
+.ih-fig .ih-compare__row { padding: 14px 0; border-top: 1px solid var(--ih-line); }
+.ih-fig .ih-compare__row:last-child { padding-bottom: 0; }
+.ih-fig .ih-compare__key { padding-top: 3px; }
+.ih-fig .ih-compare__cell { padding: 0 15px; font-size: 14.5px; line-height: 1.5; color: var(--global-text-color); }
+.ih-fig .ih-compare__who { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* Strips: events on a shared time line, each row with a highlighted window. A schematic, not a data chart. */
+.ih-fig .ih-strips__heading { margin-bottom: 12px; font-family: var(--ih-font-mono); font-size: 12px; font-weight: 500; line-height: 1.4; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ih-accent); }
+.ih-fig .ih-strips__legend { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 13px; line-height: 1.4; color: var(--ih-muted); }
+.ih-fig .ih-strips__key { display: inline-flex; align-items: center; gap: 8px; }
+.ih-fig .ih-strips__swatch { flex: none; }
+.ih-fig .ih-strips__swatch--win { width: 22px; height: 12px; border: 1px solid var(--ih-accent); border-radius: 4px; background: var(--ih-free-bg); }
+.ih-fig .ih-strips__swatch--dot { width: 9px; height: 9px; border-radius: 50%; background: var(--ih-muted); }
+.ih-fig .ih-strips__row { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--ih-line); }
+.ih-fig .ih-strips__head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; }
+.ih-fig .ih-strips__label { font-family: var(--ih-font-head); font-size: 16px; font-weight: 600; line-height: 1.3; color: var(--global-text-color); }
+.ih-fig .ih-strips__count { padding: 3px 10px; border-radius: 999px; background: var(--ih-free-bg); font-family: var(--ih-font-mono); font-size: 12px; font-weight: 500; line-height: 1.5; white-space: nowrap; color: var(--ih-free-fg); }
+.ih-fig .ih-strips__track { position: relative; display: grid; grid-template-columns: repeat(24, minmax(0, 1fr)); grid-template-columns: repeat(var(--ih-cells, 24), minmax(0, 1fr)); align-items: center; height: 46px; margin-top: 12px; }
+.ih-fig .ih-strips__track:before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; border-radius: 2px; background: var(--ih-line-strong); }
+.ih-fig .ih-strips__win { grid-row: 1; grid-column-start: var(--s); grid-column-end: var(--e); align-self: stretch; border: 1px solid var(--ih-accent); border-radius: 10px; background: var(--ih-free-bg); }
+.ih-fig .ih-strips__dot { position: relative; grid-row: 1; grid-column: var(--c); justify-self: center; width: 10px; height: 10px; border-radius: 50%; background: var(--ih-muted); box-shadow: 0 0 0 2px var(--ih-surface); }
+.ih-fig .ih-strips__dot--in { background: var(--ih-accent); box-shadow: 0 0 0 2px var(--ih-free-bg); }
+.ih-fig .ih-strips__note { margin-top: 10px; font-size: 14px; line-height: 1.5; color: var(--ih-muted); }
+.ih-fig .ih-strips__row--over .ih-strips__win { border-color: var(--ih-accepted-fg); background: var(--ih-accepted-bg); }
+.ih-fig .ih-strips__row--over .ih-strips__dot--in { background: var(--ih-accepted-fg); box-shadow: 0 0 0 2px var(--ih-accepted-bg); }
+.ih-fig .ih-strips__row--over .ih-strips__count { background: var(--ih-accepted-bg); color: var(--ih-accepted-fg); }
+.ih-fig .ih-strips__axis { margin-top: 12px; font-family: var(--ih-font-mono); font-size: 11.5px; font-weight: 500; line-height: 1.4; letter-spacing: 0.06em; text-align: right; text-transform: uppercase; color: var(--ih-muted); }
+
 /* ---------- Medium screens ---------- */
 @media (max-width: 900px) {
   .ih-cv-row { grid-template-columns: 1fr; gap: 20px; }
@@ -435,4 +518,74 @@ a:hover { color: var(--global-link-color-hover); }
   .ih-cv-row { padding: 36px 0; }
   .ih-edu, .ih-cv-cards { grid-template-columns: 1fr; }
   .ih-timeline__earlier { margin-left: 0; }
+  .ih-fig { margin: 32px 0; }
+  .ih-fig .ih-fig__panel { padding: 16px; }
+  .ih-fig .ih-flow { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 12px; row-gap: 26px; }
+  .ih-fig .ih-flow__lane--a { grid-column-start: 1; grid-column-end: 2; grid-row: 1; margin-bottom: -14px; }
+  .ih-fig .ih-flow__lane--b { grid-column-start: 2; grid-column-end: 3; grid-row: 1; margin-top: 0; margin-bottom: -14px; }
+  .ih-fig .ih-flow__step { grid-column: 1; grid-row: var(--m); }
+  .ih-fig .ih-flow__view { grid-column: 2; grid-row: var(--m); }
+  .ih-fig .ih-flow .ih-fig__arrow { left: 16px; top: 100%; margin: 5px 0 0; transform: rotate(90deg); }
+  .ih-fig .ih-flow__view--plain { justify-content: center; }
+  .ih-fig .ih-matrix__head { display: none; }
+  .ih-fig .ih-matrix__row { display: block; }
+  .ih-fig .ih-matrix__row:first-child { padding-top: 0; border-top: 0; }
+  .ih-fig .ih-matrix__cell { margin-bottom: 12px; }
+  .ih-fig .ih-matrix__cell:last-child { margin-bottom: 0; }
+  .ih-fig .ih-matrix__label { position: static; width: auto; height: auto; margin: 0; overflow: visible; clip: auto; white-space: normal; font-family: var(--ih-font-mono); font-size: 11.5px; font-weight: 500; line-height: 1.4; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ih-muted); }
+  .ih-fig .ih-matrix__cell--need .ih-matrix__label { color: var(--ih-free-fg); }
+  .ih-fig .ih-matrix .ih-fig__arrow { display: none; }
+  .ih-fig .ih-flow--stack { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 12px; }
+  .ih-fig .ih-compare__head,
+  .ih-fig .ih-compare__row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 12px; }
+  .ih-fig .ih-compare__head { padding-bottom: 14px; }
+  .ih-fig .ih-compare__side { padding: 12px; }
+  .ih-fig .ih-compare__side:first-child { grid-column: 1; }
+  .ih-fig .ih-compare__title { font-size: 15px; }
+  .ih-fig .ih-compare .ih-fig__arrow { display: none; }
+  .ih-fig .ih-compare__key { grid-column-start: 1; grid-column-end: -1; padding: 0 13px 6px; }
+  .ih-fig .ih-compare__cell { padding: 0 13px; font-size: 14px; }
+  .ih-fig .ih-strips__head { flex-direction: column; align-items: flex-start; }
+  .ih-fig .ih-strips__label { font-size: 15px; }
+  .ih-fig .ih-strips__track { height: 40px; }
+  .ih-fig .ih-strips__dot { width: 8px; height: 8px; }
+}
+
+/* ---------- Narrow phones: figures ---------- */
+/* Tighter boxes and slightly smaller headings, so that long words such as "Comprehension" stay in one piece. */
+@media (max-width: 400px) {
+  .ih-fig .ih-fig__panel { padding: 14px; }
+  .ih-fig .ih-flow { column-gap: 10px; }
+  .ih-fig .ih-flow__step,
+  .ih-fig .ih-flow__view { padding: 12px; }
+  .ih-fig .ih-flow__title { font-size: 15px; }
+  .ih-fig .ih-compare__head,
+  .ih-fig .ih-compare__row { column-gap: 10px; }
+  .ih-fig .ih-compare__side { padding: 12px 10px; }
+  .ih-fig .ih-compare__key { padding: 0 11px 6px; }
+  .ih-fig .ih-compare__cell { padding: 0 11px; }
+}
+@media (max-width: 370px) {
+  .ih-fig .ih-flow__title,
+  .ih-fig .ih-compare__title { font-size: 14px; }
+  .ih-fig .ih-flow__label,
+  .ih-fig .ih-compare__label,
+  .ih-fig .ih-compare__key { font-size: 10.5px; letter-spacing: 0.04em; }
+}
+
+/* Very narrow screens: one column, so that no word has to be split. */
+@media (max-width: 340px) {
+  .ih-fig .ih-flow { display: block; }
+  .ih-fig .ih-flow .ih-flow__lane--a,
+  .ih-fig .ih-flow .ih-flow__lane--b { margin-bottom: 0; }
+  .ih-fig .ih-flow .ih-flow__lane--b { margin-top: 2px; }
+  .ih-fig .ih-flow .ih-flow__step { margin-top: 14px; }
+  .ih-fig .ih-flow .ih-flow__view { margin-top: 6px; }
+  .ih-fig .ih-flow .ih-fig__arrow { display: none; }
+  .ih-fig .ih-compare__head { display: none; }
+  .ih-fig .ih-compare__row { display: block; }
+  .ih-fig .ih-compare__head + .ih-compare__row { padding-top: 0; border-top: 0; }
+  .ih-fig .ih-compare__key { padding: 0 0 2px; }
+  .ih-fig .ih-compare__cell { margin-top: 6px; padding: 0; }
+  .ih-fig .ih-compare__who { position: static; width: auto; height: auto; margin: 0; overflow: visible; clip: auto; white-space: normal; font-weight: 600; }
 }

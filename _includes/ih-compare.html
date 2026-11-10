@@ -1,0 +1,34 @@
+{%- comment -%}
+  Figure for posts: two things compared side by side, row by row.
+  Usage in a post: include ih-compare.html with number=1 and
+  figure=page.figures.NAME.
+  The texts live in the post's front matter: a and b (each with label and
+  title), caption and rows (label, a, b). No blank lines below, so that
+  Markdown passes the block through untouched.
+{%- endcomment -%}
+{%- assign f = include.figure -%}
+<div class="ih-fig">
+<figure>
+<div class="ih-fig__panel">
+<div class="ih-compare">
+<div class="ih-compare__head" aria-hidden="true">
+<div class="ih-compare__side">
+{%- if f.a.label -%}<span class="ih-compare__label">{{ f.a.label }}</span>{%- endif -%}
+<span class="ih-compare__title">{{ f.a.title }}</span><svg class="ih-fig__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></div>
+<div class="ih-compare__side">
+{%- if f.b.label -%}<span class="ih-compare__label">{{ f.b.label }}</span>{%- endif -%}
+<span class="ih-compare__title">{{ f.b.title }}</span></div>
+</div>
+{%- for r in f.rows %}
+<div class="ih-compare__row">
+<div class="ih-compare__key">{{ r.label }}</div>
+<div class="ih-compare__cell"><span class="ih-compare__who">{{ f.a.title }}: </span>{{ r.a }}</div>
+<div class="ih-compare__cell"><span class="ih-compare__who">{{ f.b.title }}: </span>{{ r.b }}</div>
+</div>
+{%- endfor %}
+</div>
+</div>
+<figcaption><span class="ih-fig__num">Figure {{ include.number }}</span>{{ f.caption }}</figcaption>
+</figure>
+<!-- /ih-fig -->
+</div>

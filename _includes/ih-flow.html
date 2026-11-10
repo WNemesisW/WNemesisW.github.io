@@ -1,0 +1,36 @@
+{%- comment -%}
+  Figure for posts: a chain of steps with a separate note for each step.
+  Usage in a post: include ih-flow.html with number=1 and
+  figure=page.figures.NAME.
+  The texts live in the post's front matter: lane_a, lane_b, caption and
+  steps (label, title, text, view_label, view). With layout set to "stack"
+  the steps stay under each other on wide screens too, which suits long
+  chains. No blank lines below, so that Markdown passes the block through
+  untouched.
+{%- endcomment -%}
+{%- assign f = include.figure -%}
+<div class="ih-fig">
+<figure>
+<div class="ih-fig__panel">
+<div class="ih-flow{% if f.layout == 'stack' %} ih-flow--stack{% endif %}" style="--ih-steps: {{ f.steps | size }};">
+<div class="ih-flow__lane ih-flow__lane--a">{{ f.lane_a }}</div>
+<div class="ih-flow__lane ih-flow__lane--b">{{ f.lane_b }}</div>
+{%- for s in f.steps -%}
+{%- assign m = forloop.index | plus: 1 %}
+<div class="ih-flow__step" style="--d: {{ forloop.index }}; --m: {{ m }};">
+{%- if s.label -%}<span class="ih-flow__label">{{ s.label }}</span>{%- endif -%}
+<span class="ih-flow__title">{{ s.title }}</span>
+{%- if s.text -%}<span class="ih-flow__text">{{ s.text }}</span>{%- endif -%}
+{%- unless forloop.last -%}<svg class="ih-fig__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>{%- endunless -%}
+</div>
+<div class="ih-flow__view{% unless s.view_label %} ih-flow__view--plain{% endunless %}" style="--d: {{ forloop.index }}; --m: {{ m }};">
+{%- if s.view_label -%}<span class="ih-flow__label">{{ s.view_label }}</span>{%- endif -%}
+<span class="ih-flow__text">{{ s.view }}</span>
+</div>
+{%- endfor %}
+</div>
+</div>
+<figcaption><span class="ih-fig__num">Figure {{ include.number }}</span>{{ f.caption }}</figcaption>
+</figure>
+<!-- /ih-fig -->
+</div>
