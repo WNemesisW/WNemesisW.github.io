@@ -241,7 +241,7 @@ const store = { get: function (k) { try { return localStorage.getItem(k); } catc
 let lang = (function () {
   const q = new URLSearchParams(location.search).get("lang"); if (q === "fi" || q === "en") return q;
   const s = store.get("uk-lang"); if (s === "fi" || s === "en") return s;
-  return "fi"; })();
+  return "en"; })();
 let hintOn = store.get("uk-hint-seen") !== "1", hintTarget = null;
 const T = function (k) { return STR[lang][k]; };
 const fmt = function (n) { return n.toLocaleString(lang === "fi" ? "fi-FI" : "en-US"); };
