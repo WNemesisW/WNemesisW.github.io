@@ -13,10 +13,10 @@ permalink: /threat-scenarios/sources.html
 <style>
 :root { --bg: #05070d; --panel: rgba(15, 23, 39, .86); --card-1: rgba(15, 23, 39, .97); --card-2: rgba(10, 16, 28, .97); --tbl: rgba(11, 17, 30, .6);
   --line: rgba(148, 163, 184, .14); --ink: #e6edf7; --ink-2: #b4c1d4; --muted: #7c8aa3; --accent: #22d3ee; --vio: #a78bfa; --open: #f87171;
-  --shadow: rgba(0, 0, 0, .35); --g1: rgba(34, 211, 238, .08); --g2: rgba(167, 139, 250, .07); color-scheme: dark; }
+  --shadow: rgba(0, 0, 0, .35); --g1: rgba(34, 211, 238, .08); --g2: rgba(167, 139, 250, .07); --sub: #a5f3fc; color-scheme: dark; }
 html[data-theme="light"] { --bg: #f5f7fb; --panel: rgba(255, 255, 255, .92); --card-1: #ffffff; --card-2: #f8fafc; --tbl: rgba(255, 255, 255, .8);
   --line: rgba(15, 23, 42, .10); --ink: #0f172a; --ink-2: #334155; --muted: #64748b; --accent: #0e7490; --vio: #7c3aed; --open: #dc2626;
-  --shadow: rgba(15, 23, 42, .08); --g1: rgba(8, 145, 178, .06); --g2: rgba(124, 58, 237, .05); color-scheme: light; }
+  --shadow: rgba(15, 23, 42, .08); --g1: rgba(8, 145, 178, .06); --g2: rgba(124, 58, 237, .05); --sub: #0e7490; color-scheme: light; }
 * { box-sizing: border-box; }
 body { margin: 0; color: var(--ink); font: 15px/1.55 Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   background: radial-gradient(1000px 480px at 8% -8%, var(--g1), transparent 62%), radial-gradient(800px 420px at 100% 0%, var(--g2), transparent 60%), var(--bg); min-height: 100vh; }
@@ -30,7 +30,8 @@ main { max-width: 1000px; margin: 0 auto; padding: 22px 16px 48px; }
 .theme svg { width: 15px; height: 15px; }
 html[data-theme="dark"] .t-moon, html[data-theme="light"] .t-sun { display: none; }
 .top .lang:hover, .theme:hover { color: var(--ink); }
-h1 { font-size: 26px; line-height: 1.2; font-weight: 650; letter-spacing: -.015em; margin: 0 0 16px; }
+h1 { font-size: 26px; line-height: 1.2; font-weight: 650; letter-spacing: -.015em; margin: 0 0 8px; }
+.lead { margin: 0 0 18px; color: var(--sub); font-size: 15px; font-weight: 500; max-width: 760px; }
 h2 { font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 34px 0 10px; }
 .notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1px; border-radius: 18px; overflow: hidden;
   background: linear-gradient(135deg, rgba(34, 211, 238, .45), rgba(167, 139, 250, .45)); padding: 1px; box-shadow: 0 14px 40px var(--shadow); }
@@ -59,6 +60,7 @@ footer { margin-top: 30px; font-size: 12px; color: var(--muted); }
 <main>
 <div class="top"><a href="./?lang=en">← Back to the map</a><div class="tools"><a class="lang" href="lahteet.html" hreflang="fi">FI</a><button type="button" class="theme" id="theme" aria-label="Toggle theme"><svg class="t-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button></div></div>
 <h1>Sources and Shodan queries</h1>
+<p class="lead">An open port does not automatically mean a vulnerable device. The numbers are indicative.</p>
 <div class="notes"><div><b>What the number means</b><span>The number of open services visible in Shodan in Finland on 10 Nov 2026. One result is a service at an address and port, not an identified device.</span></div><div><b>Some are honeypots</b><span>About 15–25% of internet-exposed industrial control systems are decoys (Mladenov et al. 2025). The numbers have not been adjusted.</span></div><div><b>A protocol does not reveal the sector</b><span>The link to risks is the author&#x27;s assessment. A Modbus device can be at a water utility, in a building or on a farm.</span></div><div><b>A single query, not a trend</b><span>The query was run once with the scope country:FI. The numbers can be reproduced with the same query in Shodan.</span></div></div>
 <h2>Protocols queried</h2>
 <div class="tbl"><table><thead><tr><th>Protocol and link to risk</th><th>Port</th><th>Why it should not be exposed</th><th>Results</th></tr></thead><tbody>
