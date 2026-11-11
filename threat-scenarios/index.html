@@ -23,7 +23,7 @@ html[data-theme="light"] {
   --bg: #f5f7fb; --panel: rgba(255, 255, 255, .9); --panel-2: rgba(248, 250, 252, .95); --line: rgba(15, 23, 42, .10); --line-2: rgba(15, 23, 42, .18);
   --ink: #0f172a; --ink-2: #334155; --muted: #64748b; --accent: #0e7490; --out: #0891b2; --in: #7c3aed; --bi: #059669;
   --p0: #64748b; --p2: #2563eb; --p3: #d97706; --p4: #db2777; --open: #dc2626; --open-2: #b91c1c;
-  --c0: rgba(8, 145, 178, 0.05); --c1: rgba(124, 58, 237, 0.04); --c2: #0e7490; --c3: #ffffff; --c4: #64748b; --c5: rgba(15, 23, 42, 0.056); --c6: rgba(8, 145, 178, 0.019); --c7: rgba(255, 255, 255, 0.72); --c8: rgba(255, 255, 255, 0.72); --c9: rgba(15, 23, 42, 0.083); --c10: rgba(255, 255, 255, 0.03); --c11: rgba(15, 23, 42, 0.077); --c12: rgba(15, 23, 42, 0.07); --c13: rgba(8, 145, 178, 0.099); --c14: rgba(15, 23, 42, 0.06); --c15: rgba(124, 58, 237, 0.275); --c16: rgba(220, 38, 38, 0.072); --c17: rgba(220, 38, 38, 0.252); --c18: rgba(220, 38, 38, 0.144); --c19: rgba(220, 38, 38, 0.495); --c20: #475569; --c21: #ffffff; --c22: #0891b2; --c23: #ffffff; --c24: #7c3aed; --c25: #ffffff; --c26: #059669; --c27: rgba(8, 145, 178, 0.193); --c28: rgba(8, 145, 178, 0.275); --c29: rgba(8, 145, 178, 0.154); --c30: rgba(8, 145, 178, 0.44); --c31: rgba(5, 150, 105, 0.4); --c32: rgba(124, 58, 237, 0.4); --c33: rgba(8, 145, 178, 0.248); --c34: rgba(8, 145, 178, 0); --c35: rgba(8, 145, 178, 0.138); --c36: rgba(15, 23, 42, 0.088); --c37: rgba(255, 255, 255, 0.192); --c38: rgba(255, 255, 255, 0.6); --c39: rgba(8, 145, 178, 0.044); --c40: rgba(255, 255, 255, 1); --c41: rgba(15, 23, 42, 0.11);
+  --c0: rgba(8, 145, 178, 0.05); --c1: rgba(124, 58, 237, 0.04); --c2: #0e7490; --c3: #ffffff; --c4: #64748b; --c5: rgba(15, 23, 42, 0.056); --c6: rgba(8, 145, 178, 0.019); --c7: rgba(255, 255, 255, 0.72); --c8: rgba(255, 255, 255, 0.72); --c9: rgba(15, 23, 42, 0.083); --c10: rgba(255, 255, 255, 0.03); --c11: rgba(15, 23, 42, 0.077); --c12: rgba(15, 23, 42, 0.07); --c13: rgba(8, 145, 178, 0.099); --c14: rgba(15, 23, 42, 0.06); --c15: rgba(124, 58, 237, 0.275); --c16: rgba(220, 38, 38, 0.072); --c17: rgba(220, 38, 38, 0.252); --c18: rgba(220, 38, 38, 0.144); --c19: rgba(220, 38, 38, 0.495); --c20: #475569; --c21: #164e63; --c22: #0891b2; --c23: #4c1d95; --c24: #7c3aed; --c25: #064e3b; --c26: #059669; --c27: rgba(8, 145, 178, 0.193); --c28: rgba(8, 145, 178, 0.275); --c29: rgba(8, 145, 178, 0.154); --c30: rgba(8, 145, 178, 0.44); --c31: rgba(5, 150, 105, 0.4); --c32: rgba(124, 58, 237, 0.4); --c33: rgba(8, 145, 178, 0.248); --c34: rgba(8, 145, 178, 0); --c35: rgba(8, 145, 178, 0.138); --c36: rgba(15, 23, 42, 0.088); --c37: rgba(255, 255, 255, 0.192); --c38: rgba(255, 255, 255, 0.6); --c39: rgba(8, 145, 178, 0.044); --c40: rgba(255, 255, 255, 1); --c41: rgba(15, 23, 42, 0.11);
   color-scheme: light;
 }
 #m0 path { fill: var(--edge-m); } #m1 path { fill: var(--out); } #m2 path { fill: var(--in); } #m3 path { fill: var(--bi); }
@@ -322,7 +322,7 @@ function draw() {
     P(L + ">").push({ g: g, k: "y1", oy: cy(R) }); P(R + "<").push({ g: g, k: "y2", oy: cy(L) }); return g; });
   Object.keys(ports).forEach(function (key) { const b = B[key.slice(0, -1)], list = ports[key], h = b.b - b.t;
     list.sort(function (p, q) { return p.oy - q.oy; });
-    list.forEach(function (p, j) { p.g[p.k] = b.t + h * .14 + h * .72 * (j + 1) / (list.length + 1); }); });
+    list.forEach(function (p, j) { p.g[p.k] = b.t + h * .08 + h * .84 * (j + 1) / (list.length + 1); }); });
   geo.forEach(function (g) { if (g.same || g.vert) return;
     for (let k = g.cl + 1; k < g.cr; k++) {
       const yi = g.y1 + (g.y2 - g.y1) * (k - g.cl) / (g.cr - g.cl); let best = null, bd = 1e12;
@@ -341,7 +341,7 @@ function draw() {
     list.forEach(function (p) { const g = p.g; if (g.same || g.vert) return;
       p.oy = side === ">" ? (g.cr - g.cl > 1 ? g.ys[g.cl + 1] : g.y2) : (g.cr - g.cl > 1 ? g.ys[g.cr - 1] : g.y1); });
     list.sort(function (p, q) { return p.oy - q.oy; });
-    list.forEach(function (p, j) { p.g[p.k] = b.t + h * .14 + h * .72 * (j + 1) / (list.length + 1); }); });
+    list.forEach(function (p, j) { p.g[p.k] = b.t + h * .08 + h * .84 * (j + 1) / (list.length + 1); }); });
   tracks();
   let h = "", same = 0;
   geo.forEach(function (g) {
@@ -350,11 +350,13 @@ function draw() {
       d = "M" + x + " " + (B[g.U].b + 1).toFixed(1) + " L" + x + " " + (B[g.D].t - 1).toFixed(1);
       h += '<path id="e' + g.i + '" class="edge" d="' + d + '"/><path id="f' + g.i + '" class="flow" d="' + d + '"/><path id="h' + g.i + '" class="hit" data-i="' + g.i + '" d="' + d + '"/>';
       EDGES[g.i].dir = EDGES[g.i].a === g.U ? "end" : "start"; EDGES[g.i].p0 = g.U; return; }
+    const S = 12;  // suora osuus viivan päissä: nuolenkärki asettuu viivan suuntaisesti
     if (g.same) { const x = B[g.L].r, off = 30 + (same++ % 3) * 12;
-      d = "M" + x + " " + g.y1.toFixed(1) + " C" + (x + off) + " " + g.y1.toFixed(1) + " " + (x + off) + " " + g.y2.toFixed(1) + " " + (x + 1) + " " + g.y2.toFixed(1); }
-    else { let x = B[g.L].r, y = g.y1; d = "M" + x + " " + y.toFixed(1);
+      d = "M" + x + " " + g.y1.toFixed(1) + " L" + (x + S) + " " + g.y1.toFixed(1) + " C" + (x + S + off) + " " + g.y1.toFixed(1) + " " + (x + S + off) + " " + g.y2.toFixed(1) +
+        " " + (x + S) + " " + g.y2.toFixed(1) + " L" + (x + 1) + " " + g.y2.toFixed(1); }
+    else { let x = B[g.L].r + S, y = g.y1; d = "M" + B[g.L].r + " " + y.toFixed(1) + " L" + x + " " + y.toFixed(1);
       for (let k = g.cl + 1; k < g.cr; k++) { const yk = g.ys[k]; d += curve(x, y, CX[k].l, yk) + " L" + CX[k].r + " " + yk.toFixed(1); x = CX[k].r; y = yk; }
-      d += curve(x, y, B[g.R].l - 1, g.y2); }
+      d += curve(x, y, B[g.R].l - 1 - S, g.y2) + " L" + (B[g.R].l - 1) + " " + g.y2.toFixed(1); }
     h += '<path id="e' + g.i + '" class="edge" d="' + d + '"/><path id="f' + g.i + '" class="flow" d="' + d + '"/><path id="h' + g.i + '" class="hit" data-i="' + g.i + '" d="' + d + '"/>';
     EDGES[g.i].dir = g.same || EDGES[g.i].a === g.L ? "end" : "start"; EDGES[g.i].p0 = g.L;
   });
@@ -390,7 +392,7 @@ function paint() {
     hit.setAttribute("class", "hit" + (touch ? " on" : ""));
     // Virtaus kulkee lähteestä kohteeseen; kaksisuuntaisessa valitusta poispäin
     const fl = $("f" + i), fwd = d.bi ? d.p0 === selected : d.dir === "end";
-    fl.setAttribute("class", "flow" + (touch ? " on" + (fwd ? "" : " rev") + (st === "inn" ? " in" : st === "both" ? " bi" : "") : ""));
+    fl.setAttribute("class", "flow" + (touch && d.kind !== "x" ? " on" + (fwd ? "" : " rev") + (st === "inn" ? " in" : st === "both" ? " bi" : "") : ""));
     const mk = "url(#" + (st === "inn" ? "m2" : st === "both" ? "m3" : st ? "m1" : "m0") + ")";
     el.removeAttribute("marker-start"); el.removeAttribute("marker-end");
     if (d.bi) { el.setAttribute("marker-start", mk); el.setAttribute("marker-end", mk); }
