@@ -34,7 +34,7 @@ body { margin: 0; color: var(--ink); font: 14px/1.45 Inter, ui-sans-serif, syste
   background: radial-gradient(1100px 520px at 8% -8%, var(--c0), transparent 62%),
               radial-gradient(900px 480px at 100% -4%, var(--c1), transparent 60%), var(--bg); min-height: 100vh; }
 .scroll { overflow-x: auto; }
-.inner { min-width: 1286px; max-width: 1920px; margin: 0 auto; padding: 0 28px; }
+.inner { min-width: 1128px; max-width: 1920px; margin: 0 auto; padding: 0 28px; }
 .topbar { display: flex; justify-content: space-between; align-items: center; padding: 16px 0 0; }
 header { display: grid; grid-template-columns: minmax(0, 1fr) minmax(340px, 500px); gap: 48px; align-items: end; padding: 14px 0 20px; }
 .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
@@ -68,7 +68,7 @@ html[data-theme="dark"] .t-moon, html[data-theme="light"] .t-sun { display: none
 .sw { display: inline-block; width: 24px; height: 8px; }
 .sw line { stroke: var(--c4); stroke-width: 2.4; stroke-linecap: round; }
 .sw.out line { stroke: var(--out); } .sw.inn line { stroke: var(--in); } .sw.bi line { stroke: var(--bi); } .sw.dash line { stroke-dasharray: .5 6; stroke-width: 3; }
-.map { position: relative; display: grid; grid-template-columns: repeat(5, minmax(190px, 256px)); column-gap: clamp(56px, 6.5vw, 128px); row-gap: 46px;
+.map { position: relative; display: grid; grid-template-columns: repeat(5, minmax(168px, 256px)); column-gap: clamp(44px, 5vw, 128px); row-gap: 46px;
   justify-content: space-between; align-items: center; padding: 66px 72px 48px 40px; margin-top: 10px;
   background: radial-gradient(var(--c5) 1px, transparent 1px) 0 0 / 24px 24px,
     radial-gradient(900px 420px at 50% 0%, var(--c6), transparent 70%),
@@ -205,10 +205,10 @@ footer a:hover { text-decoration: underline; }
   </section>
 </header>
 <div class="map" id="map"><div class="tools"><div class="lang" role="group" id="lang"><button type="button" data-l="fi" lang="fi">FI</button><button type="button" data-l="en" lang="en">EN</button></div><button type="button" class="theme" id="theme"><svg class="t-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button></div><div class="legend"><span class="dirl"><span data-t="causes"></span><i class="bar"></i><span data-t="affected"></span></span><i class="sep"></i><span><svg class="sw out" viewBox="0 0 30 8" aria-hidden="true"><line x1="2" y1="4" x2="28" y2="4"/></svg><span data-t="selOut"></span></span><span><svg class="sw inn" viewBox="0 0 30 8" aria-hidden="true"><line x1="2" y1="4" x2="28" y2="4"/></svg><span data-t="selIn"></span></span><span><svg class="sw bi" viewBox="0 0 30 8" aria-hidden="true"><line x1="2" y1="4" x2="28" y2="4"/></svg><span data-t="selBi"></span></span><i class="sep"></i><span><svg class="sw" viewBox="0 0 30 8" aria-hidden="true"><line x1="2" y1="4" x2="28" y2="4"/></svg><span data-t="lineR"></span></span><span><svg class="sw dash" viewBox="0 0 30 8" aria-hidden="true"><line x1="2" y1="4" x2="28" y2="4"/></svg><span data-t="lineX"></span></span></div><svg id="wires" aria-hidden="true"><defs>
-<marker id="m0" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="userSpaceOnUse" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8aa0bd"/></marker>
-<marker id="m1" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#22d3ee"/></marker>
-<marker id="m2" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#a78bfa"/></marker>
-<marker id="m3" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#34d399"/></marker>
+<marker id="m0" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M0 0.5L10 5L0 9.5L2.6 5z" fill="#8aa0bd"/></marker>
+<marker id="m1" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto-start-reverse"><path d="M0 0.5L10 5L0 9.5L2.6 5z" fill="#22d3ee"/></marker>
+<marker id="m2" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto-start-reverse"><path d="M0 0.5L10 5L0 9.5L2.6 5z" fill="#a78bfa"/></marker>
+<marker id="m3" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto-start-reverse"><path d="M0 0.5L10 5L0 9.5L2.6 5z" fill="#34d399"/></marker>
 </defs><g id="edges"></g></svg>
 <div id="hint" role="note"><span data-t="hint"></span><button type="button" id="hint-x">×</button>
 <svg class="arrow" viewBox="0 0 22 26" aria-hidden="true"><path d="M11 1v20M3 14l8 9 8-9" fill="none" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -371,7 +371,7 @@ function placeHint(B) {
   hint.style.top = Math.max(52, b.t - hint.offsetHeight - 30) + "px";
 }
 function LIVE_COLS() { return COLS.map(function (ids) { return ids.filter(function (x) { return x; }); }).filter(function (ids) { return ids.length; }); }
-function hideHint() { if (!hintOn) return; hintOn = false; store.set("uk-hint-seen", "1"); hint.style.display = "none"; map.classList.remove("hinting");
+function hideHint() { if (!hintOn) return; hintOn = false; store.set("uk-hint-seen", "1"); hint.style.display = "none"; map.classList.remove("hinting"); redraw();
   if (hintTarget) { const el = $("r-" + hintTarget); if (el) el.classList.remove("pulse"); } }
 function paint() {
   const on = {}; if (selected) on[selected] = 1;
@@ -409,7 +409,9 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", fun
   if (store.get("theme") !== "dark" && store.get("theme") !== "light") document.documentElement.setAttribute("data-theme", e.matches ? "dark" : "light"); });
 let queued = false;
 function redraw() { if (queued) return; queued = true; requestAnimationFrame(function () { queued = false; draw(); }); }
-if (window.ResizeObserver) new ResizeObserver(redraw).observe(map); else addEventListener("resize", redraw);
+// border-box: myös sisävälin muutos (kehotteen tila) piirtää viivat uudelleen
+if (window.ResizeObserver) new ResizeObserver(redraw).observe(map, { box: "border-box" }); else addEventListener("resize", redraw);
+MOBILE.addEventListener("change", redraw);
 addEventListener("load", redraw);
 setLang(lang);
 </script>
