@@ -1,7 +1,7 @@
 ---
 permalink: /
 layout: home
-title: "Cyber situation awareness in research and practice"
+title: "Academic portfolio"
 excerpt: "Jouni Ihanus – PhD candidate and cyber security practitioner working on cyber situation awareness and deception technologies."
 author_profile: false
 redirect_from: 
