@@ -286,7 +286,15 @@ footer a:hover { text-decoration: underline; }
   .fp .fpb { margin-left: 4px; color: var(--bi); font-weight: 700; }
   .fnone { font-size: 13px; color: var(--muted); }
   .fwhy { margin-top: 10px; font-size: 12.5px; color: var(--ink-2); }
-  .fwhy summary { cursor: pointer; font-size: 12px; font-weight: 600; color: var(--muted); padding: 4px 0; }
+  .fwhy summary { display: inline-flex; align-items: center; gap: 8px; min-height: 38px; padding: 7px 14px; border-radius: 999px; cursor: pointer;
+    list-style: none; font-size: 13px; font-weight: 650; color: var(--accent); background: color-mix(in srgb, var(--accent) 11%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 38%, transparent); -webkit-tap-highlight-color: transparent; }
+  .fwhy summary::-webkit-details-marker { display: none; }
+  .fwhy summary::after { content: ""; width: 6px; height: 6px; margin-top: -3px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+    transform: rotate(45deg); transition: transform .2s ease; }
+  .fwhy[open] summary::after { margin-top: 3px; transform: rotate(-135deg); }
+  .fwhy summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .fwhy[open] summary { background: color-mix(in srgb, var(--accent) 18%, transparent); }
   .fwhy ul { margin: 6px 0 0; padding-left: 16px; } .fwhy li { margin: 7px 0; } .fwhy b { display: block; color: var(--ink); font-weight: 600; }
   .fconn { display: flex; justify-content: center; height: 36px; margin: 3px 0; }
   .fconn svg { width: 24px; height: 36px; overflow: visible; }
@@ -585,7 +593,7 @@ function fgroup(sel, list, dir) {
   if (!n) return h + '<div class="fnone">' + esc(T("fNone")) + "</div></div>";
   const key = function (x) { return dir === "in" ? x + ">" + sel : sel + ">" + x; };
   h += '<div class="fps">' + list.map(function (x) { return fpill(x, dir, bis.indexOf(x) >= 0, (RINFO[key(x)] || {}).k); }).join("") + "</div>";
-  h += '<details class="fwhy"><summary>' + esc(T("fWhy")) + "</summary><ul>" + list.map(function (x) {
+  h += '<details class="fwhy"><summary>' + esc(T("fWhy")) + " (" + n + ")</summary><ul>" + list.map(function (x) {
     const a = dir === "in" ? x : sel, b = dir === "in" ? sel : x, r = RINFO[key(x)];
     return "<li><b>" + esc(byId[a].l[lang] + " → " + byId[b].l[lang]) + "</b>" + (r ? r[lang].map(esc).join("<br>") : "") + "</li>"; }).join("") + "</ul></details>";
   return h + "</div>";
@@ -600,7 +608,7 @@ function buildFocus(id) {
     fgroup(id, n.fr, "in") + (n.fr.length ? fconn("in") : '<div class="fconn"></div>');
   focusEl.appendChild(card(n, false, true));
   const acts = n.sh.filter(function (c) { return c.a; });
-  focusEl.insertAdjacentHTML("beforeend", (acts.length ? '<details class="fwhy fact"><summary>' + esc(T("tipAct")) + "</summary><ul>" + acts.map(function (c) {
+  focusEl.insertAdjacentHTML("beforeend", (acts.length ? '<details class="fwhy fact"><summary>' + esc(T("tipAct")) + " (" + acts.length + ")</summary><ul>" + acts.map(function (c) {
       return "<li><b>" + esc(c.n) + "</b>" + c.a[lang].map(esc).join("<br>") + "</li>"; }).join("") + "</ul></details>" : "") +
     (n.to.length ? fconn("out") : '<div class="fconn"></div>') + fgroup(id, n.to, "out"));
 }
