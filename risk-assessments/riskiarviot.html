@@ -213,38 +213,103 @@ footer { margin-top: 16px; font-size: 11.5px; color: var(--muted); }
 <section class="kpis"><div class="kpi p"><b>8/8</b><span>maan arviosta on julkinen riskiluettelo</span></div><div class="kpi c"><b>15</b><span>teemaa on yhteisiä lähes kaikille</span></div><div class="kpi u"><b>8</b><span>riskiä on vain yhden maan arviossa</span></div><div class="kpi k"><b>7/8</b><span>arviossa on oma kyber- tai tietojärjestelmäriski</span></div></section>
 <section class="intro"><p class="desc">Vertailussa ovat Suomen, Ruotsin, Norjan, Tanskan, Islannin, Viron, Latvian ja Liettuan kansallisten riskiarvioiden riskit. Maat nimeävät ja rajaavat riskinsä eri tavoin, joten riskit on ryhmitelty 39 yhteiseen teemaan; sama riski voi kuulua useaan teemaan.</p><h2>Näin luet vertailua</h2><ol class="howto"><li><b>Teemoittain</b>Rivi on teema ja sarake maa. Solussa ovat maan riskit, jotka kuuluvat teemaan; viiva tarkoittaa, ettei arviossa ole riskiä omana kohtanaan.</li><li><b>Maittain</b>Kunkin maan riskit arvion omassa järjestyksessä, teemat riskin alla.</li><li><b>Värit</b><i class="sw c"></i> lähes kaikissa arvioissa (vähintään 6/8), <i class="sw p"></i> osassa, <i class="sw u"></i> vain yhden maan arviossa.</li><li><b>Korostus ja lisätiedot</b>Vie osoitin riskin päälle: saman riskin kaikki esiintymät korostuvat, ja vihjeessä näkyvät alkuperäinen nimi, teemat ja todennäköisyys, jos arvio antaa sen.</li></ol></section>
 <section class="panel"><div class="phead"><div class="tabs" role="tablist"><button type="button" role="tab" data-v="teemoittain" aria-selected="true">Teemoittain</button><button type="button" role="tab" data-v="maittain" aria-selected="false">Maittain</button></div><div class="legend"><span><i class="sw c"></i>Yhteinen: vähintään 6/8 arviossa</span><span><i class="sw p"></i>Osassa arvioista</span><span><i class="sw u"></i>Vain yhden maan arviossa</span><span><i class="sw n"></i>Ei julkista riskiluetteloa</span></div></div>
-<div class="view" id="v-teemoittain"><div class="tbl"><table class="mx"><colgroup><col class="tc"><col><col><col><col><col><col><col><col></colgroup><thead><tr><th>Teema</th><th class="fi"><span class="cc">FI</span>Suomi<span class="cy">2026 · 24 riskiä</span></th><th class=""><span class="cc">SE</span>Ruotsi<span class="cy">2025 · 26 riskiä</span></th><th class=""><span class="cc">NO</span>Norja<span class="cy">2019 · 31 riskiä</span></th><th class=""><span class="cc">DK</span>Tanska<span class="cy">2025 · 16 riskiä</span></th><th class=""><span class="cc">IS</span>Islanti<span class="cy">2011 · 40 riskiä</span></th><th class=""><span class="cc">EE</span>Viro<span class="cy">2025 · 30 riskiä</span></th><th class=""><span class="cc">LV</span>Latvia<span class="cy">2026 · 58 riskiä</span></th><th class=""><span class="cc">LT</span>Liettua<span class="cy">2024 · 29 riskiä</span></th></tr></thead><tbody><tr class="bnd c"><th colspan="9">Yhteinen: vähintään 6/8 arviossa</th></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span><span>Maastopalot</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">8/8</span></span></th><td><span class="rk c" data-r="fi-3.2.5" title="Useat yhtäaikaiset maastopalot tai suuri maastopalo
-Multiple simultaneous wildfires or a large wildfire
+<div class="view" id="v-teemoittain"><div class="tbl"><table class="mx"><colgroup><col class="tc"><col><col><col><col><col><col><col><col></colgroup><thead><tr><th>Teema</th><th class="fi"><span class="cc">FI</span>Suomi<span class="cy">2026 · 24 riskiä</span></th><th class=""><span class="cc">SE</span>Ruotsi<span class="cy">2025 · 26 riskiä</span></th><th class=""><span class="cc">NO</span>Norja<span class="cy">2019 · 31 riskiä</span></th><th class=""><span class="cc">DK</span>Tanska<span class="cy">2025 · 16 riskiä</span></th><th class=""><span class="cc">IS</span>Islanti<span class="cy">2011 · 40 riskiä</span></th><th class=""><span class="cc">EE</span>Viro<span class="cy">2025 · 30 riskiä</span></th><th class=""><span class="cc">LV</span>Latvia<span class="cy">2026 · 58 riskiä</span></th><th class=""><span class="cc">LT</span>Liettua<span class="cy">2024 · 29 riskiä</span></th></tr></thead><tbody><tr class="bnd c"><th colspan="9">Yhteinen: vähintään 6/8 arviossa</th></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="13" r="9"/><path d="M14.35 4.65 16.3 2.7a2.41 2.41 0 0 1 3.4 0l1.6 1.6a2.4 2.4 0 0 1 0 3.4l-1.95 1.95"/><path d="m22 2-1.5 1.5"/></svg></span><span>Terrori-isku</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">8/8</span></span></th><td><span class="rk c" data-r="fi-3.1.5" title="Yhteiskunnan rakenteisiin tai suuriin ihmisjoukkoihin kohdistunut terroristinen tai muu väkivaltainen isku
+Terrorist or other violent attack on societal structures or large crowds
+Todennäköisyys: mahdollinen
+Teemat: Terrori-isku
+luku 3.1.5, PDF-s. 48">Yhteiskunnan rakenteisiin tai suuriin ihmisjoukkoihin kohdistunut terroristinen tai muu väkivaltainen isku</span></td><td><span class="rk c" data-r="se-18" title="CBRN-attentat
+CBRN attack
+Todennäköisyys: Laadullinen (ei asteikkoa): ”Sannolikheten för att en enskild person, kriminella eller en terroristorganisation skulle genomföra ett sådant attentat bedöms därför som låg. Sannolikheten är dock högre för att ett sådant attentat skulle utföras av en statlig aktör …” (s. 111–112)
+Teemat: Terrori-isku
+Tabell 1 s. 27; avsnitt s. 108–112 (figur 18 s. 111)">CBRN-isku</span><span class="rk c" data-r="se-22" title="Terrorattentat
+Terrorist attack
+Todennäköisyys: Laadullinen (ei asteikkoa): Kansallisen terrorismiuhka-arviointikeskuksen (NCT) uhkataso: ”Hotnivån 2025 bedöms ligga på nivå 4 av 5. Nivå 4 innebär ett högt hot och att NCT bedömer att ett attentat kan ske.” (s. 127–128)
+Teemat: Terrori-isku
+Tabell 1 s. 27; avsnitt s. 123–128 (figur 21 s. 126)">Terrori-isku</span></td><td><span class="rk c" data-r="no-22" title="Terrorangrep i by
+Terrorist Attack in a City
+Todennäköisyys: Ei arvioida (tahallinen tapahtuma); viittaus PST:n vuoden 2018 arvioon.
+Teemat: Terrori-isku
+AKS 2019, luku 15.1, s. 178–181 (tulostaulukko s. 181)">Terrori-isku kaupungissa</span><span class="rk c" data-r="no-30" title="Tilsiktet hendelse med bruk av trusselstoff i kollektivtrafikken
+Intentional incident using a threat substance in public transport
+Teemat: Terrori-isku
+Beredskapsanalyse av utvalgte CE-hendelser (kesäkuu 2024), luku 6, s. 47–56">Tahallinen uhka-aineen käyttö joukkoliikenteessä</span></td><td><span class="rk c" data-r="dk-15" title="Terrorhandlinger
+Terrorist acts
+Teemat: Terrori-isku
+NRB 2025, luku &#x27;Terrorhandlinger&#x27;, s. 169–178; yhteenvetokuva s. 9; EN NRP 2025 s. 167–175">Terroriteot</span></td><td><span class="rk c" data-r="is-40" title="Óeirðir, skemmdarverk, óstöðugleiki og hryðjuverk
+Riots, sabotage, instability and terrorism
+Todennäköisyys: Ei skenaariotaulukkoa; leipäteksti: «Almennt var talað um að litlar líkur væru á mikilli truflun» (yleisesti pieni todennäköisyys laajalle häiriölle).
+Teemat: Terrori-isku, Kohdennettu väkivalta ja levottomuudet, Kriittisen infrastruktuurin sabotaasi
+s. 141–142; piiritason luokitus Tafla 72 «Sérstaklega metin áhætta vegna skemmdar- og hryðjuverka í umdæmunum» (s. 142); Í hnotskurn s. 17">Mellakat, ilkivalta, epävakaus ja terrorismi</span></td><td><span class="rk c" data-r="ee-10" title="Äkkrünnak
+Sudden attack
+Todennäköisyys: Vähe tõenäoline (Unlikely, 2/5: 21–40 % / 2 v); ei muutosta. EN-sivulla &#x27;low&#x27;.
+Teemat: Kohdennettu väkivalta ja levottomuudet, Terrori-isku
+riigikantselei.ee/riskid/akkrunnak (EN: /en/riskid/sudden-attack); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 26">Äkillinen väkivaltainen isku</span><span class="rk c" data-r="ee-27" title="CBRN intsident
+CBRN incident
+Todennäköisyys: Ei asteikon termiä: CBRN-aineiden tahallisesta tai terroristisesta käytöstä aiheutuvan tapahtuman todennäköisyys &#x27;väike&#x27; seuraavan 5 v aikana (EN: &#x27;low&#x27;); voi kasvaa pidemmällä aikavälillä.
+Teemat: Terrori-isku
+riigikantselei.ee/riskid/cbrn-intsident (EN: /en/riskid/cbrn-incident); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 63">CBRN-välikohtaus</span></td><td><span class="rk c" data-r="lv-40" title="Teroristisks uzbrukums
+Terrorist attack
+Todennäköisyys: V=3 – Vidēja (kerran 10–30 vuodessa) (tahallinen uhka, tarkastelujakso 2 v)
+Teemat: Terrori-isku
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 29. lpp., ID C-03; 2. pielikums (Risku katalogs)">Terrori-isku</span><span class="rk c" data-r="lv-44" title="Uzbrukums CBRNe infrastruktūrai
+Attack on CBRNe infrastructure
+Todennäköisyys: V=2 – Zema (kerran 30–100 vuodessa) (tahallinen uhka, tarkastelujakso 2 v)
+Teemat: Terrori-isku, Kriittisen infrastruktuurin sabotaasi
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 30. lpp., ID C-07; 2. pielikums (Risku katalogs)">Hyökkäys CBRNe-infrastruktuuriin</span></td><td><span class="rk c" data-r="lt-02" title="Lietuvoje gyvenančių migrantų iš Centrinės Azijos šalių radikalizacija
+Radicalisation of migrants from Central Asian countries living in Lithuania
+Todennäköisyys: Didelis (3/4: Didelė – kerran 1–10 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
+Teemat: Terrori-isku, Kohdennettu väkivalta ja levottomuudet
+Nacionalinė rizikos analizė 2024, II skyrius, 2. Lietuvoje gyvenančių migrantų iš Centrinės Azijos šalių radikalizacija, p. 17–22 (rizikos vertinimas p. 22); rizikų vertinimo rezultatai p. 6–7">Liettuassa asuvien Keski-Aasian maista tulleiden maahanmuuttajien radikalisoituminen</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="11.9" r="2"/><path d="M6.7 3.4c-.9 2.5 0 5.2 2.2 6.7C6.5 9 3.7 9.6 2 11.6"/><path d="m8.9 10.1 1.4.8"/><path d="M17.3 3.4c.9 2.5 0 5.2-2.2 6.7 2.4-1.2 5.2-.6 6.9 1.5"/><path d="m15.1 10.1-1.4.8"/><path d="M16.7 20.8c-2.6-.4-4.6-2.6-4.7-5.3-.2 2.6-2.1 4.8-4.7 5.2"/><path d="M12 13.9v1.6"/><path d="M13.5 5.4c-1-.2-2-.2-3 0"/><path d="M17 16.4c.7-.7 1.2-1.6 1.5-2.5"/><path d="M5.5 13.9c.3.9.8 1.8 1.5 2.5"/></svg></span><span>Pandemia tai laaja epidemia</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">8/8</span></span></th><td><span class="rk c" data-r="fi-3.2.3" title="Pandemia tai laajalle levinnyt epidemia
+Pandemic or widespread epidemic
 Todennäköisyys: melko todennäköinen
-Teemat: Maastopalot
-luku 3.2.5, PDF-s. 71">Useat yhtäaikaiset maastopalot tai suuri maastopalo</span></td><td><span class="rk c" data-r="se-03" title="Skogs- och vegetationsbrand
-Forest and vegetation fire
-Todennäköisyys: Laadullinen (ei asteikkoa): ”Bilden är komplex och sannolikheten svårbedömd, samtidigt påverkas sannolikheten för skogs- och vegetationsbränder av klimatförändringarna.” (s. 42)
-Teemat: Maastopalot
-Tabell 1 s. 27; avsnitt s. 39–42 (figur 3 s. 41)">Metsä- ja maastopalo</span></td><td><span class="rk c" data-r="no-09" title="Tre samtidige skogbranner
-Three Simultaneous Forest Fires
-Todennäköisyys: Kolmen tarkan sijainnin skenaario: «ikke vurdert»; vastaava skenaario valtakunnallisesti: 65 % / 100 v («middels», liitteen 2 luokitus).
-Teemat: Maastopalot
-AKS 2019, luku 6.1, s. 84–87 (tulostaulukko s. 87); erillinen valmiusanalyysi «Skogbrann» 2019">Kolme samanaikaista metsäpaloa</span></td><td><span class="rk c" data-r="dk-11" title="Tørke
-Drought
-Teemat: Kuivuus ja helle, Maastopalot
-NRB 2025, luku &#x27;Tørke&#x27;, s. 137–144; yhteenvetokuva s. 9; EN NRP 2025 s. 135–142">Kuivuus</span></td><td><span class="rk c" data-r="is-21" title="Sinu- og kjarr- og skógareldar
-Forest fires / grass and scrub fires
-Todennäköisyys: «Áhætta er við sumarhús og víðar í þurrum gróðri» (riski kesämökkien lähellä ja kuivassa kasvillisuudessa); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
-Teemat: Maastopalot
-s. 94–95, Tafla 40 «Sviðsmynd vegna sinu-, kjarr- og/eða skógarelda» (s. 94); Í hnotskurn s. 13–14">Kulo-, pensas- ja metsäpalot</span></td><td><span class="rk c" data-r="ee-12" title="Metsa- ja maastikupõlengud
-Forest and wildfires
-Todennäköisyys: Vähe tõenäoline (Unlikely, 2/5: 21–40 % / 2 v) – laaja metsä- tai maastopalo; ei muutosta (riski kasvaa ilmaston lämmetessä).
-Teemat: Maastopalot
-riigikantselei.ee/riskid/metsa-ja-maastikupolengud (EN: /en/riskid/forest-and-wildfires); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 30">Metsä- ja maastopalot</span></td><td><span class="rk c" data-r="lv-08" title="Meža un kūdras ugunsgrēki
-Forest and peat fires
+Teemat: Pandemia tai laaja epidemia
+luku 3.2.3, PDF-s. 64">Pandemia tai laajalle levinnyt epidemia</span></td><td><span class="rk c" data-r="se-01" title="Epidemi
+Epidemic
+Todennäköisyys: Laadullinen (ei asteikkoa): ”Frågan är inte om utan snarare när nästa pandemi inträffar, vilket smittämne det rör sig om och vilka samhällskonsekvenser utbrottet får.” (s. 34)
+Teemat: Pandemia tai laaja epidemia
+Tabell 1 s. 27; avsnitt s. 28–34 (konsekvensfigur 1 s. 33, sannolikhet s. 33–34)">Epidemia</span></td><td><span class="rk c" data-r="no-06" title="Pandemi i Norge
+Pandemic in Norway
+Todennäköisyys: 75 % / 100 v («høy»); siirretty (valtakunnallinen) todennäköisyys «ikke relevant».
+Teemat: Pandemia tai laaja epidemia
+AKS 2019, luku 5.1, s. 68–71 (tulostaulukko s. 71)">Pandemia Norjassa</span><span class="rk c" data-r="no-07" title="Matbåren smitte
+Foodborne Illness
+Todennäköisyys: 65 % / 100 v («middels»); tulokset siirrettävissä vastaaviin tapahtumiin.
+Teemat: Pandemia tai laaja epidemia
+AKS 2019, luku 5.2, s. 72–75 (tulostaulukko s. 75)">Ruokavälitteinen tautiepidemia</span></td><td><span class="rk c" data-r="dk-07" title="Vand- og fødevarebårne risici
+Water and foodborne risks
+Teemat: Vesihuollon häiriöt, Pandemia tai laaja epidemia
+NRB 2025, luku &#x27;Vand- og fødevarebårne risici&#x27;, s. 101–108; yhteenvetokuva s. 9; EN NRP 2025 s. 100–107">Vesi- ja elintarvikevälitteiset riskit</span><span class="rk c" data-r="dk-09" title="Smitsomme sygdomme
+Infectious diseases
+Teemat: Pandemia tai laaja epidemia, Mikrobilääkeresistenssi
+NRB 2025, luku &#x27;Smitsomme sygdomme&#x27;, s. 117–129; yhteenvetokuva s. 9; EN NRP 2025 s. 116–127">Tartuntataudit</span></td><td><span class="rk c" data-r="is-16" title="Heimsfaraldur inflúensu
+Pandemic influenza
+Todennäköisyys: «2-3 sinnum á öld» (2–3 kertaa vuosisadassa); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
+Teemat: Pandemia tai laaja epidemia
+s. 84–85, Tafla 32 «Sviðsmynd vegna heimsfaraldurs inflúensu» (s. 85); Í hnotskurn s. 12–13">Influenssapandemia</span><span class="rk c" data-r="is-17" title="Fjöldasýking/matareitrun
+Mass infection / food poisoning
+Todennäköisyys: «Nokkrar» (jonkin verran); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
+Teemat: Pandemia tai laaja epidemia
+s. 85–87, Tafla 33 «Sviðsmynd: Fjöldasýkingar/matareitranir» (s. 86)">Joukkotartunta / ruokamyrkytys</span></td><td><span class="rk c" data-r="ee-13" title="Epideemia
+Epidemic
+Todennäköisyys: Väga tõenäoline (Very likely, 4/5: 61–80 % / 2 v) – herkästi leviävän tartuntataudin maahantulo ja laaja leviäminen; noussut: tõenäoline → väga tõenäoline (uusi pandemia). Rokotteella ehkäistävien tautien epideeminen leviäminen: Ebatõenäoline (Improbable, 1/5: 0–20 % / 2 v).
+Teemat: Pandemia tai laaja epidemia
+riigikantselei.ee/riskid/epideemia (EN: /en/riskid/epidemic); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 31">Epidemia</span></td><td><span class="rk c" data-r="lv-13" title="Pandēmija / plaša epidēmija
+Pandemic / widespread epidemic
+Todennäköisyys: V=3 – Vidēja (kerran 10–30 vuodessa)
+Teemat: Pandemia tai laaja epidemia
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 26. lpp., ID V-01; 2. pielikums (Risku katalogs)">Pandemia / laaja epidemia</span><span class="rk c" data-r="lv-14" title="Cita cilvēku infekcijas slimība
+Other human infectious disease
 Todennäköisyys: V=4 – Augsta (kerran 3–10 vuodessa)
-Teemat: Maastopalot
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 24. lpp., ID D-08; 2. pielikums (Risku katalogs)">Metsä- ja turvepalot</span></td><td><span class="rk c" data-r="lt-19" title="Miškų ir durpynų gaisrai
-Forest and peatland fires
-Todennäköisyys: Labai didelis (4/4: Labai didelė – useammin kuin kerran vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
-Teemat: Maastopalot
-Nacionalinė rizikos analizė 2024, II skyrius, 19. Miškų ir durpynų gaisrai, p. 129–134 (rizikos vertinimas p. 134); rizikų vertinimo rezultatai p. 6–7">Metsä- ja turvemaapalot</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10v4"/><path d="M12 2v3"/></svg></span><span>Merionnettomuus tai öljyvahinko</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">8/8</span></span></th><td><span class="rk c" data-r="fi-3.2.4" title="Merellinen monialaonnettomuus
+Teemat: Pandemia tai laaja epidemia
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 26. lpp., ID V-02; 2. pielikums (Risku katalogs)">Muu ihmisten tartuntatauti</span><span class="rk c" data-r="lv-24" title="Bioloģisko vielu incidents / noplūde
+Biological agent incident / release
+Todennäköisyys: V=2 – Zema (kerran 30–100 vuodessa)
+Teemat: Kemikaali- tai teollisuusonnettomuus, Pandemia tai laaja epidemia
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 27. lpp., ID T-06; 2. pielikums (Risku katalogs)">Biologisten aineiden vaaratilanne / vuoto</span></td><td><span class="rk c" data-r="lt-29" title="Epidemijos ir / ar pandemijos
+Epidemics and/or pandemics
+Todennäköisyys: Vidutinis (2/4: Vidutinė – kerran 10–50 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
+Teemat: Pandemia tai laaja epidemia
+Nacionalinė rizikos analizė 2024, II skyrius, 29. Epidemijos ir / ar pandemijos, p. 187–193 (rizikos vertinimas p. 193); rizikų vertinimo rezultatai p. 6–7">Epidemiat ja/tai pandemiat</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10v4"/><path d="M12 2v3"/></svg></span><span>Merionnettomuus tai öljyvahinko</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">8/8</span></span></th><td><span class="rk c" data-r="fi-3.2.4" title="Merellinen monialaonnettomuus
 Multi-sector maritime accident
 Todennäköisyys: melko todennäköinen
 Teemat: Merionnettomuus tai öljyvahinko
@@ -298,57 +363,80 @@ Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. no
 Pollution incident at sea
 Todennäköisyys: Žemas (1/4: Maža – harvemmin kuin kerran 50 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
 Teemat: Merionnettomuus tai öljyvahinko
-Nacionalinė rizikos analizė 2024, II skyrius, 22. Teršimo incidentas jūroje, p. 145–149 (rizikos vertinimas p. 149); rizikų vertinimo rezultatai p. 6–7">Meren pilaantumisonnettomuus</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="11.9" r="2"/><path d="M6.7 3.4c-.9 2.5 0 5.2 2.2 6.7C6.5 9 3.7 9.6 2 11.6"/><path d="m8.9 10.1 1.4.8"/><path d="M17.3 3.4c.9 2.5 0 5.2-2.2 6.7 2.4-1.2 5.2-.6 6.9 1.5"/><path d="m15.1 10.1-1.4.8"/><path d="M16.7 20.8c-2.6-.4-4.6-2.6-4.7-5.3-.2 2.6-2.1 4.8-4.7 5.2"/><path d="M12 13.9v1.6"/><path d="M13.5 5.4c-1-.2-2-.2-3 0"/><path d="M17 16.4c.7-.7 1.2-1.6 1.5-2.5"/><path d="M5.5 13.9c.3.9.8 1.8 1.5 2.5"/></svg></span><span>Pandemia tai laaja epidemia</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">8/8</span></span></th><td><span class="rk c" data-r="fi-3.2.3" title="Pandemia tai laajalle levinnyt epidemia
-Pandemic or widespread epidemic
+Nacionalinė rizikos analizė 2024, II skyrius, 22. Teršimo incidentas jūroje, p. 145–149 (rizikos vertinimas p. 149); rizikų vertinimo rezultatai p. 6–7">Meren pilaantumisonnettomuus</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span><span>Maastopalot</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">8/8</span></span></th><td><span class="rk c" data-r="fi-3.2.5" title="Useat yhtäaikaiset maastopalot tai suuri maastopalo
+Multiple simultaneous wildfires or a large wildfire
 Todennäköisyys: melko todennäköinen
-Teemat: Pandemia tai laaja epidemia
-luku 3.2.3, PDF-s. 64">Pandemia tai laajalle levinnyt epidemia</span></td><td><span class="rk c" data-r="se-01" title="Epidemi
-Epidemic
-Todennäköisyys: Laadullinen (ei asteikkoa): ”Frågan är inte om utan snarare när nästa pandemi inträffar, vilket smittämne det rör sig om och vilka samhällskonsekvenser utbrottet får.” (s. 34)
-Teemat: Pandemia tai laaja epidemia
-Tabell 1 s. 27; avsnitt s. 28–34 (konsekvensfigur 1 s. 33, sannolikhet s. 33–34)">Epidemia</span></td><td><span class="rk c" data-r="no-06" title="Pandemi i Norge
-Pandemic in Norway
-Todennäköisyys: 75 % / 100 v («høy»); siirretty (valtakunnallinen) todennäköisyys «ikke relevant».
-Teemat: Pandemia tai laaja epidemia
-AKS 2019, luku 5.1, s. 68–71 (tulostaulukko s. 71)">Pandemia Norjassa</span><span class="rk c" data-r="no-07" title="Matbåren smitte
-Foodborne Illness
-Todennäköisyys: 65 % / 100 v («middels»); tulokset siirrettävissä vastaaviin tapahtumiin.
-Teemat: Pandemia tai laaja epidemia
-AKS 2019, luku 5.2, s. 72–75 (tulostaulukko s. 75)">Ruokavälitteinen tautiepidemia</span></td><td><span class="rk c" data-r="dk-07" title="Vand- og fødevarebårne risici
-Water and foodborne risks
-Teemat: Vesihuollon häiriöt, Pandemia tai laaja epidemia
-NRB 2025, luku &#x27;Vand- og fødevarebårne risici&#x27;, s. 101–108; yhteenvetokuva s. 9; EN NRP 2025 s. 100–107">Vesi- ja elintarvikevälitteiset riskit</span><span class="rk c" data-r="dk-09" title="Smitsomme sygdomme
-Infectious diseases
-Teemat: Pandemia tai laaja epidemia, Mikrobilääkeresistenssi
-NRB 2025, luku &#x27;Smitsomme sygdomme&#x27;, s. 117–129; yhteenvetokuva s. 9; EN NRP 2025 s. 116–127">Tartuntataudit</span></td><td><span class="rk c" data-r="is-16" title="Heimsfaraldur inflúensu
-Pandemic influenza
-Todennäköisyys: «2-3 sinnum á öld» (2–3 kertaa vuosisadassa); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
-Teemat: Pandemia tai laaja epidemia
-s. 84–85, Tafla 32 «Sviðsmynd vegna heimsfaraldurs inflúensu» (s. 85); Í hnotskurn s. 12–13">Influenssapandemia</span><span class="rk c" data-r="is-17" title="Fjöldasýking/matareitrun
-Mass infection / food poisoning
-Todennäköisyys: «Nokkrar» (jonkin verran); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
-Teemat: Pandemia tai laaja epidemia
-s. 85–87, Tafla 33 «Sviðsmynd: Fjöldasýkingar/matareitranir» (s. 86)">Joukkotartunta / ruokamyrkytys</span></td><td><span class="rk c" data-r="ee-13" title="Epideemia
-Epidemic
-Todennäköisyys: Väga tõenäoline (Very likely, 4/5: 61–80 % / 2 v) – herkästi leviävän tartuntataudin maahantulo ja laaja leviäminen; noussut: tõenäoline → väga tõenäoline (uusi pandemia). Rokotteella ehkäistävien tautien epideeminen leviäminen: Ebatõenäoline (Improbable, 1/5: 0–20 % / 2 v).
-Teemat: Pandemia tai laaja epidemia
-riigikantselei.ee/riskid/epideemia (EN: /en/riskid/epidemic); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 31">Epidemia</span></td><td><span class="rk c" data-r="lv-13" title="Pandēmija / plaša epidēmija
-Pandemic / widespread epidemic
-Todennäköisyys: V=3 – Vidēja (kerran 10–30 vuodessa)
-Teemat: Pandemia tai laaja epidemia
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 26. lpp., ID V-01; 2. pielikums (Risku katalogs)">Pandemia / laaja epidemia</span><span class="rk c" data-r="lv-14" title="Cita cilvēku infekcijas slimība
-Other human infectious disease
+Teemat: Maastopalot
+luku 3.2.5, PDF-s. 71">Useat yhtäaikaiset maastopalot tai suuri maastopalo</span></td><td><span class="rk c" data-r="se-03" title="Skogs- och vegetationsbrand
+Forest and vegetation fire
+Todennäköisyys: Laadullinen (ei asteikkoa): ”Bilden är komplex och sannolikheten svårbedömd, samtidigt påverkas sannolikheten för skogs- och vegetationsbränder av klimatförändringarna.” (s. 42)
+Teemat: Maastopalot
+Tabell 1 s. 27; avsnitt s. 39–42 (figur 3 s. 41)">Metsä- ja maastopalo</span></td><td><span class="rk c" data-r="no-09" title="Tre samtidige skogbranner
+Three Simultaneous Forest Fires
+Todennäköisyys: Kolmen tarkan sijainnin skenaario: «ikke vurdert»; vastaava skenaario valtakunnallisesti: 65 % / 100 v («middels», liitteen 2 luokitus).
+Teemat: Maastopalot
+AKS 2019, luku 6.1, s. 84–87 (tulostaulukko s. 87); erillinen valmiusanalyysi «Skogbrann» 2019">Kolme samanaikaista metsäpaloa</span></td><td><span class="rk c" data-r="dk-11" title="Tørke
+Drought
+Teemat: Kuivuus ja helle, Maastopalot
+NRB 2025, luku &#x27;Tørke&#x27;, s. 137–144; yhteenvetokuva s. 9; EN NRP 2025 s. 135–142">Kuivuus</span></td><td><span class="rk c" data-r="is-21" title="Sinu- og kjarr- og skógareldar
+Forest fires / grass and scrub fires
+Todennäköisyys: «Áhætta er við sumarhús og víðar í þurrum gróðri» (riski kesämökkien lähellä ja kuivassa kasvillisuudessa); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
+Teemat: Maastopalot
+s. 94–95, Tafla 40 «Sviðsmynd vegna sinu-, kjarr- og/eða skógarelda» (s. 94); Í hnotskurn s. 13–14">Kulo-, pensas- ja metsäpalot</span></td><td><span class="rk c" data-r="ee-12" title="Metsa- ja maastikupõlengud
+Forest and wildfires
+Todennäköisyys: Vähe tõenäoline (Unlikely, 2/5: 21–40 % / 2 v) – laaja metsä- tai maastopalo; ei muutosta (riski kasvaa ilmaston lämmetessä).
+Teemat: Maastopalot
+riigikantselei.ee/riskid/metsa-ja-maastikupolengud (EN: /en/riskid/forest-and-wildfires); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 30">Metsä- ja maastopalot</span></td><td><span class="rk c" data-r="lv-08" title="Meža un kūdras ugunsgrēki
+Forest and peat fires
 Todennäköisyys: V=4 – Augsta (kerran 3–10 vuodessa)
-Teemat: Pandemia tai laaja epidemia
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 26. lpp., ID V-02; 2. pielikums (Risku katalogs)">Muu ihmisten tartuntatauti</span><span class="rk c" data-r="lv-24" title="Bioloģisko vielu incidents / noplūde
-Biological agent incident / release
-Todennäköisyys: V=2 – Zema (kerran 30–100 vuodessa)
-Teemat: Kemikaali- tai teollisuusonnettomuus, Pandemia tai laaja epidemia
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 27. lpp., ID T-06; 2. pielikums (Risku katalogs)">Biologisten aineiden vaaratilanne / vuoto</span></td><td><span class="rk c" data-r="lt-29" title="Epidemijos ir / ar pandemijos
-Epidemics and/or pandemics
-Todennäköisyys: Vidutinis (2/4: Vidutinė – kerran 10–50 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
-Teemat: Pandemia tai laaja epidemia
-Nacionalinė rizikos analizė 2024, II skyrius, 29. Epidemijos ir / ar pandemijos, p. 187–193 (rizikos vertinimas p. 193); rizikų vertinimo rezultatai p. 6–7">Epidemiat ja/tai pandemiat</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span><span>Sähkökatko tai sähköpula</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">8/8</span></span></th><td><span class="rk c" data-r="fi-3.3.5" title="Sähköjakelun suurhäiriö tai pitkäkestoinen sähköpula
+Teemat: Maastopalot
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 24. lpp., ID D-08; 2. pielikums (Risku katalogs)">Metsä- ja turvepalot</span></td><td><span class="rk c" data-r="lt-19" title="Miškų ir durpynų gaisrai
+Forest and peatland fires
+Todennäköisyys: Labai didelis (4/4: Labai didelė – useammin kuin kerran vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
+Teemat: Maastopalot
+Nacionalinė rizikos analizė 2024, II skyrius, 19. Miškų ir durpynų gaisrai, p. 129–134 (rizikos vertinimas p. 134); rizikų vertinimo rezultatai p. 6–7">Metsä- ja turvemaapalot</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12h.01"/><path d="M7.5 4.2c-.3-.5-.9-.7-1.3-.4C3.9 5.5 2.3 8.1 2 11c-.1.5.4 1 1 1h5c0-1.5.8-2.8 2-3.4-1.1-1.9-2-3.5-2.5-4.4z"/><path d="M21 12c.6 0 1-.4 1-1-.3-2.9-1.8-5.5-4.1-7.1-.4-.3-1.1-.2-1.3.3-.6.9-1.5 2.5-2.6 4.3 1.2.7 2 2 2 3.5h5z"/><path d="M7.5 19.8c-.3.5-.1 1.1.4 1.3 2.6 1.2 5.6 1.2 8.2 0 .5-.2.7-.8.4-1.3-.5-.9-1.4-2.5-2.5-4.3-1.2.7-2.8.7-4 0-1.1 1.8-2 3.4-2.5 4.3z"/></svg></span><span>Ydin- tai säteilyonnettomuus</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">8/8</span></span></th><td><span class="rk c" data-r="fi-3.2.6" title="Vakava säteilyvaaratilanne
+Serious radiation hazard
+Todennäköisyys: mahdollinen
+Teemat: Ydin- tai säteilyonnettomuus
+luku 3.2.6, PDF-s. 74">Vakava säteilyvaaratilanne</span></td><td><span class="rk c" data-r="se-11" title="Kärnteknisk olycka
+Nuclear accident
+Todennäköisyys: Laadullinen (ei asteikkoa): ”Baserat på ovanstående är det inte möjligt att ange någon sannolikhet för händelsen. Däremot kan konstateras att stora kärntekniska olyckor är mycket ovanliga och att säkerheten och beredskapen vid Sveriges kärnkraftverk är hög.” (s. 79–80)
+Teemat: Ydin- tai säteilyonnettomuus
+Tabell 1 s. 27; avsnitt s. 74–80 (figur 11 s. 79)">Ydinonnettomuus</span></td><td><span class="rk c" data-r="no-15" title="Atomulykke
+Nuclear Accident
+Todennäköisyys: Skenaario (Sellafield): 2 % / 100 v («svært lav»); radioaktiivinen laskeuma Norjaan jonkin ydinlaitoksen onnettomuudesta: 65 % / 100 v («middels»).
+Teemat: Ydin- tai säteilyonnettomuus
+AKS 2019, luku 11.1, s. 132–135 (tulostaulukko s. 135)">Ydinonnettomuus</span></td><td><span class="rk c" data-r="dk-03" title="Nukleare hændelser
+Nuclear incidents
+Teemat: Ydin- tai säteilyonnettomuus
+NRB 2025, luku &#x27;Nukleare hændelser&#x27;, s. 60–69; yhteenvetokuva s. 9; EN NRP 2025 s. 60–69">Ydintapahtumat</span></td><td><span class="rk c" data-r="is-26" title="Geislavirkni
+Radioactivity
+Todennäköisyys: «Frekar litlar líkur.» (melko pieni todennäköisyys); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
+Teemat: Ydin- tai säteilyonnettomuus
+s. 106–107, Tafla 47 «Sviðsmynd vegna geislavirkni» (s. 107); Í hnotskurn s. 14">Radioaktiivisuus</span></td><td><span class="rk c" data-r="ee-17" title="Piiriülese levikuga tuumaõnnetus
+Cross-border nuclear accident
+Todennäköisyys: Vähe tõenäoline (Unlikely, 2/5: 21–40 % / 2 v) – ydinonnettomuus Viron lähialueella; ei muutosta. EN-sivulla &#x27;low&#x27;.
+Teemat: Ydin- tai säteilyonnettomuus
+riigikantselei.ee/riskid/piiriulese-levikuga-tuumaonnetus (EN: /en/riskid/cross-border-nuclear-accident); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 42">Rajat ylittävä ydinonnettomuus</span><span class="rk c" data-r="ee-19" title="Õnnetus kiirgusallikaga
+Accident with a radiation source
+Todennäköisyys: Ebatõenäoline (Improbable, 1/5: 0–20 % / 2 v); ei muutosta. EN-sivulla &#x27;unlikely&#x27;.
+Teemat: Ydin- tai säteilyonnettomuus
+riigikantselei.ee/riskid/onnetus-kiirgusallikaga (EN: /en/riskid/accident-radiation-source); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 47">Säteilylähdeonnettomuus</span></td><td><span class="rk c" data-r="lv-22" title="Radiācijas avārija
+Radiation accident
+Todennäköisyys: V=1 – Ļoti zema (kerran 100 vuodessa tai harvemmin) (HILP-osion mukaan; ei arvioitu V×SW.I-kaavalla)
+Teemat: Ydin- tai säteilyonnettomuus
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa, 27. lpp. (ID T-04) ja HILP-osio 31. lpp.">Säteilyonnettomuus</span></td><td><span class="rk c" data-r="lt-13" title="Branduolinės ar radiologinės avarijos Lietuvos teritorijoje esančiuose branduolinės energetikos objektuose
+Nuclear or radiological accidents at nuclear energy facilities in Lithuania
+Todennäköisyys: Žemas (1/4: Maža – harvemmin kuin kerran 50 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
+Teemat: Ydin- tai säteilyonnettomuus
+Nacionalinė rizikos analizė 2024, II skyrius, 13. Branduolinės ar radiologinės avarijos Lietuvos teritorijoje esančiuose branduolinės energetikos objektuose, p. 88–96 (rizikos vertinimas p. 96); rizikų vertinimo rezultatai p. 6–7">Ydin- tai säteilyonnettomuudet Liettuan alueella sijaitsevissa ydinenergialaitoksissa</span><span class="rk c" data-r="lt-14" title="Branduolinė avarija Baltarusijos AE
+Nuclear accident at the Belarusian NPP
+Teemat: Ydin- tai säteilyonnettomuus
+Nacionalinė rizikos analizė 2024, II skyrius, 14. Branduolinė avarija Baltarusijos AE, p. 97–107 (rizikos vertinimas p. 106); rizikų vertinimo rezultatai p. 6–7">Ydinonnettomuus Valko-Venäjän ydinvoimalassa</span><span class="rk c" data-r="lt-15" title="Užterštumas radioaktyviosiomis medžiagomis
+Contamination with radioactive substances
+Todennäköisyys: Didelis (3/4: Didelė – kerran 1–10 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
+Teemat: Ydin- tai säteilyonnettomuus
+Nacionalinė rizikos analizė 2024, II skyrius, 15. Užterštumas radioaktyviosiomis medžiagomis, p. 108–114 (rizikos vertinimas p. 114); rizikų vertinimo rezultatai p. 6–7">Radioaktiivisten aineiden aiheuttama saastuminen</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span><span>Sähkökatko tai sähköpula</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">8/8</span></span></th><td><span class="rk c" data-r="fi-3.3.5" title="Sähköjakelun suurhäiriö tai pitkäkestoinen sähköpula
 Major electricity distribution disruption or prolonged power shortage
 Todennäköisyys: mahdollinen
 Teemat: Sähkökatko tai sähköpula
@@ -395,149 +483,7 @@ Nacionalinė rizikos analizė 2024, II skyrius, 9. Elektros energijos tiekimo su
 Damage to critical energy infrastructure
 Todennäköisyys: Didelis (3/4: Didelė – kerran 1–10 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
 Teemat: Kriittisen infrastruktuurin sabotaasi, Sähkökatko tai sähköpula
-Nacionalinė rizikos analizė 2024, II skyrius, 12. Kritinės energetinės infrastruktūros pažeidimas, p. 81–87 (rizikos vertinimas p. 87); rizikų vertinimo rezultatai p. 6–7">Kriittisen energiainfrastruktuurin vaurioituminen</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="13" r="9"/><path d="M14.35 4.65 16.3 2.7a2.41 2.41 0 0 1 3.4 0l1.6 1.6a2.4 2.4 0 0 1 0 3.4l-1.95 1.95"/><path d="m22 2-1.5 1.5"/></svg></span><span>Terrori-isku</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">8/8</span></span></th><td><span class="rk c" data-r="fi-3.1.5" title="Yhteiskunnan rakenteisiin tai suuriin ihmisjoukkoihin kohdistunut terroristinen tai muu väkivaltainen isku
-Terrorist or other violent attack on societal structures or large crowds
-Todennäköisyys: mahdollinen
-Teemat: Terrori-isku
-luku 3.1.5, PDF-s. 48">Yhteiskunnan rakenteisiin tai suuriin ihmisjoukkoihin kohdistunut terroristinen tai muu väkivaltainen isku</span></td><td><span class="rk c" data-r="se-18" title="CBRN-attentat
-CBRN attack
-Todennäköisyys: Laadullinen (ei asteikkoa): ”Sannolikheten för att en enskild person, kriminella eller en terroristorganisation skulle genomföra ett sådant attentat bedöms därför som låg. Sannolikheten är dock högre för att ett sådant attentat skulle utföras av en statlig aktör …” (s. 111–112)
-Teemat: Terrori-isku
-Tabell 1 s. 27; avsnitt s. 108–112 (figur 18 s. 111)">CBRN-isku</span><span class="rk c" data-r="se-22" title="Terrorattentat
-Terrorist attack
-Todennäköisyys: Laadullinen (ei asteikkoa): Kansallisen terrorismiuhka-arviointikeskuksen (NCT) uhkataso: ”Hotnivån 2025 bedöms ligga på nivå 4 av 5. Nivå 4 innebär ett högt hot och att NCT bedömer att ett attentat kan ske.” (s. 127–128)
-Teemat: Terrori-isku
-Tabell 1 s. 27; avsnitt s. 123–128 (figur 21 s. 126)">Terrori-isku</span></td><td><span class="rk c" data-r="no-22" title="Terrorangrep i by
-Terrorist Attack in a City
-Todennäköisyys: Ei arvioida (tahallinen tapahtuma); viittaus PST:n vuoden 2018 arvioon.
-Teemat: Terrori-isku
-AKS 2019, luku 15.1, s. 178–181 (tulostaulukko s. 181)">Terrori-isku kaupungissa</span><span class="rk c" data-r="no-30" title="Tilsiktet hendelse med bruk av trusselstoff i kollektivtrafikken
-Intentional incident using a threat substance in public transport
-Teemat: Terrori-isku
-Beredskapsanalyse av utvalgte CE-hendelser (kesäkuu 2024), luku 6, s. 47–56">Tahallinen uhka-aineen käyttö joukkoliikenteessä</span></td><td><span class="rk c" data-r="dk-15" title="Terrorhandlinger
-Terrorist acts
-Teemat: Terrori-isku
-NRB 2025, luku &#x27;Terrorhandlinger&#x27;, s. 169–178; yhteenvetokuva s. 9; EN NRP 2025 s. 167–175">Terroriteot</span></td><td><span class="rk c" data-r="is-40" title="Óeirðir, skemmdarverk, óstöðugleiki og hryðjuverk
-Riots, sabotage, instability and terrorism
-Todennäköisyys: Ei skenaariotaulukkoa; leipäteksti: «Almennt var talað um að litlar líkur væru á mikilli truflun» (yleisesti pieni todennäköisyys laajalle häiriölle).
-Teemat: Terrori-isku, Kohdennettu väkivalta ja levottomuudet, Kriittisen infrastruktuurin sabotaasi
-s. 141–142; piiritason luokitus Tafla 72 «Sérstaklega metin áhætta vegna skemmdar- og hryðjuverka í umdæmunum» (s. 142); Í hnotskurn s. 17">Mellakat, ilkivalta, epävakaus ja terrorismi</span></td><td><span class="rk c" data-r="ee-10" title="Äkkrünnak
-Sudden attack
-Todennäköisyys: Vähe tõenäoline (Unlikely, 2/5: 21–40 % / 2 v); ei muutosta. EN-sivulla &#x27;low&#x27;.
-Teemat: Kohdennettu väkivalta ja levottomuudet, Terrori-isku
-riigikantselei.ee/riskid/akkrunnak (EN: /en/riskid/sudden-attack); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 26">Äkillinen väkivaltainen isku</span><span class="rk c" data-r="ee-27" title="CBRN intsident
-CBRN incident
-Todennäköisyys: Ei asteikon termiä: CBRN-aineiden tahallisesta tai terroristisesta käytöstä aiheutuvan tapahtuman todennäköisyys &#x27;väike&#x27; seuraavan 5 v aikana (EN: &#x27;low&#x27;); voi kasvaa pidemmällä aikavälillä.
-Teemat: Terrori-isku
-riigikantselei.ee/riskid/cbrn-intsident (EN: /en/riskid/cbrn-incident); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 63">CBRN-välikohtaus</span></td><td><span class="rk c" data-r="lv-40" title="Teroristisks uzbrukums
-Terrorist attack
-Todennäköisyys: V=3 – Vidēja (kerran 10–30 vuodessa) (tahallinen uhka, tarkastelujakso 2 v)
-Teemat: Terrori-isku
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 29. lpp., ID C-03; 2. pielikums (Risku katalogs)">Terrori-isku</span><span class="rk c" data-r="lv-44" title="Uzbrukums CBRNe infrastruktūrai
-Attack on CBRNe infrastructure
-Todennäköisyys: V=2 – Zema (kerran 30–100 vuodessa) (tahallinen uhka, tarkastelujakso 2 v)
-Teemat: Terrori-isku, Kriittisen infrastruktuurin sabotaasi
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 30. lpp., ID C-07; 2. pielikums (Risku katalogs)">Hyökkäys CBRNe-infrastruktuuriin</span></td><td><span class="rk c" data-r="lt-02" title="Lietuvoje gyvenančių migrantų iš Centrinės Azijos šalių radikalizacija
-Radicalisation of migrants from Central Asian countries living in Lithuania
-Todennäköisyys: Didelis (3/4: Didelė – kerran 1–10 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
-Teemat: Terrori-isku, Kohdennettu väkivalta ja levottomuudet
-Nacionalinė rizikos analizė 2024, II skyrius, 2. Lietuvoje gyvenančių migrantų iš Centrinės Azijos šalių radikalizacija, p. 17–22 (rizikos vertinimas p. 22); rizikų vertinimo rezultatai p. 6–7">Liettuassa asuvien Keski-Aasian maista tulleiden maahanmuuttajien radikalisoituminen</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12h.01"/><path d="M7.5 4.2c-.3-.5-.9-.7-1.3-.4C3.9 5.5 2.3 8.1 2 11c-.1.5.4 1 1 1h5c0-1.5.8-2.8 2-3.4-1.1-1.9-2-3.5-2.5-4.4z"/><path d="M21 12c.6 0 1-.4 1-1-.3-2.9-1.8-5.5-4.1-7.1-.4-.3-1.1-.2-1.3.3-.6.9-1.5 2.5-2.6 4.3 1.2.7 2 2 2 3.5h5z"/><path d="M7.5 19.8c-.3.5-.1 1.1.4 1.3 2.6 1.2 5.6 1.2 8.2 0 .5-.2.7-.8.4-1.3-.5-.9-1.4-2.5-2.5-4.3-1.2.7-2.8.7-4 0-1.1 1.8-2 3.4-2.5 4.3z"/></svg></span><span>Ydin- tai säteilyonnettomuus</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">8/8</span></span></th><td><span class="rk c" data-r="fi-3.2.6" title="Vakava säteilyvaaratilanne
-Serious radiation hazard
-Todennäköisyys: mahdollinen
-Teemat: Ydin- tai säteilyonnettomuus
-luku 3.2.6, PDF-s. 74">Vakava säteilyvaaratilanne</span></td><td><span class="rk c" data-r="se-11" title="Kärnteknisk olycka
-Nuclear accident
-Todennäköisyys: Laadullinen (ei asteikkoa): ”Baserat på ovanstående är det inte möjligt att ange någon sannolikhet för händelsen. Däremot kan konstateras att stora kärntekniska olyckor är mycket ovanliga och att säkerheten och beredskapen vid Sveriges kärnkraftverk är hög.” (s. 79–80)
-Teemat: Ydin- tai säteilyonnettomuus
-Tabell 1 s. 27; avsnitt s. 74–80 (figur 11 s. 79)">Ydinonnettomuus</span></td><td><span class="rk c" data-r="no-15" title="Atomulykke
-Nuclear Accident
-Todennäköisyys: Skenaario (Sellafield): 2 % / 100 v («svært lav»); radioaktiivinen laskeuma Norjaan jonkin ydinlaitoksen onnettomuudesta: 65 % / 100 v («middels»).
-Teemat: Ydin- tai säteilyonnettomuus
-AKS 2019, luku 11.1, s. 132–135 (tulostaulukko s. 135)">Ydinonnettomuus</span></td><td><span class="rk c" data-r="dk-03" title="Nukleare hændelser
-Nuclear incidents
-Teemat: Ydin- tai säteilyonnettomuus
-NRB 2025, luku &#x27;Nukleare hændelser&#x27;, s. 60–69; yhteenvetokuva s. 9; EN NRP 2025 s. 60–69">Ydintapahtumat</span></td><td><span class="rk c" data-r="is-26" title="Geislavirkni
-Radioactivity
-Todennäköisyys: «Frekar litlar líkur.» (melko pieni todennäköisyys); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
-Teemat: Ydin- tai säteilyonnettomuus
-s. 106–107, Tafla 47 «Sviðsmynd vegna geislavirkni» (s. 107); Í hnotskurn s. 14">Radioaktiivisuus</span></td><td><span class="rk c" data-r="ee-17" title="Piiriülese levikuga tuumaõnnetus
-Cross-border nuclear accident
-Todennäköisyys: Vähe tõenäoline (Unlikely, 2/5: 21–40 % / 2 v) – ydinonnettomuus Viron lähialueella; ei muutosta. EN-sivulla &#x27;low&#x27;.
-Teemat: Ydin- tai säteilyonnettomuus
-riigikantselei.ee/riskid/piiriulese-levikuga-tuumaonnetus (EN: /en/riskid/cross-border-nuclear-accident); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 42">Rajat ylittävä ydinonnettomuus</span><span class="rk c" data-r="ee-19" title="Õnnetus kiirgusallikaga
-Accident with a radiation source
-Todennäköisyys: Ebatõenäoline (Improbable, 1/5: 0–20 % / 2 v); ei muutosta. EN-sivulla &#x27;unlikely&#x27;.
-Teemat: Ydin- tai säteilyonnettomuus
-riigikantselei.ee/riskid/onnetus-kiirgusallikaga (EN: /en/riskid/accident-radiation-source); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 47">Säteilylähdeonnettomuus</span></td><td><span class="rk c" data-r="lv-22" title="Radiācijas avārija
-Radiation accident
-Todennäköisyys: V=1 – Ļoti zema (kerran 100 vuodessa tai harvemmin) (HILP-osion mukaan; ei arvioitu V×SW.I-kaavalla)
-Teemat: Ydin- tai säteilyonnettomuus
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa, 27. lpp. (ID T-04) ja HILP-osio 31. lpp.">Säteilyonnettomuus</span></td><td><span class="rk c" data-r="lt-13" title="Branduolinės ar radiologinės avarijos Lietuvos teritorijoje esančiuose branduolinės energetikos objektuose
-Nuclear or radiological accidents at nuclear energy facilities in Lithuania
-Todennäköisyys: Žemas (1/4: Maža – harvemmin kuin kerran 50 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
-Teemat: Ydin- tai säteilyonnettomuus
-Nacionalinė rizikos analizė 2024, II skyrius, 13. Branduolinės ar radiologinės avarijos Lietuvos teritorijoje esančiuose branduolinės energetikos objektuose, p. 88–96 (rizikos vertinimas p. 96); rizikų vertinimo rezultatai p. 6–7">Ydin- tai säteilyonnettomuudet Liettuan alueella sijaitsevissa ydinenergialaitoksissa</span><span class="rk c" data-r="lt-14" title="Branduolinė avarija Baltarusijos AE
-Nuclear accident at the Belarusian NPP
-Teemat: Ydin- tai säteilyonnettomuus
-Nacionalinė rizikos analizė 2024, II skyrius, 14. Branduolinė avarija Baltarusijos AE, p. 97–107 (rizikos vertinimas p. 106); rizikų vertinimo rezultatai p. 6–7">Ydinonnettomuus Valko-Venäjän ydinvoimalassa</span><span class="rk c" data-r="lt-15" title="Užterštumas radioaktyviosiomis medžiagomis
-Contamination with radioactive substances
-Todennäköisyys: Didelis (3/4: Didelė – kerran 1–10 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
-Teemat: Ydin- tai säteilyonnettomuus
-Nacionalinė rizikos analizė 2024, II skyrius, 15. Užterštumas radioaktyviosiomis medžiagomis, p. 108–114 (rizikos vertinimas p. 114); rizikų vertinimo rezultatai p. 6–7">Radioaktiivisten aineiden aiheuttama saastuminen</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg></span><span>Kemikaali- tai teollisuusonnettomuus</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">7/8</span></span></th><td class="no">–</td><td><span class="rk c" data-r="se-10" title="Kemikalieolycka
-Chemical accident
-Todennäköisyys: Laadullinen (ei asteikkoa): ”Riskhanteringen kring hantering och transport av farliga ämnen medför att olyckor inte inträffar så ofta men det har genom åren skett utsläpp vid flera tillfällen, både vid transport och i produktion.” (s. 73–74)
-Teemat: Kemikaali- tai teollisuusonnettomuus
-Tabell 1 s. 27; avsnitt s. 70–74 (figur 10 s. 73)">Kemikaalionnettomuus</span></td><td><span class="rk c" data-r="no-13" title="Brann i oljehavn i by
-Fire at an Oil Terminal in a City
-Todennäköisyys: Skenaario (Sjursøya, Oslo): 10 % / 100 v («lav»); 16 vertailukelpoista pienempää laitosta ja 2 jalostamoa: 60 % / 100 v («middels»).
-Teemat: Kemikaali- tai teollisuusonnettomuus
-AKS 2019, luku 10.1, s. 120–123 (tulostaulukko s. 123)">Tulipalo öljysatamassa kaupungissa</span><span class="rk c" data-r="no-14" title="Gassutslipp fra industrianlegg
-Gas Emission from an Industrial Plant
-Todennäköisyys: 1 % / 100 v («svært lav») turvajärjestelmien pettäessä; ulkoiset syyt (sabotaasi, lento-onnettomuus) huomioiden hieman korkeampi mutta yhä «svært lav»; Norjassa ei suoraan vertailukelpoisia laitoksia.
-Teemat: Kemikaali- tai teollisuusonnettomuus
-AKS 2019, luku 10.2, s. 124–127 (tulostaulukko s. 127)">Kaasupäästö teollisuuslaitoksesta</span><span class="rk c" data-r="no-16" title="Olje- og gassutblåsning
-Oil and Gas Blowout
-Todennäköisyys: Skenaario (porauslautta Hordalandin edustalla): 0,02 % / 100 v («svært lav»); vakava purkaus Norjan mannerjalustalla: 4 % / 100 v («svært lav»).
-Teemat: Merionnettomuus tai öljyvahinko, Kemikaali- tai teollisuusonnettomuus
-AKS 2019, luku 12.1, s. 140–143 (tulostaulukko s. 143)">Öljy- ja kaasupurkaus</span><span class="rk c" data-r="no-29" title="Eksplosjon og brann i anlegg for behandling av farlig avfall
-Explosion and fire at a hazardous waste treatment facility
-Teemat: Kemikaali- tai teollisuusonnettomuus
-Beredskapsanalyse av utvalgte CE-hendelser (kesäkuu 2024), luku 5, s. 33–46">Räjähdys ja tulipalo vaarallisen jätteen käsittelylaitoksessa</span></td><td><span class="rk c" data-r="dk-06" title="Kemiske hændelser
-Chemical incidents
-Teemat: Kemikaali- tai teollisuusonnettomuus
-NRB 2025, luku &#x27;Kemiske hændelser&#x27;, s. 92–100; yhteenvetokuva s. 9; EN NRP 2025 s. 91–99">Kemikaalitapahtumat</span></td><td><span class="rk c" data-r="is-20" title="Bruni hættulegra efna
-Fire involving hazardous substances
-Todennäköisyys: «Nokkrar» (jonkin verran); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
-Teemat: Kemikaali- tai teollisuusonnettomuus
-s. 93, Tafla 38 «Bruni hættulegra efna» (luvun Eldsvoðar osa)">Vaarallisten aineiden palo</span><span class="rk c" data-r="is-22" title="Hættuleg og mengandi efni
-Hazardous and polluting substances
-Todennäköisyys: «Nokkrar» (jonkin verran); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
-Teemat: Kemikaali- tai teollisuusonnettomuus
-s. 97–98 (luku «Ýmis hættuleg efni»), Tafla 42 «Sviðsmynd vegna hættulegra og mengandi efna» (s. 98); Í hnotskurn s. 14">Vaaralliset ja saastuttavat aineet</span><span class="rk c" data-r="is-23" title="Bráðamengun við ströndina, í hafi, nálægt landinu eða í höfnum
-Acute pollution on the coast, at sea, near land or in harbours
-Todennäköisyys: «Nokkrar» (jonkin verran); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
-Teemat: Merionnettomuus tai öljyvahinko, Kemikaali- tai teollisuusonnettomuus
-s. 99–102 (luku «Mengun hafs og stranda»), Tafla 43 (s. 99)">Äkillinen meren ja rannikon pilaantuminen</span></td><td><span class="rk c" data-r="ee-18" title="Õnnetus ohtlikke kemikaale käitlevas ettevõttes
-Accident handling industrial hazardous chemicals
-Todennäköisyys: Vähe tõenäoline (Unlikely, 2/5: 21–40 % / 2 v) – suuronnettomuus; ei muutosta.
-Teemat: Kemikaali- tai teollisuusonnettomuus
-riigikantselei.ee/riskid/onnetus-ohtlikke-kemikaale-kaitlevas-ettevottes (EN: /en/riskid/accident-handling-industrial-hazardous-chemicals); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 44">Onnettomuus vaarallisia kemikaaleja käsittelevässä yrityksessä</span></td><td><span class="rk c" data-r="lv-23" title="Bīstamo ķīmisko vielu noplūde
-Hazardous chemical release
-Todennäköisyys: V=3 – Vidēja (kerran 10–30 vuodessa)
-Teemat: Kemikaali- tai teollisuusonnettomuus
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 27. lpp., ID T-05; 2. pielikums (Risku katalogs)">Vaarallisten kemikaalien vuoto</span><span class="rk c" data-r="lv-24" title="Bioloģisko vielu incidents / noplūde
-Biological agent incident / release
-Todennäköisyys: V=2 – Zema (kerran 30–100 vuodessa)
-Teemat: Kemikaali- tai teollisuusonnettomuus, Pandemia tai laaja epidemia
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 27. lpp., ID T-06; 2. pielikums (Risku katalogs)">Biologisten aineiden vaaratilanne / vuoto</span><span class="rk c" data-r="lv-29" title="Dzelzceļa katastrofa (ar bīstamu kravu)
-Railway disaster (with dangerous goods)
-Todennäköisyys: V=3 – Vidēja (kerran 10–30 vuodessa)
-Teemat: Suuri liikenne- tai muu onnettomuus, Kemikaali- tai teollisuusonnettomuus
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 28. lpp., ID T-11; 2. pielikums (Risku katalogs)">Rautatieonnettomuus (vaarallisia aineita kuljettaen)</span></td><td><span class="rk c" data-r="lt-23" title="Pramoninė avarija
-Industrial accident
-Todennäköisyys: Vidutinis (2/4: Vidutinė – kerran 10–50 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
-Teemat: Kemikaali- tai teollisuusonnettomuus
-Nacionalinė rizikos analizė 2024, II skyrius, 23. Pramoninė avarija, p. 150–154 (rizikos vertinimas p. 154); rizikų vertinimo rezultatai p. 6–7">Teollisuusonnettomuus</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18v-6a5 5 0 1 1 10 0v6"/><path d="M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z"/><path d="M21 12h1"/><path d="M18.5 4.5 18 5"/><path d="M2 12h1"/><path d="M12 2v1"/><path d="m4.929 4.929.707.707"/><path d="M12 12v6"/></svg></span><span>Kohdennettu väkivalta ja levottomuudet</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">7/8</span></span></th><td><span class="rk c" data-r="fi-3.1.4" title="Kohdennettu väkivaltainen toiminta tai muu yhteiskuntajärjestystä vaarantava toiminta
+Nacionalinė rizikos analizė 2024, II skyrius, 12. Kritinės energetinės infrastruktūros pažeidimas, p. 81–87 (rizikos vertinimas p. 87); rizikų vertinimo rezultatai p. 6–7">Kriittisen energiainfrastruktuurin vaurioituminen</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18v-6a5 5 0 1 1 10 0v6"/><path d="M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z"/><path d="M21 12h1"/><path d="M18.5 4.5 18 5"/><path d="M2 12h1"/><path d="M12 2v1"/><path d="m4.929 4.929.707.707"/><path d="M12 12v6"/></svg></span><span>Kohdennettu väkivalta ja levottomuudet</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">7/8</span></span></th><td><span class="rk c" data-r="fi-3.1.4" title="Kohdennettu väkivaltainen toiminta tai muu yhteiskuntajärjestystä vaarantava toiminta
 Targeted violent activity or other activity endangering public order
 Todennäköisyys: mahdollinen
 Teemat: Kohdennettu väkivalta ja levottomuudet
@@ -585,40 +531,7 @@ Nacionalinė rizikos analizė 2024, II skyrius, 27. Protestai Lietuvos teritorij
 Protest actions at the border
 Todennäköisyys: Didelis (3/4: Didelė – kerran 1–10 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
 Teemat: Kohdennettu väkivalta ja levottomuudet
-Nacionalinė rizikos analizė 2024, II skyrius, 28. Protesto akcijos pasienyje, p. 182–186 (rizikos vertinimas p. 186); rizikų vertinimo rezultatai p. 6–7">Protestitoimet raja-alueella</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a1 1 0 0 1-1-1v-1a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1"/><path d="M19 15V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V9"/><path d="M21 21v-2h-4"/><path d="M3 5h4V3"/><path d="M7 5a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1V3"/></svg></span><span>Kriittisen infrastruktuurin sabotaasi</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">7/8</span></span></th><td class="no">–</td><td><span class="rk c" data-r="se-21" title="Sabotage mot kritisk infrastruktur
-Sabotage against critical infrastructure
-Todennäköisyys: Laadullinen (ei asteikkoa): ”Sannolikheten för ett allvarligt sabotage mot kritisk infrastruktur … är svårbedömd. Det kan dock sammantaget konstateras att omvärldsläget är oroligare än på länge …” (s. 123)
-Teemat: Kriittisen infrastruktuurin sabotaasi
-Tabell 1 s. 27; avsnitt s. 121–123 (ei gestaltning eikä konsekvensfigur)">Kriittisen infrastruktuurin sabotaasi</span></td><td><span class="rk c" data-r="no-31" title="Manipulering av satellittbaserte tidssignaler
-Manipulation of satellite-based time signals
-Teemat: Avaruussää ja satelliittipalvelut, Kriittisen infrastruktuurin sabotaasi
-Risikoanalyse av manipulering av satellittbaserte tidssignaler (2026), luku 3 s. 16–17 (skenaario), luku 5 s. 19–20, luku 8 s. 41–45 (yhteenveto s. 45)">Satelliittipohjaisten aikasignaalien manipulointi</span></td><td><span class="rk c" data-r="dk-04" title="Maritime hændelser
-Maritime incidents
-Teemat: Merionnettomuus tai öljyvahinko, Kriittisen infrastruktuurin sabotaasi
-NRB 2025, luku &#x27;Maritime hændelser&#x27;, s. 70–81; yhteenvetokuva s. 9; EN NRP 2025 s. 70–80">Merelliset tapahtumat</span></td><td><span class="rk c" data-r="is-39" title="Samfélagsöryggi
-Societal security
-Teemat: Kriittisen infrastruktuurin sabotaasi
-s. 139–141 ja 142–144 (Samantekt um öryggismál, Tafla 73 «Innbyrðis tengingar atburða»); piiritason luokitus Tafla 71 «Sérstaklega metin áhætta vegna öryggismála í umdæmunum» (s. 141); Í hnotskurn s. 17">Yhteiskunnan turvallisuus</span><span class="rk c" data-r="is-40" title="Óeirðir, skemmdarverk, óstöðugleiki og hryðjuverk
-Riots, sabotage, instability and terrorism
-Todennäköisyys: Ei skenaariotaulukkoa; leipäteksti: «Almennt var talað um að litlar líkur væru á mikilli truflun» (yleisesti pieni todennäköisyys laajalle häiriölle).
-Teemat: Terrori-isku, Kohdennettu väkivalta ja levottomuudet, Kriittisen infrastruktuurin sabotaasi
-s. 141–142; piiritason luokitus Tafla 72 «Sérstaklega metin áhætta vegna skemmdar- og hryðjuverka í umdæmunum» (s. 142); Í hnotskurn s. 17">Mellakat, ilkivalta, epävakaus ja terrorismi</span></td><td><span class="rk c" data-r="ee-03" title="Taristu sabotaaž
-Infrastructure sabotage
-Todennäköisyys: Kaksi arviota: kriittisen infrastruktuurin tahallinen sabotaasi 2 v sisällä Vähe tõenäoline (Unlikely, 2/5: 21–40 % / 2 v); merenalaisten yhteyksien vaurioitumisinsidentti 2 v sisällä Tõenäoline (Likely, 3/5: 41–60 % / 2 v).
-Teemat: Kriittisen infrastruktuurin sabotaasi
-riigikantselei.ee/riskid/taristu-sabotaaz (EN: /en/riskid/infrastructure-sabotage); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 9">Infrastruktuurin sabotaasi</span></td><td><span class="rk c" data-r="lv-44" title="Uzbrukums CBRNe infrastruktūrai
-Attack on CBRNe infrastructure
-Todennäköisyys: V=2 – Zema (kerran 30–100 vuodessa) (tahallinen uhka, tarkastelujakso 2 v)
-Teemat: Terrori-isku, Kriittisen infrastruktuurin sabotaasi
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 30. lpp., ID C-07; 2. pielikums (Risku katalogs)">Hyökkäys CBRNe-infrastruktuuriin</span><span class="rk c" data-r="lv-45" title="Sabotāža (fiziska infrastruktūra)
-Sabotage (physical infrastructure)
-Todennäköisyys: V=3 – Vidēja (kerran 10–30 vuodessa) (tahallinen uhka, tarkastelujakso 2 v)
-Teemat: Kriittisen infrastruktuurin sabotaasi
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 30. lpp., ID C-08; 2. pielikums (Risku katalogs)">Sabotaasi (fyysinen infrastruktuuri)</span></td><td><span class="rk c" data-r="lt-12" title="Kritinės energetinės infrastruktūros pažeidimas
-Damage to critical energy infrastructure
-Todennäköisyys: Didelis (3/4: Didelė – kerran 1–10 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
-Teemat: Kriittisen infrastruktuurin sabotaasi, Sähkökatko tai sähköpula
-Nacionalinė rizikos analizė 2024, II skyrius, 12. Kritinės energetinės infrastruktūros pažeidimas, p. 81–87 (rizikos vertinimas p. 87); rizikų vertinimo rezultatai p. 6–7">Kriittisen energiainfrastruktuurin vaurioituminen</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg></span><span>Kyberhyökkäys tai tietojärjestelmien häiriö</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">7/8</span></span></th><td><span class="rk c" data-r="fi-3.3.3" title="Tiedon käytettävyyden häiriintyminen
+Nacionalinė rizikos analizė 2024, II skyrius, 28. Protesto akcijos pasienyje, p. 182–186 (rizikos vertinimas p. 186); rizikų vertinimo rezultatai p. 6–7">Protestitoimet raja-alueella</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg></span><span>Kyberhyökkäys tai tietojärjestelmien häiriö</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">7/8</span></span></th><td><span class="rk c" data-r="fi-3.3.3" title="Tiedon käytettävyyden häiriintyminen
 Disruption of data availability
 Todennäköisyys: mahdollinen
 Teemat: Kyberhyökkäys tai tietojärjestelmien häiriö
@@ -681,7 +594,127 @@ Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, E-kat
 Cyberattacks targeting the availability, integrity and confidentiality of information
 Todennäköisyys: Labai didelis (4/4: Labai didelė – useammin kuin kerran vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
 Teemat: Kyberhyökkäys tai tietojärjestelmien häiriö
-Nacionalinė rizikos analizė 2024, II skyrius, 6. Kibernetinės atakos, nukreiptos į informacijos prieinamumą, vientisumą ir konfidencialumą, p. 42–47 (rizikos vertinimas p. 46); rizikų vertinimo rezultatai p. 6–7">Tiedon saatavuuteen, eheyteen ja luottamuksellisuuteen kohdistuvat kyberhyökkäykset</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></span><span>Suuri liikenne- tai muu onnettomuus</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">7/8</span></span></th><td class="no">–</td><td><span class="rk c" data-r="se-08" title="Dammhaveri
+Nacionalinė rizikos analizė 2024, II skyrius, 6. Kibernetinės atakos, nukreiptos į informacijos prieinamumą, vientisumą ir konfidencialumą, p. 42–47 (rizikos vertinimas p. 46); rizikų vertinimo rezultatai p. 6–7">Tiedon saatavuuteen, eheyteen ja luottamuksellisuuteen kohdistuvat kyberhyökkäykset</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg></span><span>Tulvat ja rankkasateet</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">7/8</span></span></th><td class="no">–</td><td><span class="rk c" data-r="se-04" title="Skyfall
+Cloudburst (extreme rainfall)
+Todennäköisyys: Laadullinen (ei asteikkoa): ”Sannolikheten för ett skyfall är mycket svår att bedöma …” ja ”Klimatförändringarna har redan ökat förekomsten av intensiva regn och den ökningen kommer fortsätta.” (s. 46)
+Teemat: Tulvat ja rankkasateet
+Tabell 1 s. 27; avsnitt s. 42–46 (figur 4 s. 45)">Rankkasade</span><span class="rk c" data-r="se-08" title="Dammhaveri
+Dam failure
+Todennäköisyys: Laadullinen (ei asteikkoa): Ei yhteenvetävää päätelmää. Viitataan ICOLD-tilastoon: suurista padoista ”knappt en procent” on murtunut (s. 65).
+Teemat: Suuri liikenne- tai muu onnettomuus, Tulvat ja rankkasateet
+Tabell 1 s. 27; avsnitt s. 61–65 (figur 8 s. 64)">Patomurtuma</span></td><td><span class="rk c" data-r="no-02" title="Flom i Lågen og Glomma
+Flooding in Lågen and Glomma
+Todennäköisyys: Skenaario: 15 % / 100 v («lav»); vastaava tulva muualla maassa: 55 % / 100 v («middels»).
+Teemat: Tulvat ja rankkasateet
+AKS 2019, luku 3.2, s. 44–47 (tulostaulukko s. 47)">Tulva Lågen- ja Glomma-joissa</span><span class="rk c" data-r="no-03" title="Regnflom i by
+Flash Flooding in a City
+Todennäköisyys: Skenaario (Drammen): 75 % / 100 v («høy»); jossakin 20 alttiista Oslonvuonon/Skagerrakin kaupungista: «svært høy» (lähes 100 %).
+Teemat: Tulvat ja rankkasateet
+AKS 2019, luku 3.3, s. 48–51 (tulostaulukko s. 51)">Rankkasadetulva kaupungissa</span></td><td><span class="rk c" data-r="dk-12" title="Oversvømmelser fra havet
+Ocean flooding
+Teemat: Tulvat ja rankkasateet
+NRB 2025, luku &#x27;Oversvømmelser fra havet&#x27;, s. 145–153; yhteenvetokuva s. 9; EN NRP 2025 s. 143–151">Merivesitulvat</span><span class="rk c" data-r="dk-13" title="Ekstremregn
+Extreme rain
+Teemat: Tulvat ja rankkasateet
+NRB 2025, luku &#x27;Ekstremregn&#x27;, s. 154–162; yhteenvetokuva s. 9; EN NRP 2025 s. 152–160">Rankkasateet</span></td><td><span class="rk c" data-r="is-04" title="Jökulhlaup
+Glacial outburst floods
+Todennäköisyys: «Undir mörgum jöklum er eldvirkni og eru jökulhlaup allt frá því að vera árviss í það að vera á nokkurra alda fresti» (vuosittaisista muutaman vuosisadan välein); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
+Teemat: Tulvat ja rankkasateet, Maanjäristys, tulivuori tai maanvyöry
+s. 52–54, Tafla 9 «Sviðsmynd vegna jökulhlaupa» (s. 52); Í hnotskurn s. 11">Jäätikköpurkaustulva</span><span class="rk c" data-r="is-06" title="Sjávarflóð
+Coastal floods and severe storm surges
+Todennäköisyys: «Búast má við stórflóðum á 10 – 20 ára fresti. Breytingar á loftslagi geta aukið líkur á sjávarflóðum á landinu» (suuria merivesitulvia 10–20 vuoden välein); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
+Teemat: Tulvat ja rankkasateet, Myrskyt ja äärisää
+s. 59–63, Tafla 14 «Sviðsmynd vegna sjávarflóða» (s. 61); Í hnotskurn s. 12">Merivesitulva ja myrskyvuoksi</span><span class="rk c" data-r="is-07" title="Flóðbylgjur
+Tsunami
+Todennäköisyys: «Frekar litlar líkur/skoða nánar» (melko pieni todennäköisyys / tarkasteltava lähemmin); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
+Teemat: Maanjäristys, tulivuori tai maanvyöry, Tulvat ja rankkasateet
+s. 63–65, Tafla 16 «Sviðsmynd vegna flóðbylgna/tsunami» (s. 64); Í hnotskurn s. 12">Hyökyaallot (tsunami)</span><span class="rk c" data-r="is-08" title="Flóð í ám og vötnum
+Floods
+Todennäköisyys: «Flóð verða oft í ám á landinu.» (jokitulvia esiintyy usein; Veðurstofan selvittää toistumisajat); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
+Teemat: Tulvat ja rankkasateet
+s. 65–67, Tafla 18 «Sviðsmynd vegna flóða í ám og vötnum» (s. 65); Í hnotskurn s. 12">Jokien ja järvien tulvat</span><span class="rk c" data-r="is-33" title="Virkjanir og stíflurof
+Power plants and dam failure
+Todennäköisyys: «Nokkuð ólíklegt.» (melko epätodennäköinen); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
+Teemat: Tulvat ja rankkasateet, Suuri liikenne- tai muu onnettomuus
+s. 125–127, Tafla 61 «Sviðsmynd vegna hættu í virkjunum og stíflurofs» (s. 125); Í hnotskurn s. 16">Voimalaitokset ja padon murtuminen</span></td><td><span class="rk c" data-r="ee-11" title="Üleujutus
+Floods
+Todennäköisyys: Tõenäoline (Likely, 3/5: 41–60 % / 2 v) – vakavin seurauksin; noussut: vähe tõenäoline → tõenäoline.
+Teemat: Tulvat ja rankkasateet
+riigikantselei.ee/riskid/uleujutus (EN: /en/riskid/floods); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 28">Tulva</span></td><td><span class="rk c" data-r="lv-01" title="Upju plūdi
+River floods
+Todennäköisyys: V=4 – Augsta (kerran 3–10 vuodessa)
+Teemat: Tulvat ja rankkasateet
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 24. lpp., ID D-01; 2. pielikums (Risku katalogs)">Jokitulvat</span><span class="rk c" data-r="lv-02" title="Piekrastes plūdi (t. sk. D-02a: ledus apdraudējumi — lielu ledus gabalu atraušanās no krasta, sastrēgumi Rīgas līcī)
+Coastal flooding (incl. D-02a: ice hazards — detachment of large ice floes from the shore, ice jams in the Gulf of Riga)
+Todennäköisyys: V=3 – Vidēja (kerran 10–30 vuodessa)
+Teemat: Tulvat ja rankkasateet
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 24. lpp., ID D-02; 2. pielikums (Risku katalogs)">Rannikkotulvat (ml. D-02a: jäävaarat — suurten jäälauttojen irtoaminen rannasta, jääpadot Riianlahdella)</span><span class="rk c" data-r="lv-03" title="Pilsētu applūšana (sanesu ūdeņi, lietusgāzes, atkusnis)
+Urban flooding (stormwater, downpours, thaw)
+Todennäköisyys: V=4 – Augsta (kerran 3–10 vuodessa)
+Teemat: Tulvat ja rankkasateet
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 24. lpp., ID D-03; 2. pielikums (Risku katalogs)">Kaupunkitulvat (hulevedet, rankkasateet, suojasää)</span><span class="rk c" data-r="lv-25" title="Daugavas HES dambja pārrāvums
+Daugava hydropower plant dam failure
+Todennäköisyys: V=1 – Ļoti zema (kerran 100 vuodessa tai harvemmin) (HILP-osion mukaan; ei arvioitu V×SW.I-kaavalla)
+Teemat: Tulvat ja rankkasateet, Suuri liikenne- tai muu onnettomuus
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa, 27. lpp. (ID T-07) ja HILP-osio 31. lpp.">Daugavan vesivoimalan padon murtuminen</span></td><td><span class="rk c" data-r="lt-21" title="Stichiniai, katastrofiniai hidrologiniai ir meteorologiniai reiškiniai
+Natural-disaster-level and catastrophic hydrological and meteorological phenomena
+Todennäköisyys: Labai didelis (4/4: Labai didelė – useammin kuin kerran vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
+Teemat: Myrskyt ja äärisää, Tulvat ja rankkasateet
+Nacionalinė rizikos analizė 2024, II skyrius, 21. Stichiniai, katastrofiniai hidrologiniai ir meteorologiniai reiškiniai, p. 140–144 (rizikos vertinimas p. 144); rizikų vertinimo rezultatai p. 6–7">Luonnononnettomuustason ja katastrofaaliset hydrologiset ja meteorologiset ilmiöt</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg></span><span>Kemikaali- tai teollisuusonnettomuus</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">7/8</span></span></th><td class="no">–</td><td><span class="rk c" data-r="se-10" title="Kemikalieolycka
+Chemical accident
+Todennäköisyys: Laadullinen (ei asteikkoa): ”Riskhanteringen kring hantering och transport av farliga ämnen medför att olyckor inte inträffar så ofta men det har genom åren skett utsläpp vid flera tillfällen, både vid transport och i produktion.” (s. 73–74)
+Teemat: Kemikaali- tai teollisuusonnettomuus
+Tabell 1 s. 27; avsnitt s. 70–74 (figur 10 s. 73)">Kemikaalionnettomuus</span></td><td><span class="rk c" data-r="no-13" title="Brann i oljehavn i by
+Fire at an Oil Terminal in a City
+Todennäköisyys: Skenaario (Sjursøya, Oslo): 10 % / 100 v («lav»); 16 vertailukelpoista pienempää laitosta ja 2 jalostamoa: 60 % / 100 v («middels»).
+Teemat: Kemikaali- tai teollisuusonnettomuus
+AKS 2019, luku 10.1, s. 120–123 (tulostaulukko s. 123)">Tulipalo öljysatamassa kaupungissa</span><span class="rk c" data-r="no-14" title="Gassutslipp fra industrianlegg
+Gas Emission from an Industrial Plant
+Todennäköisyys: 1 % / 100 v («svært lav») turvajärjestelmien pettäessä; ulkoiset syyt (sabotaasi, lento-onnettomuus) huomioiden hieman korkeampi mutta yhä «svært lav»; Norjassa ei suoraan vertailukelpoisia laitoksia.
+Teemat: Kemikaali- tai teollisuusonnettomuus
+AKS 2019, luku 10.2, s. 124–127 (tulostaulukko s. 127)">Kaasupäästö teollisuuslaitoksesta</span><span class="rk c" data-r="no-16" title="Olje- og gassutblåsning
+Oil and Gas Blowout
+Todennäköisyys: Skenaario (porauslautta Hordalandin edustalla): 0,02 % / 100 v («svært lav»); vakava purkaus Norjan mannerjalustalla: 4 % / 100 v («svært lav»).
+Teemat: Merionnettomuus tai öljyvahinko, Kemikaali- tai teollisuusonnettomuus
+AKS 2019, luku 12.1, s. 140–143 (tulostaulukko s. 143)">Öljy- ja kaasupurkaus</span><span class="rk c" data-r="no-29" title="Eksplosjon og brann i anlegg for behandling av farlig avfall
+Explosion and fire at a hazardous waste treatment facility
+Teemat: Kemikaali- tai teollisuusonnettomuus
+Beredskapsanalyse av utvalgte CE-hendelser (kesäkuu 2024), luku 5, s. 33–46">Räjähdys ja tulipalo vaarallisen jätteen käsittelylaitoksessa</span></td><td><span class="rk c" data-r="dk-06" title="Kemiske hændelser
+Chemical incidents
+Teemat: Kemikaali- tai teollisuusonnettomuus
+NRB 2025, luku &#x27;Kemiske hændelser&#x27;, s. 92–100; yhteenvetokuva s. 9; EN NRP 2025 s. 91–99">Kemikaalitapahtumat</span></td><td><span class="rk c" data-r="is-20" title="Bruni hættulegra efna
+Fire involving hazardous substances
+Todennäköisyys: «Nokkrar» (jonkin verran); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
+Teemat: Kemikaali- tai teollisuusonnettomuus
+s. 93, Tafla 38 «Bruni hættulegra efna» (luvun Eldsvoðar osa)">Vaarallisten aineiden palo</span><span class="rk c" data-r="is-22" title="Hættuleg og mengandi efni
+Hazardous and polluting substances
+Todennäköisyys: «Nokkrar» (jonkin verran); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
+Teemat: Kemikaali- tai teollisuusonnettomuus
+s. 97–98 (luku «Ýmis hættuleg efni»), Tafla 42 «Sviðsmynd vegna hættulegra og mengandi efna» (s. 98); Í hnotskurn s. 14">Vaaralliset ja saastuttavat aineet</span><span class="rk c" data-r="is-23" title="Bráðamengun við ströndina, í hafi, nálægt landinu eða í höfnum
+Acute pollution on the coast, at sea, near land or in harbours
+Todennäköisyys: «Nokkrar» (jonkin verran); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
+Teemat: Merionnettomuus tai öljyvahinko, Kemikaali- tai teollisuusonnettomuus
+s. 99–102 (luku «Mengun hafs og stranda»), Tafla 43 (s. 99)">Äkillinen meren ja rannikon pilaantuminen</span></td><td><span class="rk c" data-r="ee-18" title="Õnnetus ohtlikke kemikaale käitlevas ettevõttes
+Accident handling industrial hazardous chemicals
+Todennäköisyys: Vähe tõenäoline (Unlikely, 2/5: 21–40 % / 2 v) – suuronnettomuus; ei muutosta.
+Teemat: Kemikaali- tai teollisuusonnettomuus
+riigikantselei.ee/riskid/onnetus-ohtlikke-kemikaale-kaitlevas-ettevottes (EN: /en/riskid/accident-handling-industrial-hazardous-chemicals); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 44">Onnettomuus vaarallisia kemikaaleja käsittelevässä yrityksessä</span></td><td><span class="rk c" data-r="lv-23" title="Bīstamo ķīmisko vielu noplūde
+Hazardous chemical release
+Todennäköisyys: V=3 – Vidēja (kerran 10–30 vuodessa)
+Teemat: Kemikaali- tai teollisuusonnettomuus
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 27. lpp., ID T-05; 2. pielikums (Risku katalogs)">Vaarallisten kemikaalien vuoto</span><span class="rk c" data-r="lv-24" title="Bioloģisko vielu incidents / noplūde
+Biological agent incident / release
+Todennäköisyys: V=2 – Zema (kerran 30–100 vuodessa)
+Teemat: Kemikaali- tai teollisuusonnettomuus, Pandemia tai laaja epidemia
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 27. lpp., ID T-06; 2. pielikums (Risku katalogs)">Biologisten aineiden vaaratilanne / vuoto</span><span class="rk c" data-r="lv-29" title="Dzelzceļa katastrofa (ar bīstamu kravu)
+Railway disaster (with dangerous goods)
+Todennäköisyys: V=3 – Vidēja (kerran 10–30 vuodessa)
+Teemat: Suuri liikenne- tai muu onnettomuus, Kemikaali- tai teollisuusonnettomuus
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 28. lpp., ID T-11; 2. pielikums (Risku katalogs)">Rautatieonnettomuus (vaarallisia aineita kuljettaen)</span></td><td><span class="rk c" data-r="lt-23" title="Pramoninė avarija
+Industrial accident
+Todennäköisyys: Vidutinis (2/4: Vidutinė – kerran 10–50 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
+Teemat: Kemikaali- tai teollisuusonnettomuus
+Nacionalinė rizikos analizė 2024, II skyrius, 23. Pramoninė avarija, p. 150–154 (rizikos vertinimas p. 154); rizikų vertinimo rezultatai p. 6–7">Teollisuusonnettomuus</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></span><span>Suuri liikenne- tai muu onnettomuus</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">7/8</span></span></th><td class="no">–</td><td><span class="rk c" data-r="se-08" title="Dammhaveri
 Dam failure
 Todennäköisyys: Laadullinen (ei asteikkoa): Ei yhteenvetävää päätelmää. Viitataan ICOLD-tilastoon: suurista padoista ”knappt en procent” on murtunut (s. 65).
 Teemat: Suuri liikenne- tai muu onnettomuus, Tulvat ja rankkasateet
@@ -772,73 +805,75 @@ Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. no
 Fires and/or explosions
 Todennäköisyys: Didelis (3/4: Didelė – kerran 1–10 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
 Teemat: Suuri liikenne- tai muu onnettomuus
-Nacionalinė rizikos analizė 2024, II skyrius, 20. Gaisrai ir / ar sprogimai, p. 135–139 (rizikos vertinimas p. 139); rizikų vertinimo rezultatai p. 6–7">Tulipalot ja/tai räjähdykset</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg></span><span>Tulvat ja rankkasateet</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">7/8</span></span></th><td class="no">–</td><td><span class="rk c" data-r="se-04" title="Skyfall
-Cloudburst (extreme rainfall)
-Todennäköisyys: Laadullinen (ei asteikkoa): ”Sannolikheten för ett skyfall är mycket svår att bedöma …” ja ”Klimatförändringarna har redan ökat förekomsten av intensiva regn och den ökningen kommer fortsätta.” (s. 46)
-Teemat: Tulvat ja rankkasateet
-Tabell 1 s. 27; avsnitt s. 42–46 (figur 4 s. 45)">Rankkasade</span><span class="rk c" data-r="se-08" title="Dammhaveri
-Dam failure
-Todennäköisyys: Laadullinen (ei asteikkoa): Ei yhteenvetävää päätelmää. Viitataan ICOLD-tilastoon: suurista padoista ”knappt en procent” on murtunut (s. 65).
-Teemat: Suuri liikenne- tai muu onnettomuus, Tulvat ja rankkasateet
-Tabell 1 s. 27; avsnitt s. 61–65 (figur 8 s. 64)">Patomurtuma</span></td><td><span class="rk c" data-r="no-02" title="Flom i Lågen og Glomma
-Flooding in Lågen and Glomma
-Todennäköisyys: Skenaario: 15 % / 100 v («lav»); vastaava tulva muualla maassa: 55 % / 100 v («middels»).
-Teemat: Tulvat ja rankkasateet
-AKS 2019, luku 3.2, s. 44–47 (tulostaulukko s. 47)">Tulva Lågen- ja Glomma-joissa</span><span class="rk c" data-r="no-03" title="Regnflom i by
-Flash Flooding in a City
-Todennäköisyys: Skenaario (Drammen): 75 % / 100 v («høy»); jossakin 20 alttiista Oslonvuonon/Skagerrakin kaupungista: «svært høy» (lähes 100 %).
-Teemat: Tulvat ja rankkasateet
-AKS 2019, luku 3.3, s. 48–51 (tulostaulukko s. 51)">Rankkasadetulva kaupungissa</span></td><td><span class="rk c" data-r="dk-12" title="Oversvømmelser fra havet
-Ocean flooding
-Teemat: Tulvat ja rankkasateet
-NRB 2025, luku &#x27;Oversvømmelser fra havet&#x27;, s. 145–153; yhteenvetokuva s. 9; EN NRP 2025 s. 143–151">Merivesitulvat</span><span class="rk c" data-r="dk-13" title="Ekstremregn
-Extreme rain
-Teemat: Tulvat ja rankkasateet
-NRB 2025, luku &#x27;Ekstremregn&#x27;, s. 154–162; yhteenvetokuva s. 9; EN NRP 2025 s. 152–160">Rankkasateet</span></td><td><span class="rk c" data-r="is-04" title="Jökulhlaup
-Glacial outburst floods
-Todennäköisyys: «Undir mörgum jöklum er eldvirkni og eru jökulhlaup allt frá því að vera árviss í það að vera á nokkurra alda fresti» (vuosittaisista muutaman vuosisadan välein); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
-Teemat: Tulvat ja rankkasateet, Maanjäristys, tulivuori tai maanvyöry
-s. 52–54, Tafla 9 «Sviðsmynd vegna jökulhlaupa» (s. 52); Í hnotskurn s. 11">Jäätikköpurkaustulva</span><span class="rk c" data-r="is-06" title="Sjávarflóð
-Coastal floods and severe storm surges
-Todennäköisyys: «Búast má við stórflóðum á 10 – 20 ára fresti. Breytingar á loftslagi geta aukið líkur á sjávarflóðum á landinu» (suuria merivesitulvia 10–20 vuoden välein); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
-Teemat: Tulvat ja rankkasateet, Myrskyt ja äärisää
-s. 59–63, Tafla 14 «Sviðsmynd vegna sjávarflóða» (s. 61); Í hnotskurn s. 12">Merivesitulva ja myrskyvuoksi</span><span class="rk c" data-r="is-07" title="Flóðbylgjur
-Tsunami
-Todennäköisyys: «Frekar litlar líkur/skoða nánar» (melko pieni todennäköisyys / tarkasteltava lähemmin); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
-Teemat: Maanjäristys, tulivuori tai maanvyöry, Tulvat ja rankkasateet
-s. 63–65, Tafla 16 «Sviðsmynd vegna flóðbylgna/tsunami» (s. 64); Í hnotskurn s. 12">Hyökyaallot (tsunami)</span><span class="rk c" data-r="is-08" title="Flóð í ám og vötnum
-Floods
-Todennäköisyys: «Flóð verða oft í ám á landinu.» (jokitulvia esiintyy usein; Veðurstofan selvittää toistumisajat); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
-Teemat: Tulvat ja rankkasateet
-s. 65–67, Tafla 18 «Sviðsmynd vegna flóða í ám og vötnum» (s. 65); Í hnotskurn s. 12">Jokien ja järvien tulvat</span><span class="rk c" data-r="is-33" title="Virkjanir og stíflurof
-Power plants and dam failure
-Todennäköisyys: «Nokkuð ólíklegt.» (melko epätodennäköinen); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
-Teemat: Tulvat ja rankkasateet, Suuri liikenne- tai muu onnettomuus
-s. 125–127, Tafla 61 «Sviðsmynd vegna hættu í virkjunum og stíflurofs» (s. 125); Í hnotskurn s. 16">Voimalaitokset ja padon murtuminen</span></td><td><span class="rk c" data-r="ee-11" title="Üleujutus
-Floods
-Todennäköisyys: Tõenäoline (Likely, 3/5: 41–60 % / 2 v) – vakavin seurauksin; noussut: vähe tõenäoline → tõenäoline.
-Teemat: Tulvat ja rankkasateet
-riigikantselei.ee/riskid/uleujutus (EN: /en/riskid/floods); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 28">Tulva</span></td><td><span class="rk c" data-r="lv-01" title="Upju plūdi
-River floods
-Todennäköisyys: V=4 – Augsta (kerran 3–10 vuodessa)
-Teemat: Tulvat ja rankkasateet
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 24. lpp., ID D-01; 2. pielikums (Risku katalogs)">Jokitulvat</span><span class="rk c" data-r="lv-02" title="Piekrastes plūdi (t. sk. D-02a: ledus apdraudējumi — lielu ledus gabalu atraušanās no krasta, sastrēgumi Rīgas līcī)
-Coastal flooding (incl. D-02a: ice hazards — detachment of large ice floes from the shore, ice jams in the Gulf of Riga)
-Todennäköisyys: V=3 – Vidēja (kerran 10–30 vuodessa)
-Teemat: Tulvat ja rankkasateet
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 24. lpp., ID D-02; 2. pielikums (Risku katalogs)">Rannikkotulvat (ml. D-02a: jäävaarat — suurten jäälauttojen irtoaminen rannasta, jääpadot Riianlahdella)</span><span class="rk c" data-r="lv-03" title="Pilsētu applūšana (sanesu ūdeņi, lietusgāzes, atkusnis)
-Urban flooding (stormwater, downpours, thaw)
-Todennäköisyys: V=4 – Augsta (kerran 3–10 vuodessa)
-Teemat: Tulvat ja rankkasateet
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 24. lpp., ID D-03; 2. pielikums (Risku katalogs)">Kaupunkitulvat (hulevedet, rankkasateet, suojasää)</span><span class="rk c" data-r="lv-25" title="Daugavas HES dambja pārrāvums
-Daugava hydropower plant dam failure
-Todennäköisyys: V=1 – Ļoti zema (kerran 100 vuodessa tai harvemmin) (HILP-osion mukaan; ei arvioitu V×SW.I-kaavalla)
-Teemat: Tulvat ja rankkasateet, Suuri liikenne- tai muu onnettomuus
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa, 27. lpp. (ID T-07) ja HILP-osio 31. lpp.">Daugavan vesivoimalan padon murtuminen</span></td><td><span class="rk c" data-r="lt-21" title="Stichiniai, katastrofiniai hidrologiniai ir meteorologiniai reiškiniai
-Natural-disaster-level and catastrophic hydrological and meteorological phenomena
-Todennäköisyys: Labai didelis (4/4: Labai didelė – useammin kuin kerran vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
-Teemat: Myrskyt ja äärisää, Tulvat ja rankkasateet
-Nacionalinė rizikos analizė 2024, II skyrius, 21. Stichiniai, katastrofiniai hidrologiniai ir meteorologiniai reiškiniai, p. 140–144 (rizikos vertinimas p. 144); rizikų vertinimo rezultatai p. 6–7">Luonnononnettomuustason ja katastrofaaliset hydrologiset ja meteorologiset ilmiöt</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></svg></span><span>Eläintaudit</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">6/8</span></span></th><td><span class="rk c" data-r="fi-3.2.1" title="Eläintautiepidemiat
+Nacionalinė rizikos analizė 2024, II skyrius, 20. Gaisrai ir / ar sprogimai, p. 135–139 (rizikos vertinimas p. 139); rizikų vertinimo rezultatai p. 6–7">Tulipalot ja/tai räjähdykset</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a1 1 0 0 1-1-1v-1a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1"/><path d="M19 15V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V9"/><path d="M21 21v-2h-4"/><path d="M3 5h4V3"/><path d="M7 5a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1V3"/></svg></span><span>Kriittisen infrastruktuurin sabotaasi</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">7/8</span></span></th><td class="no">–</td><td><span class="rk c" data-r="se-21" title="Sabotage mot kritisk infrastruktur
+Sabotage against critical infrastructure
+Todennäköisyys: Laadullinen (ei asteikkoa): ”Sannolikheten för ett allvarligt sabotage mot kritisk infrastruktur … är svårbedömd. Det kan dock sammantaget konstateras att omvärldsläget är oroligare än på länge …” (s. 123)
+Teemat: Kriittisen infrastruktuurin sabotaasi
+Tabell 1 s. 27; avsnitt s. 121–123 (ei gestaltning eikä konsekvensfigur)">Kriittisen infrastruktuurin sabotaasi</span></td><td><span class="rk c" data-r="no-31" title="Manipulering av satellittbaserte tidssignaler
+Manipulation of satellite-based time signals
+Teemat: Avaruussää ja satelliittipalvelut, Kriittisen infrastruktuurin sabotaasi
+Risikoanalyse av manipulering av satellittbaserte tidssignaler (2026), luku 3 s. 16–17 (skenaario), luku 5 s. 19–20, luku 8 s. 41–45 (yhteenveto s. 45)">Satelliittipohjaisten aikasignaalien manipulointi</span></td><td><span class="rk c" data-r="dk-04" title="Maritime hændelser
+Maritime incidents
+Teemat: Merionnettomuus tai öljyvahinko, Kriittisen infrastruktuurin sabotaasi
+NRB 2025, luku &#x27;Maritime hændelser&#x27;, s. 70–81; yhteenvetokuva s. 9; EN NRP 2025 s. 70–80">Merelliset tapahtumat</span></td><td><span class="rk c" data-r="is-39" title="Samfélagsöryggi
+Societal security
+Teemat: Kriittisen infrastruktuurin sabotaasi
+s. 139–141 ja 142–144 (Samantekt um öryggismál, Tafla 73 «Innbyrðis tengingar atburða»); piiritason luokitus Tafla 71 «Sérstaklega metin áhætta vegna öryggismála í umdæmunum» (s. 141); Í hnotskurn s. 17">Yhteiskunnan turvallisuus</span><span class="rk c" data-r="is-40" title="Óeirðir, skemmdarverk, óstöðugleiki og hryðjuverk
+Riots, sabotage, instability and terrorism
+Todennäköisyys: Ei skenaariotaulukkoa; leipäteksti: «Almennt var talað um að litlar líkur væru á mikilli truflun» (yleisesti pieni todennäköisyys laajalle häiriölle).
+Teemat: Terrori-isku, Kohdennettu väkivalta ja levottomuudet, Kriittisen infrastruktuurin sabotaasi
+s. 141–142; piiritason luokitus Tafla 72 «Sérstaklega metin áhætta vegna skemmdar- og hryðjuverka í umdæmunum» (s. 142); Í hnotskurn s. 17">Mellakat, ilkivalta, epävakaus ja terrorismi</span></td><td><span class="rk c" data-r="ee-03" title="Taristu sabotaaž
+Infrastructure sabotage
+Todennäköisyys: Kaksi arviota: kriittisen infrastruktuurin tahallinen sabotaasi 2 v sisällä Vähe tõenäoline (Unlikely, 2/5: 21–40 % / 2 v); merenalaisten yhteyksien vaurioitumisinsidentti 2 v sisällä Tõenäoline (Likely, 3/5: 41–60 % / 2 v).
+Teemat: Kriittisen infrastruktuurin sabotaasi
+riigikantselei.ee/riskid/taristu-sabotaaz (EN: /en/riskid/infrastructure-sabotage); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 9">Infrastruktuurin sabotaasi</span></td><td><span class="rk c" data-r="lv-44" title="Uzbrukums CBRNe infrastruktūrai
+Attack on CBRNe infrastructure
+Todennäköisyys: V=2 – Zema (kerran 30–100 vuodessa) (tahallinen uhka, tarkastelujakso 2 v)
+Teemat: Terrori-isku, Kriittisen infrastruktuurin sabotaasi
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 30. lpp., ID C-07; 2. pielikums (Risku katalogs)">Hyökkäys CBRNe-infrastruktuuriin</span><span class="rk c" data-r="lv-45" title="Sabotāža (fiziska infrastruktūra)
+Sabotage (physical infrastructure)
+Todennäköisyys: V=3 – Vidēja (kerran 10–30 vuodessa) (tahallinen uhka, tarkastelujakso 2 v)
+Teemat: Kriittisen infrastruktuurin sabotaasi
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 30. lpp., ID C-08; 2. pielikums (Risku katalogs)">Sabotaasi (fyysinen infrastruktuuri)</span></td><td><span class="rk c" data-r="lt-12" title="Kritinės energetinės infrastruktūros pažeidimas
+Damage to critical energy infrastructure
+Todennäköisyys: Didelis (3/4: Didelė – kerran 1–10 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
+Teemat: Kriittisen infrastruktuurin sabotaasi, Sähkökatko tai sähköpula
+Nacionalinė rizikos analizė 2024, II skyrius, 12. Kritinės energetinės infrastruktūros pažeidimas, p. 81–87 (rizikos vertinimas p. 87); rizikų vertinimo rezultatai p. 6–7">Kriittisen energiainfrastruktuurin vaurioituminen</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"/><line x1="13" x2="19" y1="19" y2="13"/><line x1="16" x2="20" y1="16" y2="20"/><line x1="19" x2="21" y1="21" y2="19"/><polyline points="14.5 6.5 18 3 21 3 21 6 17.5 9.5"/><line x1="5" x2="9" y1="14" y2="18"/><line x1="7" x2="4" y1="17" y2="20"/><line x1="3" x2="5" y1="19" y2="21"/></svg></span><span>Sotilaallinen hyökkäys tai konflikti</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">6/8</span></span></th><td><span class="rk c" data-r="fi-3.1.6" title="Sotilaallisen voiman käyttö
+Use of military force
+Todennäköisyys: mahdollinen
+Teemat: Sotilaallinen hyökkäys tai konflikti
+luku 3.1.6, PDF-s. 53">Sotilaallisen voiman käyttö</span></td><td><span class="rk c" data-r="se-23" title="Väpnat angrepp – Strid utanför Sverige inom ramen för Nato
+Armed attack – Combat outside Sweden within the NATO framework
+Todennäköisyys: Laadullinen (ei asteikkoa): ”Åtaganden inom ramen för Natos ömsesidiga försvarsgarantier innebär att sannolikheten ökar för att Sverige kan engageras i konflikter utanför svenskt närområde.” (s. 133)
+Teemat: Sotilaallinen hyökkäys tai konflikti
+Tabell 1 s. 27; avsnitt s. 128–133 (luvun otsikko &#x27;Strid utanför svenskt territorium inom ramen för Natos verksamhet&#x27;; yhteinen hotbeskrivning s. 128–129; figur 22 s. 133)">Aseellinen hyökkäys – taistelut Ruotsin ulkopuolella Naton puitteissa</span><span class="rk c" data-r="se-24" title="Väpnat angrepp – Fjärrangrepp
+Armed attack – Long-range (stand-off) attack
+Todennäköisyys: Laadullinen (ei asteikkoa): ”Regeringen konstaterar likt försvarsberedningen att ett väpnat angrepp mot Sverige eller våra allierade inte kan uteslutas.” (s. 137)
+Teemat: Sotilaallinen hyökkäys tai konflikti
+Tabell 1 s. 27; avsnitt s. 134–137 (figur 23 s. 137)">Aseellinen hyökkäys – kaukovaikutteinen hyökkäys</span><span class="rk c" data-r="se-25" title="Väpnat angrepp – Strid på svenskt territorium
+Armed attack – Combat on Swedish territory
+Todennäköisyys: Laadullinen (ei asteikkoa): ”Samtidigt som risken för ett militärt angrepp mot Sverige i det korta tidsperspektivet bedöms som låg föreligger en ökad risk för påverkansoperationer och andra fientliga aktioner.” (s. 141)
+Teemat: Sotilaallinen hyökkäys tai konflikti
+Tabell 1 s. 27; avsnitt s. 138–141 (figur 24 s. 140)">Aseellinen hyökkäys – taistelut Ruotsin alueella</span><span class="rk c" data-r="se-26" title="Väpnat angrepp – Kärnvapenangrepp
+Armed attack – Nuclear weapons attack
+Todennäköisyys: Laadullinen (ei asteikkoa): ”Ryssland har fortsatt förmåga att genomföra operationer med kärnvapen mot Sverige och Sveriges närområde.” Valitusta tapahtumasta: ”Det betyder inte att händelsen nödvändigtvis är den mest troliga för användning av kärnvapen.” (s. 145)
+Teemat: Sotilaallinen hyökkäys tai konflikti
+Tabell 1 s. 27; avsnitt s. 141–145 (figur 25 s. 144)">Aseellinen hyökkäys – ydinasehyökkäys</span></td><td><span class="rk c" data-r="no-24" title="Sikkerhetspolitisk konflikt
+Aggression by foreign state
+Teemat: Sotilaallinen hyökkäys tai konflikti
+AKS 2019, luku 17, s. 191–196 (riskialueen kuvaus; DSB:n 2017 riskianalyysi «Hybrid angrep mot Norge» on luokiteltu, s. 192)">Turvallisuuspoliittinen konflikti</span></td><td class="no">–</td><td class="no">–</td><td><span class="rk c" data-r="ee-01" title="Sõjaline oht
+Military threat
+Todennäköisyys: Ebatõenäoline (Improbable, 1/5: 0–20 % / 2 v) – suora sotilaallinen hyökkäys Viroon vuonna 2025; ei muutosta edelliseen. EN-sivulla &#x27;low&#x27;.
+Teemat: Sotilaallinen hyökkäys tai konflikti
+riigikantselei.ee/riskid/sojaline-oht (EN: /en/riskid/military-threat); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 3">Sotilaallinen uhka</span></td><td><span class="rk c" data-r="lv-38" title="Bruņots konflikts / militārs iebrukums
+Armed conflict / military invasion
+Todennäköisyys: V=3 – Vidēja (kerran 10–30 vuodessa) (tahallinen uhka, tarkastelujakso 2 v)
+Teemat: Sotilaallinen hyökkäys tai konflikti
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 29. lpp., ID C-01; 2. pielikums (Risku katalogs)">Aseellinen konflikti / sotilaallinen hyökkäys</span></td><td><span class="rk c" data-r="lt-01" title="Pavojus valstybės saugumui
+Threat to national security
+Todennäköisyys: Vidutinis (2/4: Vidutinė – kerran 10–50 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
+Teemat: Sotilaallinen hyökkäys tai konflikti
+Nacionalinė rizikos analizė 2024, II skyrius, 1. Pavojus valstybės saugumui, p. 10–16 (rizikos vertinimas p. 15); rizikų vertinimo rezultatai p. 6–7">Valtion turvallisuuteen kohdistuva uhka</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/></svg></span><span>Eläintaudit</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">6/8</span></span></th><td><span class="rk c" data-r="fi-3.2.1" title="Eläintautiepidemiat
 Animal disease epidemics
 Todennäköisyys: melko todennäköinen
 Teemat: Eläintaudit
@@ -891,72 +926,7 @@ Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. no
 Natural-disaster-level and catastrophic hydrological and meteorological phenomena
 Todennäköisyys: Labai didelis (4/4: Labai didelė – useammin kuin kerran vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
 Teemat: Myrskyt ja äärisää, Tulvat ja rankkasateet
-Nacionalinė rizikos analizė 2024, II skyrius, 21. Stichiniai, katastrofiniai hidrologiniai ir meteorologiniai reiškiniai, p. 140–144 (rizikos vertinimas p. 144); rizikų vertinimo rezultatai p. 6–7">Luonnononnettomuustason ja katastrofaaliset hydrologiset ja meteorologiset ilmiöt</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"/><line x1="13" x2="19" y1="19" y2="13"/><line x1="16" x2="20" y1="16" y2="20"/><line x1="19" x2="21" y1="21" y2="19"/><polyline points="14.5 6.5 18 3 21 3 21 6 17.5 9.5"/><line x1="5" x2="9" y1="14" y2="18"/><line x1="7" x2="4" y1="17" y2="20"/><line x1="3" x2="5" y1="19" y2="21"/></svg></span><span>Sotilaallinen hyökkäys tai konflikti</span><span class="cnt c" title="Yhteinen: vähintään 6/8 arviossa">6/8</span></span></th><td><span class="rk c" data-r="fi-3.1.6" title="Sotilaallisen voiman käyttö
-Use of military force
-Todennäköisyys: mahdollinen
-Teemat: Sotilaallinen hyökkäys tai konflikti
-luku 3.1.6, PDF-s. 53">Sotilaallisen voiman käyttö</span></td><td><span class="rk c" data-r="se-23" title="Väpnat angrepp – Strid utanför Sverige inom ramen för Nato
-Armed attack – Combat outside Sweden within the NATO framework
-Todennäköisyys: Laadullinen (ei asteikkoa): ”Åtaganden inom ramen för Natos ömsesidiga försvarsgarantier innebär att sannolikheten ökar för att Sverige kan engageras i konflikter utanför svenskt närområde.” (s. 133)
-Teemat: Sotilaallinen hyökkäys tai konflikti
-Tabell 1 s. 27; avsnitt s. 128–133 (luvun otsikko &#x27;Strid utanför svenskt territorium inom ramen för Natos verksamhet&#x27;; yhteinen hotbeskrivning s. 128–129; figur 22 s. 133)">Aseellinen hyökkäys – taistelut Ruotsin ulkopuolella Naton puitteissa</span><span class="rk c" data-r="se-24" title="Väpnat angrepp – Fjärrangrepp
-Armed attack – Long-range (stand-off) attack
-Todennäköisyys: Laadullinen (ei asteikkoa): ”Regeringen konstaterar likt försvarsberedningen att ett väpnat angrepp mot Sverige eller våra allierade inte kan uteslutas.” (s. 137)
-Teemat: Sotilaallinen hyökkäys tai konflikti
-Tabell 1 s. 27; avsnitt s. 134–137 (figur 23 s. 137)">Aseellinen hyökkäys – kaukovaikutteinen hyökkäys</span><span class="rk c" data-r="se-25" title="Väpnat angrepp – Strid på svenskt territorium
-Armed attack – Combat on Swedish territory
-Todennäköisyys: Laadullinen (ei asteikkoa): ”Samtidigt som risken för ett militärt angrepp mot Sverige i det korta tidsperspektivet bedöms som låg föreligger en ökad risk för påverkansoperationer och andra fientliga aktioner.” (s. 141)
-Teemat: Sotilaallinen hyökkäys tai konflikti
-Tabell 1 s. 27; avsnitt s. 138–141 (figur 24 s. 140)">Aseellinen hyökkäys – taistelut Ruotsin alueella</span><span class="rk c" data-r="se-26" title="Väpnat angrepp – Kärnvapenangrepp
-Armed attack – Nuclear weapons attack
-Todennäköisyys: Laadullinen (ei asteikkoa): ”Ryssland har fortsatt förmåga att genomföra operationer med kärnvapen mot Sverige och Sveriges närområde.” Valitusta tapahtumasta: ”Det betyder inte att händelsen nödvändigtvis är den mest troliga för användning av kärnvapen.” (s. 145)
-Teemat: Sotilaallinen hyökkäys tai konflikti
-Tabell 1 s. 27; avsnitt s. 141–145 (figur 25 s. 144)">Aseellinen hyökkäys – ydinasehyökkäys</span></td><td><span class="rk c" data-r="no-24" title="Sikkerhetspolitisk konflikt
-Aggression by foreign state
-Teemat: Sotilaallinen hyökkäys tai konflikti
-AKS 2019, luku 17, s. 191–196 (riskialueen kuvaus; DSB:n 2017 riskianalyysi «Hybrid angrep mot Norge» on luokiteltu, s. 192)">Turvallisuuspoliittinen konflikti</span></td><td class="no">–</td><td class="no">–</td><td><span class="rk c" data-r="ee-01" title="Sõjaline oht
-Military threat
-Todennäköisyys: Ebatõenäoline (Improbable, 1/5: 0–20 % / 2 v) – suora sotilaallinen hyökkäys Viroon vuonna 2025; ei muutosta edelliseen. EN-sivulla &#x27;low&#x27;.
-Teemat: Sotilaallinen hyökkäys tai konflikti
-riigikantselei.ee/riskid/sojaline-oht (EN: /en/riskid/military-threat); PDF &#x27;Riskid&#x27; (viimane uuendus 24.11.2025) lk 3">Sotilaallinen uhka</span></td><td><span class="rk c" data-r="lv-38" title="Bruņots konflikts / militārs iebrukums
-Armed conflict / military invasion
-Todennäköisyys: V=3 – Vidēja (kerran 10–30 vuodessa) (tahallinen uhka, tarkastelujakso 2 v)
-Teemat: Sotilaallinen hyökkäys tai konflikti
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 29. lpp., ID C-01; 2. pielikums (Risku katalogs)">Aseellinen konflikti / sotilaallinen hyökkäys</span></td><td><span class="rk c" data-r="lt-01" title="Pavojus valstybės saugumui
-Threat to national security
-Todennäköisyys: Vidutinis (2/4: Vidutinė – kerran 10–50 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
-Teemat: Sotilaallinen hyökkäys tai konflikti
-Nacionalinė rizikos analizė 2024, II skyrius, 1. Pavojus valstybės saugumui, p. 10–16 (rizikos vertinimas p. 15); rizikų vertinimo rezultatai p. 6–7">Valtion turvallisuuteen kohdistuva uhka</span></td></tr><tr class="bnd p"><th colspan="9">Osassa arvioista</th></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 7 9 3 5 7l4 4"/><path d="m17 11 4 4-4 4-4-4"/><path d="m8 12 4 4 6-6-4-4Z"/><path d="m16 8 3-3"/><path d="M9 21a6 6 0 0 0-6-6"/></svg></span><span>Avaruussää ja satelliittipalvelut</span><span class="cnt p" title="Osassa arvioista">5/8</span></span></th><td><span class="rk p" data-r="fi-3.3.1" title="Avaruuspalvelujen häiriöt
-Disruptions to space services
-Todennäköisyys: mahdollinen
-Teemat: Avaruussää ja satelliittipalvelut
-luku 3.3.1, PDF-s. 79">Avaruuspalvelujen häiriöt</span></td><td><span class="rk p" data-r="se-05" title="Solstorm
-Solar storm
-Todennäköisyys: Laadullinen (ei asteikkoa): ”Omfattande solstormar är ett realistiskt hot men sannolikheten att sådana ska inträffa är svårbedömd.” ”Solstormar anses därmed vara 100- till 500-åriga händelser.” (s. 51–52)
-Teemat: Avaruussää ja satelliittipalvelut, Sähkökatko tai sähköpula
-Tabell 1 s. 27; avsnitt s. 46–52 (figur 5 s. 51)">Aurinkomyrsky</span></td><td><span class="rk p" data-r="no-10" title="Solstorm
-Solar Storm
-Todennäköisyys: 65 % / 100 v («middels»); siirretty todennäköisyys «ikke relevant».
-Teemat: Avaruussää ja satelliittipalvelut
-AKS 2019, luku 7.1, s. 92–95 (tulostaulukko s. 95)">Aurinkomyrsky</span><span class="rk p" data-r="no-31" title="Manipulering av satellittbaserte tidssignaler
-Manipulation of satellite-based time signals
-Teemat: Avaruussää ja satelliittipalvelut, Kriittisen infrastruktuurin sabotaasi
-Risikoanalyse av manipulering av satellittbaserte tidssignaler (2026), luku 3 s. 16–17 (skenaario), luku 5 s. 19–20, luku 8 s. 41–45 (yhteenveto s. 45)">Satelliittipohjaisten aikasignaalien manipulointi</span></td><td><span class="rk p" data-r="dk-16" title="Rumhændelser
-Space incidents
-Teemat: Avaruussää ja satelliittipalvelut
-NRB 2025, luku &#x27;Rumhændelser&#x27;, s. 179–188; yhteenvetokuva s. 9; EN NRP 2025 s. 176–185">Avaruustapahtumat</span></td><td class="no">–</td><td class="no">–</td><td><span class="rk p" data-r="lv-12" title="Kosmiskā laika apstākļi (saules vētra)
-Space weather (solar storm)
-Todennäköisyys: V=2 – Zema (kerran 30–100 vuodessa)
-Teemat: Avaruussää ja satelliittipalvelut
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 25. lpp., ID D-12; 2. pielikums (Risku katalogs)">Avaruussää (aurinkomyrsky)</span><span class="rk p" data-r="lv-35" title="Satelītu infrastruktūras traucējumi (GNSS, sakari, novērošana)
-Satellite infrastructure disruption (GNSS, communications, observation)
-Todennäköisyys: V=4 – Augsta (kerran 3–10 vuodessa) (tahallinen uhka, tarkastelujakso 2 v)
-Teemat: Avaruussää ja satelliittipalvelut
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 28. lpp., ID K-04; 2. pielikums (Risku katalogs)">Satelliitti-infrastruktuurin häiriöt (GNSS, viestintä, kaukokartoitus)</span><span class="rk p" data-r="lv-57" title="Kessler sindroms (kosmosa atkritumi)
-Kessler syndrome (space debris)
-Todennäköisyys: Ei V-arvoa (laadullinen arvio); tendence: Zems varbūtīb. (matala todennäköisyys)
-Teemat: Avaruussää ja satelliittipalvelut
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, E-kategorijas tabula, 32. lpp., ID E-07">Kesslerin oireyhtymä (avaruusromu)</span></td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></span><span>Informaatiovaikuttaminen</span><span class="cnt p" title="Osassa arvioista">5/8</span></span></th><td><span class="rk p" data-r="fi-3.1.1" title="Informaatiovaikuttaminen
+Nacionalinė rizikos analizė 2024, II skyrius, 21. Stichiniai, katastrofiniai hidrologiniai ir meteorologiniai reiškiniai, p. 140–144 (rizikos vertinimas p. 144); rizikų vertinimo rezultatai p. 6–7">Luonnononnettomuustason ja katastrofaaliset hydrologiset ja meteorologiset ilmiöt</span></td></tr><tr class="bnd p"><th colspan="9">Osassa arvioista</th></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></span><span>Informaatiovaikuttaminen</span><span class="cnt p" title="Osassa arvioista">5/8</span></span></th><td><span class="rk p" data-r="fi-3.1.1" title="Informaatiovaikuttaminen
 Information influence
 Todennäköisyys: todennäköinen
 Teemat: Informaatiovaikuttaminen
@@ -1008,7 +978,37 @@ Nacionalinė rizikos analizė 2024, II skyrius, 16. Didėjanti teisėtų imigran
 Instrumentalised migration
 Todennäköisyys: Didelis (3/4: Didelė – kerran 1–10 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
 Teemat: Laajamittainen tai välineellistetty maahantulo, Poliittinen ja taloudellinen painostus
-Nacionalinė rizikos analizė 2024, II skyrius, 24. Instrumentalizuota migracija, p. 155–161 (rizikos vertinimas p. 161); rizikų vertinimo rezultatai p. 6–7">Välineellistetty maahantulo</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.9 16.1C1 12.2 1 5.8 4.9 1.9"/><path d="M7.8 4.7a6.14 6.14 0 0 0-.8 7.5"/><circle cx="12" cy="9" r="2"/><path d="M16.2 4.8c2 2 2.26 5.11.8 7.47"/><path d="M19.1 1.9a9.96 9.96 0 0 1 0 14.1"/><path d="M9.5 18h5"/><path d="m8 22 4-11 4 11"/></svg></span><span>Viestintäverkkojen häiriöt</span><span class="cnt p" title="Osassa arvioista">5/8</span></span></th><td><span class="rk p" data-r="fi-3.3.2" title="Viestintäverkkojen ja -palveluiden häiriöt
+Nacionalinė rizikos analizė 2024, II skyrius, 24. Instrumentalizuota migracija, p. 155–161 (rizikos vertinimas p. 161); rizikų vertinimo rezultatai p. 6–7">Välineellistetty maahantulo</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 7 9 3 5 7l4 4"/><path d="m17 11 4 4-4 4-4-4"/><path d="m8 12 4 4 6-6-4-4Z"/><path d="m16 8 3-3"/><path d="M9 21a6 6 0 0 0-6-6"/></svg></span><span>Avaruussää ja satelliittipalvelut</span><span class="cnt p" title="Osassa arvioista">5/8</span></span></th><td><span class="rk p" data-r="fi-3.3.1" title="Avaruuspalvelujen häiriöt
+Disruptions to space services
+Todennäköisyys: mahdollinen
+Teemat: Avaruussää ja satelliittipalvelut
+luku 3.3.1, PDF-s. 79">Avaruuspalvelujen häiriöt</span></td><td><span class="rk p" data-r="se-05" title="Solstorm
+Solar storm
+Todennäköisyys: Laadullinen (ei asteikkoa): ”Omfattande solstormar är ett realistiskt hot men sannolikheten att sådana ska inträffa är svårbedömd.” ”Solstormar anses därmed vara 100- till 500-åriga händelser.” (s. 51–52)
+Teemat: Avaruussää ja satelliittipalvelut, Sähkökatko tai sähköpula
+Tabell 1 s. 27; avsnitt s. 46–52 (figur 5 s. 51)">Aurinkomyrsky</span></td><td><span class="rk p" data-r="no-10" title="Solstorm
+Solar Storm
+Todennäköisyys: 65 % / 100 v («middels»); siirretty todennäköisyys «ikke relevant».
+Teemat: Avaruussää ja satelliittipalvelut
+AKS 2019, luku 7.1, s. 92–95 (tulostaulukko s. 95)">Aurinkomyrsky</span><span class="rk p" data-r="no-31" title="Manipulering av satellittbaserte tidssignaler
+Manipulation of satellite-based time signals
+Teemat: Avaruussää ja satelliittipalvelut, Kriittisen infrastruktuurin sabotaasi
+Risikoanalyse av manipulering av satellittbaserte tidssignaler (2026), luku 3 s. 16–17 (skenaario), luku 5 s. 19–20, luku 8 s. 41–45 (yhteenveto s. 45)">Satelliittipohjaisten aikasignaalien manipulointi</span></td><td><span class="rk p" data-r="dk-16" title="Rumhændelser
+Space incidents
+Teemat: Avaruussää ja satelliittipalvelut
+NRB 2025, luku &#x27;Rumhændelser&#x27;, s. 179–188; yhteenvetokuva s. 9; EN NRP 2025 s. 176–185">Avaruustapahtumat</span></td><td class="no">–</td><td class="no">–</td><td><span class="rk p" data-r="lv-12" title="Kosmiskā laika apstākļi (saules vētra)
+Space weather (solar storm)
+Todennäköisyys: V=2 – Zema (kerran 30–100 vuodessa)
+Teemat: Avaruussää ja satelliittipalvelut
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 25. lpp., ID D-12; 2. pielikums (Risku katalogs)">Avaruussää (aurinkomyrsky)</span><span class="rk p" data-r="lv-35" title="Satelītu infrastruktūras traucējumi (GNSS, sakari, novērošana)
+Satellite infrastructure disruption (GNSS, communications, observation)
+Todennäköisyys: V=4 – Augsta (kerran 3–10 vuodessa) (tahallinen uhka, tarkastelujakso 2 v)
+Teemat: Avaruussää ja satelliittipalvelut
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 28. lpp., ID K-04; 2. pielikums (Risku katalogs)">Satelliitti-infrastruktuurin häiriöt (GNSS, viestintä, kaukokartoitus)</span><span class="rk p" data-r="lv-57" title="Kessler sindroms (kosmosa atkritumi)
+Kessler syndrome (space debris)
+Todennäköisyys: Ei V-arvoa (laadullinen arvio); tendence: Zems varbūtīb. (matala todennäköisyys)
+Teemat: Avaruussää ja satelliittipalvelut
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, E-kategorijas tabula, 32. lpp., ID E-07">Kesslerin oireyhtymä (avaruusromu)</span></td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.9 16.1C1 12.2 1 5.8 4.9 1.9"/><path d="M7.8 4.7a6.14 6.14 0 0 0-.8 7.5"/><circle cx="12" cy="9" r="2"/><path d="M16.2 4.8c2 2 2.26 5.11.8 7.47"/><path d="M19.1 1.9a9.96 9.96 0 0 1 0 14.1"/><path d="M9.5 18h5"/><path d="m8 22 4-11 4 11"/></svg></span><span>Viestintäverkkojen häiriöt</span><span class="cnt p" title="Osassa arvioista">5/8</span></span></th><td><span class="rk p" data-r="fi-3.3.2" title="Viestintäverkkojen ja -palveluiden häiriöt
 Disruptions to communications networks and services
 Todennäköisyys: mahdollinen
 Teemat: Viestintäverkkojen häiriöt
@@ -1036,42 +1036,7 @@ Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, E-kat
 Digitalisation of social systems
 Todennäköisyys: Ei V-arvoa (laadullinen arvio); tendence: Pieaugošs (kasvava)
 Teemat: Kyberhyökkäys tai tietojärjestelmien häiriö, Viestintäverkkojen häiriöt
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, E-kategorijas tabula, 32. lpp., ID E-06">Yhteiskunnallisten järjestelmien digitalisaatio</span></td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z"/><path d="M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M15.47 13.47 17 15l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M19.47 9.47 21 11l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L13 11l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/></svg></span><span>Elintarvikehuollon häiriöt</span><span class="cnt p" title="Osassa arvioista">4/8</span></span></th><td><span class="rk p" data-r="fi-3.4.1" title="Elintarvikehuollon häiriöt ja ruokaturvan heikkeneminen
-Disruptions to food supply and weakened food security
-Todennäköisyys: mahdollinen
-Teemat: Elintarvikehuollon häiriöt
-luku 3.4.1, PDF-s. 102">Elintarvikehuollon häiriöt ja ruokaturvan heikkeneminen</span></td><td class="no">–</td><td><span class="rk p" data-r="no-20" title="Global svikt i produksjonen av korn
-Global Grain Production Failure
-Todennäköisyys: 20 % / 100 v nykyilmastossa («lav»); siirretty todennäköisyys «ikke relevant».
-Teemat: Elintarvikehuollon häiriöt
-AKS 2019, luku 14.2, s. 166–169 (tulostaulukko s. 169)">Viljantuotannon maailmanlaajuinen romahdus</span></td><td class="no">–</td><td><span class="rk p" data-r="is-36" title="Matvælaöryggi og fæðuframboð
-Food safety and food supply
-Todennäköisyys: «Frekar ólíklegt.» (melko epätodennäköinen); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
-Teemat: Elintarvikehuollon häiriöt
-s. 132–133, Tafla 66 «Sviðsmynd vegna matvælaöryggis og fæðuframboðs» (s. 133); Í hnotskurn s. 16">Elintarviketurvallisuus ja ruoan saatavuus</span></td><td class="no">–</td><td><span class="rk p" data-r="lv-17" title="Pārtikas piesārņojums / drošības incidents
-Food contamination / food safety incident
-Todennäköisyys: V=4 – Augsta (kerran 3–10 vuodessa)
-Teemat: Elintarvikehuollon häiriöt
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 26. lpp., ID V-05; 2. pielikums (Risku katalogs)">Elintarvikkeiden saastuminen / elintarviketurvallisuushäiriö</span><span class="rk p" data-r="lv-50" title="Pārtikas apgādes traucējumi
-Food supply disruption
-Todennäköisyys: V=2 – Zema (kerran 30–100 vuodessa)
-Teemat: Elintarvikehuollon häiriöt
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 30. lpp., ID S-05; 2. pielikums (Risku katalogs)">Elintarvikehuollon häiriöt</span></td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg></span><span>Mikrobilääkeresistenssi</span><span class="cnt p" title="Osassa arvioista">4/8</span></span></th><td><span class="rk p" data-r="fi-3.2.2" title="Mikrobilääkeresistenssi
-Antimicrobial resistance
-Todennäköisyys: mahdollinen
-Teemat: Mikrobilääkeresistenssi
-luku 3.2.2, PDF-s. 60">Mikrobilääkeresistenssi</span></td><td class="no">–</td><td><span class="rk p" data-r="no-08" title="Sykdomsutbrudd med antibiotikaresistente bakterier
-Disease Outbreak with Antibiotic-Resistant Bacteria
-Todennäköisyys: Skenaario: 25 % / 100 v («lav»); vastaava purkaus jossakin päin maata: 65 % / 100 v («middels»).
-Teemat: Mikrobilääkeresistenssi
-AKS 2019, luku 5.3, s. 76–79 (tulostaulukko s. 79); DSB:n AKS-sivulla nimellä «Antibiotikaresistens» (2017)">Antibioottiresistenttien bakteerien aiheuttama tautipurkaus</span></td><td><span class="rk p" data-r="dk-09" title="Smitsomme sygdomme
-Infectious diseases
-Teemat: Pandemia tai laaja epidemia, Mikrobilääkeresistenssi
-NRB 2025, luku &#x27;Smitsomme sygdomme&#x27;, s. 117–129; yhteenvetokuva s. 9; EN NRP 2025 s. 116–127">Tartuntataudit</span></td><td class="no">–</td><td class="no">–</td><td><span class="rk p" data-r="lv-18" title="Antimikrobiālā rezistence (AMR)
-Antimicrobial resistance (AMR)
-Todennäköisyys: V=3 – Vidēja (kerran 10–30 vuodessa)
-Teemat: Mikrobilääkeresistenssi
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 26. lpp., ID V-06; 2. pielikums (Risku katalogs)">Mikrobilääkeresistenssi (AMR)</span></td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></span><span>Poliittinen ja taloudellinen painostus</span><span class="cnt p" title="Osassa arvioista">4/8</span></span></th><td><span class="rk p" data-r="fi-3.1.2" title="Poliittinen ja taloudellinen vaikuttaminen ja painostus
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, E-kategorijas tabula, 32. lpp., ID E-06">Yhteiskunnallisten järjestelmien digitalisaatio</span></td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></span><span>Poliittinen ja taloudellinen painostus</span><span class="cnt p" title="Osassa arvioista">4/8</span></span></th><td><span class="rk p" data-r="fi-3.1.2" title="Poliittinen ja taloudellinen vaikuttaminen ja painostus
 Political and economic influence and pressure
 Todennäköisyys: todennäköinen
 Teemat: Poliittinen ja taloudellinen painostus
@@ -1110,7 +1075,81 @@ Nacionalinė rizikos analizė 2024, II skyrius, 18. Bepiločių orlaivių neteis
 Instrumentalised migration
 Todennäköisyys: Didelis (3/4: Didelė – kerran 1–10 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
 Teemat: Laajamittainen tai välineellistetty maahantulo, Poliittinen ja taloudellinen painostus
-Nacionalinė rizikos analizė 2024, II skyrius, 24. Instrumentalizuota migracija, p. 155–161 (rizikos vertinimas p. 161); rizikų vertinimo rezultatai p. 6–7">Välineellistetty maahantulo</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" x2="15" y1="22" y2="22"/><line x1="4" x2="14" y1="9" y2="9"/><path d="M14 22V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v18"/><path d="M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2a2 2 0 0 0 2-2V9.83a2 2 0 0 0-.59-1.42L18 5"/></svg></span><span>Polttoaineen saatavuus</span><span class="cnt p" title="Osassa arvioista">4/8</span></span></th><td><span class="rk p" data-r="fi-3.4.3" title="Polttoaineiden saatavuuden suurhäiriö
+Nacionalinė rizikos analizė 2024, II skyrius, 24. Instrumentalizuota migracija, p. 155–161 (rizikos vertinimas p. 161); rizikų vertinimo rezultatai p. 6–7">Välineellistetty maahantulo</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg></span><span>Mikrobilääkeresistenssi</span><span class="cnt p" title="Osassa arvioista">4/8</span></span></th><td><span class="rk p" data-r="fi-3.2.2" title="Mikrobilääkeresistenssi
+Antimicrobial resistance
+Todennäköisyys: mahdollinen
+Teemat: Mikrobilääkeresistenssi
+luku 3.2.2, PDF-s. 60">Mikrobilääkeresistenssi</span></td><td class="no">–</td><td><span class="rk p" data-r="no-08" title="Sykdomsutbrudd med antibiotikaresistente bakterier
+Disease Outbreak with Antibiotic-Resistant Bacteria
+Todennäköisyys: Skenaario: 25 % / 100 v («lav»); vastaava purkaus jossakin päin maata: 65 % / 100 v («middels»).
+Teemat: Mikrobilääkeresistenssi
+AKS 2019, luku 5.3, s. 76–79 (tulostaulukko s. 79); DSB:n AKS-sivulla nimellä «Antibiotikaresistens» (2017)">Antibioottiresistenttien bakteerien aiheuttama tautipurkaus</span></td><td><span class="rk p" data-r="dk-09" title="Smitsomme sygdomme
+Infectious diseases
+Teemat: Pandemia tai laaja epidemia, Mikrobilääkeresistenssi
+NRB 2025, luku &#x27;Smitsomme sygdomme&#x27;, s. 117–129; yhteenvetokuva s. 9; EN NRP 2025 s. 116–127">Tartuntataudit</span></td><td class="no">–</td><td class="no">–</td><td><span class="rk p" data-r="lv-18" title="Antimikrobiālā rezistence (AMR)
+Antimicrobial resistance (AMR)
+Todennäköisyys: V=3 – Vidēja (kerran 10–30 vuodessa)
+Teemat: Mikrobilääkeresistenssi
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 26. lpp., ID V-06; 2. pielikums (Risku katalogs)">Mikrobilääkeresistenssi (AMR)</span></td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span><span>Vesihuollon häiriöt</span><span class="cnt p" title="Osassa arvioista">4/8</span></span></th><td><span class="rk p" data-r="fi-3.3.4" title="Vesihuollon häiriöt
+Disruptions to water supply
+Todennäköisyys: mahdollinen
+Teemat: Vesihuollon häiriöt
+luku 3.3.4, PDF-s. 89">Vesihuollon häiriöt</span></td><td class="no">–</td><td class="no">–</td><td><span class="rk p" data-r="dk-07" title="Vand- og fødevarebårne risici
+Water and foodborne risks
+Teemat: Vesihuollon häiriöt, Pandemia tai laaja epidemia
+NRB 2025, luku &#x27;Vand- og fødevarebårne risici&#x27;, s. 101–108; yhteenvetokuva s. 9; EN NRP 2025 s. 100–107">Vesi- ja elintarvikevälitteiset riskit</span></td><td><span class="rk p" data-r="is-30" title="Neysluvatn - gæði og framboð á vatni
+Drinking water – quality and supply
+Todennäköisyys: «Nokkrar.» (jonkin verran); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
+Teemat: Vesihuollon häiriöt
+s. 117–119 (luku «Vatn, vatnsgæði og miðlun neysluvatns»), Tafla 55 (s. 118); Í hnotskurn s. 15">Talousvesi – laatu ja saatavuus</span><span class="rk p" data-r="is-34" title="Fráveitur
+Sewage systems
+Todennäköisyys: «Nokkrar» (jonkin verran); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
+Teemat: Vesihuollon häiriöt
+s. 127–128, Tafla 63 «Sviðsmynd vegna fráveitna» (s. 128); Í hnotskurn s. 16">Viemäröinti ja jätevesi</span></td><td class="no">–</td><td><span class="rk p" data-r="lv-31" title="Dzeramā ūdens piegādes avārija
+Drinking water supply failure
+Todennäköisyys: V=2 – Zema (kerran 30–100 vuodessa)
+Teemat: Vesihuollon häiriöt
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 28. lpp., ID T-13; 2. pielikums (Risku katalogs)">Juomaveden toimitushäiriö</span></td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z"/><path d="M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M15.47 13.47 17 15l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/><path d="M19.47 9.47 21 11l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L13 11l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z"/></svg></span><span>Elintarvikehuollon häiriöt</span><span class="cnt p" title="Osassa arvioista">4/8</span></span></th><td><span class="rk p" data-r="fi-3.4.1" title="Elintarvikehuollon häiriöt ja ruokaturvan heikkeneminen
+Disruptions to food supply and weakened food security
+Todennäköisyys: mahdollinen
+Teemat: Elintarvikehuollon häiriöt
+luku 3.4.1, PDF-s. 102">Elintarvikehuollon häiriöt ja ruokaturvan heikkeneminen</span></td><td class="no">–</td><td><span class="rk p" data-r="no-20" title="Global svikt i produksjonen av korn
+Global Grain Production Failure
+Todennäköisyys: 20 % / 100 v nykyilmastossa («lav»); siirretty todennäköisyys «ikke relevant».
+Teemat: Elintarvikehuollon häiriöt
+AKS 2019, luku 14.2, s. 166–169 (tulostaulukko s. 169)">Viljantuotannon maailmanlaajuinen romahdus</span></td><td class="no">–</td><td><span class="rk p" data-r="is-36" title="Matvælaöryggi og fæðuframboð
+Food safety and food supply
+Todennäköisyys: «Frekar ólíklegt.» (melko epätodennäköinen); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
+Teemat: Elintarvikehuollon häiriöt
+s. 132–133, Tafla 66 «Sviðsmynd vegna matvælaöryggis og fæðuframboðs» (s. 133); Í hnotskurn s. 16">Elintarviketurvallisuus ja ruoan saatavuus</span></td><td class="no">–</td><td><span class="rk p" data-r="lv-17" title="Pārtikas piesārņojums / drošības incidents
+Food contamination / food safety incident
+Todennäköisyys: V=4 – Augsta (kerran 3–10 vuodessa)
+Teemat: Elintarvikehuollon häiriöt
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 26. lpp., ID V-05; 2. pielikums (Risku katalogs)">Elintarvikkeiden saastuminen / elintarviketurvallisuushäiriö</span><span class="rk p" data-r="lv-50" title="Pārtikas apgādes traucējumi
+Food supply disruption
+Todennäköisyys: V=2 – Zema (kerran 30–100 vuodessa)
+Teemat: Elintarvikehuollon häiriöt
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 30. lpp., ID S-05; 2. pielikums (Risku katalogs)">Elintarvikehuollon häiriöt</span></td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/></svg></span><span>Toimitusketjujen häiriöt</span><span class="cnt p" title="Osassa arvioista">4/8</span></span></th><td><span class="rk p" data-r="fi-3.4.2" title="Häiriöt globaaleissa arvo- ja tuotantoketjuissa
+Disruptions in global value and production chains
+Todennäköisyys: mahdollinen
+Teemat: Toimitusketjujen häiriöt
+luku 3.4.2, PDF-s. 106">Häiriöt globaaleissa arvo- ja tuotantoketjuissa</span></td><td><span class="rk p" data-r="se-16" title="Störning i internationella handelsflöden
+Disruption of international trade flows
+Todennäköisyys: Laadullinen (ei asteikkoa): ”Sannolikheten för större störningar i internationella handelsflöden är svårbedömd …” Levoton maailmantilanne ja ilmastonmuutos ”pekar dock på att sannolikheten för nya störningar i internationella handelsflöden har ökat.” (s. 103)
+Teemat: Toimitusketjujen häiriöt
+Tabell 1 s. 27; avsnitt s. 98–103 (figur 16 s. 102)">Kansainvälisten kauppavirtojen häiriö</span></td><td><span class="rk p" data-r="no-21" title="Legemiddelmangel
+Drug Shortage
+Todennäköisyys: Skenaario (insuliini ja antibiootit): 75 % / 100 v («høy»); vastaavat tapahtumat muilla lääkkeillä: yli 90 % / 100 v.
+Teemat: Toimitusketjujen häiriöt
+AKS 2019, luku 14.3, s. 170–173 (tulostaulukko s. 173)">Lääkepula</span></td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td><span class="rk p" data-r="lv-46" title="Piegādes ķēžu pārrāvums (stratēģiskas preces)
+Supply chain disruption (strategic goods)
+Todennäköisyys: V=3 – Vidēja (kerran 10–30 vuodessa)
+Teemat: Toimitusketjujen häiriöt
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 30. lpp., ID S-01; 2. pielikums (Risku katalogs)">Toimitusketjujen katkeaminen (strategiset hyödykkeet)</span><span class="rk p" data-r="lv-54" title="Stratēģiskās izejvielu atkarības
+Strategic raw material dependencies
+Todennäköisyys: Ei V-arvoa (laadullinen arvio); tendence: Stabils (vakaa)
+Teemat: Toimitusketjujen häiriöt
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, E-kategorijas tabula, 32. lpp., ID E-04">Strategiset raaka-aineriippuvuudet</span></td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" x2="15" y1="22" y2="22"/><line x1="4" x2="14" y1="9" y2="9"/><path d="M14 22V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v18"/><path d="M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2a2 2 0 0 0 2-2V9.83a2 2 0 0 0-.59-1.42L18 5"/></svg></span><span>Polttoaineen saatavuus</span><span class="cnt p" title="Osassa arvioista">4/8</span></span></th><td><span class="rk p" data-r="fi-3.4.3" title="Polttoaineiden saatavuuden suurhäiriö
 Major disruption to fuel availability
 Todennäköisyys: mahdollinen
 Teemat: Polttoaineen saatavuus
@@ -1153,64 +1192,7 @@ Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. no
 Risk of financial instability
 Todennäköisyys: Žemas (1/4: Maža – harvemmin kuin kerran 50 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
 Teemat: Rahoitusjärjestelmä ja maksaminen
-Nacionalinė rizikos analizė 2024, II skyrius, 7. Finansinio nestabilumo rizika, p. 48–52 (rizikos vertinimas p. 52); rizikų vertinimo rezultatai p. 6–7">Rahoitusjärjestelmän epävakauden riski</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/></svg></span><span>Toimitusketjujen häiriöt</span><span class="cnt p" title="Osassa arvioista">4/8</span></span></th><td><span class="rk p" data-r="fi-3.4.2" title="Häiriöt globaaleissa arvo- ja tuotantoketjuissa
-Disruptions in global value and production chains
-Todennäköisyys: mahdollinen
-Teemat: Toimitusketjujen häiriöt
-luku 3.4.2, PDF-s. 106">Häiriöt globaaleissa arvo- ja tuotantoketjuissa</span></td><td><span class="rk p" data-r="se-16" title="Störning i internationella handelsflöden
-Disruption of international trade flows
-Todennäköisyys: Laadullinen (ei asteikkoa): ”Sannolikheten för större störningar i internationella handelsflöden är svårbedömd …” Levoton maailmantilanne ja ilmastonmuutos ”pekar dock på att sannolikheten för nya störningar i internationella handelsflöden har ökat.” (s. 103)
-Teemat: Toimitusketjujen häiriöt
-Tabell 1 s. 27; avsnitt s. 98–103 (figur 16 s. 102)">Kansainvälisten kauppavirtojen häiriö</span></td><td><span class="rk p" data-r="no-21" title="Legemiddelmangel
-Drug Shortage
-Todennäköisyys: Skenaario (insuliini ja antibiootit): 75 % / 100 v («høy»); vastaavat tapahtumat muilla lääkkeillä: yli 90 % / 100 v.
-Teemat: Toimitusketjujen häiriöt
-AKS 2019, luku 14.3, s. 170–173 (tulostaulukko s. 173)">Lääkepula</span></td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td><span class="rk p" data-r="lv-46" title="Piegādes ķēžu pārrāvums (stratēģiskas preces)
-Supply chain disruption (strategic goods)
-Todennäköisyys: V=3 – Vidēja (kerran 10–30 vuodessa)
-Teemat: Toimitusketjujen häiriöt
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 30. lpp., ID S-01; 2. pielikums (Risku katalogs)">Toimitusketjujen katkeaminen (strategiset hyödykkeet)</span><span class="rk p" data-r="lv-54" title="Stratēģiskās izejvielu atkarības
-Strategic raw material dependencies
-Todennäköisyys: Ei V-arvoa (laadullinen arvio); tendence: Stabils (vakaa)
-Teemat: Toimitusketjujen häiriöt
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, E-kategorijas tabula, 32. lpp., ID E-04">Strategiset raaka-aineriippuvuudet</span></td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span><span>Vesihuollon häiriöt</span><span class="cnt p" title="Osassa arvioista">4/8</span></span></th><td><span class="rk p" data-r="fi-3.3.4" title="Vesihuollon häiriöt
-Disruptions to water supply
-Todennäköisyys: mahdollinen
-Teemat: Vesihuollon häiriöt
-luku 3.3.4, PDF-s. 89">Vesihuollon häiriöt</span></td><td class="no">–</td><td class="no">–</td><td><span class="rk p" data-r="dk-07" title="Vand- og fødevarebårne risici
-Water and foodborne risks
-Teemat: Vesihuollon häiriöt, Pandemia tai laaja epidemia
-NRB 2025, luku &#x27;Vand- og fødevarebårne risici&#x27;, s. 101–108; yhteenvetokuva s. 9; EN NRP 2025 s. 100–107">Vesi- ja elintarvikevälitteiset riskit</span></td><td><span class="rk p" data-r="is-30" title="Neysluvatn - gæði og framboð á vatni
-Drinking water – quality and supply
-Todennäköisyys: «Nokkrar.» (jonkin verran); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
-Teemat: Vesihuollon häiriöt
-s. 117–119 (luku «Vatn, vatnsgæði og miðlun neysluvatns»), Tafla 55 (s. 118); Í hnotskurn s. 15">Talousvesi – laatu ja saatavuus</span><span class="rk p" data-r="is-34" title="Fráveitur
-Sewage systems
-Todennäköisyys: «Nokkrar» (jonkin verran); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
-Teemat: Vesihuollon häiriöt
-s. 127–128, Tafla 63 «Sviðsmynd vegna fráveitna» (s. 128); Í hnotskurn s. 16">Viemäröinti ja jätevesi</span></td><td class="no">–</td><td><span class="rk p" data-r="lv-31" title="Dzeramā ūdens piegādes avārija
-Drinking water supply failure
-Todennäköisyys: V=2 – Zema (kerran 30–100 vuodessa)
-Teemat: Vesihuollon häiriöt
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 28. lpp., ID T-13; 2. pielikums (Risku katalogs)">Juomaveden toimitushäiriö</span></td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></span><span>Kuivuus ja helle</span><span class="cnt p" title="Osassa arvioista">3/8</span></span></th><td class="no">–</td><td><span class="rk p" data-r="se-07" title="Värmebölja och torka
-Heatwave and drought
-Todennäköisyys: Laadullinen (ei asteikkoa): ”… därför ha en lägre sannolikhet och längre återkomsttid, möjligen några hundra år. Bedömningen är dock mycket osäker.” Ilmastonmuutoksen vuoksi todennäköisyys kasvaa (s. 59–60).
-Teemat: Kuivuus ja helle
-Tabell 1 s. 27; avsnitt s. 56–60 (figur 7 s. 59)">Helleaalto ja kuivuus</span></td><td class="no">–</td><td><span class="rk p" data-r="dk-10" title="Hedebølger
-Heat waves
-Teemat: Kuivuus ja helle
-NRB 2025, luku &#x27;Hedebølger&#x27;, s. 130–136; yhteenvetokuva s. 9; EN NRP 2025 s. 128–134">Helleaallot</span><span class="rk p" data-r="dk-11" title="Tørke
-Drought
-Teemat: Kuivuus ja helle, Maastopalot
-NRB 2025, luku &#x27;Tørke&#x27;, s. 137–144; yhteenvetokuva s. 9; EN NRP 2025 s. 135–142">Kuivuus</span></td><td class="no">–</td><td class="no">–</td><td><span class="rk p" data-r="lv-06" title="Karstuma viļņi un veselības sistēmas pārslodze
-Heatwaves and health system overload
-Todennäköisyys: V=4 – Augsta (kerran 3–10 vuodessa)
-Teemat: Kuivuus ja helle
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 24. lpp., ID D-06; 2. pielikums (Risku katalogs)">Helleaallot ja terveydenhuollon ylikuormitus</span><span class="rk p" data-r="lv-07" title="Sausums
-Drought
-Todennäköisyys: V=4 – Augsta (kerran 3–10 vuodessa)
-Teemat: Kuivuus ja helle
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 24. lpp., ID D-07; 2. pielikums (Risku katalogs)">Kuivuus</span></td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></span><span>Liikenteen häiriöt</span><span class="cnt p" title="Osassa arvioista">3/8</span></span></th><td><span class="rk p" data-r="fi-3.3.6" title="Liikenneverkkojen ja -palveluiden häiriöt
+Nacionalinė rizikos analizė 2024, II skyrius, 7. Finansinio nestabilumo rizika, p. 48–52 (rizikos vertinimas p. 52); rizikų vertinimo rezultatai p. 6–7">Rahoitusjärjestelmän epävakauden riski</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></span><span>Liikenteen häiriöt</span><span class="cnt p" title="Osassa arvioista">3/8</span></span></th><td><span class="rk p" data-r="fi-3.3.6" title="Liikenneverkkojen ja -palveluiden häiriöt
 Disruptions to transport networks and services
 Todennäköisyys: mahdollinen
 Teemat: Liikenteen häiriöt
@@ -1229,7 +1211,25 @@ s. 113–115, Tafla 51 «Sviðsmynd vegna samgangna á sjó» (s. 114); Í hnots
 Air transport disruption
 Todennäköisyys: «Nokkrar» (jonkin verran); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
 Teemat: Liikenteen häiriöt
-s. 115–116, Tafla 53 «Sviðsmynd vegna samgangna í lofti» (s. 116); Í hnotskurn s. 15">Lentoliikenteen häiriöt</span></td><td class="no">–</td><td class="no">–</td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></span><span>Maanjäristys, tulivuori tai maanvyöry</span><span class="cnt p" title="Osassa arvioista">3/8</span></span></th><td class="no">–</td><td class="no">–</td><td><span class="rk p" data-r="no-04" title="Fjellskred i Åknes
+s. 115–116, Tafla 53 «Sviðsmynd vegna samgangna í lofti» (s. 116); Í hnotskurn s. 15">Lentoliikenteen häiriöt</span></td><td class="no">–</td><td class="no">–</td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></span><span>Kuivuus ja helle</span><span class="cnt p" title="Osassa arvioista">3/8</span></span></th><td class="no">–</td><td><span class="rk p" data-r="se-07" title="Värmebölja och torka
+Heatwave and drought
+Todennäköisyys: Laadullinen (ei asteikkoa): ”… därför ha en lägre sannolikhet och längre återkomsttid, möjligen några hundra år. Bedömningen är dock mycket osäker.” Ilmastonmuutoksen vuoksi todennäköisyys kasvaa (s. 59–60).
+Teemat: Kuivuus ja helle
+Tabell 1 s. 27; avsnitt s. 56–60 (figur 7 s. 59)">Helleaalto ja kuivuus</span></td><td class="no">–</td><td><span class="rk p" data-r="dk-10" title="Hedebølger
+Heat waves
+Teemat: Kuivuus ja helle
+NRB 2025, luku &#x27;Hedebølger&#x27;, s. 130–136; yhteenvetokuva s. 9; EN NRP 2025 s. 128–134">Helleaallot</span><span class="rk p" data-r="dk-11" title="Tørke
+Drought
+Teemat: Kuivuus ja helle, Maastopalot
+NRB 2025, luku &#x27;Tørke&#x27;, s. 137–144; yhteenvetokuva s. 9; EN NRP 2025 s. 135–142">Kuivuus</span></td><td class="no">–</td><td class="no">–</td><td><span class="rk p" data-r="lv-06" title="Karstuma viļņi un veselības sistēmas pārslodze
+Heatwaves and health system overload
+Todennäköisyys: V=4 – Augsta (kerran 3–10 vuodessa)
+Teemat: Kuivuus ja helle
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 24. lpp., ID D-06; 2. pielikums (Risku katalogs)">Helleaallot ja terveydenhuollon ylikuormitus</span><span class="rk p" data-r="lv-07" title="Sausums
+Drought
+Todennäköisyys: V=4 – Augsta (kerran 3–10 vuodessa)
+Teemat: Kuivuus ja helle
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. nodaļa (Risku kataloga kopsavilkums), 24. lpp., ID D-07; 2. pielikums (Risku katalogs)">Kuivuus</span></td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></span><span>Maanjäristys, tulivuori tai maanvyöry</span><span class="cnt p" title="Osassa arvioista">3/8</span></span></th><td class="no">–</td><td class="no">–</td><td><span class="rk p" data-r="no-04" title="Fjellskred i Åknes
 Rockslide at Åknes
 Todennäköisyys: Skenaario: 2 % / 100 v («svært lav»); jossakin 26 vyöryalttiista vuorenrinteestä: 40 % / 100 v («middels»).
 Teemat: Maanjäristys, tulivuori tai maanvyöry
@@ -1281,14 +1281,7 @@ Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. no
 Volcanic ash (Pinatubo/Tambora class)
 Todennäköisyys: Ei V-arvoa (laadullinen arvio); tendence: Ļoti zems (erittäin matala)
 Teemat: Maanjäristys, tulivuori tai maanvyöry
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, E-kategorijas tabula, 32. lpp., ID E-08">Tulivuorentuhka (Pinatubo/Tambora-luokka)</span></td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="M20 12h2"/><path d="m19.07 4.93-1.41 1.41"/><path d="M15.947 12.65a4 4 0 0 0-5.925-4.128"/><path d="M3 20a5 5 0 1 1 8.9-4H13a3 3 0 0 1 2 5.24"/><path d="M11 20v2"/><path d="M7 19v2"/></svg></span><span>Ilmastonmuutoksen kerrannaisvaikutukset</span><span class="cnt p" title="Osassa arvioista">2/8</span></span></th><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td><span class="rk p" data-r="is-11" title="Loftslagsbreytingar og náttúruhamfarir
-Climate change and natural disasters
-Teemat: Ilmastonmuutoksen kerrannaisvaikutukset
-s. 71–72 (ei skenaariotaulukkoa); Í hnotskurn s. 12: «Áhætta er talin aukast í náttúrufari, vegna loftslagsbreytinga.»">Ilmastonmuutos ja luonnonkatastrofit</span></td><td class="no">–</td><td><span class="rk p" data-r="lv-55" title="Klimata kaskādes ietekme
-Climate cascade effects
-Todennäköisyys: Ei V-arvoa (laadullinen arvio); tendence: Pieaugošs (kasvava)
-Teemat: Ilmastonmuutoksen kerrannaisvaikutukset
-Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, E-kategorijas tabula, 32. lpp., ID E-05">Ilmastonmuutoksen kerrannaisvaikutukset</span></td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/><path d="m21 11-8-8"/></svg></span><span>Järjestäytynyt rikollisuus ja korruptio</span><span class="cnt p" title="Osassa arvioista">2/8</span></span></th><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td><span class="rk p" data-r="ee-06" title="Korruptsioon
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, E-kategorijas tabula, 32. lpp., ID E-08">Tulivuorentuhka (Pinatubo/Tambora-luokka)</span></td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/><path d="m21 11-8-8"/></svg></span><span>Järjestäytynyt rikollisuus ja korruptio</span><span class="cnt p" title="Osassa arvioista">2/8</span></span></th><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td><span class="rk p" data-r="ee-06" title="Korruptsioon
 Corruption
 Todennäköisyys: Vähe tõenäoline (Unlikely, 2/5: 21–40 % / 2 v) – laajamittainen korruptio; ei muutosta. EN-sivulla &#x27;unlikely&#x27;.
 Teemat: Järjestäytynyt rikollisuus ja korruptio
@@ -1323,27 +1316,26 @@ Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, 5. no
 Outbreaks of harmful organisms
 Todennäköisyys: Vidutinis (2/4: Vidutinė – kerran 10–50 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
 Teemat: Kasvintuhoojat ja vieraslajit
-Nacionalinė rizikos analizė 2024, II skyrius, 25. Kenksmingųjų organizmų židiniai, p. 162–168 (rizikos vertinimas p. 168); rizikų vertinimo rezultatai p. 6–7">Kasvintuhoojien esiintymät</span></td></tr><tr class="bnd u"><th colspan="9">Vain yhden maan arviossa</th></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg></span><span>Julkisen talouden häiriö</span><span class="cnt u" title="Vain yhden maan arviossa">1/8</span></span></th><td><span class="rk u" data-r="fi-3.4.5" title="Julkisen talouden häiriö
-Public finance disruption
-Todennäköisyys: mahdollinen
-Teemat: Julkisen talouden häiriö
-luku 3.4.5, PDF-s. 117">Julkisen talouden häiriö</span></td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 20v-9H2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z"/><path d="M18 11V4H6v7"/><path d="M15 22v-4a3 3 0 0 0-3-3a3 3 0 0 0-3 3v4"/><path d="M22 11V9"/><path d="M2 11V9"/><path d="M6 4V2"/><path d="M18 4V2"/><path d="M10 4V2"/><path d="M14 4V2"/></svg></span><span>Kulttuuriperinnön vahingoittuminen</span><span class="cnt u" title="Vain yhden maan arviossa">1/8</span></span></th><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td><span class="rk u" data-r="lt-26" title="Pavojus kultūros paveldui
-Threat to cultural heritage
-Todennäköisyys: Didelis (3/4: Didelė – kerran 1–10 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
-Teemat: Kulttuuriperinnön vahingoittuminen
-Nacionalinė rizikos analizė 2024, II skyrius, 26. Pavojus kultūros paveldui, p. 169–174 (rizikos vertinimas p. 174); rizikų vertinimo rezultatai p. 6–7">Kulttuuriperintöön kohdistuva vaara</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9a4 4 0 0 0-2 7.5"/><path d="M12 3v2"/><path d="m6.6 18.4-1.4 1.4"/><path d="M20 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/><path d="M4 13H2"/><path d="M6.34 7.34 4.93 5.93"/></svg></span><span>Lämmönjakelun häiriöt</span><span class="cnt u" title="Vain yhden maan arviossa">1/8</span></span></th><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td><span class="rk u" data-r="is-31" title="Hitaveitur/Jarðvarmaveitur
-District heating / geothermal heating utilities
-Todennäköisyys: «Frekar litlar líkur á stórfelldu rofi en minniháttar bilanir eru nokkuð tíðar.» (laajan katkon todennäköisyys melko pieni, pienet viat melko yleisiä); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
-Teemat: Lämmönjakelun häiriöt
-s. 119–121, Tafla 57 «Sviðsmynd vegna atburða í heitavatnsöflun og vinnslu jarðhita» (s. 120); Í hnotskurn s. 15">Kaukolämpö ja geoterminen lämmöntuotanto</span></td><td class="no">–</td><td class="no">–</td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span><span>Onnettomuus tai kriisi ulkomailla</span><span class="cnt u" title="Vain yhden maan arviossa">1/8</span></span></th><td class="no">–</td><td><span class="rk u" data-r="se-14" title="Händelse utomlands
-Incident abroad
-Todennäköisyys: Laadullinen (ei asteikkoa): ”Det är svårt att uttala sig om sannolikheten …” Mahdollisesti levoton maailmantilanne ja ääri-ilmiöt ovat lisänneet todennäköisyyttä (s. 93–94).
-Teemat: Onnettomuus tai kriisi ulkomailla
-Tabell 1 s. 27; avsnitt s. 90–94 (figur 14 s. 93)">Tapahtuma ulkomailla</span></td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg></span><span>Työvoiman saatavuus</span><span class="cnt u" title="Vain yhden maan arviossa">1/8</span></span></th><td><span class="rk u" data-r="fi-3.4.4" title="Osaavan työvoiman saatavuus häiriötilanteissa
+Nacionalinė rizikos analizė 2024, II skyrius, 25. Kenksmingųjų organizmų židiniai, p. 162–168 (rizikos vertinimas p. 168); rizikų vertinimo rezultatai p. 6–7">Kasvintuhoojien esiintymät</span></td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="M20 12h2"/><path d="m19.07 4.93-1.41 1.41"/><path d="M15.947 12.65a4 4 0 0 0-5.925-4.128"/><path d="M3 20a5 5 0 1 1 8.9-4H13a3 3 0 0 1 2 5.24"/><path d="M11 20v2"/><path d="M7 19v2"/></svg></span><span>Ilmastonmuutoksen kerrannaisvaikutukset</span><span class="cnt p" title="Osassa arvioista">2/8</span></span></th><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td><span class="rk p" data-r="is-11" title="Loftslagsbreytingar og náttúruhamfarir
+Climate change and natural disasters
+Teemat: Ilmastonmuutoksen kerrannaisvaikutukset
+s. 71–72 (ei skenaariotaulukkoa); Í hnotskurn s. 12: «Áhætta er talin aukast í náttúrufari, vegna loftslagsbreytinga.»">Ilmastonmuutos ja luonnonkatastrofit</span></td><td class="no">–</td><td><span class="rk p" data-r="lv-55" title="Klimata kaskādes ietekme
+Climate cascade effects
+Todennäköisyys: Ei V-arvoa (laadullinen arvio); tendence: Pieaugošs (kasvava)
+Teemat: Ilmastonmuutoksen kerrannaisvaikutukset
+Latvijas Nacionālais risku katalogs v1.0, precizēta redakcija 1.10.2026, E-kategorijas tabula, 32. lpp., ID E-05">Ilmastonmuutoksen kerrannaisvaikutukset</span></td><td class="no">–</td></tr><tr class="bnd u"><th colspan="9">Vain yhden maan arviossa</th></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg></span><span>Työvoiman saatavuus</span><span class="cnt u" title="Vain yhden maan arviossa">1/8</span></span></th><td><span class="rk u" data-r="fi-3.4.4" title="Osaavan työvoiman saatavuus häiriötilanteissa
 Availability of skilled labor in disruptions
 Todennäköisyys: mahdollinen
 Teemat: Työvoiman saatavuus
-luku 3.4.4, PDF-s. 113">Osaavan työvoiman saatavuus häiriötilanteissa</span></td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="m15 9 6-6"/></svg></span><span>Yhteiskunnan polarisaatio</span><span class="cnt u" title="Vain yhden maan arviossa">1/8</span></span></th><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td><span class="rk u" data-r="lv-49" title="Sociālā polarizācija un sabiedrības sašķelšanās
+luku 3.4.4, PDF-s. 113">Osaavan työvoiman saatavuus häiriötilanteissa</span></td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg></span><span>Julkisen talouden häiriö</span><span class="cnt u" title="Vain yhden maan arviossa">1/8</span></span></th><td><span class="rk u" data-r="fi-3.4.5" title="Julkisen talouden häiriö
+Public finance disruption
+Todennäköisyys: mahdollinen
+Teemat: Julkisen talouden häiriö
+luku 3.4.5, PDF-s. 117">Julkisen talouden häiriö</span></td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span><span>Onnettomuus tai kriisi ulkomailla</span><span class="cnt u" title="Vain yhden maan arviossa">1/8</span></span></th><td class="no">–</td><td><span class="rk u" data-r="se-14" title="Händelse utomlands
+Incident abroad
+Todennäköisyys: Laadullinen (ei asteikkoa): ”Det är svårt att uttala sig om sannolikheten …” Mahdollisesti levoton maailmantilanne ja ääri-ilmiöt ovat lisänneet todennäköisyyttä (s. 93–94).
+Teemat: Onnettomuus tai kriisi ulkomailla
+Tabell 1 s. 27; avsnitt s. 90–94 (figur 14 s. 93)">Tapahtuma ulkomailla</span></td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="m15 9 6-6"/></svg></span><span>Yhteiskunnan polarisaatio</span><span class="cnt u" title="Vain yhden maan arviossa">1/8</span></span></th><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td><span class="rk u" data-r="lv-49" title="Sociālā polarizācija un sabiedrības sašķelšanās
 Social polarisation and societal division
 Todennäköisyys: V=4 – Augsta (kerran 3–10 vuodessa)
 Teemat: Yhteiskunnan polarisaatio
@@ -1353,7 +1345,15 @@ Teemat: Ympäristön pilaantuminen
 s. 103–105, ei kansallista skenaariotaulukkoa; piiritason luokitus Tafla 45 «Sérstaklega metin áhætta vegna loftmengunar» (s. 105)">Ilmansaasteet</span><span class="rk u" data-r="is-25" title="Mengun í jarðvegi
 Soil pollution
 Teemat: Ympäristön pilaantuminen
-s. 105–106, ei kansallista skenaariotaulukkoa; piiritason luokitus Tafla 46 «Sérstaklega metin áhætta vegna mengunar í jarðvegi» (s. 106)">Maaperän pilaantuminen</span></td><td class="no">–</td><td class="no">–</td><td class="no">–</td></tr></tbody></table></div></div><div class="view" id="v-maittain" hidden><div class="cols" style="--n:8"><div class="col"><h3><span class="cc">FI</span><a href="https://urn.fi/URN:ISBN:978-952-324-888-5" target="_blank" rel="noopener noreferrer">Suomi ↗</a><span class="cy">2026 · 24 riskiä</span><span class="an" title="Kansallinen riskiarvio 2026">Kansallinen riskiarvio 2026</span></h3><div class="rl"><div class="rc p" data-r="fi-3.1.1" title="Informaatiovaikuttaminen
+s. 105–106, ei kansallista skenaariotaulukkoa; piiritason luokitus Tafla 46 «Sérstaklega metin áhætta vegna mengunar í jarðvegi» (s. 106)">Maaperän pilaantuminen</span></td><td class="no">–</td><td class="no">–</td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9a4 4 0 0 0-2 7.5"/><path d="M12 3v2"/><path d="m6.6 18.4-1.4 1.4"/><path d="M20 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/><path d="M4 13H2"/><path d="M6.34 7.34 4.93 5.93"/></svg></span><span>Lämmönjakelun häiriöt</span><span class="cnt u" title="Vain yhden maan arviossa">1/8</span></span></th><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td><span class="rk u" data-r="is-31" title="Hitaveitur/Jarðvarmaveitur
+District heating / geothermal heating utilities
+Todennäköisyys: «Frekar litlar líkur á stórfelldu rofi en minniháttar bilanir eru nokkuð tíðar.» (laajan katkon todennäköisyys melko pieni, pienet viat melko yleisiä); laadullinen kuvaus kansallisessa skenaariotaulukossa, ei 1–5-asteikolla.
+Teemat: Lämmönjakelun häiriöt
+s. 119–121, Tafla 57 «Sviðsmynd vegna atburða í heitavatnsöflun og vinnslu jarðhita» (s. 120); Í hnotskurn s. 15">Kaukolämpö ja geoterminen lämmöntuotanto</span></td><td class="no">–</td><td class="no">–</td><td class="no">–</td></tr><tr><th class="tm"><span class="tmw"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 20v-9H2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2Z"/><path d="M18 11V4H6v7"/><path d="M15 22v-4a3 3 0 0 0-3-3a3 3 0 0 0-3 3v4"/><path d="M22 11V9"/><path d="M2 11V9"/><path d="M6 4V2"/><path d="M18 4V2"/><path d="M10 4V2"/><path d="M14 4V2"/></svg></span><span>Kulttuuriperinnön vahingoittuminen</span><span class="cnt u" title="Vain yhden maan arviossa">1/8</span></span></th><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td class="no">–</td><td><span class="rk u" data-r="lt-26" title="Pavojus kultūros paveldui
+Threat to cultural heritage
+Todennäköisyys: Didelis (3/4: Didelė – kerran 1–10 vuodessa) – luettu skenaarion riskitutkasta (tikimybės lygis)
+Teemat: Kulttuuriperinnön vahingoittuminen
+Nacionalinė rizikos analizė 2024, II skyrius, 26. Pavojus kultūros paveldui, p. 169–174 (rizikos vertinimas p. 174); rizikų vertinimo rezultatai p. 6–7">Kulttuuriperintöön kohdistuva vaara</span></td></tr></tbody></table></div></div><div class="view" id="v-maittain" hidden><div class="cols" style="--n:8"><div class="col"><h3><span class="cc">FI</span><a href="https://urn.fi/URN:ISBN:978-952-324-888-5" target="_blank" rel="noopener noreferrer">Suomi ↗</a><span class="cy">2026 · 24 riskiä</span><span class="an" title="Kansallinen riskiarvio 2026">Kansallinen riskiarvio 2026</span></h3><div class="rl"><div class="rc p" data-r="fi-3.1.1" title="Informaatiovaikuttaminen
 Information influence
 Todennäköisyys: todennäköinen
 Teemat: Informaatiovaikuttaminen
