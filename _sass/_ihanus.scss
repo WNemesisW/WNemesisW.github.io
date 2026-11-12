@@ -596,6 +596,7 @@ a:hover { color: var(--global-link-color-hover); }
   .ih-fig .ih-compare__who { position: static; width: auto; height: auto; margin: 0; overflow: visible; clip: auto; white-space: normal; font-weight: 600; }
 }
 
+/* ih-dd:start */
 /* Projects drop-down in the masthead: opens on hover with a pointer, and on click, tap, Enter or Space; Esc closes. */
 .greedy-nav .visible-links .ih-dd { position: relative; }
 .greedy-nav .visible-links .ih-dd__btn { display: inline-flex; align-items: center; gap: 4px; cursor: pointer; user-select: none; }
@@ -619,3 +620,9 @@ a:hover { color: var(--global-link-color-hover); }
 .ih-dd__menu a:hover b { color: var(--ih-accent); }
 .ih-dd__menu span { display: block; margin-top: 3px; font-size: 13px; line-height: 1.45; font-weight: 400; color: var(--ih-muted); }
 @media (prefers-reduced-motion: reduce) { .greedy-nav .visible-links .ih-dd__menu, .ih-dd__chev { transition: none; } }
+/* Narrow screens: the menu spans the masthead instead of hanging off the Projects item, so it cannot overflow the viewport. */
+@media (max-width: 600px) {
+  .greedy-nav .visible-links .ih-dd { position: static; }
+  .greedy-nav .visible-links .ih-dd__menu { left: 0; right: 0; width: auto; max-width: none; }
+}
+/* ih-dd:end */
