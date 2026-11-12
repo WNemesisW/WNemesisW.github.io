@@ -74,11 +74,14 @@ h1 { margin: 8px 0 0; font-size: 26px; line-height: 1.15; font-weight: 650; lett
 @media (prefers-reduced-motion: reduce) { .subnav, .subnav:hover, .sn::after { transition: none; transform: none; } }
 .sn[aria-current="page"] { color: var(--ink); background: color-mix(in srgb, var(--accent) 16%, transparent); }
 .sn[aria-current="page"]::after { transform: scaleX(1); }
-html[data-theme="light"] .subnav { border-color: rgba(15, 23, 42, .09); background: rgba(255, 255, 255, .74);
-  box-shadow: 0 1px 2px rgba(15, 23, 42, .05), 0 10px 28px rgba(15, 23, 42, .07), inset 0 1px 0 #fff; }
-html[data-theme="light"] .subnav:hover { box-shadow: 0 2px 4px rgba(15, 23, 42, .05), 0 16px 38px rgba(15, 23, 42, .10), inset 0 1px 0 #fff; }
-html[data-theme="light"] .sn:hover { color: var(--accent); background: rgba(15, 23, 42, .04); }
-html[data-theme="light"] .sn[aria-current="page"] { color: var(--ink); background: color-mix(in srgb, var(--accent) 9%, #fff); }
+html[data-theme="light"] .subnav { border-color: transparent;
+  background: linear-gradient(100deg, rgba(207, 250, 254, .80), rgba(237, 233, 254, .80) 58%, rgba(224, 242, 254, .80)) padding-box,
+    linear-gradient(90deg, rgba(8, 145, 178, .50), rgba(124, 58, 237, .40) 58%, rgba(8, 145, 178, .38)) border-box;
+  box-shadow: 0 10px 30px rgba(8, 145, 178, .13), 0 2px 8px rgba(124, 58, 237, .07), inset 0 1px 0 rgba(255, 255, 255, .85); }
+html[data-theme="light"] .subnav:hover { box-shadow: 0 16px 40px rgba(8, 145, 178, .17), 0 3px 10px rgba(124, 58, 237, .09), inset 0 1px 0 rgba(255, 255, 255, .85); }
+html[data-theme="light"] .sn:hover { color: var(--ink); background: rgba(255, 255, 255, .55); }
+html[data-theme="light"] .sn[aria-current="page"] { color: var(--ink); background: #fff; box-shadow: 0 1px 2px rgba(15, 23, 42, .08), 0 4px 14px rgba(8, 145, 178, .16); }
+html[data-theme="light"] .sn::after { background: linear-gradient(90deg, var(--accent), #7c3aed); }
 .fnote { display: flex; gap: 12px; align-items: flex-start; margin: 0 0 14px; padding: 10px 16px 11px 12px; border-radius: 14px;
   background: color-mix(in srgb, var(--panel) 72%, transparent); border: 1px solid var(--line); border-left: 3px solid var(--accent);
   box-shadow: inset 0 1px 0 var(--c10); font-size: 12px; line-height: 1.45; color: var(--ink-2); }
