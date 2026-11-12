@@ -28,11 +28,11 @@ highlights:
 sections:
   - title: "Doctoral research"
     text: "My dissertation examines how deception technologies – honeypots, honeytokens and other low-false-positive sensors – can be integrated into cyber defence ecosystems as structured sources of cyber situation awareness. Following the Design Science Research paradigm, I develop models and implementation concepts for security operations. The dissertation is expected to be completed in 2027."
-    link_title: "Publications"
+    link_title: "Publications on deception and situation awareness"
     link_url: "/publications/"
   - title: "Practice"
     text: "My research questions come from practice. I work as Chief Operating Officer at NGIT Oy. Earlier I led Kela's Technical Situation Awareness Centre, responsible for daily security operations and for situation awareness and response across the organisation, and after that Finnair's Cyber Defense Center. Practice keeps the research close to what security teams actually face."
-    link_title: "CV"
+    link_title: "Full CV: career, education and cyber exercises"
     link_url: "/cv/"
   - title: "Exercises and teaching"
     text: "Cyber exercises offer a controlled setting for observing decision-making under pressure. I have taken part in NATO CCDCOE's Locked Shields four times, leading different functional areas, and I am co-organiser and scenario lead of ERIK, the annual cyber exercise of the National Defence Training Association of Finland (MPK). At Savonia University of Applied Sciences I teach a master's-level course on communication and influence in comprehensive security."
