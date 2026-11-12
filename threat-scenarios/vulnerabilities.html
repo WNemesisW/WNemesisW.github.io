@@ -1,0 +1,191 @@
+---
+layout: null
+sitemap: false
+permalink: /threat-scenarios/vulnerabilities.html
+---
+{% raw %}<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exploited vulnerabilities – Finland&#x27;s national threat scenarios through a cybersecurity lens</title>
+<meta name="description" content="Do the products behind the map&#x27;s services have vulnerabilities that have been used in attacks?">
+<link rel="canonical" href="https://www.ihanus.eu/threat-scenarios/vulnerabilities.html">
+<link rel="alternate" hreflang="fi" href="https://www.ihanus.eu/threat-scenarios/haavoittuvuudet.html">
+<link rel="alternate" hreflang="en" href="https://www.ihanus.eu/threat-scenarios/vulnerabilities.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jouni Ihanus">
+<meta property="og:title" content="Exploited vulnerabilities – Finland&#x27;s national threat scenarios through a cybersecurity lens">
+<meta property="og:description" content="Do the products behind the map&#x27;s services have vulnerabilities that have been used in attacks?">
+<meta property="og:url" content="https://www.ihanus.eu/threat-scenarios/vulnerabilities.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fi_FI">
+<meta property="og:image" content="https://www.ihanus.eu/threat-scenarios/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Map of Finland&#x27;s national threat scenarios: risk cards and their dependencies as lines">
+<meta name="twitter:card" content="summary_large_image">
+<script>(function () { var t; try { t = localStorage.getItem("theme"); } catch (e) {} if (t !== "dark" && t !== "light") { t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-theme", t); })();</script>
+<style>
+:root {
+  --bg: #05070d; --panel: rgba(15, 23, 39, .86); --panel-2: rgba(11, 17, 30, .92); --line: rgba(148, 163, 184, .13); --line-2: rgba(148, 163, 184, .22);
+  --ink: #e6edf7; --ink-2: #b4c1d4; --muted: #7c8aa3; --accent: #22d3ee; --out: #22d3ee; --in: #a78bfa; --bi: #fb923c;
+  --p0: #94a3b8; --p2: #60a5fa; --p3: #fbbf24; --p4: #f472b6; --open: #f87171; --open-2: #fca5a5; --info: #34d399;
+  --c0: rgba(34, 211, 238, .09); --c1: rgba(167, 139, 250, .08); --c2: #a5f3fc; --c3: #04121a; --c4: #9fb0c8; --c5: rgba(148, 163, 184, .075); --c6: rgba(34, 211, 238, .035); --c7: rgba(14, 21, 36, .62); --c8: rgba(8, 12, 22, .62); --c9: rgba(148, 163, 184, .11); --c10: rgba(255, 255, 255, .03); --c11: rgba(0, 0, 0, .35); --c12: rgba(0, 0, 0, .32); --c13: rgba(34, 211, 238, .18); --c14: rgba(148, 163, 184, .08); --c15: rgba(167, 139, 250, .55); --c16: rgba(239, 68, 68, .08); --c17: rgba(248, 113, 113, .28); --c18: rgba(239, 68, 68, .16); --c19: rgba(248, 113, 113, .55); --c20: #8aa0bd; --c21: #e0fbff; --c22: #22d3ee; --c23: #f1ebff; --c24: #a78bfa; --c25: #fff1e6; --c26: #fb923c; --c27: rgba(34, 211, 238, .35); --c28: rgba(34, 211, 238, .5); --c29: rgba(34, 211, 238, .28); --c30: rgba(34, 211, 238, .8); --c31: rgba(251, 146, 60, .8); --c32: rgba(167, 139, 250, .8); --c33: rgba(34, 211, 238, .45); --c34: rgba(34, 211, 238, 0); --c35: rgba(34, 211, 238, .25); --c36: rgba(0, 0, 0, .4); --c37: rgba(4, 18, 26, .12); --c38: rgba(15, 23, 39, .5); --c39: rgba(34, 211, 238, .08); --c40: rgba(12, 19, 33, .96); --c41: rgba(0, 0, 0, .5);
+  --edge-m: var(--c20); color-scheme: dark;
+}
+html[data-theme="light"] {
+  --bg: #f5f7fb; --panel: rgba(255, 255, 255, .9); --panel-2: rgba(248, 250, 252, .95); --line: rgba(15, 23, 42, .10); --line-2: rgba(15, 23, 42, .18);
+  --ink: #0f172a; --ink-2: #334155; --muted: #64748b; --accent: #0e7490; --out: #0891b2; --in: #7c3aed; --bi: #ea580c;
+  --p0: #64748b; --p2: #2563eb; --p3: #d97706; --p4: #db2777; --open: #dc2626; --open-2: #b91c1c; --info: #047857;
+  --c0: rgba(8, 145, 178, 0.05); --c1: rgba(124, 58, 237, 0.04); --c2: #0e7490; --c3: #ffffff; --c4: #64748b; --c5: rgba(15, 23, 42, 0.056); --c6: rgba(8, 145, 178, 0.019); --c7: rgba(255, 255, 255, 0.72); --c8: rgba(255, 255, 255, 0.72); --c9: rgba(15, 23, 42, 0.083); --c10: rgba(255, 255, 255, 0.03); --c11: rgba(15, 23, 42, 0.077); --c12: rgba(15, 23, 42, 0.07); --c13: rgba(8, 145, 178, 0.099); --c14: rgba(15, 23, 42, 0.06); --c15: rgba(124, 58, 237, 0.275); --c16: rgba(220, 38, 38, 0.072); --c17: rgba(220, 38, 38, 0.252); --c18: rgba(220, 38, 38, 0.144); --c19: rgba(220, 38, 38, 0.495); --c20: #475569; --c21: #164e63; --c22: #0891b2; --c23: #4c1d95; --c24: #7c3aed; --c25: #7c2d12; --c26: #ea580c; --c27: rgba(8, 145, 178, 0.193); --c28: rgba(8, 145, 178, 0.275); --c29: rgba(8, 145, 178, 0.154); --c30: rgba(8, 145, 178, 0.44); --c31: rgba(234, 88, 12, 0.4); --c32: rgba(124, 58, 237, 0.4); --c33: rgba(8, 145, 178, 0.248); --c34: rgba(8, 145, 178, 0); --c35: rgba(8, 145, 178, 0.138); --c36: rgba(15, 23, 42, 0.088); --c37: rgba(255, 255, 255, 0.192); --c38: rgba(255, 255, 255, 0.6); --c39: rgba(8, 145, 178, 0.044); --c40: rgba(255, 255, 255, 1); --c41: rgba(15, 23, 42, 0.11);
+  color-scheme: light;
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 600; font-display: swap;
+  src: url("/assets/fonts/space-grotesk-latin-600-normal.woff2") format("woff2"); }
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body { margin: 0; color: var(--ink); font: 14px/1.5 Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; min-height: 100vh;
+  background: radial-gradient(1100px 520px at 8% -8%, var(--c0), transparent 62%), radial-gradient(900px 480px at 100% -4%, var(--c1), transparent 60%), var(--bg); }
+.inner { max-width: 1320px; margin: 0 auto; padding: 0 28px 36px; }
+.topbar { padding: 16px 0 0; }
+.home { font-size: 12px; color: var(--muted); text-decoration: none; } .home:hover { color: var(--accent); }
+.ph { padding: 14px 0 16px; max-width: 920px; }
+.eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+h1 { margin: 8px 0 0; font-size: 26px; line-height: 1.15; font-weight: 650; letter-spacing: -.015em; }
+.sub { margin: 10px 0 0; color: var(--c2); font-size: 14.5px; font-weight: 500; }
+.subnav { position: sticky; top: 12px; z-index: 6; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 4px;
+  margin: 6px 0 16px; padding: 5px; border-radius: 16px; border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 13%, transparent), color-mix(in srgb, var(--accent) 6%, transparent)),
+    color-mix(in srgb, var(--panel) 62%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4); backdrop-filter: blur(16px) saturate(1.4);
+  box-shadow: 0 12px 32px var(--c11), inset 0 1px 0 var(--c10); transition: transform .25s ease, box-shadow .25s ease; }
+.subnav:hover { transform: translateY(-3px); box-shadow: 0 18px 44px var(--c11), 0 0 0 1px var(--c27), inset 0 1px 0 var(--c10); }
+.sn { position: relative; display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 40px; padding: 8px 14px;
+  border-radius: 12px; text-decoration: none; text-align: center; color: var(--accent); line-height: 1.2;
+  font: 600 14px/1.2 "Space Grotesk", Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: .005em;
+  transition: background .2s, color .2s; }
+.sn::after { content: ""; position: absolute; left: 22%; right: 22%; bottom: 5px; height: 2px; border-radius: 2px; background: var(--accent);
+  transform: scaleX(0); transition: transform .25s ease; }
+.sn:hover { color: var(--ink); background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.sn:hover::after { transform: scaleX(1); }
+.sn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.sn .sne { font-size: 11px; opacity: .7; }
+@media (prefers-reduced-motion: reduce) { .subnav, .subnav:hover, .sn::after { transition: none; transform: none; } }
+.sn[aria-current="page"] { color: var(--ink); background: color-mix(in srgb, var(--accent) 16%, transparent); }
+.sn[aria-current="page"]::after { transform: scaleX(1); }
+.fnote { display: flex; gap: 12px; align-items: flex-start; margin: 0 0 14px; padding: 10px 16px 11px 12px; border-radius: 14px;
+  background: color-mix(in srgb, var(--panel) 72%, transparent); border: 1px solid var(--line); border-left: 3px solid var(--accent);
+  box-shadow: inset 0 1px 0 var(--c10); font-size: 12px; line-height: 1.45; color: var(--ink-2); }
+.fnote .fn-i { flex: 0 0 auto; display: inline-grid; place-items: center; width: 20px; height: 20px; margin-top: 1px; border-radius: 50%;
+  font: italic 700 12px/1 Georgia, "Times New Roman", serif; color: var(--accent); background: var(--c0); border: 1px solid var(--c13); }
+.fnote b { display: block; margin-bottom: 2px; font-size: 10.5px; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0 0 16px; }
+.kpi { padding: 14px 18px; border-radius: 16px; background: linear-gradient(180deg, var(--panel), var(--panel-2)); border: 1px solid var(--line);
+  box-shadow: inset 0 1px 0 var(--c10), 0 10px 28px var(--c12); }
+.kpi b { display: block; font: 650 26px/1.1 "Space Grotesk", Inter, ui-sans-serif, system-ui, sans-serif; letter-spacing: -.01em; font-variant-numeric: tabular-nums; }
+.kpi span { display: block; margin-top: 5px; font-size: 12.5px; color: var(--muted); }
+.kpi.red b { color: var(--open); } .kpi.cyan b { color: var(--accent); } .kpi.green b { color: var(--info); }
+.panel { padding: 16px 20px 20px; border-radius: 22px; border: 1px solid var(--c9);
+  background: radial-gradient(var(--c5) 1px, transparent 1px) 0 0 / 24px 24px, radial-gradient(900px 420px at 50% 0%, var(--c6), transparent 70%), linear-gradient(180deg, var(--c7), var(--c8));
+  box-shadow: inset 0 1px 0 var(--c10), 0 24px 60px var(--c11); }
+.phead { display: flex; justify-content: space-between; align-items: center; gap: 10px 16px; flex-wrap: wrap; margin: 2px 2px 14px; }
+.legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; font-size: 11.5px; color: var(--muted); }
+.legend > span { display: inline-flex; align-items: center; gap: 7px; }
+.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; }
+.dot.red { background: var(--open); } .dot.green { background: var(--info); } .dot.cyan { background: var(--accent); }
+.heat { display: inline-block; width: 70px; height: 8px; border-radius: 4px; background: linear-gradient(90deg, color-mix(in srgb, var(--open) 4%, transparent), color-mix(in srgb, var(--open) 45%, transparent)); }
+.fibox { display: inline-block; width: 14px; height: 10px; border-radius: 3px; box-shadow: inset 0 0 0 1.5px var(--accent); }
+.tools { display: flex; gap: 8px; align-items: center; margin-left: auto; }
+.langl { font-size: 12px; font-weight: 600; letter-spacing: .06em; color: var(--muted); text-decoration: none; background: var(--panel); border: 1px solid var(--line);
+  border-radius: 999px; padding: 5px 13px; } .langl:hover { color: var(--ink); }
+.theme { display: inline-grid; place-items: center; width: 32px; height: 30px; padding: 0; border-radius: 999px; color: var(--muted); background: var(--panel);
+  border: 1px solid var(--line); cursor: pointer; } .theme:hover { color: var(--ink); } .theme svg { width: 16px; height: 16px; }
+html[data-theme="dark"] .t-moon, html[data-theme="light"] .t-sun { display: none; }
+.tbl { overflow-x: auto; border-radius: 14px; background: var(--panel); border: 1px solid var(--line); }
+table { width: 100%; border-collapse: collapse; min-width: 760px; }
+th, td { padding: 11px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); font-size: 13.5px; }
+th { font-size: 10.5px; font-weight: 650; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); background: var(--c14); }
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:hover td { background: var(--c39); }
+td .nm { font-weight: 650; font-size: 14px; }
+td a { color: var(--accent); text-decoration: none; } td a:hover { text-decoration: underline; }
+.tag { display: inline-block; margin: 4px 4px 0 0; padding: 1px 9px; border-radius: 999px; font-size: 11.5px; color: var(--ink-2); background: var(--c14); border: 1px solid var(--line); }
+.chip { display: inline-block; margin: 4px 4px 0 0; padding: 1px 8px; border-radius: 6px; font-size: 11px; font-weight: 650; border: 1px solid; }
+.chip.vahva { color: var(--info); border-color: color-mix(in srgb, var(--info) 45%, transparent); background: color-mix(in srgb, var(--info) 10%, transparent); }
+.chip.kohtalainen { color: var(--p3); border-color: color-mix(in srgb, var(--p3) 45%, transparent); background: color-mix(in srgb, var(--p3) 10%, transparent); }
+.chip.heikko { color: var(--open); border-color: color-mix(in srgb, var(--open) 45%, transparent); background: color-mix(in srgb, var(--open) 9%, transparent); }
+.chip.cyan { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 40%, transparent); background: color-mix(in srgb, var(--accent) 9%, transparent); }
+a.chip { text-decoration: none; } a.chip:hover { text-decoration: none; filter: brightness(1.1); }
+code.q { display: inline-block; padding: 2px 8px; border-radius: 6px; font: 12px/1.5 ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: var(--ink-2);
+  background: var(--c14); border: 1px solid var(--line); white-space: nowrap; }
+.vm { display: block; margin-top: 5px; font-size: 11px; color: var(--muted); }
+.why { color: var(--ink-2); }
+ul.act { list-style: none; margin: 7px 0 0; padding: 0; }
+ul.act li { position: relative; margin: 3px 0; padding-left: 18px; font-size: 12.5px; color: var(--ink-2); }
+ul.act li::before { content: "✓"; position: absolute; left: 0; color: var(--info); font-weight: 700; }
+.rep { display: block; margin-top: 6px; font-size: 12px; }
+td.n { text-align: right; white-space: nowrap; }
+td.n b, td.k b { font: 650 16px/1.2 "Space Grotesk", Inter, ui-sans-serif, sans-serif; color: var(--open); font-variant-numeric: tabular-nums; }
+td.n .chg { display: flex; justify-content: flex-end; align-items: center; gap: 6px; margin-top: 4px; font-size: 11px; color: var(--muted); }
+.spark polyline { fill: none; stroke: var(--open); stroke-width: 1.4; stroke-linejoin: round; stroke-linecap: round; }
+td.k { text-align: center; white-space: nowrap; }
+.badge { display: inline-grid; place-items: center; min-width: 30px; padding: 2px 8px; border-radius: 7px; font: 700 13px/1.3 "Space Grotesk", Inter, sans-serif; }
+.badge.red { color: var(--c3); background: var(--open); } .badge.dark { color: #fff; background: color-mix(in srgb, var(--open) 62%, #3b0a0a); }
+.badge.zero { color: var(--muted); background: var(--c14); }
+.cve { display: inline-block; margin: 2px 4px 2px 0; padding: 1px 7px; border-radius: 6px; font: 11.5px/1.5 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color: var(--ink-2) !important; background: var(--c14); border: 1px solid var(--line); }
+.cve.rw { border-color: color-mix(in srgb, var(--open) 55%, transparent); }
+tr.muted td { color: var(--muted); } tr.muted .nm { color: var(--ink-2); }
+table.cmp { min-width: 700px; }
+table.cmp th, table.cmp td { text-align: right; padding: 9px 10px; font-variant-numeric: tabular-nums; }
+table.cmp th:first-child, table.cmp td:first-child { text-align: left; }
+table.cmp td.h { background: color-mix(in srgb, var(--open) var(--h), transparent); color: var(--ink); }
+table.cmp tbody tr:hover td.h { background: color-mix(in srgb, var(--open) var(--h), var(--c39)); }
+table.cmp .fi { font-weight: 700; box-shadow: inset 1.5px 0 0 var(--accent), inset -1.5px 0 0 var(--accent); }
+table.cmp th.fi { color: var(--accent); }
+table.cmp .tot { border-left: 1px solid var(--line); white-space: nowrap; }
+table.cmp td.tot { font-weight: 650; } table.cmp td.tot span { display: block; font-size: 11px; font-weight: 400; color: var(--muted); }
+table.cmp td.rk { white-space: nowrap; font-weight: 650; color: var(--ink-2); } table.cmp td.rk.top { color: var(--open); }
+.fnote.method { margin-top: 16px; } .fnote ul { margin: 4px 0 0; padding-left: 16px; } .fnote li { margin: 3px 0; }
+.srcs { margin-top: 18px; padding: 14px 18px; border-radius: 16px; border: 1px solid var(--line); background: color-mix(in srgb, var(--panel) 60%, transparent); }
+.srcs h2 { margin: 0 0 6px; font-size: 10.5px; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.srcs ul { margin: 0; padding-left: 16px; } .srcs li { margin: 4px 0; font-size: 12.5px; color: var(--ink-2); } .srcs a { color: var(--accent); }
+footer { margin-top: 16px; font-size: 11.5px; color: var(--muted); }
+@media (max-width: 1000px) {
+  .inner { padding: 0 16px 28px; }
+  h1 { font-size: 22px; }
+  .subnav { position: static; display: flex; flex-wrap: wrap; margin: 2px 0 12px; } .subnav:hover { transform: none; }
+  .sn { flex: 1 1 auto; min-height: 38px; padding: 7px 10px; font-size: 13px; }
+  .kpis { grid-template-columns: 1fr; gap: 8px; } .kpi { padding: 10px 14px; } .kpi b { font-size: 22px; }
+  .panel { padding: 12px; border-radius: 18px; }
+}
+</style>
+</head>
+<body>
+<div class="inner">
+<div class="topbar"><a class="home" href="https://www.ihanus.eu/">← www.ihanus.eu</a></div>
+<header class="ph"><div class="eyebrow">Threat scenario map</div><h1>Exploited vulnerabilities</h1><p class="sub">Do the products behind the map&#x27;s services have vulnerabilities that have been used in attacks?</p></header>
+<nav class="subnav" aria-label="Threat scenario map pages"><a class="sn" href="./?lang=en">Map</a><a class="sn" href="sources.html">Sources and Shodan queries</a><a class="sn" href="vulnerabilities.html" aria-current="page">Vulnerabilities</a><a class="sn" href="comparison.html">Nordic and Baltic comparison</a><a class="sn" href="supervisors.html">Supervisory authorities</a><a class="sn" href="https://urn.fi/URN:ISBN:978-952-324-888-5" target="_blank" rel="noopener noreferrer">National Risk Assessment 2026<span class="sne" aria-hidden="true">↗</span></a></nav>
+<section class="kpis"><div class="kpi red"><b>5</b><span>services whose products have exploited vulnerabilities</span></div><div class="kpi red"><b>16</b><span>KEV entries in the map&#x27;s services</span></div><div class="kpi red"><b>8</b><span>used in ransomware campaigns</span></div></section>
+<section class="panel"><div class="phead"><div class="legend"><span><span class="badge red">n</span>exploited vulnerabilities</span><span><span class="badge dark">n</span>in ransomware</span><span><span class="tag">device / service</span>scope</span></div><div class="tools"><a class="langl" href="haavoittuvuudet.html" hreflang="fi">FI</a><button type="button" class="theme" id="theme" aria-label="Toggle theme" title="Toggle theme"><svg class="t-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button></div></div>
+<div class="tbl"><table><thead><tr><th>Service</th><th>Scope</th><th>Exploited</th><th>In ransomware</th><th>Identifiers (NVD)</th></tr></thead><tbody>
+<tr><td><span class="nm">SMB</span></td><td>Microsoft SMB server<div><span class="tag">service</span></div></td><td class="k"><span class="badge red">8</span></td><td class="k"><span class="badge dark">7</span></td><td><a class="cve rw" href="https://nvd.nist.gov/vuln/detail/CVE-2017-0147" target="_blank" rel="noopener noreferrer" title="Microsoft Windows SMBv1 Information Disclosure Vulnerability · KEV 2022-05-24">CVE-2017-0147</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2019-0703" target="_blank" rel="noopener noreferrer" title="Microsoft Windows SMB Information Disclosure Vulnerability · KEV 2022-05-23">CVE-2019-0703</a><a class="cve rw" href="https://nvd.nist.gov/vuln/detail/CVE-2017-0148" target="_blank" rel="noopener noreferrer" title="Microsoft SMBv1 Server Remote Code Execution Vulnerability · KEV 2022-04-06">CVE-2017-0148</a><a class="cve rw" href="https://nvd.nist.gov/vuln/detail/CVE-2017-0146" target="_blank" rel="noopener noreferrer" title="Microsoft Windows SMB Remote Code Execution Vulnerability · KEV 2022-03-25">CVE-2017-0146</a><a class="cve rw" href="https://nvd.nist.gov/vuln/detail/CVE-2020-0796" target="_blank" rel="noopener noreferrer" title="Microsoft SMBv3 Remote Code Execution Vulnerability · KEV 2022-02-10">CVE-2020-0796</a><a class="cve rw" href="https://nvd.nist.gov/vuln/detail/CVE-2017-0145" target="_blank" rel="noopener noreferrer" title="Microsoft SMBv1 Remote Code Execution Vulnerability · KEV 2022-02-10">CVE-2017-0145</a><a class="cve rw" href="https://nvd.nist.gov/vuln/detail/CVE-2017-0144" target="_blank" rel="noopener noreferrer" title="Microsoft SMBv1 Remote Code Execution Vulnerability · KEV 2022-02-10">CVE-2017-0144</a><a class="cve rw" href="https://nvd.nist.gov/vuln/detail/CVE-2017-0143" target="_blank" rel="noopener noreferrer" title="Microsoft Windows Server Message Block (SMBv1) Remote Code Execution Vulnerability · KEV 2021-11-03">CVE-2017-0143</a></td></tr>
+<tr><td><span class="nm">Winbox</span></td><td>MikroTik RouterOS<div><span class="tag">device</span></div></td><td class="k"><span class="badge red">5</span></td><td class="k"><span class="badge zero">0</span></td><td><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-67279" target="_blank" rel="noopener noreferrer" title="Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability · KEV 2026-09-25">CVE-2026-67279</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-86060" target="_blank" rel="noopener noreferrer" title="MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability · KEV 2026-09-10">CVE-2026-86060</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2026-67277" target="_blank" rel="noopener noreferrer" title="MikroTik RouterOS Missing Authentication for Critical Function Vulnerability · KEV 2026-09-10">CVE-2026-67277</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2018-7445" target="_blank" rel="noopener noreferrer" title="MikroTik RouterOS Stack-Based Buffer Overflow Vulnerability · KEV 2022-09-08">CVE-2018-7445</a><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2018-14847" target="_blank" rel="noopener noreferrer" title="MikroTik Router OS Directory Traversal Vulnerability · KEV 2021-12-01">CVE-2018-14847</a></td></tr>
+<tr><td><span class="nm">RDP</span></td><td>Microsoft Remote Desktop Services<div><span class="tag">service</span></div></td><td class="k"><span class="badge red">1</span></td><td class="k"><span class="badge dark">1</span></td><td><a class="cve rw" href="https://nvd.nist.gov/vuln/detail/CVE-2019-0708" target="_blank" rel="noopener noreferrer" title="Microsoft Remote Desktop Services Remote Code Execution Vulnerability · KEV 2021-11-03">CVE-2019-0708</a></td></tr>
+<tr><td><span class="nm">MongoDB</span></td><td>MongoDB Server<div><span class="tag">service</span></div></td><td class="k"><span class="badge red">1</span></td><td class="k"><span class="badge zero">0</span></td><td><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2025-14847" target="_blank" rel="noopener noreferrer" title="MongoDB and MongoDB Server Improper Handling of Length Parameter Inconsistency Vulnerability · KEV 2025-12-29">CVE-2025-14847</a></td></tr>
+<tr><td><span class="nm">S7</span></td><td>Siemens SIMATIC<div><span class="tag">device</span></div></td><td class="k"><span class="badge red">1</span></td><td class="k"><span class="badge zero">0</span></td><td><a class="cve" href="https://nvd.nist.gov/vuln/detail/CVE-2016-8562" target="_blank" rel="noopener noreferrer" title="Siemens SIMATIC CP 1543-1 Improper Privilege Management Vulnerability · KEV 2022-03-03">CVE-2016-8562</a></td></tr>
+<tr class="muted"><td><span class="nm">ATG</span></td><td>Veeder-Root<div><span class="tag">device</span></div></td><td class="k"><span class="badge zero">0</span></td><td class="k"><span class="badge zero">0</span></td><td>–</td></tr>
+<tr class="muted"><td><span class="nm">PostgreSQL</span></td><td>PostgreSQL<div><span class="tag">service</span></div></td><td class="k"><span class="badge zero">0</span></td><td class="k"><span class="badge zero">0</span></td><td>–</td></tr>
+<tr class="muted"><td><span class="nm">StoreView</span></td><td>Danfoss<div><span class="tag">device</span></div></td><td class="k"><span class="badge zero">0</span></td><td class="k"><span class="badge zero">0</span></td><td>–</td></tr>
+<tr class="muted"><td><span class="nm">Teltonika</span></td><td>Teltonika<div><span class="tag">device</span></div></td><td class="k"><span class="badge zero">0</span></td><td class="k"><span class="badge zero">0</span></td><td>–</td></tr>
+<tr class="muted"><td><span class="nm">VNC</span></td><td>VNC servers<div><span class="tag">service</span></div></td><td class="k"><span class="badge zero">0</span></td><td class="k"><span class="badge zero">0</span></td><td>–</td></tr>
+</tbody></table></div>
+</section>
+<aside class="fnote method"><span class="fn-i" aria-hidden="true">i</span><span class="fn-t"><b>Method and caveats</b><ul><li><b>The KEV catalog.</b> The US Cybersecurity and Infrastructure Security Agency's list of vulnerabilities with evidence of exploitation in attacks (version 2026.11.10, 1,779 entries).</li><li><b>Scope.</b> Service: only entries exploitable remotely against the server. Device: all entries for the device's software, because the whole device is on the internet.</li><li>The protocols Modbus, IEC 104, BACnet, DICOM, TR-069 and RTSP were not compared with the catalog because they do not identify a product.</li><li><b>A missing entry does not mean a safe product:</b> the catalog lists only vulnerabilities for which CISA has evidence of exploitation.</li></ul></span></aside>
+<section class="srcs"><h2>Sources</h2><ul><li>CISA (2026). <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">Known Exploited Vulnerabilities Catalog</a>, version 2026.11.10.</li><li>NIST. <a href="https://nvd.nist.gov/">National Vulnerability Database</a>.</li></ul></section>
+<footer>Shodan data: Shodan® (shodan.io); Shodan owns the data and holds its copyright. Icons: Lucide (ISC license).</footer>
+</div>
+<script>document.getElementById("theme").addEventListener("click", function () { var h = document.documentElement, t = h.getAttribute("data-theme") === "dark" ? "light" : "dark"; h.setAttribute("data-theme", t); try { localStorage.setItem("theme", t); } catch (e) {} });</script>
+{% endraw %}{% include analytics-providers/custom.html %}
+</body>
+</html>
