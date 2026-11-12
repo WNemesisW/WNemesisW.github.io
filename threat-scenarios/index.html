@@ -83,9 +83,21 @@ html.fs .inner { padding-top: 12px; padding-bottom: 12px; }
 :root { --i0: color-mix(in srgb, var(--muted) 30%, transparent); --i1: #eab308; --i2: #f97316; --i3: #dc2626; }
 html[data-theme="dark"] { --i1: #facc15; --i2: #fb923c; --i3: #f87171; }
 /* Valitun riskin vaikutuskortti: kartan sisällä, paikka haetaan niin, ettei kortti peitä korostettuja viivoja eikä valitun riskin kortteja */
-.rpop { position: absolute; z-index: 5; width: 340px; left: 0; top: 0; padding: 14px 18px 14px; transition: left .3s ease, top .3s ease; border-radius: 18px; border: 1px solid var(--line); border-top: 3px solid var(--accent);
-  background: linear-gradient(180deg, var(--panel), var(--panel-2)); box-shadow: 0 14px 36px var(--c11); }
-.rpop[hidden] { display: none; }
+/* Merkitys yhteiskunnalle: paneeli liukuu yläpalkin alle kartan yläpuolelle; kartan koko ei muutu */
+html { overflow-anchor: none; }
+.mdrawer { position: sticky; top: var(--navb, 62px); z-index: 5; display: grid; grid-template-rows: 0fr; margin: 0;
+  transition: grid-template-rows .8s cubic-bezier(.22, .8, .25, 1), margin-bottom .8s cubic-bezier(.22, .8, .25, 1); }
+.mdrawer.open { grid-template-rows: 1fr; margin-bottom: 12px; }
+.md-in { min-height: 0; overflow: hidden; }
+.md-card { display: grid; grid-template-columns: 270px minmax(0, 1fr) 28px; gap: 0 26px; align-items: center; margin: 0 0 6px; padding: 10px 18px 12px 10px;
+  border-radius: 18px; border: 1px solid var(--line); border-top: 3px solid var(--accent); background: color-mix(in srgb, var(--panel) 96%, transparent);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 16px 36px var(--c11);
+  opacity: 0; transform: translateY(-12px); transition: opacity .6s ease .15s, transform .8s cubic-bezier(.22, .8, .25, 1); }
+.mdrawer.open .md-card { opacity: 1; transform: none; }
+.md-card .radar { max-width: 270px; margin: 0; } .md-card .rp-lg { margin-top: 0; }
+.md-t { min-width: 0; } .md-n { display: block; font-size: 18px; line-height: 1.2; } .md-m { display: block; margin-top: 2px; font-size: 12px; color: var(--muted); }
+.md-card .rp-d { max-width: 100ch; margin: 8px 0 8px; font-size: 14px; }
+.md-card .rp-x { align-self: start; }
 .rp-h { display: flex; align-items: flex-start; gap: 10px; }
 .rp-h .ico { grid-row: auto; flex: none; width: 30px; height: 30px; border-radius: 9px; } .rp-h .ico svg { width: 16px; height: 16px; }
 .rp-h .rp-n { flex: 1; min-width: 0; } .rp-h b { display: block; font-size: 15px; line-height: 1.25; }
@@ -106,8 +118,8 @@ html[data-theme="dark"] { --i1: #facc15; --i2: #fb923c; --i3: #f87171; }
 .rp-lg { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 12px; margin-top: 4px; font-size: 11px; color: var(--muted); }
 .rp-lg span { display: inline-flex; align-items: center; gap: 5px; } .rp-lg .wd { width: 8px; height: 8px; border-radius: 50%; } .rp-lg .wd.l0 { background: var(--i0); }
 .rp-a { display: inline-block; margin-top: 8px; font-size: 12px; color: var(--accent); text-decoration: none; } .rp-a:hover { text-decoration: underline; }
-@media (prefers-reduced-motion: reduce) { .rpop { transition: none; } }
-@media (max-width: 1240px) { .rpop { display: none !important; } }
+@media (prefers-reduced-motion: reduce) { .mdrawer, .md-card { transition: none; } }
+@media (max-width: 1240px) { .mdrawer { display: none !important; } }
 .fimp { margin: 10px 0 0; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--line); background: var(--panel); }
 .fimp .rp-d { margin-top: 4px; }
 .legend { position: absolute; top: 21px; left: 40px; right: 40px; z-index: 2; display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: center;
@@ -404,13 +416,13 @@ footer a:hover { text-decoration: underline; }
   </section>
 </header>
 <nav class="subnav" id="subnav" aria-label="Lähteet ja lisätiedot"><a class="sn" data-sn="map" href="./" aria-current="page"><span data-t="sn_map"></span></a><a class="sn" data-sn="haut" href="sources.html"><span data-t="sn_haut"></span></a><a class="sn" data-sn="kev" href="vulnerabilities.html"><span data-t="sn_kev"></span></a><a class="sn" data-sn="vertailu" href="comparison.html"><span data-t="sn_vertailu"></span></a><a class="sn" data-sn="valvojat" href="supervisors.html"><span data-t="sn_valvojat"></span></a><a class="sn" href="https://urn.fi/URN:ISBN:978-952-324-888-5" target="_blank" rel="noopener noreferrer"><span data-t="sn_ra"></span><span class="sne" aria-hidden="true">↗</span></a><div class="tools"><div class="lang" role="group" id="lang"><button type="button" data-l="fi" lang="fi">FI</button><button type="button" data-l="sv" lang="sv">SV</button><button type="button" data-l="en" lang="en">EN</button></div><button type="button" class="theme" id="theme"><svg class="t-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button><button type="button" class="theme" id="fs" hidden><svg class="fs-max" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg><svg class="fs-min" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/></svg></button></div></nav>
+<div class="mdrawer" id="mdrawer" aria-live="polite"><div class="md-in"><div class="md-card" id="rpop"></div></div></div>
 <div class="map" id="map"><div class="legend"><span class="dirl"><span data-t="causes"></span><i class="bar"></i><span data-t="affected"></span></span><i class="sep selk"></i><span class="selk"><svg class="sw out" viewBox="0 0 30 8" aria-hidden="true"><line x1="2" y1="4" x2="28" y2="4"/></svg><span data-t="selOut"></span></span><span class="selk"><svg class="sw inn" viewBox="0 0 30 8" aria-hidden="true"><line x1="2" y1="4" x2="28" y2="4"/></svg><span data-t="selIn"></span></span><span class="selk"><svg class="sw bi" viewBox="0 0 30 8" aria-hidden="true"><line x1="2" y1="4" x2="28" y2="4"/></svg><span data-t="selBi"></span></span><i class="sep"></i><span><svg class="sw" viewBox="0 0 30 8" aria-hidden="true"><line x1="2" y1="4" x2="28" y2="4"/></svg><span data-t="lineR"></span></span><span><svg class="sw dash" viewBox="0 0 30 8" aria-hidden="true"><line x1="2" y1="4" x2="28" y2="4"/></svg><span data-t="lineX"></span></span><i class="sep"></i><span><i class="kev">KEV</i><span data-t="kevL"></span></span></div><svg id="wires" aria-hidden="true"><defs>
 <marker id="m0" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M0 0.5L10 5L0 9.5L2.6 5z" fill="#8aa0bd"/></marker>
 <marker id="m1" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto-start-reverse"><path d="M0 0.5L10 5L0 9.5L2.6 5z" fill="#22d3ee"/></marker>
 <marker id="m2" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto-start-reverse"><path d="M0 0.5L10 5L0 9.5L2.6 5z" fill="#a78bfa"/></marker>
 <marker id="m3" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto-start-reverse"><path d="M0 0.5L10 5L0 9.5L2.6 5z" fill="#fb923c"/></marker>
 </defs><g id="edges"></g></svg>
-<aside class="rpop" id="rpop" hidden aria-live="polite"></aside>
 <section id="focus" class="focus" hidden></section>
 <div id="hint" role="note"><span data-t="hint"></span><span class="hint-m" data-t="hintM"></span><ol class="tour-l"><li><i>1</i><span data-t="tour1"></span></li><li><i>2</i><span data-t="tour2"></span></li><li><i>3</i><span data-t="tour3"></span></li><li><i>4</i><span data-t="tour4"></span></li></ol><button type="button" id="hint-x">×</button>
 <svg class="arrow" viewBox="0 0 22 26" aria-hidden="true"><path d="M11 1v20M3 14l8 9 8-9" fill="none" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -647,45 +659,47 @@ function impBody(n) {
     '<a class="rp-a" href="' + RA_PDF + "#page=" + n.fp + '" target="_blank" rel="noopener noreferrer">' + esc(T("impFig").replace("%d", n.fp)) + " ↗</a></div>" +
     '<div class="rp-r"><div class="rp-rh">' + esc(T("impH")) + "</div>" + radar(n) + '<div class="rp-lg">' + lg + "</div></div></div>";
 }
-const rpop = $("rpop");
+const drawer = $("mdrawer"), rpop = $("rpop");
+function popHtml(n) {
+  const m = Math.max.apply(null, WHEEL.map(function (f) { return n.imp[f]; }));
+  const worst = WHEEL.filter(function (f) { return n.imp[f] === m; }).map(function (f) { return T("funL")[f].join(" ").replace(/- /g, ""); });
+  const lg = [1, 2, 3].map(function (k) { return '<span><i class="wd l' + k + '"></i>' + esc(T("lev")[k]) + "</span>"; }).join("");
+  return '<div class="md-r">' + radar(n) + '<div class="rp-lg">' + lg + "</div></div>" +
+    '<div class="md-t"><span class="rp-k">' + esc(T("impK")) + '</span><b class="md-n">' + esc(n.l[lang].replace(/\u00ad/g, "")) + "</b>" +
+    '<span class="md-m">' + n.s + " · " + esc(T("cls")[n.p]) + "</span>" + (n.d ? '<p class="rp-d">' + esc(n.d[lang]) + "</p>" : "") +
+    (m > 0 ? '<div class="rp-w"><i class="wd l' + m + '"></i><span>' + esc(T("impW") + " (" + T("lev")[m] + "): " + worst.join(" · ")) + "</span></div>" : "") +
+    '<a class="rp-a" href="' + RA_PDF + "#page=" + n.fp + '" target="_blank" rel="noopener noreferrer">' + esc(T("impFig").replace("%d", n.fp)) + " ↗</a></div>" +
+    '<button type="button" class="rp-x" aria-label="' + esc(T("close")) + '" title="' + esc(T("close")) + '">✕</button>';
+}
+// Kun karttaa on vieritetty, paneelin avautuminen yläpuolella työntäisi valitun kortin alas: pidetään kortti paikallaan näkymässä
+let anchorRaf = 0;
+function holdAnchor(el, ms) {
+  cancelAnimationFrame(anchorRaf);
+  if (!el || map.getBoundingClientRect().top > $("subnav").getBoundingClientRect().bottom + 4) return;  // kartan yläreuna näkyy: kartta valuu alas
+  const y0 = el.getBoundingClientRect().top, t0 = performance.now();
+  const step = function (t) { const dy = el.getBoundingClientRect().top - y0; if (Math.abs(dy) >= 1) scrollBy(0, dy); if (t - t0 < ms) anchorRaf = requestAnimationFrame(step); };
+  anchorRaf = requestAnimationFrame(step);
+}
+// Jos valittu kortti jää paneelin alle, vieritetään se näkyviin paneelin alapuolelle
+function revealSel(id) {
+  const el = $("r-" + id); if (!el || selected !== id) return;
+  const r = el.getBoundingClientRect(), b = drawer.getBoundingClientRect().bottom;
+  if (r.top < b + 10) scrollBy({ top: r.top - b - 16, behavior: "smooth" });
+}
 function showPop(id) {
-  const n = id ? byId[id] : null;
-  if (!n || !n.imp || MOBILE.matches) { if (!rpop.hidden) { rpop.hidden = true; rpop.innerHTML = ""; redraw(); } return; }
-  rpop.innerHTML = '<div class="rp-h"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-    n.icon + '</svg></span><div class="rp-n"><span class="rp-k">' + esc(T("impK")) + "</span><b>" + esc(n.l[lang].replace(/\u00ad/g, "")) + '</b></div><button type="button" class="rp-x" aria-label="' +
-    esc(T("close")) + '" title="' + esc(T("close")) + '">✕</button></div>' + impBody(n);
-  rpop.hidden = false; placePop();
-}
-// Kortin paikka: ruudukko kartan sisällä; pisteytys = päällekkäisyys valitun ja siihen liittyvien korttien ja korostettujen viivojen kanssa
-// (raskas), muiden korttien kanssa (kevyt) sekä etäisyys valittuun korttiin (lähempi on parempi).
-function placePop() {
-  if (rpop.hidden || !selected) return;
-  const M = map.getBoundingClientRect(), W = rpop.offsetWidth, H = rpop.offsetHeight, pad = 10;
-  const heavy = [], light = [], pts = [];
-  const box = function (el, m) { const r = el.getBoundingClientRect(); return [r.left - M.left - m, r.top - M.top - m, r.right - M.left + m, r.bottom - M.top + m]; };
-  map.querySelectorAll(".risk").forEach(function (el) { (el.classList.contains("on") || el.classList.contains("sel") ? heavy : light).push(box(el, 10)); });
-  const lg = map.querySelector(".legend"); if (lg) heavy.push(box(lg, 6));
-  EDGES.forEach(function (d, i) {
-    if (d.a !== selected && d.b !== selected) return;
-    const el = $("e" + i); if (!el || !el.getTotalLength) return;
-    const len = el.getTotalLength(), mtx = el.getScreenCTM(); if (!mtx) return;
-    for (let t = 0; t <= len; t += 10) { const q = el.getPointAtLength(t), sp = new DOMPoint(q.x, q.y).matrixTransform(mtx); pts.push([sp.x - M.left, sp.y - M.top]); }
-  });
-  const sel = $("r-" + selected), sb = sel ? box(sel, 0) : [0, 0, 0, 0], sx = (sb[0] + sb[2]) / 2, sy = (sb[1] + sb[3]) / 2;
-  const ov = function (a, x, y) { const w = Math.min(a[2], x + W) - Math.max(a[0], x), h = Math.min(a[3], y + H) - Math.max(a[1], y); return w > 0 && h > 0 ? w * h : 0; };
-  let best = null, bx = pad, by = pad;
-  for (let y = pad; y <= Math.max(pad, M.height - H - pad); y += 16) {
-    for (let x = pad; x <= Math.max(pad, M.width - W - pad); x += 16) {
-      let sc = 0;
-      for (let k = 0; k < heavy.length; k++) sc += ov(heavy[k], x, y) * 40;
-      for (let k = 0; k < light.length; k++) sc += ov(light[k], x, y) * 0.6;
-      for (let k = 0; k < pts.length; k++) { const q = pts[k]; if (q[0] > x - 6 && q[0] < x + W + 6 && q[1] > y - 6 && q[1] < y + H + 6) sc += 9000; }
-      sc += Math.hypot(x + W / 2 - sx, y + H / 2 - sy) * 4;
-      if (best === null || sc < best) { best = sc; bx = x; by = y; }
-    }
+  const n = id ? byId[id] : null, open = drawer.classList.contains("open");
+  if (!n || !n.imp || MOBILE.matches) {
+    if (open) { holdAnchor($("r-" + drawer.getAttribute("data-id")), 950); drawer.classList.remove("open"); drawer.setAttribute("data-id", ""); }
+    return;
   }
-  rpop.style.left = bx + "px"; rpop.style.top = by + "px";
+  rpop.innerHTML = popHtml(n);
+  holdAnchor($("r-" + id), 950);
+  drawer.classList.add("open"); drawer.setAttribute("data-id", id);
+  if (!open) setTimeout(function () { revealSel(id); }, 850);
 }
+// Paneeli kiinnittyy yläpalkin alle: palkki on sticky 10 px:n päässä yläreunasta
+const navb = function () { document.documentElement.style.setProperty("--navb", ($("subnav").offsetHeight + 16) + "px"); };
+addEventListener("resize", navb); addEventListener("load", navb); navb();
 rpop.addEventListener("click", function (ev) { if (ev.target.closest("a")) { ev.stopPropagation(); return; } ev.stopPropagation(); if (ev.target.closest(".rp-x")) select(null); });
 addEventListener("keydown", function (ev) { if (ev.key === "Escape" && selected && !MOBILE.matches) select(null); });
 // Mobiilissa valinta avaa fokusnäkymän: valittu riski keskellä, riippuvuudet ylä- ja alapuolella.
@@ -801,7 +815,7 @@ document.addEventListener("focusin", function (ev) { const a = chipOf(ev); if (a
 document.addEventListener("focusout", function (ev) { if (chipOf(ev)) hideChipTip(); });
 addEventListener("scroll", hideChipTip, true);
 let queued = false;
-function redraw() { if (queued) return; queued = true; requestAnimationFrame(function () { queued = false; draw(); placePop(); }); }
+function redraw() { if (queued) return; queued = true; requestAnimationFrame(function () { queued = false; draw(); }); }
 // border-box: myös sisävälin muutos (kehotteen tila) piirtää viivat uudelleen
 if (window.ResizeObserver) new ResizeObserver(redraw).observe(map, { box: "border-box" }); else addEventListener("resize", redraw);
 MOBILE.addEventListener("change", function () {
