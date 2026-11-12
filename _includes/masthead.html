@@ -22,11 +22,12 @@
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
           </li>
           <li class="persist ih-nav-sep" aria-hidden="true"></li>
-          <li class="masthead__menu-item persist ih-project">
-            <a href="{{ base_path }}/threat-scenarios/" title="Finland's national threat scenarios through a cybersecurity lens">Threat map</a>
-          </li>
-          <li class="masthead__menu-item persist ih-project">
-            <a href="{{ base_path }}/risk-assessments/" title="Nordic and Baltic national risk assessments side by side">Risk assessments</a>
+          <li class="masthead__menu-item persist ih-project ih-dd">
+            <a class="ih-dd__btn" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-controls="ih-projects">Projects<svg class="ih-dd__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"></path></svg></a>
+            <ul class="ih-dd__menu" id="ih-projects">
+              <li><a href="{{ base_path }}/threat-scenarios/"><b>Finland's national threat scenarios</b><span>A map of the National Risk Assessment 2026 through a cybersecurity lens</span></a></li>
+              <li><a href="{{ base_path }}/risk-assessments/"><b>Nordic and Baltic risk assessments</b><span>Eight national risk assessments side by side: shared and unique risks</span></a></li>
+            </ul>
           </li>
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -34,3 +35,18 @@
     </div>
   </div>
 </div>
+<!-- ih-dd -->
+<script>
+(function () {
+  var dd = document.querySelector("#site-nav .ih-dd"); if (!dd) return;
+  var b = dd.querySelector(".ih-dd__btn");
+  function set(o) { dd.classList.toggle("open", o); b.setAttribute("aria-expanded", o ? "true" : "false"); }
+  b.addEventListener("click", function (e) { e.preventDefault(); set(!dd.classList.contains("open")); });
+  b.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); set(!dd.classList.contains("open")); } });
+  document.addEventListener("click", function (e) { if (!dd.contains(e.target)) set(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && dd.classList.contains("open")) { set(false); b.focus(); } });
+  dd.addEventListener("mouseleave", function () { set(false); });
+  dd.addEventListener("focusout", function (e) { if (!dd.contains(e.relatedTarget)) set(false); });
+})();
+</script>
+<!-- /ih-dd -->

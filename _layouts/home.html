@@ -46,7 +46,8 @@ layout: default
       <p class="ih-card__num">{{ forloop.index | prepend: '0' }}</p>
       <h2 class="ih-card__title">{{ s.title }}</h2>
       <p class="ih-card__text">{{ s.text }}</p>
-      {% if s.link_url %}<a class="ih-link" href="{{ s.link_url | relative_url }}">{{ s.link_title }}{% include ih-arrow.html %}</a>{% endif %}
+      {% if s.links %}<div class="ih-card__links">{% for l in s.links %}<a class="ih-link" href="{{ l.url | relative_url }}">{{ l.title }}{% include ih-arrow.html %}</a>{% endfor %}</div>
+      {% elsif s.link_url %}<a class="ih-link" href="{{ s.link_url | relative_url }}">{{ s.link_title }}{% include ih-arrow.html %}</a>{% endif %}
     </article>
     {% endfor %}
   </section>

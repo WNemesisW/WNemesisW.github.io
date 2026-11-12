@@ -36,6 +36,13 @@ sections:
     link_url: "/cv/"
   - title: "Exercises and teaching"
     text: "Cyber exercises offer a controlled setting for observing decision-making under pressure. I have taken part in NATO CCDCOE's Locked Shields four times, leading different functional areas, and I am co-organiser and scenario lead of ERIK, the annual cyber exercise of the National Defence Training Association of Finland (MPK). At Savonia University of Applied Sciences I teach a master's-level course on communication and influence in comprehensive security."
+  - title: "Open situational pictures"
+    text: "Two open, non-commercial views built only from public sources: a map of Finland's national threat scenarios through a cybersecurity lens, and a side-by-side comparison of the Nordic and Baltic national risk assessments that shows which risks the countries share and which belong to one country only."
+    links:
+      - title: "Finland's national threat scenario map"
+        url: "/threat-scenarios/"
+      - title: "Nordic and Baltic risk assessments side by side"
+        url: "/risk-assessments/"
 interests_label: "Current interests"
 interests:
   - "How AI can support the analysis of security data so that it becomes useful for decision-making."
