@@ -12,6 +12,7 @@ permalink: /threat-scenarios/valvojat.html
 <meta name="description" content="Kuka valvoo kyberturvallisuuslain velvoitteita kartan riskien toimialoilla, ja minne poikkeamista ilmoitetaan?">
 <link rel="canonical" href="https://www.ihanus.eu/threat-scenarios/valvojat.html">
 <link rel="alternate" hreflang="fi" href="https://www.ihanus.eu/threat-scenarios/valvojat.html">
+<link rel="alternate" hreflang="sv" href="https://www.ihanus.eu/threat-scenarios/tillsyn.html">
 <link rel="alternate" hreflang="en" href="https://www.ihanus.eu/threat-scenarios/supervisors.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Jouni Ihanus">
@@ -19,6 +20,7 @@ permalink: /threat-scenarios/valvojat.html
 <meta property="og:description" content="Kuka valvoo kyberturvallisuuslain velvoitteita kartan riskien toimialoilla, ja minne poikkeamista ilmoitetaan?">
 <meta property="og:url" content="https://www.ihanus.eu/threat-scenarios/valvojat.html">
 <meta property="og:locale" content="fi_FI">
+<meta property="og:locale:alternate" content="sv_FI">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:image" content="https://www.ihanus.eu/threat-scenarios/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -160,6 +162,12 @@ table.cmp td.rk { white-space: nowrap; font-weight: 650; color: var(--ink-2); } 
 .srcs { margin-top: 18px; padding: 14px 18px; border-radius: 16px; border: 1px solid var(--line); background: color-mix(in srgb, var(--panel) 60%, transparent); }
 .srcs h2 { margin: 0 0 6px; font-size: 10.5px; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .srcs ul { margin: 0; padding-left: 16px; } .srcs li { margin: 4px 0; font-size: 12.5px; color: var(--ink-2); } .srcs a { color: var(--accent); }
+.cta { display: flex; align-items: center; gap: 12px; margin-top: 12px; padding: 12px 16px; border-radius: 14px; text-decoration: none; color: var(--ink);
+  background: color-mix(in srgb, var(--info) 10%, transparent); border: 1px solid color-mix(in srgb, var(--info) 35%, transparent); }
+.cta:hover { background: color-mix(in srgb, var(--info) 16%, transparent); }
+.cta:focus-visible { outline: 2px solid var(--info); outline-offset: 2px; }
+.cta .ci { flex: none; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--info); color: var(--c3); font-weight: 800; }
+.cta b { display: block; color: var(--info); font-size: 14px; } .cta .d { display: block; margin-top: 2px; font-size: 12.5px; color: var(--ink-2); }
 footer { margin-top: 16px; font-size: 11.5px; color: var(--muted); }
 @media (max-width: 1000px) {
   .inner { padding: 0 16px 28px; }
@@ -175,7 +183,7 @@ footer { margin-top: 16px; font-size: 11.5px; color: var(--muted); }
 <div class="inner">
 <div class="topbar"><a class="home" href="https://www.ihanus.eu/">← www.ihanus.eu</a></div>
 <header class="ph"><div class="eyebrow">Uhkaskenaariokartta</div><h1>Valvovat viranomaiset</h1><p class="sub">Kuka valvoo kyberturvallisuuslain velvoitteita kartan riskien toimialoilla, ja minne poikkeamista ilmoitetaan?</p></header>
-<nav class="subnav" aria-label="Uhkaskenaariokartan sivut"><a class="sn" href="./?lang=fi">Kartta</a><a class="sn" href="lahteet.html">Lähteet ja Shodan-haut</a><a class="sn" href="haavoittuvuudet.html">Haavoittuvuudet</a><a class="sn" href="vertailu.html">Vertailu Pohjoismaihin ja Baltiaan</a><a class="sn" href="valvojat.html" aria-current="page">Valvovat viranomaiset</a><a class="sn" href="https://urn.fi/URN:ISBN:978-952-324-888-5" target="_blank" rel="noopener noreferrer">Kansallinen riskiarvio 2026<span class="sne" aria-hidden="true">↗</span></a><div class="tools"><div class="lang" role="group" aria-label="Kieli"><a href="valvojat.html" lang="fi" hreflang="fi" aria-current="page">FI</a><a href="supervisors.html" lang="en" hreflang="en">EN</a></div><button type="button" class="theme" id="theme" aria-label="Vaihda teema" title="Vaihda teema"><svg class="t-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button></div></nav>
+<nav class="subnav" aria-label="Uhkaskenaariokartan sivut"><a class="sn" href="./?lang=fi">Kartta</a><a class="sn" href="lahteet.html">Lähteet ja Shodan-haut</a><a class="sn" href="haavoittuvuudet.html">Haavoittuvuudet</a><a class="sn" href="vertailu.html">Vertailu Pohjoismaihin ja Baltiaan</a><a class="sn" href="valvojat.html" aria-current="page">Valvovat viranomaiset</a><a class="sn" href="https://urn.fi/URN:ISBN:978-952-324-888-5" target="_blank" rel="noopener noreferrer">Kansallinen riskiarvio 2026<span class="sne" aria-hidden="true">↗</span></a><div class="tools"><div class="lang" role="group" aria-label="Kieli"><a href="valvojat.html" lang="fi" hreflang="fi" aria-current="page">FI</a><a href="tillsyn.html" lang="sv" hreflang="sv">SV</a><a href="supervisors.html" lang="en" hreflang="en">EN</a></div><button type="button" class="theme" id="theme" aria-label="Vaihda teema" title="Vaihda teema"><svg class="t-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button></div></nav>
 <section class="kpis"><div class="kpi cyan"><b>10</b><span>toimialaa kyberturvallisuuslain piirissä</span></div><div class="kpi cyan"><b>12</b><span>kartan riskiä liitetty toimialaan</span></div><div class="kpi green"><b>24 h / 72 h</b><span>ennakkovaroitus / poikkeamailmoitus</span></div></section>
 <section class="panel">
 <div class="tbl"><table><thead><tr><th>Toimiala</th><th>Riski kartalla</th><th>Valvova viranomainen</th></tr></thead><tbody>
@@ -190,9 +198,10 @@ footer { margin-top: 16px; font-size: 11.5px; color: var(--muted); }
 <tr><td><span class="nm">avaruus</span></td><td><span class="tag">Avaruuspalvelujen häiriöt</span></td><td><span class="chip cyan">Traficom</span></td></tr>
 <tr><td><span class="nm">valmistus</span></td><td><span class="tag">Arvo- ja tuotantoketjujen häiriöt</span></td><td><span class="chip cyan">Tukes, Traficom tai Fimea alasta riippuen</span></td></tr>
 </tbody></table></div>
+<a class="cta" href="https://www.kyberturvallisuuskeskus.fi/fi/organisaatioiden-tietoturva/kybermittari" target="_blank" rel="noopener noreferrer"><span class="ci" aria-hidden="true">✓</span><span><b>Arvioi organisaatiosi kyberturvallisuus Kybermittarilla ↗</b><span class="d">Kyberturvallisuuskeskuksen maksuton itsearviointi johdolle: kyberturvallisuuden kypsyystaso osa-alueittain (NIST CSF ja C2M2). Suomeksi, ruotsiksi ja englanniksi.</span></span></a>
 </section>
 <aside class="fnote method"><span class="fn-i" aria-hidden="true">i</span><span class="fn-t"><b>Menetelmä ja varaumat</b><ul><li><b>Kyberturvallisuuslaki</b> velvoittaa kriittisten toimialojen toimijat hallitsemaan kyberriskejään ja ilmoittamaan merkittävistä poikkeamista.</li><li><b>Riskin liitos toimialaan on tekijän tulkinta;</b> laki ei käytä riskiarvion jakoa.</li><li>Merkittävästä poikkeamasta ilmoitetaan viipymättä omalle valvojalle Kyberturvallisuuskeskuksen NIS2-poikkeamailmoitussovelluksella (ennakkovaroitus 24 tunnissa, ilmoitus 72 tunnissa). Rahoitusalalla velvoitteet voivat tulla DORA-asetuksesta.</li></ul></span></aside>
-<section class="srcs"><h2>Lähteet</h2><ul><li><a href="https://www.kyberturvallisuuskeskus.fi/fi/nis2-ja-kyberturvallisuuslaki/tarkeaa-tietoa-euroopan-unionin-kyberturvallisuusdirektiivista-nis2">Kyberturvallisuuskeskus: Tärkeää tietoa EU:n kyberturvallisuusdirektiivistä (NIS2)</a></li><li><a href="https://kyberturvallisuuskeskus.fi/fi/toimintamme/saantely-ja-valvonta/nis-2-euroopan-unionin-kyberturvallisuusdirektiivi/nis2-ukk">Kyberturvallisuuskeskus: NIS2 UKK</a></li></ul></section>
+<section class="srcs"><h2>Lähteet</h2><ul><li><a href="https://www.kyberturvallisuuskeskus.fi/fi/nis2-ja-kyberturvallisuuslaki/tarkeaa-tietoa-euroopan-unionin-kyberturvallisuusdirektiivista-nis2">Kyberturvallisuuskeskus: Tärkeää tietoa EU:n kyberturvallisuusdirektiivistä (NIS2)</a></li><li><a href="https://kyberturvallisuuskeskus.fi/fi/toimintamme/saantely-ja-valvonta/nis-2-euroopan-unionin-kyberturvallisuusdirektiivi/nis2-ukk">Kyberturvallisuuskeskus: NIS2 UKK</a></li><li><a href="https://www.kyberturvallisuuskeskus.fi/fi/organisaatioiden-tietoturva/kybermittari">Kyberturvallisuuskeskus: Kybermittari</a></li></ul></section>
 <footer>Shodan-tiedot: Shodan® (shodan.io); aineiston omistus ja tekijänoikeudet kuuluvat Shodanille. Ikonit: Lucide (ISC-lisenssi).</footer>
 </div>
 <script>document.getElementById("theme").addEventListener("click", function () { var h = document.documentElement, t = h.getAttribute("data-theme") === "dark" ? "light" : "dark"; h.setAttribute("data-theme", t); try { localStorage.setItem("theme", t); } catch (e) {} });</script>
