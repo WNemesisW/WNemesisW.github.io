@@ -42,6 +42,8 @@ html[data-theme="light"] {
 }
 #m0 path { fill: var(--edge-m); } #m1 path { fill: var(--out); } #m2 path { fill: var(--in); } #m3 path { fill: var(--bi); }
 #hint .arrow path { stroke: var(--accent); }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 600; font-display: swap;
+  src: url("/assets/fonts/space-grotesk-latin-600-normal.woff2") format("woff2"); }
 * { box-sizing: border-box; }
 html { background: var(--bg); }
 body { margin: 0; color: var(--ink); font: 14px/1.45 Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -83,19 +85,22 @@ html[data-theme="dark"] .t-moon, html[data-theme="light"] .t-sun { display: none
 .sw line { stroke: var(--c4); stroke-width: 2.4; stroke-linecap: round; }
 .sw.out line { stroke: var(--out); } .sw.inn line { stroke: var(--in); } .sw.bi line { stroke: var(--bi); } .sw.dash line { stroke-dasharray: .5 6; stroke-width: 3; }
 .subnav { position: sticky; top: 12px; z-index: 6; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 4px;
-  margin: 6px 0 16px; padding: 5px; border-radius: 16px; border: 1px solid var(--line-2);
-  background: color-mix(in srgb, var(--panel) 55%, transparent); -webkit-backdrop-filter: blur(16px) saturate(1.4); backdrop-filter: blur(16px) saturate(1.4);
+  margin: 6px 0 16px; padding: 5px; border-radius: 16px; border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 13%, transparent), color-mix(in srgb, var(--accent) 6%, transparent)),
+    color-mix(in srgb, var(--panel) 62%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4); backdrop-filter: blur(16px) saturate(1.4);
   box-shadow: 0 12px 32px var(--c11), inset 0 1px 0 var(--c10); transition: transform .25s ease, box-shadow .25s ease; }
 .subnav:hover { transform: translateY(-3px); box-shadow: 0 18px 44px var(--c11), 0 0 0 1px var(--c27), inset 0 1px 0 var(--c10); }
 .sn { position: relative; display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 40px; padding: 8px 14px;
-  border-radius: 12px; text-decoration: none; text-align: center; color: var(--ink-2); font-size: 13.5px; font-weight: 600; line-height: 1.2;
+  border-radius: 12px; text-decoration: none; text-align: center; color: var(--accent); line-height: 1.2;
+  font: 600 14px/1.2 "Space Grotesk", Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: .005em;
   transition: background .2s, color .2s; }
 .sn::after { content: ""; position: absolute; left: 22%; right: 22%; bottom: 5px; height: 2px; border-radius: 2px; background: var(--accent);
   transform: scaleX(0); transition: transform .25s ease; }
-.sn:hover { color: var(--ink); background: var(--c39); }
+.sn:hover { color: var(--ink); background: color-mix(in srgb, var(--accent) 14%, transparent); }
 .sn:hover::after { transform: scaleX(1); }
 .sn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.sn .sne { font-size: 11px; color: var(--muted); }
+.sn .sne { font-size: 11px; opacity: .7; }
 @media (prefers-reduced-motion: reduce) { .subnav, .subnav:hover, .sn::after { transition: none; transform: none; } }
 .legend .selk { display: none; }
 body.hl .legend .selk { display: inline-flex; } body.hl .legend i.selk { display: inline-block; }
@@ -234,7 +239,7 @@ footer a:hover { text-decoration: underline; }
   .map > .tools { position: static; align-self: flex-end; }
   .subnav { position: static; display: flex; flex-wrap: wrap; margin: 2px 0 6px; }
   .subnav:hover { transform: none; }
-  .sn { flex: 1 1 auto; min-height: 38px; padding: 7px 10px; font-size: 12.5px; }
+  .sn { flex: 1 1 auto; min-height: 38px; padding: 7px 10px; font-size: 13px; }
   h1 { font-size: 22px; }
   .aud-list .a { grid-template-columns: 1fr; gap: 2px; }
   .map { display: flex; flex-direction: column; gap: 12px; padding: 14px 0 18px; background: none; border: 0; border-radius: 0; box-shadow: none; }
