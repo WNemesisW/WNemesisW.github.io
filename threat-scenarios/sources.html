@@ -74,6 +74,11 @@ h1 { margin: 8px 0 0; font-size: 26px; line-height: 1.15; font-weight: 650; lett
 @media (prefers-reduced-motion: reduce) { .subnav, .subnav:hover, .sn::after { transition: none; transform: none; } }
 .sn[aria-current="page"] { color: var(--ink); background: color-mix(in srgb, var(--accent) 16%, transparent); }
 .sn[aria-current="page"]::after { transform: scaleX(1); }
+html[data-theme="light"] .subnav { border-color: rgba(15, 23, 42, .09); background: rgba(255, 255, 255, .74);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .05), 0 10px 28px rgba(15, 23, 42, .07), inset 0 1px 0 #fff; }
+html[data-theme="light"] .subnav:hover { box-shadow: 0 2px 4px rgba(15, 23, 42, .05), 0 16px 38px rgba(15, 23, 42, .10), inset 0 1px 0 #fff; }
+html[data-theme="light"] .sn:hover { color: var(--accent); background: rgba(15, 23, 42, .04); }
+html[data-theme="light"] .sn[aria-current="page"] { color: var(--ink); background: color-mix(in srgb, var(--accent) 9%, #fff); }
 .fnote { display: flex; gap: 12px; align-items: flex-start; margin: 0 0 14px; padding: 10px 16px 11px 12px; border-radius: 14px;
   background: color-mix(in srgb, var(--panel) 72%, transparent); border: 1px solid var(--line); border-left: 3px solid var(--accent);
   box-shadow: inset 0 1px 0 var(--c10); font-size: 12px; line-height: 1.45; color: var(--ink-2); }
