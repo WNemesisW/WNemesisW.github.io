@@ -122,20 +122,30 @@ html[data-theme="dark"] .t-moon, html[data-theme="light"] .t-sun { display: none
 table.mx { width: 100%; min-width: 1180px; border-collapse: separate; border-spacing: 0; table-layout: fixed; }
 table.mx col.tc { width: 250px; }
 table.mx th, table.mx td { padding: 7px 8px; border-bottom: 1px solid var(--line); vertical-align: top; text-align: left; }
-table.mx thead th { position: sticky; top: 0; z-index: 2; background: var(--panel); font-size: 12px; color: var(--ink); }
+/* Otsikkorivi kulkee mukana vieritettäessä: leveällä näytöllä sivun mukana yläpalkin alla (--stick, JS), kapealla taulukon omassa
+   vierityslaatikossa. Tausta on peittävä, jotta rivit eivät näy otsikon läpi. */
+table.mx thead th { position: sticky; top: var(--stick, 0px); z-index: 3; background: linear-gradient(var(--panel), var(--panel)), var(--bg);
+  box-shadow: 0 1px 0 var(--line-2); font-size: 12px; color: var(--ink); }
+table.mx thead th:first-child { left: 0; z-index: 4; }
+table.mx tbody tr:last-child > * { border-bottom: 0; }
+@media (min-width: 1290px) {
+  .tbl { overflow: visible; }
+  table.mx thead th:first-child { border-top-left-radius: 14px; } table.mx thead th:last-child { border-top-right-radius: 14px; }
+}
+@media (max-width: 1289.98px) { .tbl { max-height: calc(100vh - 24px); overflow: auto; } table.mx thead th { top: 0; } }
 table.mx thead th .cc { display: block; font: 650 15px/1.1 "Space Grotesk", Inter, sans-serif; color: var(--accent); }
 table.mx thead th .cy { display: block; font-weight: 400; color: var(--muted); font-size: 11px; }
 table.mx thead th.fi .cc { color: var(--ink); }
 table.mx tr.bnd th { padding: 12px 10px 6px; font-size: 10.5px; font-weight: 650; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); background: var(--c14); }
 table.mx tr.bnd.c th { color: var(--bc); } table.mx tr.bnd.p th { color: var(--bp); } table.mx tr.bnd.u th { color: var(--bu); }
-table.mx th.tm { position: sticky; left: 0; z-index: 1; background: var(--panel); font-weight: 600; font-size: 13px; }
+table.mx th.tm { position: sticky; left: 0; z-index: 1; background: linear-gradient(var(--panel), var(--panel)), var(--bg); font-weight: 600; font-size: 13px; }
 .tm .tmw { display: flex; align-items: center; gap: 9px; }
 .ico { flex: none; width: 28px; height: 28px; border-radius: 9px; display: grid; place-items: center; color: var(--accent); background: var(--c0); border: 1px solid var(--c13); }
 .ico svg { width: 15px; height: 15px; }
 .tm .cnt { margin-left: auto; font: 650 12px/1 "Space Grotesk", Inter, sans-serif; padding: 3px 7px; border-radius: 999px; white-space: nowrap; }
 .cnt.c { color: var(--bc); background: color-mix(in srgb, var(--bc) 14%, transparent); } .cnt.p { color: var(--bp); background: color-mix(in srgb, var(--bp) 12%, transparent); }
 .cnt.u { color: var(--bu); background: color-mix(in srgb, var(--bu) 14%, transparent); }
-td.no { color: var(--line-2); text-align: center !important; } td.na { background: repeating-linear-gradient(135deg, var(--c14) 0 2px, transparent 2px 7px); }
+td.no { color: var(--muted); font-weight: 500; text-align: center !important; } td.na { background: repeating-linear-gradient(135deg, var(--c14) 0 2px, transparent 2px 7px); }
 .rk { display: block; margin: 0 0 4px; padding: 3px 8px; border-radius: 8px; font-size: 12px; line-height: 1.3; color: var(--ink-2); cursor: default;
   overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; transition: box-shadow .15s, background .15s; }
 .rk:last-child { margin-bottom: 0; }
@@ -2338,6 +2348,11 @@ Nacionalinė rizikos analizė 2024, II skyrius, 29. Epidemijos ir / ar pandemijo
   tabs.forEach(function (b, j) { b.addEventListener("click", function () { show(j); }); });
   var h = decodeURIComponent(location.hash.slice(1));
   Object.keys(VH).forEach(function (c) { if (h && VH[c][1] === h) show(1); });
+  // Taulukon otsikkorivi pysähtyy yläpalkin alareunaan (palkki on sticky, top 10 px)
+  var nav = document.querySelector(".subnav");
+  function stick() { var st = nav && getComputedStyle(nav).position === "sticky";
+    document.documentElement.style.setProperty("--stick", st ? (nav.offsetHeight + 14) + "px" : "0px"); }
+  stick(); window.addEventListener("resize", stick);
   // Saman riskin kaikki esiintymät korostuvat (riski voi kuulua useaan teemaan)
   document.addEventListener("mouseover", function (ev) { var r = ev.target.closest ? ev.target.closest("[data-r]") : null; if (!r) return;
     document.querySelectorAll('[data-r="' + r.getAttribute("data-r") + '"]').forEach(function (x) { x.classList.add("hl"); }); });
