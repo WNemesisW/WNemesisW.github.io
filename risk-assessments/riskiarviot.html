@@ -153,6 +153,16 @@ td.no { color: var(--muted); font-weight: 500; text-align: center !important; } 
 .rk.p { background: color-mix(in srgb, var(--bp) 10%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--bp) 30%, transparent); }
 .rk.u { background: color-mix(in srgb, var(--bu) 14%, transparent); box-shadow: inset 0 0 0 1.5px var(--bu); color: var(--ink); font-weight: 600; }
 .rk.hl { box-shadow: inset 0 0 0 2px var(--ink); }
+/* Vaalea tila: syvempi sävytys ja selvä reuna (Jounin valinta A esikatselusta 12.11.2026); tumma tila ennallaan.
+   Laskurimerkkien teksti saman värin tummana sävynä, jotta pieni teksti ylittää 4,5:1. */
+html[data-theme="light"] .rk.c, html[data-theme="light"] .sw.c { background: color-mix(in srgb, var(--bc) 22%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--bc) 60%, transparent); }
+html[data-theme="light"] .rk.p, html[data-theme="light"] .sw.p { background: color-mix(in srgb, var(--bp) 15%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--bp) 55%, transparent); }
+html[data-theme="light"] .rk.u, html[data-theme="light"] .sw.u { background: color-mix(in srgb, var(--bu) 22%, transparent); }
+html[data-theme="light"] .rk.c, html[data-theme="light"] .rk.p { color: var(--ink); }
+html[data-theme="light"] .cnt.c { color: #065f46; background: color-mix(in srgb, var(--bc) 18%, transparent); }
+html[data-theme="light"] .cnt.p { color: #155e75; background: color-mix(in srgb, var(--bp) 15%, transparent); }
+html[data-theme="light"] .cnt.u { color: #92400e; background: color-mix(in srgb, var(--bu) 18%, transparent); }
+html[data-theme="light"] .rk.hl { box-shadow: inset 0 0 0 2px var(--ink); }
 /* Maittain */
 /* Otsikot ovat yhteisellä rivillä (subgrid), joten kaikkien maiden kortit alkavat samalta tasolta */
 .cols { display: grid; grid-template-columns: repeat(var(--n), minmax(170px, 1fr)); grid-template-rows: auto auto; gap: 0 12px; overflow-x: auto; }
