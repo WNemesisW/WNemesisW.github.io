@@ -10,6 +10,17 @@
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  /* Tumma teema ennen ensimmäistä piirtoa, ettei sivunvaihdossa vilahda valkoinen tausta. Sama päättely kuin
+     main.js:n setTheme: tallennettu valinta, muuten käyttöjärjestelmän asetus. Sivu tiivistetään yhdelle riville
+     (compress.html), joten tässä ei saa käyttää //-kommentteja. */
+  (function () {
+    var t;
+    try { t = localStorage.getItem("theme"); } catch (e) {}
+    if (t !== "dark" && t !== "light") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  })();
 </script>
 
 <!-- For all browsers -->
