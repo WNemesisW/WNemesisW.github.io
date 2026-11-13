@@ -137,7 +137,28 @@ table.mx tbody tr:last-child > * { border-bottom: 0; }
   .tbl { overflow: visible; }
   table.mx thead th:first-child { border-top-left-radius: 14px; } table.mx thead th:last-child { border-top-right-radius: 14px; }
 }
-@media (max-width: 1159.98px) { .tbl { max-height: calc(100vh - var(--stick, 0px) - 16px); overflow: auto; } table.mx thead th { top: 0; } }
+.ccl, table.mx td.miss { display: none; }
+/* Alle 1160 px: taulukko pystysuuntaisiksi teemakorteiksi (ei vaakavieritystä, jota käyttäjä ei huomaa). Kortissa teeman alla maat,
+   joiden arviossa teema on; muut maat yhdellä rivillä. Maittain-näkymä maa kerrallaan allekkain. */
+@media (max-width: 1159.98px) {
+  .tbl { overflow: visible; border: 0; background: none; border-radius: 0; }
+  table.mx, table.mx tbody, table.mx tr, table.mx th, table.mx td { display: block; width: auto; min-width: 0; }
+  table.mx colgroup, table.mx thead, table.mx td.no, table.mx td.na { display: none; }
+  table.mx tr.bnd th { margin: 16px 0 8px; padding: 8px 12px; border: 0; border-radius: 10px; }
+  table.mx tbody > tr:first-child th { margin-top: 0; }
+  table.mx tbody tr:not(.bnd) { margin: 0 0 10px; padding: 12px 14px 10px; border-radius: 14px; background: var(--panel); border: 1px solid var(--line); }
+  table.mx th.tm { position: static; padding: 0 0 8px; border: 0; background: none; }
+  table.mx td { display: flex; align-items: flex-start; gap: 10px; padding: 6px 0; border: 0; border-top: 1px solid var(--line); }
+  table.mx td.miss { display: block; padding: 8px 0 0; font-size: 12px; color: var(--muted); }
+  .ccl { display: block; flex: none; width: 104px; padding-top: 3px; font-size: 12px; line-height: 1.3; color: var(--muted); }
+  .ccl b { display: inline-block; min-width: 24px; margin-right: 4px; font: 650 12.5px/1 "Space Grotesk", Inter, sans-serif; color: var(--accent); }
+  .rks { flex: 1; min-width: 0; }
+  table.mx .rk { display: block; -webkit-line-clamp: unset; overflow: visible; font-size: 13px; padding: 4px 9px; }
+  .cols { display: block; overflow: visible; }
+  .col { display: block; margin: 0 0 22px; }
+  .col h3 { margin-bottom: 8px; }
+  .col .rl { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0 10px; }
+}
 table.mx thead th .cc { display: block; font: 650 15px/1.1 "Space Grotesk", Inter, sans-serif; color: var(--accent); }
 table.mx thead th .cy { display: block; font-weight: 400; color: var(--muted); font-size: 11px; }
 table.mx thead th.fi .cc { color: var(--ink); }
@@ -263,7 +284,7 @@ footer { margin-top: 16px; font-size: 11.5px; color: var(--muted); }
   .subnav { position: static; display: flex; flex-wrap: wrap; margin: 2px 0 12px; } .subnav:hover { transform: none; }
   .sn { flex: 1 1 auto; min-height: 38px; padding: 7px 10px; font-size: 13px; white-space: normal; }
   .kpis { grid-template-columns: 1fr 1fr; gap: 8px; } .kpi { padding: 10px 14px; } .kpi b { font-size: 22px; }
-  .panel { padding: 12px; border-radius: 18px; } table.mx col.tc { width: 180px; }
+  .panel { padding: 12px; border-radius: 18px; }
   .intro { padding: 14px 16px; } .howto { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 620px) { .howto { grid-template-columns: 1fr; } }
