@@ -212,13 +212,11 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 .dead2{stroke:var(--g-line);stroke-width:2.2;stroke-linecap:round}
 .wdark{fill:var(--g-panel);stroke:var(--g-obj);stroke-width:.8}
 
-.pwx2{fill:none;stroke:var(--g-pwr);stroke-width:1.2;stroke-dasharray:14 8;stroke-linecap:round}
-.pwx1{fill:none;stroke:var(--g-pwr);stroke-width:.6;stroke-dasharray:7 13;stroke-linecap:round}
-.fx{fill:none;stroke:var(--g-flowp);stroke-linecap:round;animation-timing-function:linear;animation-iteration-count:infinite}
-.fx2{stroke-width:.8;stroke-dasharray:3 22;animation-name:flow25}
-.fx1{stroke-width:.45;stroke-dasharray:2 30;animation-name:flow32}
-@keyframes flow25{to{stroke-dashoffset:-25}}@keyframes flow32{to{stroke-dashoffset:-32}}
-@media (prefers-reduced-motion:reduce){.fx{animation:none}}
+.pwx2,.pwx1{fill:none;stroke:var(--g-pwr);stroke-linecap:butt;animation-timing-function:linear;animation-iteration-count:infinite}
+.pwx2{stroke-width:1.8;stroke-dasharray:10 8;animation-name:flow18}
+.pwx1{stroke-width:1.2;stroke-dasharray:5 15;animation-name:flow20;opacity:.85}
+@keyframes flow18{to{stroke-dashoffset:-18}}@keyframes flow20{to{stroke-dashoffset:-20}}
+@media (prefers-reduced-motion:reduce){.pwx2,.pwx1{animation:none}}
 .fmask{stroke:var(--g-gnd);stroke-width:10}
 .pwd{stroke:var(--g-pwr);stroke-width:2;opacity:.3}
 .fls{stroke:var(--g-flowp);stroke-width:2;opacity:.6}
