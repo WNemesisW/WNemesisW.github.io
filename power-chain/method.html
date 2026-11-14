@@ -104,8 +104,8 @@ html[data-theme="light"] .sn[aria-current="page"] { color: #fff; background: rgb
 .corr p { margin: 0 0 8px; max-width: 980px; font-size: 12.5px; line-height: 1.55; color: var(--ink-2); }
 .corr p a { font-weight: 600; } .corr li time { font-weight: 600; color: var(--ink); margin-right: 6px; font-variant-numeric: tabular-nums; }
 .corr .none { color: var(--muted); }
-:root { --g-bg:#05070d;--g-gnd:#0b111d;--g-panel:#131c2e;--g-ink:#e6edf7;--g-ink2:#b4c1d4;--g-muted:#8a97ad;--g-accent:#22d3ee;--g-red:#f87171;--g-green:#34d399;--g-pwr:#fbbf24;--g-onred:#05070d;--g-chip:#24304a;--g-line:#2a3548;--g-flowp:#5a2a00;--g-flowr:#5c0b0b; }
-html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e9eef6;--g-panel:#ffffff;--g-ink:#0f172a;--g-ink2:#334155;--g-muted:#586579;--g-accent:#0e7490;--g-red:#dc2626;--g-green:#047857;--g-pwr:#b45309;--g-onred:#ffffff;--g-chip:#d5deea;--g-line:#c9d3e0;--g-flowp:#fff3c4;--g-flowr:#ffffff; }
+:root { --g-bg:#05070d;--g-gnd:#0b111d;--g-panel:#1c2840;--g-ink:#e6edf7;--g-ink2:#b4c1d4;--g-muted:#8a97ad;--g-accent:#22d3ee;--g-red:#f87171;--g-green:#34d399;--g-pwr:#fbbf24;--g-onred:#05070d;--g-chip:#2e3d5c;--g-line:#2a3548;--g-flowp:#5a2a00;--g-flowr:#5c0b0b;--g-obj:#d6deeb; }
+html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-ink:#0f172a;--g-ink2:#334155;--g-muted:#586579;--g-accent:#0e7490;--g-red:#dc2626;--g-green:#047857;--g-pwr:#b45309;--g-onred:#ffffff;--g-chip:#d5deea;--g-line:#c9d3e0;--g-flowp:#fff3c4;--g-flowr:#ffffff;--g-obj:#1e293b; }
 #i-m:checked~.inner label[for=i-m],#i-ua:checked~.inner label[for=i-ua],#i-vs:checked~.inner label[for=i-vs],#i-dk:checked~.inner label[for=i-dk],#i-pl:checked~.inner label[for=i-pl],#i-ai:checked~.inner label[for=i-ai],#i-all:checked~.inner label[for=i-all]{background:var(--g-accent);border-color:var(--g-accent);color:var(--g-bg)}
 #i-m:focus-visible~.inner label[for=i-m],#i-ua:focus-visible~.inner label[for=i-ua],#i-vs:focus-visible~.inner label[for=i-vs],#i-dk:focus-visible~.inner label[for=i-dk],#i-pl:focus-visible~.inner label[for=i-pl],#i-ai:focus-visible~.inner label[for=i-ai],#i-all:focus-visible~.inner label[for=i-all]{outline:2px solid var(--g-ink);outline-offset:2px}
 #i-m:checked~.inner .cap-m,#i-ua:checked~.inner .cap-ua,#i-vs:checked~.inner .cap-vs,#i-dk:checked~.inner .cap-dk,#i-pl:checked~.inner .cap-pl,#i-ai:checked~.inner .cap-ai,#i-all:checked~.inner .cap-all{display:block}
@@ -140,6 +140,18 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e9eef6;--g-panel:#ffffff;--g-
 .legend svg{flex:none}
 .caps .hint{margin-top:8px;font-size:12.5px;color:var(--g-muted)}
 .notes{margin:12px 0 0;padding-left:18px;display:grid;gap:8px}
+/* Vaiheittainen piirto: valittu tapaus maalautuu vaihe kerrallaan (Jouni 14.11.2026) */
+.s1{--d:.15s}.s2{--d:.95s}.s3{--d:1.75s}.s4{--d:2.55s}.s5{--d:3.35s}
+.st{animation:stepin .4s ease var(--d) both}
+.st .drw{stroke-dasharray:1;animation:draw .7s ease-in-out var(--d) both}
+.st .arh{animation:stepin .2s ease calc(var(--d) + .6s) both}
+.st .fl{animation:flow 1.15s linear infinite,stepin .3s ease calc(var(--d) + .7s) both}
+.cap .steps li{animation:stepin .4s ease var(--d,0s) both}
+.cap .target,.cap .srcl{animation:stepin .4s ease var(--end,0s) both}
+.cap .steps li:nth-child(1){--d:.15s}.cap .steps li:nth-child(2){--d:.95s}.cap .steps li:nth-child(3){--d:1.75s}.cap .steps li:nth-child(4){--d:2.55s}.cap .steps li:nth-child(5){--d:3.35s}
+@keyframes stepin{from{opacity:0}}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.st,.st .drw,.st .arh,.st .fl,.cap .steps li,.cap .target,.cap .srcl{animation:none}}
 @media (min-width:460px){.fig{margin:14px auto 0;max-width:430px}}
 @media (min-width:880px){.grid{display:flex;gap:32px;align-items:flex-start}.fig{flex:0 0 430px;margin:14px 0 0}.caps{flex:1;margin-top:28px;position:sticky;top:64px}}
 .fig-w{display:none}
@@ -149,18 +161,18 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e9eef6;--g-panel:#ffffff;--g-
 .rl{fill:var(--g-muted);font-size:10.5px;font-weight:600;letter-spacing:.09em}
 .nt{fill:var(--g-ink);font-size:12.5px;font-weight:650}
 .lb{fill:var(--g-ink2);font-size:10.5px}
-.ol{fill:var(--g-panel);stroke:var(--g-ink2);stroke-width:1.3;stroke-linejoin:round}
+.ol{fill:var(--g-panel);stroke:var(--g-obj);stroke-width:1.5;stroke-linejoin:round}
 .sp{fill:var(--g-chip)}
-.of{fill:var(--g-chip);stroke:var(--g-ink2);stroke-width:.9}
-.scr{fill:var(--g-chip);stroke:var(--g-ink2);stroke-width:1}
-.bl{stroke:var(--g-ink2);stroke-width:2.4;stroke-linecap:round}
-.dl{fill:none;stroke:var(--g-ink2);stroke-width:1.3;stroke-linecap:round}
-.dl2{fill:none;stroke:var(--g-ink2);stroke-width:2;stroke-linecap:round}
-.dt{fill:none;stroke:var(--g-ink2);stroke-width:.9;stroke-linecap:round;stroke-linejoin:round}
-.dv{fill:var(--g-panel);stroke:var(--g-ink2);stroke-width:1.2}
-.dvl{fill:none;stroke:var(--g-ink2);stroke-width:1.4}
-.dvc{fill:var(--g-ink2)}
-.dot{fill:var(--g-ink2)}
+.of{fill:var(--g-chip);stroke:var(--g-obj);stroke-width:1}
+.scr{fill:var(--g-chip);stroke:var(--g-obj);stroke-width:1.1}
+.bl{stroke:var(--g-obj);stroke-width:2.6;stroke-linecap:round}
+.dl{fill:none;stroke:var(--g-obj);stroke-width:1.5;stroke-linecap:round}
+.dl2{fill:none;stroke:var(--g-obj);stroke-width:2.2;stroke-linecap:round}
+.dt{fill:none;stroke:var(--g-obj);stroke-width:1.05;stroke-linecap:round;stroke-linejoin:round}
+.dv{fill:var(--g-panel);stroke:var(--g-obj);stroke-width:1.4}
+.dvl{fill:none;stroke:var(--g-obj);stroke-width:1.5}
+.dvc{fill:var(--g-obj)}
+.dot{fill:var(--g-obj)}
 .smoke{fill:none;stroke:var(--g-muted);stroke-width:1.1}
 .wave{fill:none;stroke:var(--g-muted);stroke-width:1.2;stroke-linecap:round}
 .win{fill:var(--g-pwr)}
@@ -191,7 +203,7 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e9eef6;--g-panel:#ffffff;--g-
 .xml{fill:none;stroke:var(--g-red);stroke-width:1.8;stroke-linecap:round}
 .dead{fill:none;stroke:var(--g-line);stroke-width:3.8;stroke-linecap:round;stroke-linejoin:round}
 .dead2{stroke:var(--g-line);stroke-width:2.2;stroke-linecap:round}
-.wdark{fill:var(--g-panel);stroke:var(--g-ink2);stroke-width:.8}
+.wdark{fill:var(--g-panel);stroke:var(--g-obj);stroke-width:.8}
 </style>
 </head>
 <body>
