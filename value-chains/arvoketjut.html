@@ -331,26 +331,35 @@ tr.out .sd.h2,tr.out .sd.h1{background:var(--g-muted);border-color:var(--g-muted
 .refs h3{margin:0 0 6px;font-size:11px;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--g-muted)}
 .refs ul{margin:0;padding-left:16px}.refs li{margin:5px 0;font-size:12.5px;color:var(--g-ink2)}.refs a{color:var(--g-accent)}
 .sel label.ov-all{font-weight:650}
-#i-npt:checked~.inner .h-npt-3.k-EL .nd{animation:cdim1 .8s ease 3.85s forwards}
+#i-npt:checked~.inner .h-npt-3.k-EL .nd{animation:cdim1-npt .8s ease 3.85s forwards}
 @media (prefers-reduced-motion:reduce){#i-npt:checked~.inner .h-npt-3.k-EL .nd{animation:none;opacity:0.7;filter:grayscale(0.5)}}
-#i-vst:checked~.inner .h-vst-1.k-TL .nd{animation:cdim1 .8s ease 1.05s forwards}
+#i-vst:checked~.inner .h-vst-1.k-TL .nd{animation:cdim1-vst .8s ease 1.05s forwards}
 @media (prefers-reduced-motion:reduce){#i-vst:checked~.inner .h-vst-1.k-TL .nd{animation:none;opacity:0.7;filter:grayscale(0.5)}}
-#i-ksy:checked~.inner .h-ksy-3.k-EL .nd{animation:cdim2 .8s ease 3.85s forwards}
+#i-ksy:checked~.inner .h-ksy-3.k-EL .nd{animation:cdim2-ksy .8s ease 3.85s forwards}
 @media (prefers-reduced-motion:reduce){#i-ksy:checked~.inner .h-ksy-3.k-EL .nd{animation:none;opacity:0.5;filter:grayscale(0.85)}}
-#i-tvy:checked~.inner .h-tvy-1.k-IT .nd{animation:cdim3 .8s ease 1.05s forwards}
+#i-tvy:checked~.inner .h-tvy-1.k-IT .nd{animation:cdim3-tvy .8s ease 1.05s forwards}
 @media (prefers-reduced-motion:reduce){#i-tvy:checked~.inner .h-tvy-1.k-IT .nd{animation:none;opacity:0.3;filter:grayscale(1)}}
-#i-tvy:checked~.inner .h-tvy-2.k-TE .nd{animation:cdim1 .8s ease 2.45s forwards}
+#i-tvy:checked~.inner .h-tvy-2.k-TE .nd{animation:cdim1-tvy .8s ease 2.45s forwards}
 @media (prefers-reduced-motion:reduce){#i-tvy:checked~.inner .h-tvy-2.k-TE .nd{animation:none;opacity:0.7;filter:grayscale(0.5)}}
-#i-chg:checked~.inner .h-chg-1.k-PM .nd{animation:cdim3 .8s ease 1.05s forwards}
+#i-chg:checked~.inner .h-chg-1.k-PM .nd{animation:cdim3-chg .8s ease 1.05s forwards}
 @media (prefers-reduced-motion:reduce){#i-chg:checked~.inner .h-chg-1.k-PM .nd{animation:none;opacity:0.3;filter:grayscale(1)}}
-#i-chg:checked~.inner .h-chg-2.k-TE .nd{animation:cdim2 .8s ease 2.45s forwards}
+#i-chg:checked~.inner .h-chg-2.k-TE .nd{animation:cdim2-chg .8s ease 2.45s forwards}
 @media (prefers-reduced-motion:reduce){#i-chg:checked~.inner .h-chg-2.k-TE .nd{animation:none;opacity:0.5;filter:grayscale(0.85)}}
-#i-crw:checked~.inner .h-crw-1.k-IT .nd{animation:cdim3 .8s ease 1.05s forwards}
+#i-crw:checked~.inner .h-crw-1.k-IT .nd{animation:cdim3-crw .8s ease 1.05s forwards}
 @media (prefers-reduced-motion:reduce){#i-crw:checked~.inner .h-crw-1.k-IT .nd{animation:none;opacity:0.3;filter:grayscale(1)}}
-#i-crw:checked~.inner .h-crw-2.k-PM .nd{animation:cdim1 .8s ease 2.45s forwards}
+#i-crw:checked~.inner .h-crw-2.k-PM .nd{animation:cdim1-crw .8s ease 2.45s forwards}
 @media (prefers-reduced-motion:reduce){#i-crw:checked~.inner .h-crw-2.k-PM .nd{animation:none;opacity:0.7;filter:grayscale(0.5)}}
-#i-crw:checked~.inner .h-crw-3.k-TE .nd{animation:cdim1 .8s ease 3.85s forwards}
+#i-crw:checked~.inner .h-crw-3.k-TE .nd{animation:cdim1-crw .8s ease 3.85s forwards}
 @media (prefers-reduced-motion:reduce){#i-crw:checked~.inner .h-crw-3.k-TE .nd{animation:none;opacity:0.7;filter:grayscale(0.5)}}
+@keyframes cdim1-crw{to{opacity:0.7;filter:grayscale(0.5)}}
+@keyframes cdim1-npt{to{opacity:0.7;filter:grayscale(0.5)}}
+@keyframes cdim1-tvy{to{opacity:0.7;filter:grayscale(0.5)}}
+@keyframes cdim1-vst{to{opacity:0.7;filter:grayscale(0.5)}}
+@keyframes cdim2-chg{to{opacity:0.5;filter:grayscale(0.85)}}
+@keyframes cdim2-ksy{to{opacity:0.5;filter:grayscale(0.85)}}
+@keyframes cdim3-chg{to{opacity:0.3;filter:grayscale(1)}}
+@keyframes cdim3-crw{to{opacity:0.3;filter:grayscale(1)}}
+@keyframes cdim3-tvy{to{opacity:0.3;filter:grayscale(1)}}
 </style>
 </head>
 <body>
