@@ -241,10 +241,10 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 .shtab td.eu{color:var(--g-red);font-weight:700}
 .shtab code{font-size:11.5px;color:var(--g-ink2);overflow-wrap:anywhere}
 .sn.chain{font-weight:500}
-#i-hse:checked~.inner .fh-hse-3{animation:fhide-hse .6s ease 2.95s forwards}@media (prefers-reduced-motion:reduce){#i-hse:checked~.inner .fh-hse-3{animation:none;opacity:0}}
-#i-dus:checked~.inner .fh-dus-3{animation:fhide-dus .6s ease 2.95s forwards}@media (prefers-reduced-motion:reduce){#i-dus:checked~.inner .fh-dus-3{animation:none;opacity:0}}
-#i-vas:checked~.inner .fh-vas-3{animation:fhide-vas .6s ease 2.95s forwards}@media (prefers-reduced-motion:reduce){#i-vas:checked~.inner .fh-vas-3{animation:none;opacity:0}}
-#i-tie:checked~.inner .fh-tie-2{animation:fhide-tie .6s ease 1.55s forwards}@media (prefers-reduced-motion:reduce){#i-tie:checked~.inner .fh-tie-2{animation:none;opacity:0}}
+#i-hse:checked~.inner .fh-hse-3.pw{animation:fhide-hse .6s ease 2.95s forwards}#i-hse:checked~.inner .fh-hse-3.fl{animation:flow 1.15s linear infinite,fhide-hse .6s ease 2.95s forwards}@media (prefers-reduced-motion:reduce){#i-hse:checked~.inner .fh-hse-3{animation:none;opacity:0}}
+#i-dus:checked~.inner .fh-dus-3.pw{animation:fhide-dus .6s ease 2.95s forwards}#i-dus:checked~.inner .fh-dus-3.fl{animation:flow 1.15s linear infinite,fhide-dus .6s ease 2.95s forwards}@media (prefers-reduced-motion:reduce){#i-dus:checked~.inner .fh-dus-3{animation:none;opacity:0}}
+#i-vas:checked~.inner .fh-vas-3.pw{animation:fhide-vas .6s ease 2.95s forwards}#i-vas:checked~.inner .fh-vas-3.fl{animation:flow 1.15s linear infinite,fhide-vas .6s ease 2.95s forwards}@media (prefers-reduced-motion:reduce){#i-vas:checked~.inner .fh-vas-3{animation:none;opacity:0}}
+#i-tie:checked~.inner .fh-tie-2.pw{animation:fhide-tie .6s ease 1.55s forwards}#i-tie:checked~.inner .fh-tie-2.fl{animation:flow 1.15s linear infinite,fhide-tie .6s ease 1.55s forwards}@media (prefers-reduced-motion:reduce){#i-tie:checked~.inner .fh-tie-2{animation:none;opacity:0}}
 @keyframes fhide-dus{to{opacity:0}}
 @keyframes fhide-hse{to{opacity:0}}
 @keyframes fhide-tie{to{opacity:0}}

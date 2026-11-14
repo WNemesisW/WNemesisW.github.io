@@ -241,11 +241,11 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 .shtab td.eu{color:var(--g-red);font-weight:700}
 .shtab code{font-size:11.5px;color:var(--g-ink2);overflow-wrap:anywhere}
 .sn.chain{font-weight:500}
-#i-bgd:checked~.inner .fh-bgd-3{animation:fhide-bgd .6s ease 2.95s forwards}@media (prefers-reduced-motion:reduce){#i-bgd:checked~.inner .fh-bgd-3{animation:none;opacity:0}}
-#i-ion:checked~.inner .fh-ion-2{animation:fhide-ion .6s ease 1.55s forwards}@media (prefers-reduced-motion:reduce){#i-ion:checked~.inner .fh-ion-2{animation:none;opacity:0}}
-#i-tie:checked~.inner .fh-tie-2{animation:fhide-tie .6s ease 1.55s forwards}@media (prefers-reduced-motion:reduce){#i-tie:checked~.inner .fh-tie-2{animation:none;opacity:0}}
-#i-ddos:checked~.inner .fh-ddos-2{animation:fhide-ddos .6s ease 1.55s forwards}@media (prefers-reduced-motion:reduce){#i-ddos:checked~.inner .fh-ddos-2{animation:none;opacity:0}}
-#i-crs:checked~.inner .fh-crs-2{animation:fhide-crs .6s ease 1.55s forwards}@media (prefers-reduced-motion:reduce){#i-crs:checked~.inner .fh-crs-2{animation:none;opacity:0}}
+#i-bgd:checked~.inner .fh-bgd-3.pw{animation:fhide-bgd .6s ease 2.95s forwards}#i-bgd:checked~.inner .fh-bgd-3.fl{animation:flow 1.15s linear infinite,fhide-bgd .6s ease 2.95s forwards}@media (prefers-reduced-motion:reduce){#i-bgd:checked~.inner .fh-bgd-3{animation:none;opacity:0}}
+#i-ion:checked~.inner .fh-ion-2.pw{animation:fhide-ion .6s ease 1.55s forwards}#i-ion:checked~.inner .fh-ion-2.fl{animation:flow 1.15s linear infinite,fhide-ion .6s ease 1.55s forwards}@media (prefers-reduced-motion:reduce){#i-ion:checked~.inner .fh-ion-2{animation:none;opacity:0}}
+#i-tie:checked~.inner .fh-tie-2.pw{animation:fhide-tie .6s ease 1.55s forwards}#i-tie:checked~.inner .fh-tie-2.fl{animation:flow 1.15s linear infinite,fhide-tie .6s ease 1.55s forwards}@media (prefers-reduced-motion:reduce){#i-tie:checked~.inner .fh-tie-2{animation:none;opacity:0}}
+#i-ddos:checked~.inner .fh-ddos-2.pw{animation:fhide-ddos .6s ease 1.55s forwards}#i-ddos:checked~.inner .fh-ddos-2.fl{animation:flow 1.15s linear infinite,fhide-ddos .6s ease 1.55s forwards}@media (prefers-reduced-motion:reduce){#i-ddos:checked~.inner .fh-ddos-2{animation:none;opacity:0}}
+#i-crs:checked~.inner .fh-crs-2.pw{animation:fhide-crs .6s ease 1.55s forwards}#i-crs:checked~.inner .fh-crs-2.fl{animation:flow 1.15s linear infinite,fhide-crs .6s ease 1.55s forwards}@media (prefers-reduced-motion:reduce){#i-crs:checked~.inner .fh-crs-2{animation:none;opacity:0}}
 @keyframes fhide-bgd{to{opacity:0}}
 @keyframes fhide-crs{to{opacity:0}}
 @keyframes fhide-ddos{to{opacity:0}}

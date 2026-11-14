@@ -241,9 +241,9 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 .shtab td.eu{color:var(--g-red);font-weight:700}
 .shtab code{font-size:11.5px;color:var(--g-ink2);overflow-wrap:anywhere}
 .sn.chain{font-weight:500}
-#i-usa:checked~.inner .fh-usa-2{animation:fhide-usa .6s ease 1.55s forwards}@media (prefers-reduced-motion:reduce){#i-usa:checked~.inner .fh-usa-2{animation:none;opacity:0}}
-#i-nor:checked~.inner .fh-nor-2{animation:fhide-nor .6s ease 1.55s forwards}@media (prefers-reduced-motion:reduce){#i-nor:checked~.inner .fh-nor-2{animation:none;opacity:0}}
-#i-ark:checked~.inner .fh-ark-2{animation:fhide-ark .6s ease 1.55s forwards}@media (prefers-reduced-motion:reduce){#i-ark:checked~.inner .fh-ark-2{animation:none;opacity:0}}
+#i-usa:checked~.inner .fh-usa-2.pw{animation:fhide-usa .6s ease 1.55s forwards}#i-usa:checked~.inner .fh-usa-2.fl{animation:flow 1.15s linear infinite,fhide-usa .6s ease 1.55s forwards}@media (prefers-reduced-motion:reduce){#i-usa:checked~.inner .fh-usa-2{animation:none;opacity:0}}
+#i-nor:checked~.inner .fh-nor-2.pw{animation:fhide-nor .6s ease 1.55s forwards}#i-nor:checked~.inner .fh-nor-2.fl{animation:flow 1.15s linear infinite,fhide-nor .6s ease 1.55s forwards}@media (prefers-reduced-motion:reduce){#i-nor:checked~.inner .fh-nor-2{animation:none;opacity:0}}
+#i-ark:checked~.inner .fh-ark-2.pw{animation:fhide-ark .6s ease 1.55s forwards}#i-ark:checked~.inner .fh-ark-2.fl{animation:flow 1.15s linear infinite,fhide-ark .6s ease 1.55s forwards}@media (prefers-reduced-motion:reduce){#i-ark:checked~.inner .fh-ark-2{animation:none;opacity:0}}
 @keyframes fhide-ark{to{opacity:0}}
 @keyframes fhide-nor{to{opacity:0}}
 @keyframes fhide-usa{to{opacity:0}}
