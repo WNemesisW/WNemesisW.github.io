@@ -212,6 +212,13 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 .dead2{stroke:var(--g-line);stroke-width:2.2;stroke-linecap:round}
 .wdark{fill:var(--g-panel);stroke:var(--g-obj);stroke-width:.8}
 
+.fmask{stroke:var(--g-gnd);stroke-width:10}
+.pwd{stroke:var(--g-pwr);stroke-width:2;opacity:.3}
+.fls{stroke:var(--g-flowp);stroke-width:2;opacity:.6}
+.fls2{stroke:var(--g-red);stroke-width:2;opacity:.7}
+.fl.fls{animation:flow 4s linear infinite}.fl.fls2{animation:flow 9s linear infinite}
+.st .fl.fls{animation:flow 4s linear infinite,stepin .4s ease calc(var(--d) + 1.1s) both}
+.st .fl.fls2{animation:flow 9s linear infinite,stepin .4s ease calc(var(--d) + 1.1s) both}
 .shp{fill:var(--g-panel);stroke:var(--g-accent);stroke-width:1.2}
 .sht{fill:var(--g-ink2);font-size:11px;font-weight:600}
 .shn{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums}
@@ -236,6 +243,16 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 .casb a{color:var(--g-accent)}
 .lv{display:inline-block;padding:1px 8px;border-radius:999px;font-size:11.5px;font-weight:700;white-space:nowrap}
 .lv.l3{background:var(--g-red);color:var(--g-onred)}
+.lv.l2{background:color-mix(in srgb,var(--g-red) 65%,transparent);color:var(--g-onred)}
+.scb{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:12px;font-size:11.5px;font-weight:700}
+.sct{font-size:11px;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:var(--g-muted)}
+.sgb{display:inline-flex;border-radius:999px;overflow:hidden}
+.sg{padding:3px 10px;white-space:nowrap;cursor:help}
+.sg.s0{background:var(--g-green);color:var(--g-bg)}
+.sg.s1{background:color-mix(in srgb,var(--g-red) 30%,transparent);color:var(--g-ink)}
+.sg.s2{background:color-mix(in srgb,var(--g-red) 65%,transparent);color:var(--g-onred)}
+.sg.s3{background:var(--g-red);color:var(--g-onred)}
+.sg.s9{background:var(--g-muted);color:var(--g-bg);border-radius:999px}
 .lv.l1{border:1.4px solid var(--g-red);color:var(--g-red)}
 .lv.l0{background:var(--g-green);color:var(--g-bg)}
 .lv.l9{background:var(--g-muted);color:var(--g-bg)}
