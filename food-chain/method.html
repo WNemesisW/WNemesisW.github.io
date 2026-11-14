@@ -212,6 +212,13 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 .dead2{stroke:var(--g-line);stroke-width:2.2;stroke-linecap:round}
 .wdark{fill:var(--g-panel);stroke:var(--g-obj);stroke-width:.8}
 
+.fmask{stroke:var(--g-gnd);stroke-width:10}
+.pwd{stroke:var(--g-pwr);stroke-width:2;opacity:.3}
+.fls{stroke:var(--g-flowp);stroke-width:2;opacity:.6}
+.fls2{stroke:var(--g-red);stroke-width:2;opacity:.7}
+.fl.fls{animation:flow 4s linear infinite}.fl.fls2{animation:flow 9s linear infinite}
+.st .fl.fls{animation:flow 4s linear infinite,stepin .4s ease calc(var(--d) + 1.1s) both}
+.st .fl.fls2{animation:flow 9s linear infinite,stepin .4s ease calc(var(--d) + 1.1s) both}
 .shp{fill:var(--g-panel);stroke:var(--g-accent);stroke-width:1.2}
 .sht{fill:var(--g-ink2);font-size:11px;font-weight:600}
 .shn{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums}
