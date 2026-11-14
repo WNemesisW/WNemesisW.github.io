@@ -1,0 +1,236 @@
+---
+layout: null
+sitemap: false
+permalink: /food-chain/method.html
+---
+{% raw %}<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method and sources – ihanus.eu</title>
+<meta name="description" content="How were the map, the cases and the Shodan counts put together?">
+<link rel="canonical" href="https://www.ihanus.eu/food-chain/method.html">
+<link rel="alternate" hreflang="fi" href="https://www.ihanus.eu/food-chain/menetelma.html">
+<link rel="alternate" hreflang="sv" href="https://www.ihanus.eu/food-chain/metod.html">
+<link rel="alternate" hreflang="en" href="https://www.ihanus.eu/food-chain/method.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jouni Ihanus">
+<meta property="og:title" content="Method and sources – ihanus.eu">
+<meta property="og:description" content="How were the map, the cases and the Shodan counts put together?">
+<meta property="og:url" content="https://www.ihanus.eu/food-chain/method.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fi_FI">
+<meta property="og:locale:alternate" content="sv_FI">
+<meta property="og:image" content="https://www.ihanus.eu/food-chain/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The food value chain and the cyberattacks that hit it">
+<meta name="twitter:card" content="summary_large_image">
+<script>(function () { var t; try { t = localStorage.getItem("theme"); } catch (e) {} if (t !== "dark" && t !== "light") { t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-theme", t); })();</script>
+<style>
+:root {
+  --bg: #05070d; --panel: rgba(15, 23, 39, .86); --panel-2: rgba(11, 17, 30, .92); --line: rgba(148, 163, 184, .13); --line-2: rgba(148, 163, 184, .22);
+  --ink: #e6edf7; --ink-2: #b4c1d4; --muted: #7c8aa3; --accent: #22d3ee; --out: #22d3ee; --in: #a78bfa; --bi: #fb923c;
+  --p0: #94a3b8; --p2: #60a5fa; --p3: #fbbf24; --p4: #f472b6; --open: #f87171; --open-2: #fca5a5; --info: #34d399;
+  --c0: rgba(34, 211, 238, .09); --c1: rgba(167, 139, 250, .08); --c2: #a5f3fc; --c3: #04121a; --c4: #9fb0c8; --c5: rgba(148, 163, 184, .075); --c6: rgba(34, 211, 238, .035); --c7: rgba(14, 21, 36, .62); --c8: rgba(8, 12, 22, .62); --c9: rgba(148, 163, 184, .11); --c10: rgba(255, 255, 255, .03); --c11: rgba(0, 0, 0, .35); --c12: rgba(0, 0, 0, .32); --c13: rgba(34, 211, 238, .18); --c14: rgba(148, 163, 184, .08); --c15: rgba(167, 139, 250, .55); --c16: rgba(239, 68, 68, .08); --c17: rgba(248, 113, 113, .28); --c18: rgba(239, 68, 68, .16); --c19: rgba(248, 113, 113, .55); --c20: #8aa0bd; --c21: #e0fbff; --c22: #22d3ee; --c23: #f1ebff; --c24: #a78bfa; --c25: #fff1e6; --c26: #fb923c; --c27: rgba(34, 211, 238, .35); --c28: rgba(34, 211, 238, .5); --c29: rgba(34, 211, 238, .28); --c30: rgba(34, 211, 238, .8); --c31: rgba(251, 146, 60, .8); --c32: rgba(167, 139, 250, .8); --c33: rgba(34, 211, 238, .45); --c34: rgba(34, 211, 238, 0); --c35: rgba(34, 211, 238, .25); --c36: rgba(0, 0, 0, .4); --c37: rgba(4, 18, 26, .12); --c38: rgba(15, 23, 39, .5); --c39: rgba(34, 211, 238, .08); --c40: rgba(12, 19, 33, .96); --c41: rgba(0, 0, 0, .5);
+  --edge-m: var(--c20); color-scheme: dark;
+}
+html[data-theme="light"] {
+  --bg: #f5f7fb; --panel: rgba(255, 255, 255, .9); --panel-2: rgba(248, 250, 252, .95); --line: rgba(15, 23, 42, .10); --line-2: rgba(15, 23, 42, .18);
+  --ink: #0f172a; --ink-2: #334155; --muted: #64748b; --accent: #0e7490; --out: #0891b2; --in: #7c3aed; --bi: #ea580c;
+  --p0: #64748b; --p2: #2563eb; --p3: #d97706; --p4: #db2777; --open: #dc2626; --open-2: #b91c1c; --info: #047857;
+  --c0: rgba(8, 145, 178, 0.05); --c1: rgba(124, 58, 237, 0.04); --c2: #0e7490; --c3: #ffffff; --c4: #64748b; --c5: rgba(15, 23, 42, 0.056); --c6: rgba(8, 145, 178, 0.019); --c7: rgba(255, 255, 255, 0.72); --c8: rgba(255, 255, 255, 0.72); --c9: rgba(15, 23, 42, 0.083); --c10: rgba(255, 255, 255, 0.03); --c11: rgba(15, 23, 42, 0.077); --c12: rgba(15, 23, 42, 0.07); --c13: rgba(8, 145, 178, 0.099); --c14: rgba(15, 23, 42, 0.06); --c15: rgba(124, 58, 237, 0.275); --c16: rgba(220, 38, 38, 0.072); --c17: rgba(220, 38, 38, 0.252); --c18: rgba(220, 38, 38, 0.144); --c19: rgba(220, 38, 38, 0.495); --c20: #475569; --c21: #164e63; --c22: #0891b2; --c23: #4c1d95; --c24: #7c3aed; --c25: #7c2d12; --c26: #ea580c; --c27: rgba(8, 145, 178, 0.193); --c28: rgba(8, 145, 178, 0.275); --c29: rgba(8, 145, 178, 0.154); --c30: rgba(8, 145, 178, 0.44); --c31: rgba(234, 88, 12, 0.4); --c32: rgba(124, 58, 237, 0.4); --c33: rgba(8, 145, 178, 0.248); --c34: rgba(8, 145, 178, 0); --c35: rgba(8, 145, 178, 0.138); --c36: rgba(15, 23, 42, 0.088); --c37: rgba(255, 255, 255, 0.192); --c38: rgba(255, 255, 255, 0.6); --c39: rgba(8, 145, 178, 0.044); --c40: rgba(255, 255, 255, 1); --c41: rgba(15, 23, 42, 0.11);
+  color-scheme: light;
+}
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 600; font-display: swap;
+  src: url("/assets/fonts/space-grotesk-latin-600-normal.woff2") format("woff2"); }
+* { box-sizing: border-box; }
+html { background: var(--bg); -webkit-text-size-adjust: 100%; }
+body { margin: 0; color: var(--ink); font: 14px/1.5 Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; min-height: 100vh;
+  background: radial-gradient(1100px 520px at 8% -8%, var(--c0), transparent 62%), radial-gradient(900px 480px at 100% -4%, var(--c1), transparent 60%), var(--bg); }
+.inner { max-width: 900px; margin: 0 auto; padding: 0 16px 36px; }
+@media (min-width: 1000px) { .inner { max-width: 1400px; padding: 0 28px 36px; } }
+.topbar { padding: 16px 0 0; } .home { font-size: 12px; color: var(--muted); text-decoration: none; } .home:hover { color: var(--accent); }
+.ph { padding: 14px 0 16px; max-width: 980px; }
+.eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+h1 { margin: 8px 0 0; font-size: 26px; line-height: 1.15; font-weight: 650; letter-spacing: -.015em; }
+.sub { margin: 10px 0 0; color: var(--c2); font-size: 14.5px; font-weight: 500; }
+.lang { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--panel); border: 1px solid var(--line); }
+.lang a { font-size: 12px; font-weight: 600; letter-spacing: .06em; line-height: 1.5; color: var(--muted); text-decoration: none; border-radius: 999px; padding: 3px 12px; }
+.lang a:hover { color: var(--ink); } .lang a[aria-current="page"] { color: var(--c3); background: var(--accent); }
+.theme { display: inline-grid; place-items: center; width: 32px; height: 30px; padding: 0; border-radius: 999px; color: var(--muted); background: var(--panel);
+  border: 1px solid var(--line); cursor: pointer; } .theme:hover { color: var(--ink); } .theme svg { width: 16px; height: 16px; }
+html[data-theme="dark"] .t-moon, html[data-theme="light"] .t-sun { display: none; }
+.fnote.method { margin-top: 16px; } .fnote ul { margin: 4px 0 0; padding-left: 16px; } .fnote li { margin: 6px 0; }
+.srcs { margin-top: 18px; padding: 14px 18px; border-radius: 16px; border: 1px solid var(--line); background: color-mix(in srgb, var(--panel) 60%, transparent); }
+.srcs h2 { margin: 0 0 6px; font-size: 10.5px; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.srcs ul { margin: 0; padding-left: 16px; } .srcs li { margin: 4px 0; font-size: 12.5px; color: var(--ink-2); } .srcs a { color: var(--accent); }
+footer { margin-top: 24px; font-size: 11.5px; color: var(--muted); } footer a { color: var(--accent); }
+.subnav { position: sticky; top: 10px; z-index: 6; display: flex; flex-wrap: wrap; gap: 3px;
+  margin: 4px 0 14px; padding: 4px; border-radius: 14px; border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 13%, transparent), color-mix(in srgb, var(--accent) 6%, transparent)),
+    color-mix(in srgb, var(--panel) 62%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4); backdrop-filter: blur(16px) saturate(1.4);
+  box-shadow: 0 12px 32px var(--c11), inset 0 1px 0 var(--c10); transition: transform .25s ease, box-shadow .25s ease; }
+.subnav:hover { transform: translateY(-3px); box-shadow: 0 18px 44px var(--c11), 0 0 0 1px var(--c27), inset 0 1px 0 var(--c10); }
+.sn { position: relative; flex: 1 1 auto; display: flex; align-items: center; justify-content: center; gap: 5px; min-height: 32px; padding: 5px 12px;
+  border-radius: 10px; text-decoration: none; text-align: center; white-space: nowrap; color: var(--accent); line-height: 1.2;
+  font: 600 13.5px/1.2 "Space Grotesk", Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: .005em;
+  transition: background .2s, color .2s; }
+.sn::after { content: ""; position: absolute; left: 22%; right: 22%; bottom: 3px; height: 2px; border-radius: 2px; background: var(--accent);
+  transform: scaleX(0); transition: transform .25s ease; }
+.sn:hover { color: var(--ink); background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.sn:hover::after { transform: scaleX(1); }
+.sn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.sn .sne { font-size: 11px; opacity: .7; }
+.subnav > .tools { display: flex; gap: 6px; align-items: center; margin-left: auto; padding: 0 3px 0 8px; }
+@media (prefers-reduced-motion: reduce) { .subnav, .subnav:hover, .sn::after { transition: none; transform: none; } }
+.sn[aria-current="page"] { color: var(--ink); background: color-mix(in srgb, var(--accent) 16%, transparent); }
+.sn[aria-current="page"]::after { transform: scaleX(1); }
+html[data-theme="light"] .subnav { background: rgba(255, 255, 255, .62); border-color: rgba(255, 255, 255, .75);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .05), 0 10px 28px rgba(15, 23, 42, .09), inset 0 1px 0 rgba(255, 255, 255, .9); }
+html[data-theme="light"] .subnav:hover { box-shadow: 0 2px 4px rgba(15, 23, 42, .05), 0 16px 38px rgba(15, 23, 42, .12), inset 0 1px 0 rgba(255, 255, 255, .9); }
+html[data-theme="light"] .sn { color: #334155; }
+html[data-theme="light"] .sn:hover { color: #0f172a; background: rgba(255, 255, 255, .7); }
+html[data-theme="light"] .sn::after { display: none; }
+html[data-theme="light"] .sn[aria-current="page"] { color: #fff; background: rgba(14, 116, 144, .92); box-shadow: 0 4px 14px rgba(14, 116, 144, .30); }
+.fnote { display: flex; gap: 12px; align-items: flex-start; margin: 0 0 14px; padding: 10px 16px 11px 12px; border-radius: 14px;
+  background: color-mix(in srgb, var(--panel) 72%, transparent); border: 1px solid var(--line); border-left: 3px solid var(--accent);
+  box-shadow: inset 0 1px 0 var(--c10); font-size: 12px; line-height: 1.45; color: var(--ink-2); }
+.fnote .fn-i { flex: 0 0 auto; display: inline-grid; place-items: center; width: 20px; height: 20px; margin-top: 1px; border-radius: 50%;
+  font: italic 700 12px/1 Georgia, "Times New Roman", serif; color: var(--accent); background: var(--c0); border: 1px solid var(--c13); }
+.fnote b { display: block; margin-bottom: 2px; font-size: 10.5px; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.corr p { margin: 0 0 8px; max-width: 980px; font-size: 12.5px; line-height: 1.55; color: var(--ink-2); }
+.corr p a { font-weight: 600; } .corr li time { font-weight: 600; color: var(--ink); margin-right: 6px; font-variant-numeric: tabular-nums; }
+.corr .none { color: var(--muted); }
+:root { --g-bg:#05070d;--g-gnd:#0b111d;--g-panel:#1c2840;--g-ink:#e6edf7;--g-ink2:#b4c1d4;--g-muted:#8a97ad;--g-accent:#22d3ee;--g-red:#f87171;--g-green:#34d399;--g-pwr:#fbbf24;--g-onred:#05070d;--g-chip:#2e3d5c;--g-line:#2a3548;--g-flowp:#5a2a00;--g-flowr:#5c0b0b;--g-obj:#d6deeb; }
+html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-ink:#0f172a;--g-ink2:#334155;--g-muted:#586579;--g-accent:#0e7490;--g-red:#dc2626;--g-green:#047857;--g-pwr:#b45309;--g-onred:#ffffff;--g-chip:#d5deea;--g-line:#c9d3e0;--g-flowp:#fff3c4;--g-flowr:#ffffff;--g-obj:#1e293b; }
+#i-m:checked~.inner label[for=i-m]{background:var(--g-accent);border-color:var(--g-accent);color:var(--g-bg)}
+#i-m:focus-visible~.inner label[for=i-m]{outline:2px solid var(--g-ink);outline-offset:2px}
+#i-m:checked~.inner .cap-m{display:block}
+{display:inline}
+{opacity:.3}
+
+.vr{position:absolute;opacity:0;pointer-events:none}
+.sel{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 0}
+.sel label{padding:7px 12px;border:1px solid var(--g-line);border-radius:999px;cursor:pointer;color:var(--g-ink2);font-weight:600;font-size:13px;background:var(--g-gnd)}
+.sel label:hover{color:var(--g-ink)}
+.fig,.fig-w{margin:14px -16px 0}
+.fig svg,.fig-w svg{display:block;width:100%;height:auto;font-family:inherit}
+.cap,.ov{display:none}
+.n{transition:opacity .2s}
+.caps{margin-top:14px;font-size:14px}
+.caps p{margin:0}
+.oc{color:var(--g-ink2)}
+.pill{display:inline-block;padding:2px 10px;border:1px solid var(--g-line);border-radius:999px;color:var(--g-ink);font-weight:650;font-size:13.5px}
+.pill.crit{background:var(--g-red);border-color:var(--g-red);color:var(--g-onred)}
+.steps{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:12px}
+.steps li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start}
+.num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--g-red);color:var(--g-onred);font-size:12.5px;font-weight:700}
+.num.off{width:8px;height:8px;margin:7px 7px 0;background:var(--g-muted)}
+.stt{margin-left:4px;font-size:12.5px;color:var(--g-muted)}
+.caps .tech{margin-top:2px;font-size:13px;color:var(--g-ink2)}
+.sec{display:inline-block;margin-left:4px;padding:0 6px;border:1px solid var(--g-line);border-radius:999px;font-size:11.5px;color:var(--g-muted);white-space:nowrap}
+.caps .target{margin-top:14px;padding-left:10px;border-left:3px solid var(--g-green)}
+.caps .srcl{margin-top:8px;font-size:13px}
+.srcl a{color:var(--g-accent)}
+.legend{list-style:none;display:flex;flex-wrap:wrap;gap:6px 16px;margin:16px 0 0;padding:12px 0 0;border-top:1px solid var(--g-line);font-size:12.5px;color:var(--g-ink2)}
+.legend li{display:inline-flex;align-items:center;gap:6px}
+.legend svg{flex:none}
+.caps .hint{margin-top:8px;font-size:12.5px;color:var(--g-muted)}
+.notes{margin:12px 0 0;padding-left:18px;display:grid;gap:8px}
+/* Vaiheittainen piirto: valittu tapaus maalautuu vaihe kerrallaan (Jouni 14.11.2026) */
+.s1{--d:.15s}.s2{--d:.95s}.s3{--d:1.75s}.s4{--d:2.55s}.s5{--d:3.35s}
+.st{animation:stepin .4s ease var(--d) both}
+.st .drw{stroke-dasharray:1;animation:draw .7s ease-in-out var(--d) both}
+.st .arh{animation:stepin .2s ease calc(var(--d) + .6s) both}
+.st .fl{animation:flow 1.15s linear infinite,stepin .3s ease calc(var(--d) + .7s) both}
+.cap .steps li{animation:stepin .4s ease var(--d,0s) both}
+.cap .target,.cap .srcl{animation:stepin .4s ease var(--end,0s) both}
+.cap .steps li:nth-child(1){--d:.15s}.cap .steps li:nth-child(2){--d:.95s}.cap .steps li:nth-child(3){--d:1.75s}.cap .steps li:nth-child(4){--d:2.55s}.cap .steps li:nth-child(5){--d:3.35s}
+@keyframes stepin{from{opacity:0}}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.st,.st .drw,.st .arh,.st .fl,.cap .steps li,.cap .target,.cap .srcl{animation:none}}
+@media (min-width:460px){.fig{margin:14px auto 0;max-width:430px}}
+@media (min-width:880px){.grid{display:flex;gap:32px;align-items:flex-start}.fig{flex:0 0 430px;margin:14px 0 0}.caps{flex:1;margin-top:28px;position:sticky;top:64px}}
+.fig-w{display:none}
+@media (min-width:1000px){.fig-p{display:none}.fig-w{display:block;margin:16px 0 0}.grid{display:block}.caps{margin-top:18px;position:static}.steps{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.notes{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px 36px}}
+
+.gnd{fill:var(--g-gnd);stroke:var(--g-line);stroke-width:1}
+.rl{fill:var(--g-muted);font-size:10.5px;font-weight:600;letter-spacing:.09em}
+.nt{fill:var(--g-ink);font-size:12.5px;font-weight:650}
+.lb{fill:var(--g-ink2);font-size:10.5px}
+.ol{fill:var(--g-panel);stroke:var(--g-obj);stroke-width:1.5;stroke-linejoin:round}
+.sp{fill:var(--g-chip)}
+.of{fill:var(--g-chip);stroke:var(--g-obj);stroke-width:1}
+.scr{fill:var(--g-chip);stroke:var(--g-obj);stroke-width:1.1}
+.bl{stroke:var(--g-obj);stroke-width:2.6;stroke-linecap:round}
+.dl{fill:none;stroke:var(--g-obj);stroke-width:1.5;stroke-linecap:round}
+.dl2{fill:none;stroke:var(--g-obj);stroke-width:2.2;stroke-linecap:round}
+.dt{fill:none;stroke:var(--g-obj);stroke-width:1.05;stroke-linecap:round;stroke-linejoin:round}
+.dv{fill:var(--g-panel);stroke:var(--g-obj);stroke-width:1.4}
+.dvl{fill:none;stroke:var(--g-obj);stroke-width:1.5}
+.dvc{fill:var(--g-obj)}
+.dot{fill:var(--g-obj)}
+.smoke{fill:none;stroke:var(--g-muted);stroke-width:1.1}
+.wave{fill:none;stroke:var(--g-muted);stroke-width:1.2;stroke-linecap:round}
+.win{fill:var(--g-pwr)}
+.pw{fill:none;stroke:var(--g-pwr);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.pw2{fill:none;stroke:var(--g-pwr);stroke-width:2;stroke-linecap:round}
+.pw3{fill:none;stroke:var(--g-pwr);stroke-width:1.2;stroke-linecap:round}
+.fl{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3 13;animation:flow 1.15s linear infinite}
+.flp{stroke:var(--g-flowp);stroke-width:2}
+.flp2{stroke:var(--g-flowp);stroke-width:1.3}
+.flp3{stroke:var(--g-flowp);stroke-width:.9}
+.flr{stroke:var(--g-flowr);stroke-width:1.5}
+@keyframes flow{to{stroke-dashoffset:-16}}
+@media (prefers-reduced-motion:reduce){.fl{animation:none}}
+.cm{fill:none;stroke:var(--g-muted);stroke-width:1.4;stroke-dasharray:3 4;stroke-linecap:round}
+.net{fill:none;stroke:var(--g-muted);stroke-width:1.6;stroke-linecap:round}
+.ar{fill:none;stroke:var(--g-red);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}
+.ard{stroke-dasharray:5 5}
+.arh{fill:var(--g-red)}
+.rg{fill:none;stroke:var(--g-red);stroke-width:2}
+.rgd{stroke-dasharray:6 4}
+.bx{fill:var(--g-red);stroke:var(--g-gnd);stroke-width:1.5}
+.bxl{fill:none;stroke:var(--g-onred);stroke-width:1.7;stroke-linecap:round}
+.bd{fill:var(--g-red);stroke:var(--g-bg);stroke-width:2}
+.bdt{fill:var(--g-onred);font-size:11px;font-weight:700}
+.yb{fill:var(--g-ink2);stroke:var(--g-bg);stroke-width:2}
+.ybt{fill:var(--g-bg);font-size:10px;font-weight:700}
+.xm{fill:var(--g-bg);stroke:var(--g-red);stroke-width:1.8}
+.xml{fill:none;stroke:var(--g-red);stroke-width:1.8;stroke-linecap:round}
+.dead{fill:none;stroke:var(--g-line);stroke-width:3.8;stroke-linecap:round;stroke-linejoin:round}
+.dead2{stroke:var(--g-line);stroke-width:2.2;stroke-linecap:round}
+.wdark{fill:var(--g-panel);stroke:var(--g-obj);stroke-width:.8}
+
+.shc{fill:var(--g-panel);stroke:var(--g-accent);stroke-width:1.2}
+.sht{fill:var(--g-ink);font-size:10.5px;font-weight:600}
+.ov-nm{--g-red:#f59e0b;--g-onred:#05070d}
+
+.shtab{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px}
+.shtab th,.shtab td{padding:6px 8px;border-bottom:1px solid var(--g-line);text-align:left;vertical-align:top}
+.shtab th{font-size:11px;font-weight:650;letter-spacing:.06em;text-transform:uppercase;color:var(--g-muted)}
+.shtab td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.shtab code{font-size:11.5px;color:var(--g-ink2);overflow-wrap:anywhere}
+.s6{--d:4.15s}
+.cap .steps li:nth-child(6){--d:4.15s}
+.sn.chain{font-weight:500}
+</style>
+</head>
+<body>
+<div class="inner">
+<div class="topbar"><a class="home" href="https://www.ihanus.eu/">← www.ihanus.eu</a></div>
+<header class="ph"><div class="eyebrow">Food · cyberattacks</div><h1>Method and sources</h1><p class="sub">How were the map, the cases and the Shodan counts put together?</p></header>
+<nav class="subnav" aria-label="Pages"><a class="sn chain" href="/power-chain/">Power</a><a class="sn chain" href="/hospital-chain/">Hospital</a><a class="sn chain" href="/bank-chain/">Bank</a><a class="sn chain" href="/food-chain/">Food</a><a class="sn" href="method.html" aria-current="page">Method and sources</a><div class="tools"><div class="lang" role="group" aria-label="Language"><a href="menetelma.html" lang="fi" hreflang="fi">FI</a><a href="metod.html" lang="sv" hreflang="sv">SV</a><a href="method.html" lang="en" hreflang="en" aria-current="page">EN</a></div><button type="button" class="theme" id="theme" aria-label="Toggle theme" title="Toggle theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="t-sun" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="t-moon" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button></div></nav>
+<aside class="fnote method"><span class="fn-i" aria-hidden="true">i</span><span class="fn-t"><b>Method and caveats</b><ul><li><b>The map</b> is a simplified model of the food chain: farm, cold chain, plant, distribution and retail, and of the networks and service providers the chain depends on. The components drawn are the main parts of the chain and those the cases hit. The names are generic and do not depict any organisation's systems.</li><li><b>Shodan counts</b> are totals of internet-visible services in Finland and the comparison countries. The queries were calibrated with Shodan's facets; queries whose hits could not be confirmed as the right product (FortiGate, MOVEit, Carel, Danfoss AK-SM and Kaseya VSA) were left out. Each query is linked to the part of the chain where the service is typically used; the same service may also be used elsewhere. No individual addresses, organisations or vulnerabilities are published.</li><li><b>The cases</b> are publicly documented. Steps are numbered in the order the attack progressed, as far as the source describes it; a dashed line marks a step that is uncertain or only partly happened. Perpetrators are not shown, because the view is meant for targeting your own measures. Counts describe these cases only, not likelihood.</li></ul></span></aside>
+<section class="srcs"><h2>Sources</h2><ul><li>JBS 2021: <a href="https://jbsfoodsgroup.com/articles/jbs-usa-cyberattack-media-statement-may-31" target="_blank" rel="noopener noreferrer">JBS USA: media statement 31 May 2021</a></li><li>JBS 2021: <a href="https://jbsfoodsgroup.com/articles/jbs-usa-cyberattack-media-statement-june-9" target="_blank" rel="noopener noreferrer">JBS USA: media statement 9 June 2021</a></li><li>Mondelez 2017: <a href="https://www.sec.gov/Archives/edgar/data/0001103982/000119312517245459/d412472d10q.htm" target="_blank" rel="noopener noreferrer">Mondelez International: Form 10-Q, Q2 2017</a></li><li>Mondelez 2017: <a href="https://www.sec.gov/Archives/edgar/data/0001103982/000119312518037332/d466496d10k.htm" target="_blank" rel="noopener noreferrer">Mondelez International: Form 10-K 2017</a></li><li>Dole 2023: <a href="https://www.doleplc.com/news/company-news/company-news-details/2023/-Dole-Experiences-Cybersecurity-Incident/default.aspx" target="_blank" rel="noopener noreferrer">Dole plc: cybersecurity incident (22 Feb 2023)</a></li><li>Dole 2023: <a href="https://s202.q4cdn.com/638653076/files/doc_financials/2023/q1/Dole-plc-Q1-2023-6K-Financial-Statements.pdf" target="_blank" rel="noopener noreferrer">Dole plc: Q1 2023 financial statements</a></li><li>Coop 2021: <a href="https://www.mynewsdesk.com/se/visma/pressreleases/mjukvaruleverantoeren-kesaya-utsatt-foer-en-global-cyberattack-som-paaverkar-detaljhandeln-3114593" target="_blank" rel="noopener noreferrer">Visma: Kaseya-attacken (3 Jul 2021)</a></li><li>Coop 2021: <a href="https://truesec.com/cases/back-in-business-after-the-largest-ransomware-attack-of-all-time" target="_blank" rel="noopener noreferrer">Truesec: back in business after the largest ransomware attack</a></li><li>Nortura 2021: <a href="https://www.nortura.no/attachments/%C3%85rsmeldinger/Nortura-arsmelding-2021.pdf" target="_blank" rel="noopener noreferrer">Nortura: årsmelding 2021</a></li><li>Nortura 2021: <a href="https://www.nortura.no/attachments/Tertialrapporter/Tertialrapport-2021-T3.pdf" target="_blank" rel="noopener noreferrer">Nortura: tertialrapport 3/2021</a></li></ul></section>
+<section class="srcs"><h2>Shodan queries 14 Nov 2026</h2><ul><li>RDP: <code>country:FI port:3389</code></li><li>SAP: <code>country:FI &quot;SAP NetWeaver&quot;</code></li><li>ScreenConnect: <code>country:FI http.title:&quot;ScreenConnect&quot;</code></li><li>Teltonika: <code>country:FI http.title:Teltonika</code></li><li>Modbus: <code>country:FI port:502</code></li><li>S7: <code>country:FI port:102</code></li><li>VNC: <code>country:FI port:5900</code></li><li>StoreView: <code>country:FI http.title:StoreView</code></li></ul></section>
+<section class="srcs corr" id="corrections"><h2>Corrections and feedback</h2><p>Spotted an error or a misreading? Let me know on <a href="https://www.linkedin.com/in/jouni-ihanus-71651441/" target="_blank" rel="noopener noreferrer">LinkedIn</a>. Content corrections after publication and changes made in response to feedback are listed here with their dates.</p><p class="none">No corrections recorded yet.</p></section>
+<footer>The map is a simplified model. The case details are based on the linked sources.</footer>
+</div>
+<script>document.getElementById("theme").addEventListener("click", function () { var h = document.documentElement, t = h.getAttribute("data-theme") === "dark" ? "light" : "dark"; h.setAttribute("data-theme", t); try { localStorage.setItem("theme", t); } catch (e) {} });</script>
+{% endraw %}{% include analytics-providers/custom.html %}
+</body>
+</html>
