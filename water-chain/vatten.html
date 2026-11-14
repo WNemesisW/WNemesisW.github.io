@@ -234,12 +234,14 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 .shtab td.eu{color:var(--g-red);font-weight:700}
 .shtab code{font-size:11.5px;color:var(--g-ink2);overflow-wrap:anywhere}
 .sn.chain{font-weight:500}
-#i-usa:checked~.inner .pw.fk1c1-usa-2{animation:fw1-usa .9s ease 2.45s forwards}#i-usa:checked~.inner .fl.fk1c1-usa-2{animation:flow 3.22s linear infinite,fd1-usa .9s ease 2.45s forwards}@media (prefers-reduced-motion:reduce){#i-usa:checked~.inner .pw.fk1c1-usa-2{animation:none;stroke-width:0.6}#i-usa:checked~.inner .fl.fk1c1-usa-2{animation:none;stroke-width:0.45}}
-#i-nor:checked~.inner .pw.fk1c1-nor-2{animation:fw1-nor .9s ease 2.45s forwards}#i-nor:checked~.inner .fl.fk1c1-nor-2{animation:flow 3.22s linear infinite,fd1-nor .9s ease 2.45s forwards}@media (prefers-reduced-motion:reduce){#i-nor:checked~.inner .pw.fk1c1-nor-2{animation:none;stroke-width:0.6}#i-nor:checked~.inner .fl.fk1c1-nor-2{animation:none;stroke-width:0.45}}
-#i-ark:checked~.inner .pw.fk1c1-ark-2{animation:fw1-ark .9s ease 2.45s forwards}#i-ark:checked~.inner .fl.fk1c1-ark-2{animation:flow 3.22s linear infinite,fd1-ark .9s ease 2.45s forwards}@media (prefers-reduced-motion:reduce){#i-ark:checked~.inner .pw.fk1c1-ark-2{animation:none;stroke-width:0.6}#i-ark:checked~.inner .fl.fk1c1-ark-2{animation:none;stroke-width:0.45}}
-@keyframes fw1-ark{to{stroke-width:0.6}}@keyframes fd1-ark{to{stroke-width:0.45}}
-@keyframes fw1-nor{to{stroke-width:0.6}}@keyframes fd1-nor{to{stroke-width:0.45}}
-@keyframes fw1-usa{to{stroke-width:0.6}}@keyframes fd1-usa{to{stroke-width:0.45}}
+#i-usa:checked~.inner .pw.fk1c1-usa-2{animation:fw1-usa .9s ease 2.45s forwards}#i-usa:checked~.inner .fl.fk1c1-usa-2{animation:flow32 6.44s linear infinite,fd1-usa .9s ease 2.45s forwards}@media (prefers-reduced-motion:reduce){#i-usa:checked~.inner .pw.fk1c1-usa-2{animation:none;stroke-width:0.6;stroke-dasharray:7 13}#i-usa:checked~.inner .fl.fk1c1-usa-2{animation:none;stroke-width:0.45;stroke-dasharray:2 30}}
+#i-nor:checked~.inner .pw.fk1c1-nor-2{animation:fw1-nor .9s ease 2.45s forwards}#i-nor:checked~.inner .fl.fk1c1-nor-2{animation:flow32 6.44s linear infinite,fd1-nor .9s ease 2.45s forwards}@media (prefers-reduced-motion:reduce){#i-nor:checked~.inner .pw.fk1c1-nor-2{animation:none;stroke-width:0.6;stroke-dasharray:7 13}#i-nor:checked~.inner .fl.fk1c1-nor-2{animation:none;stroke-width:0.45;stroke-dasharray:2 30}}
+#i-ark:checked~.inner .pw.fk1c1-ark-2{animation:fw1-ark .9s ease 2.45s forwards}#i-ark:checked~.inner .fl.fk1c1-ark-2{animation:flow32 6.44s linear infinite,fd1-ark .9s ease 2.45s forwards}@media (prefers-reduced-motion:reduce){#i-ark:checked~.inner .pw.fk1c1-ark-2{animation:none;stroke-width:0.6;stroke-dasharray:7 13}#i-ark:checked~.inner .fl.fk1c1-ark-2{animation:none;stroke-width:0.45;stroke-dasharray:2 30}}
+@keyframes fw1-ark{to{stroke-width:0.6;stroke-dasharray:7 13}}@keyframes fd1-ark{to{stroke-width:0.45;stroke-dasharray:2 30}}
+@keyframes fw1-nor{to{stroke-width:0.6;stroke-dasharray:7 13}}@keyframes fd1-nor{to{stroke-width:0.45;stroke-dasharray:2 30}}
+@keyframes fw1-usa{to{stroke-width:0.6;stroke-dasharray:7 13}}@keyframes fd1-usa{to{stroke-width:0.45;stroke-dasharray:2 30}}
+@keyframes flow25{to{stroke-dashoffset:-25}}
+@keyframes flow32{to{stroke-dashoffset:-32}}
 </style>
 </head>
 <body>
