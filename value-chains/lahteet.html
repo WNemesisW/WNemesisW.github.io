@@ -427,8 +427,9 @@ if (emb) {
   var chg = function () { if (wrap && !fsel()) { shut(); } };
   document.addEventListener("fullscreenchange", chg); document.addEventListener("webkitfullscreenchange", chg);
   return; }
-/* Zoomaus: taso (50–300 %) tallentuu katsojan omaan selaimeen sivukohtaisesti; 100 % = kuva sovitettuna näyttöön */
-var ZK = "ihanus-zoom:" + location.pathname.replace(/[^\/]*$/, ""), zm = document.querySelector(".zm"), zr = zm && zm.querySelector(".zr"), z = 1;
+/* Zoomaus: taso (50–300 %) tallentuu katsojan omaan selaimeen ja on sama kaikilla sivuilla (Jouni 15.11.2026);
+   100 % = kuva sovitettuna näyttöön */
+var ZK = "ihanus-zoom", zm = document.querySelector(".zm"), zr = zm && zm.querySelector(".zr"), z = 1;
 try { z = parseFloat(localStorage.getItem(ZK)) || 1; } catch (x) {}
 function figs() { var o = [], s = document.querySelectorAll(".fig-w > svg, .fig > svg"); for (var i = 0; i < s.length; i++) { if (s[i].getClientRects().length) { o.push(s[i]); } } return o; }
 function zoom() { var on = !!cur(); de.classList.toggle("zoomed", on && z !== 1); de.classList.toggle("pan", on && z > 1);
