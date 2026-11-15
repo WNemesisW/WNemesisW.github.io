@@ -75,9 +75,11 @@ html.fs .fig-w svg { max-height: calc(100vh - 190px); }
   color: var(--muted); font: 600 12px/1 inherit; font-variant-numeric: tabular-nums; cursor: pointer; } .zr:hover { color: var(--ink); }
 .zm .theme:disabled { opacity: .4; cursor: default; }
 /* Zoomattu kuva vierii kehyksensä sisällä; hiirellä voi raahata */
-html.zoomed .fig-w, html.zoomed .fig { overflow: auto; max-height: calc(100vh - 150px); overscroll-behavior: contain; }
-html.zoomed .fig-w svg, html.zoomed .fig svg { max-height: none; max-width: none; margin: 0 auto; }
-html.zoomed.pan .fig-w, html.zoomed.pan .fig { cursor: grab; } html.drag .fig-w, html.drag .fig { cursor: grabbing; user-select: none; }
+html.zoomed .fig-w, html.zoomed .fig, html.zoomed .fig-panel { overflow: auto; max-height: calc(100vh - 150px); overscroll-behavior: contain; }
+html.zoomed .fig-w svg, html.zoomed .fig svg, html.zoomed .fig-panel > svg { max-height: none; max-width: none; margin: 0 auto; }
+/* Taulukot (esim. Shodan-tulokset) suurenevat samassa suhteessa; leveä taulukko vierii kehyksessään */
+html.zoomed .tw { overflow: auto; } html.zoomed .tw > table { zoom: var(--zt, 1); }
+html.zoomed.pan .fig-w, html.zoomed.pan .fig, html.zoomed.pan .fig-panel { cursor: grab; } html.drag .fig-w, html.drag .fig, html.drag .fig-panel { cursor: grabbing; user-select: none; }
 /* Kyvykkyyksien ja muiden otsikoiden raja yläpalkissa (Jouni 15.11.2026); kapeassa rivitetyssä palkissa piilossa */
 .snsep { flex: none; align-self: stretch; width: 1.5px; margin: 6px 8px; border-radius: 1px; background: color-mix(in srgb, var(--accent) 55%, transparent); }
 @media (max-width: 900px) { .snsep { display: none; } }
@@ -312,9 +314,9 @@ var de = document.documentElement;
 function cur() { return true; }
 var ZK = "ihanus-zoom", zm = document.querySelector(".zm"), zr = zm && zm.querySelector(".zr"), z = 1;
 try { z = parseFloat(localStorage.getItem(ZK)) || 1; } catch (x) {}
-function figs() { var o = [], s = document.querySelectorAll(".fig-w > svg, .fig > svg"); for (var i = 0; i < s.length; i++) { if (s[i].getClientRects().length) { o.push(s[i]); } } return o; }
-function zoom() { var on = !!cur(); de.classList.toggle("zoomed", on && z !== 1); de.classList.toggle("pan", on && z > 1);
-  var s = document.querySelectorAll(".fig-w > svg, .fig > svg"); for (var i = 0; i < s.length; i++) { s[i].style.width = ""; s[i].style.height = ""; }
+function figs() { var o = [], s = document.querySelectorAll(".fig-w > svg, .fig > svg, .fig-panel > svg"); for (var i = 0; i < s.length; i++) { if (s[i].getClientRects().length) { o.push(s[i]); } } return o; }
+function zoom() { var on = !!cur(); de.classList.toggle("zoomed", on && z !== 1); de.classList.toggle("pan", on && z > 1); de.style.setProperty("--zt", String(z));
+  var s = document.querySelectorAll(".fig-w > svg, .fig > svg, .fig-panel > svg"); for (var i = 0; i < s.length; i++) { s[i].style.width = ""; s[i].style.height = ""; }
   if (zr) { zr.textContent = Math.round(z * 100) + " %"; zm.querySelector('[data-z="-1"]').disabled = z <= 0.5; zm.querySelector('[data-z="1"]').disabled = z >= 3; }
   if (!on || z === 1) { return; }
   de.classList.remove("zoomed"); var f = figs(), r = [];
@@ -331,7 +333,7 @@ document.addEventListener("keydown", function (ev) { if (!cur() || ev.ctrlKey ||
   if (ev.key === "+" || ev.key === "=") { setz(z * 1.25); ev.preventDefault(); } else if (ev.key === "-") { setz(z / 1.25); ev.preventDefault(); } else if (ev.key === "0") { setz(1); ev.preventDefault(); } });
 var dr = null;
 document.addEventListener("pointerdown", function (ev) { if (!cur() || z <= 1 || ev.pointerType !== "mouse" || ev.button !== 0) { return; }
-  var p = ev.target.closest && ev.target.closest(".fig-w, .fig"); if (!p) { return; } dr = [p, ev.clientX, ev.clientY, p.scrollLeft, p.scrollTop]; de.classList.add("drag"); });
+  var p = ev.target.closest && ev.target.closest(".fig-w, .fig, .fig-panel"); if (!p) { return; } dr = [p, ev.clientX, ev.clientY, p.scrollLeft, p.scrollTop]; de.classList.add("drag"); });
 document.addEventListener("pointermove", function (ev) { if (dr) { dr[0].scrollLeft = dr[3] - (ev.clientX - dr[1]); dr[0].scrollTop = dr[4] - (ev.clientY - dr[2]); } });
 document.addEventListener("pointerup", function () { dr = null; de.classList.remove("drag"); });
 window.addEventListener("storage", function (ev) { if (ev.key === ZK) { z = parseFloat(ev.newValue) || 1; zoom(); } });
