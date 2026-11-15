@@ -301,6 +301,9 @@ sync(); })();(function () {
    selaimeen ja on sama kaikilla sivuilla; 100 % = kuva sovitettuna. Erillään koko näytön koodista. */
 var de = document.documentElement;
 function cur() { return true; }
+/* Koko näytön kehyksessä fs-luokka asetetaan ennen ensimmäistä mittausta: muuten 100 %:n perustaso mitataan tavallisen
+   sivun asettelusta (ei korkeusrajaa), ja tallennettu zoomaus näkyy kehyksessä aivan liian suurena (Jouni 15.11.2026). */
+try { if (window.top !== window && window.frameElement && window.frameElement.id === "fsf") { de.classList.add("fs"); } } catch (x) {}
 var ZK = "ihanus-zoom", zm = document.querySelector(".zm"), zr = zm && zm.querySelector(".zr"), z = 1;
 try { z = parseFloat(localStorage.getItem(ZK)) || 1; } catch (x) {}
 function figs() { var o = [], s = document.querySelectorAll(".fig-w > svg, .fig > svg, .fig-panel > svg"); for (var i = 0; i < s.length; i++) { if (s[i].getClientRects().length) { o.push(s[i]); } } return o; }
@@ -337,6 +340,7 @@ document.addEventListener("pointermove", function (ev) { if (dr) { dr[0].scrollL
 document.addEventListener("pointerup", function () { dr = null; de.classList.remove("drag"); });
 window.addEventListener("storage", function (ev) { if (ev.key === ZK) { z = parseFloat(ev.newValue) || 1; zoom(); } });
 var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(zoom, 150); });
+window.addEventListener("load", zoom);
 zoom(); })();
 (function () {
 /* Koko näyttö kehyksessä (Jouni 15.11.2026: "koko näytön tila pomppaa pois, kun ylävalikosta vaihtaa sivua"): selain
