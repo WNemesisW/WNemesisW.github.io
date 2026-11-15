@@ -66,6 +66,9 @@ h1 { margin: 8px 0 0; font-size: 26px; line-height: 1.15; font-weight: 650; lett
 html[data-theme="dark"] .t-moon, html[data-theme="light"] .t-sun { display: none; }
 /* Koko näytön tila (kuten uhkaskenaariokartassa): otsikko ja alalaita piiloon, kartta täyttää näytön; yläpalkin
    välilehdet ja valinnat jäävät näkyviin (Jouni 15.11.2026) */
+.mnote { display: flex; gap: 10px; align-items: center; margin: 4px 0 10px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line);
+  background: var(--panel); font-size: 13px; color: var(--ink2, var(--ink)); } .mnote p { margin: 0; flex: 1; }
+.mnote button { flex: none; padding: 6px 12px; border-radius: 999px; border: 0; background: var(--accent); color: var(--bg); font: inherit; font-weight: 650; cursor: pointer; }
 html.fs .fs-max, html:not(.fs) .fs-min { display: none; }
 html.fs { background: var(--bg); } html.fs body { overflow-y: auto; }
 html.fs .topbar, html.fs .ph, html.fs footer { display: none; }
@@ -172,7 +175,12 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 /* Mikä olisi voinut auttaa: vihreä (puolustus), vaiheen numero ympyrässä */
 .guide{margin-top:16px;padding:14px 16px 6px;border-radius:16px;border:1px solid color-mix(in srgb,var(--g-green) 35%,var(--g-line));
   background:color-mix(in srgb,var(--g-green) 6%,transparent)}
-.guide h3{display:flex;align-items:center;gap:8px;margin:0;font-size:13.5px;font-weight:700;color:var(--g-ink)}
+.guide h3{display:inline-flex;align-items:center;gap:8px;margin:0;font-size:13.5px;font-weight:700;color:var(--g-ink)}
+.guide summary{cursor:pointer;list-style:none}.guide summary::-webkit-details-marker{display:none}
+.guide summary::after{content:"▾";margin-left:8px;color:var(--g-muted);font-size:12px}.guide:not([open]) summary::after{content:"▸"}
+.guide:not([open]){padding-bottom:12px}
+/* Mobiilissa tekniset lisärivit pois (tiivistys); tiedot ovat lähdesivulla */
+@media (max-width:760px){.caps .tech{display:none}}
 .guide h3 svg{width:18px;height:18px;color:var(--g-green);flex:none}
 .guide .glead{margin:4px 0 0;font-size:12.5px;color:var(--g-muted)}
 .guide ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:10px}
@@ -247,6 +255,10 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 .rg{fill:none;stroke:var(--g-red);stroke-width:2}
 .cim{fill:none;stroke:var(--g-ink2);stroke-width:2;stroke-dasharray:5 4}
 .ctg{fill:var(--g-panel);stroke:var(--g-line);stroke-width:1.2}.ctgt{fill:var(--g-ink);font-size:11px;font-weight:700}
+.tkb{fill:var(--g-panel);stroke:var(--g-line);stroke-width:1}.tkt{fill:var(--g-ink);font-weight:700}.tks{fill:var(--g-muted);font-weight:600}
+.tk{opacity:0;animation:tkshow var(--len) linear var(--t0) both}.tk.tkl{opacity:1;animation:stepin .5s ease var(--t0) both}
+@keyframes tkshow{0%{opacity:0}6%{opacity:1}90%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.tk{animation:none}}
 .sst{fill:var(--g-red)}.sstt{fill:var(--g-onred);font-size:11px;font-weight:700}
 .ctgp{fill:var(--g-muted);font-size:9.5px;font-weight:700;letter-spacing:.08em}
 .cim2{fill:none;stroke:var(--g-ink2);stroke-width:2}
@@ -405,6 +417,27 @@ if (emb) {
   var chg = function () { if (wrap && !fsel()) { shut(); } };
   document.addEventListener("fullscreenchange", chg); document.addEventListener("webkitfullscreenchange", chg);
   return; }
+})();
+(function () {
+/* Mobiilin ensikäynnin ilmoitus (Jouni 15.11.2026): visualisoinnit toimivat parhaiten isolla näytöllä. Näytetään kerran;
+   kuittaus muistetaan katsojan selaimessa. Lisäksi mobiilissa pitkät osiot (ohjeet) alkavat suljettuina. */
+var mq = window.matchMedia && window.matchMedia("(max-width: 760px)");
+if (!mq || !mq.matches) { return; }
+var g = document.querySelectorAll("details.guide[open]"); for (var i = 0; i < g.length; i++) { g[i].removeAttribute("open"); }
+var K = "ihanus-mobile-note";
+try { if (localStorage.getItem(K)) { return; } } catch (x) { return; }
+if (window.top !== window) { return; }
+var T = {fi: ["Sivu toimii parhaiten isolla näytöllä.", "Puhelimella voit napauttaa kortteja ja seurata vaiheita kuvan yläreunasta.", "Selvä"],
+  en: ["This page works best on a large screen.", "On a phone you can tap the cards and follow the steps at the top of the image.", "Got it"],
+  sv: ["Sidan fungerar bäst på en stor skärm.", "På telefonen kan du trycka på korten och följa stegen överst i bilden.", "Uppfattat"]};
+var t = T[document.documentElement.lang] || T.fi, inner = document.querySelector(".inner"), nav = document.querySelector(".subnav");
+if (!inner) { return; }
+var d = document.createElement("div"); d.className = "mnote"; d.setAttribute("role", "note");
+var p = document.createElement("p"), b = document.createElement("b"); b.textContent = t[0]; p.appendChild(b); p.appendChild(document.createTextNode(" " + t[1]));
+var btn = document.createElement("button"); btn.type = "button"; btn.textContent = t[2];
+d.appendChild(p); d.appendChild(btn);
+if (nav && nav.parentNode === inner) { inner.insertBefore(d, nav.nextSibling); } else { inner.insertBefore(d, inner.firstChild); }
+btn.addEventListener("click", function () { try { localStorage.setItem(K, "1"); } catch (x) {} d.parentNode.removeChild(d); });
 })();</script>
 {% endraw %}{% include analytics-providers/custom.html %}
 </body>
