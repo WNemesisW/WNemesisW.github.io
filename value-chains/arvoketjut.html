@@ -114,8 +114,8 @@ html[data-theme="light"] .sn[aria-current="page"] { color: #fff; background: rgb
 html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-ink:#0f172a;--g-ink2:#334155;--g-muted:#586579;--g-accent:#0e7490;--g-red:#dc2626;--g-green:#047857;--g-pwr:#b45309;--g-onred:#ffffff;--g-chip:#d5deea;--g-line:#c9d3e0;--g-flowp:#fff3c4;--g-flowr:#ffffff;--g-obj:#1e293b;--g-frame:rgba(15, 23, 42, .16);--g-bad:#dc2626;--g-onbad:#ffffff; }
 #i-m:checked~.inner label[for=i-m],#i-gen:checked~.inner label[for=i-gen],#i-npt:checked~.inner label[for=i-npt],#i-vst:checked~.inner label[for=i-vst],#i-ksy:checked~.inner label[for=i-ksy],#i-tvy:checked~.inner label[for=i-tvy],#i-chg:checked~.inner label[for=i-chg],#i-crw:checked~.inner label[for=i-crw]{background:var(--g-accent);border-color:var(--g-accent);color:var(--g-bg)}
 #i-m:focus-visible~.inner label[for=i-m],#i-gen:focus-visible~.inner label[for=i-gen],#i-npt:focus-visible~.inner label[for=i-npt],#i-vst:focus-visible~.inner label[for=i-vst],#i-ksy:focus-visible~.inner label[for=i-ksy],#i-tvy:focus-visible~.inner label[for=i-tvy],#i-chg:focus-visible~.inner label[for=i-chg],#i-crw:focus-visible~.inner label[for=i-crw]{outline:2px solid var(--g-ink);outline-offset:2px}
-#i-m:checked~.inner .cap-m,#i-gen:checked~.inner .cap-gen,#i-npt:checked~.inner .cap-npt,#i-vst:checked~.inner .cap-vst,#i-ksy:checked~.inner .cap-ksy,#i-tvy:checked~.inner .cap-tvy,#i-chg:checked~.inner .cap-chg,#i-crw:checked~.inner .cap-crw{display:block;opacity:1;animation:swapin .8s ease 0.8s both}
-#i-gen:checked~.inner .ov-gen,#i-npt:checked~.inner .ov-npt,#i-vst:checked~.inner .ov-vst,#i-ksy:checked~.inner .ov-ksy,#i-tvy:checked~.inner .ov-tvy,#i-chg:checked~.inner .ov-chg,#i-crw:checked~.inner .ov-crw{display:inline;opacity:1;animation:swapin .8s ease 0.8s both}
+#i-m:checked~.inner .cap-m,#i-gen:checked~.inner .cap-gen,#i-npt:checked~.inner .cap-npt,#i-vst:checked~.inner .cap-vst,#i-ksy:checked~.inner .cap-ksy,#i-tvy:checked~.inner .cap-tvy,#i-chg:checked~.inner .cap-chg,#i-crw:checked~.inner .cap-crw{display:block;opacity:1;animation:swapin .8s ease 0.8s backwards}
+#i-gen:checked~.inner .ov-gen,#i-npt:checked~.inner .ov-npt,#i-vst:checked~.inner .ov-vst,#i-ksy:checked~.inner .ov-ksy,#i-tvy:checked~.inner .ov-tvy,#i-chg:checked~.inner .ov-chg,#i-crw:checked~.inner .ov-crw{display:inline;opacity:1;animation:swapin .8s ease 0.8s backwards}
 #i-gen:checked~.inner .n:not(.in-gen),#i-npt:checked~.inner .n:not(.in-npt),#i-vst:checked~.inner .n:not(.in-vst),#i-ksy:checked~.inner .n:not(.in-ksy),#i-tvy:checked~.inner .n:not(.in-tvy),#i-chg:checked~.inner .n:not(.in-chg),#i-crw:checked~.inner .n:not(.in-crw){opacity:.3}
 
 .vr{position:absolute;opacity:0;pointer-events:none}
@@ -355,8 +355,8 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 @media (prefers-reduced-motion:reduce){.ov .arn,.ov .arnh,.ov .ar,.ov .arh,.ov .rlb{animation:none}}
 .om,.n>.nd,.n>.cnl,.k-IN>text{transition:opacity .8s ease}
 @supports (transition-behavior:allow-discrete){.om,.n>.nd,.n>.cnl,.k-IN>text{transition:opacity .8s ease,display .8s allow-discrete}}
-.om{opacity:0}.n>.nd,.n>.cnl,.k-IN>text{animation:swapin .8s ease .8s both}
-#i-m:checked~.inner .om{display:inline;opacity:1;animation:swapin .8s ease .8s both}
+.om{opacity:0}.n>.nd,.n>.cnl,.k-IN>text{animation:swapin .8s ease .8s backwards}
+#i-m:checked~.inner .om{display:inline;opacity:1;animation:swapin .8s ease .8s backwards}
 #i-m:checked~.inner .n>.nd,#i-m:checked~.inner .n>.cnl,#i-m:checked~.inner .k-IN>text{display:none;opacity:0;animation:none}
 .cnet{transition:opacity .8s ease .8s}#i-m:checked~.inner .cnet{opacity:0;transition:opacity .8s ease}
 @media (prefers-reduced-motion:reduce){.om,.n>.nd,.n>.cnl,.k-IN>text,.ndi{transition:none;animation:none!important}}
