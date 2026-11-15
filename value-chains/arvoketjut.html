@@ -114,10 +114,8 @@ html[data-theme="light"] .sn[aria-current="page"] { color: #fff; background: rgb
 html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-ink:#0f172a;--g-ink2:#334155;--g-muted:#586579;--g-accent:#0e7490;--g-red:#dc2626;--g-green:#047857;--g-pwr:#b45309;--g-onred:#ffffff;--g-chip:#d5deea;--g-line:#c9d3e0;--g-flowp:#fff3c4;--g-flowr:#ffffff;--g-obj:#1e293b;--g-frame:rgba(15, 23, 42, .16);--g-bad:#dc2626;--g-onbad:#ffffff; }
 #i-m:checked~.inner label[for=i-m],#i-gen:checked~.inner label[for=i-gen],#i-npt:checked~.inner label[for=i-npt],#i-vst:checked~.inner label[for=i-vst],#i-ksy:checked~.inner label[for=i-ksy],#i-tvy:checked~.inner label[for=i-tvy],#i-chg:checked~.inner label[for=i-chg],#i-crw:checked~.inner label[for=i-crw]{background:var(--g-accent);border-color:var(--g-accent);color:var(--g-bg)}
 #i-m:focus-visible~.inner label[for=i-m],#i-gen:focus-visible~.inner label[for=i-gen],#i-npt:focus-visible~.inner label[for=i-npt],#i-vst:focus-visible~.inner label[for=i-vst],#i-ksy:focus-visible~.inner label[for=i-ksy],#i-tvy:focus-visible~.inner label[for=i-tvy],#i-chg:focus-visible~.inner label[for=i-chg],#i-crw:focus-visible~.inner label[for=i-crw]{outline:2px solid var(--g-ink);outline-offset:2px}
-#i-m:checked~.inner .cap-m,#i-gen:checked~.inner .cap-gen,#i-npt:checked~.inner .cap-npt,#i-vst:checked~.inner .cap-vst,#i-ksy:checked~.inner .cap-ksy,#i-tvy:checked~.inner .cap-tvy,#i-chg:checked~.inner .cap-chg,#i-crw:checked~.inner .cap-crw{display:block;opacity:1;transition:opacity .8s ease 0.8s}
-#i-gen:checked~.inner .ov-gen,#i-npt:checked~.inner .ov-npt,#i-vst:checked~.inner .ov-vst,#i-ksy:checked~.inner .ov-ksy,#i-tvy:checked~.inner .ov-tvy,#i-chg:checked~.inner .ov-chg,#i-crw:checked~.inner .ov-crw{display:inline;opacity:1;transition:opacity .8s ease 0.8s}
-@supports (transition-behavior:allow-discrete){#i-m:checked~.inner .cap-m,#i-gen:checked~.inner .cap-gen,#i-npt:checked~.inner .cap-npt,#i-vst:checked~.inner .cap-vst,#i-ksy:checked~.inner .cap-ksy,#i-tvy:checked~.inner .cap-tvy,#i-chg:checked~.inner .cap-chg,#i-crw:checked~.inner .cap-crw,#i-gen:checked~.inner .ov-gen,#i-npt:checked~.inner .ov-npt,#i-vst:checked~.inner .ov-vst,#i-ksy:checked~.inner .ov-ksy,#i-tvy:checked~.inner .ov-tvy,#i-chg:checked~.inner .ov-chg,#i-crw:checked~.inner .ov-crw{transition:opacity .8s ease 0.8s,display 0s allow-discrete}}
-@starting-style{#i-m:checked~.inner .cap-m,#i-gen:checked~.inner .cap-gen,#i-npt:checked~.inner .cap-npt,#i-vst:checked~.inner .cap-vst,#i-ksy:checked~.inner .cap-ksy,#i-tvy:checked~.inner .cap-tvy,#i-chg:checked~.inner .cap-chg,#i-crw:checked~.inner .cap-crw,#i-gen:checked~.inner .ov-gen,#i-npt:checked~.inner .ov-npt,#i-vst:checked~.inner .ov-vst,#i-ksy:checked~.inner .ov-ksy,#i-tvy:checked~.inner .ov-tvy,#i-chg:checked~.inner .ov-chg,#i-crw:checked~.inner .ov-crw{opacity:0}}
+#i-m:checked~.inner .cap-m,#i-gen:checked~.inner .cap-gen,#i-npt:checked~.inner .cap-npt,#i-vst:checked~.inner .cap-vst,#i-ksy:checked~.inner .cap-ksy,#i-tvy:checked~.inner .cap-tvy,#i-chg:checked~.inner .cap-chg,#i-crw:checked~.inner .cap-crw{display:block;opacity:1;animation:swapin .8s ease 0.8s both}
+#i-gen:checked~.inner .ov-gen,#i-npt:checked~.inner .ov-npt,#i-vst:checked~.inner .ov-vst,#i-ksy:checked~.inner .ov-ksy,#i-tvy:checked~.inner .ov-tvy,#i-chg:checked~.inner .ov-chg,#i-crw:checked~.inner .ov-crw{display:inline;opacity:1;animation:swapin .8s ease 0.8s both}
 #i-gen:checked~.inner .n:not(.in-gen),#i-npt:checked~.inner .n:not(.in-npt),#i-vst:checked~.inner .n:not(.in-vst),#i-ksy:checked~.inner .n:not(.in-ksy),#i-tvy:checked~.inner .n:not(.in-tvy),#i-chg:checked~.inner .n:not(.in-chg),#i-crw:checked~.inner .n:not(.in-crw){opacity:.3}
 
 .vr{position:absolute;opacity:0;pointer-events:none}
@@ -134,10 +132,10 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
    solussa, jotta vaihtuva selite ei hyppää; ilman display-siirtymän tukea vaihto on välitön kuten ennen */
 .cap,.ov{display:none;opacity:0;transition:opacity .8s ease}
 @supports (transition-behavior:allow-discrete){.cap,.ov{transition:opacity .8s ease,display .8s allow-discrete}}
-/* Näkyviin tuleva odottaa, kunnes poistuva on häipynyt (valitun tilan siirtymä: viive SWAP) */
+@keyframes swapin{from{opacity:0}to{opacity:1}}
 .caps{display:grid}.caps>.cap{grid-area:1/1;min-width:0}
 .n{transition:opacity .8s ease .8s}
-@media (prefers-reduced-motion:reduce){.cap,.ov,.n{transition:none}}
+@media (prefers-reduced-motion:reduce){.cap,.ov,.n{transition:none;animation:none!important}}
 .caps{margin-top:14px;font-size:14px}
 .caps p{margin:0}
 .oc{color:var(--g-ink2)}
@@ -229,7 +227,7 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 .dead2{stroke:var(--g-line);stroke-width:2.2;stroke-linecap:round}
 .wdark{fill:var(--g-panel);stroke:var(--g-obj);stroke-width:.8}
 
-.pw,.fl{transition:opacity .8s ease}
+.pw,.fl{transition:opacity .8s ease .8s}
 .pwx2s{fill:none;stroke:var(--g-pwr);stroke-width:1.6;stroke-dasharray:6 4}
 .pwx2,.pwx1{fill:none;stroke:var(--g-pwr);stroke-linecap:butt;animation-timing-function:linear;animation-iteration-count:infinite}
 .pwx2{stroke-dasharray:10 8;animation-name:flow18}
@@ -329,7 +327,7 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 @media (prefers-reduced-motion:reduce){#i-crw:checked~.inner .h-crw-2.k-PM .ndi{transition:none}}
 #i-crw:checked~.inner .h-crw-3.k-TE .ndi{opacity:0.7;filter:grayscale(0.5);transition:opacity 1.1s ease 7.45s,filter 1.1s ease 7.45s}
 @media (prefers-reduced-motion:reduce){#i-crw:checked~.inner .h-crw-3.k-TE .ndi{transition:none}}
-.ndi{transition:opacity .8s ease,filter .8s ease}
+.ndi{transition:opacity .8s ease .8s,filter .8s ease .8s}
 #i-gen:checked~.inner .fh-gen-1{opacity:0;transition:opacity .9s ease 0.95s}@media (prefers-reduced-motion:reduce){#i-gen:checked~.inner .fh-gen-1{transition:none}}
 #i-gen:checked~.inner .fh-gen-2{opacity:0;transition:opacity .9s ease 3.75s}@media (prefers-reduced-motion:reduce){#i-gen:checked~.inner .fh-gen-2{transition:none}}
 #i-gen:checked~.inner .fh-gen-3{opacity:0;transition:opacity .9s ease 6.55s}@media (prefers-reduced-motion:reduce){#i-gen:checked~.inner .fh-gen-3{transition:none}}
@@ -355,15 +353,13 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 #i-chg:checked~.inner .ov-chg .arn.drw,#i-chg:checked~.inner .ov-chg .ar.drw{animation:draw 1.1s ease-in-out var(--d) both,cbg-chg 1s ease 6.15s forwards}#i-chg:checked~.inner .ov-chg .arnh,#i-chg:checked~.inner .ov-chg .arh{animation:stepin .3s ease calc(var(--d) + 1s) both,cbg-chg 1s ease 6.15s forwards}#i-chg:checked~.inner .ov-chg .rlb{animation:clb-chg 1s ease 6.15s forwards}@keyframes cbg-chg{to{opacity:.28}}@keyframes clb-chg{to{opacity:.45}}
 #i-crw:checked~.inner .ov-crw .arn.drw,#i-crw:checked~.inner .ov-crw .ar.drw{animation:draw 1.1s ease-in-out var(--d) both,cbg-crw 1s ease 8.95s forwards}#i-crw:checked~.inner .ov-crw .arnh,#i-crw:checked~.inner .ov-crw .arh{animation:stepin .3s ease calc(var(--d) + 1s) both,cbg-crw 1s ease 8.95s forwards}#i-crw:checked~.inner .ov-crw .rlb{animation:clb-crw 1s ease 8.95s forwards}@keyframes cbg-crw{to{opacity:.28}}@keyframes clb-crw{to{opacity:.45}}
 @media (prefers-reduced-motion:reduce){.ov .arn,.ov .arnh,.ov .ar,.ov .arh,.ov .rlb{animation:none}}
-.om{opacity:0;transition:opacity .8s ease}.n>.nd,.n>.cnl,.k-IN>text{transition:opacity .8s ease .8s}
-@supports (transition-behavior:allow-discrete){.om{transition:opacity .8s ease,display .8s allow-discrete}.n>.nd,.n>.cnl,.k-IN>text{transition:opacity .8s ease .8s,display 0s allow-discrete}}
-#i-m:checked~.inner .om{display:inline;opacity:1;transition:opacity .8s ease .8s}
-@supports (transition-behavior:allow-discrete){#i-m:checked~.inner .om{transition:opacity .8s ease .8s,display 0s allow-discrete}}
-#i-m:checked~.inner .n>.nd,#i-m:checked~.inner .n>.cnl,#i-m:checked~.inner .k-IN>text{display:none;opacity:0;transition:opacity .8s ease}
-@supports (transition-behavior:allow-discrete){#i-m:checked~.inner .n>.nd,#i-m:checked~.inner .n>.cnl,#i-m:checked~.inner .k-IN>text{transition:opacity .8s ease,display .8s allow-discrete}}
+.om,.n>.nd,.n>.cnl,.k-IN>text{transition:opacity .8s ease}
+@supports (transition-behavior:allow-discrete){.om,.n>.nd,.n>.cnl,.k-IN>text{transition:opacity .8s ease,display .8s allow-discrete}}
+.om{opacity:0}.n>.nd,.n>.cnl,.k-IN>text{animation:swapin .8s ease .8s both}
+#i-m:checked~.inner .om{display:inline;opacity:1;animation:swapin .8s ease .8s both}
+#i-m:checked~.inner .n>.nd,#i-m:checked~.inner .n>.cnl,#i-m:checked~.inner .k-IN>text{display:none;opacity:0;animation:none}
 .cnet{transition:opacity .8s ease .8s}#i-m:checked~.inner .cnet{opacity:0;transition:opacity .8s ease}
-@starting-style{#i-m:checked~.inner .om{opacity:0}.n>.nd,.n>.cnl{opacity:0}}
-@media (prefers-reduced-motion:reduce){.om,.n>.nd,.n>.cnl,.ndi{transition:none}}
+@media (prefers-reduced-motion:reduce){.om,.n>.nd,.n>.cnl,.k-IN>text,.ndi{transition:none;animation:none!important}}
 .fig-p .rlb{display:none}
 </style>
 </head>

@@ -114,10 +114,8 @@ html[data-theme="light"] .sn[aria-current="page"] { color: #fff; background: rgb
 html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-ink:#0f172a;--g-ink2:#334155;--g-muted:#586579;--g-accent:#0e7490;--g-red:#dc2626;--g-green:#047857;--g-pwr:#b45309;--g-onred:#ffffff;--g-chip:#d5deea;--g-line:#c9d3e0;--g-flowp:#fff3c4;--g-flowr:#ffffff;--g-obj:#1e293b;--g-frame:rgba(15, 23, 42, .16);--g-bad:#dc2626;--g-onbad:#ffffff; }
 #i-m:checked~.inner label[for=i-m],#i-bgd:checked~.inner label[for=i-bgd],#i-ion:checked~.inner label[for=i-ion],#i-tie:checked~.inner label[for=i-tie],#i-fin:checked~.inner label[for=i-fin],#i-ddos:checked~.inner label[for=i-ddos],#i-crs:checked~.inner label[for=i-crs],#i-all:checked~.inner label[for=i-all]{background:var(--g-accent);border-color:var(--g-accent);color:var(--g-bg)}
 #i-m:focus-visible~.inner label[for=i-m],#i-bgd:focus-visible~.inner label[for=i-bgd],#i-ion:focus-visible~.inner label[for=i-ion],#i-tie:focus-visible~.inner label[for=i-tie],#i-fin:focus-visible~.inner label[for=i-fin],#i-ddos:focus-visible~.inner label[for=i-ddos],#i-crs:focus-visible~.inner label[for=i-crs],#i-all:focus-visible~.inner label[for=i-all]{outline:2px solid var(--g-ink);outline-offset:2px}
-#i-m:checked~.inner .cap-m,#i-bgd:checked~.inner .cap-bgd,#i-ion:checked~.inner .cap-ion,#i-tie:checked~.inner .cap-tie,#i-fin:checked~.inner .cap-fin,#i-ddos:checked~.inner .cap-ddos,#i-crs:checked~.inner .cap-crs,#i-all:checked~.inner .cap-all{display:block;opacity:1;transition:opacity .8s ease 0.8s}
-#i-bgd:checked~.inner .ov-bgd,#i-ion:checked~.inner .ov-ion,#i-tie:checked~.inner .ov-tie,#i-fin:checked~.inner .ov-fin,#i-ddos:checked~.inner .ov-ddos,#i-crs:checked~.inner .ov-crs,#i-all:checked~.inner .ov-all{display:inline;opacity:1;transition:opacity .8s ease 0.8s}
-@supports (transition-behavior:allow-discrete){#i-m:checked~.inner .cap-m,#i-bgd:checked~.inner .cap-bgd,#i-ion:checked~.inner .cap-ion,#i-tie:checked~.inner .cap-tie,#i-fin:checked~.inner .cap-fin,#i-ddos:checked~.inner .cap-ddos,#i-crs:checked~.inner .cap-crs,#i-all:checked~.inner .cap-all,#i-bgd:checked~.inner .ov-bgd,#i-ion:checked~.inner .ov-ion,#i-tie:checked~.inner .ov-tie,#i-fin:checked~.inner .ov-fin,#i-ddos:checked~.inner .ov-ddos,#i-crs:checked~.inner .ov-crs,#i-all:checked~.inner .ov-all{transition:opacity .8s ease 0.8s,display 0s allow-discrete}}
-@starting-style{#i-m:checked~.inner .cap-m,#i-bgd:checked~.inner .cap-bgd,#i-ion:checked~.inner .cap-ion,#i-tie:checked~.inner .cap-tie,#i-fin:checked~.inner .cap-fin,#i-ddos:checked~.inner .cap-ddos,#i-crs:checked~.inner .cap-crs,#i-all:checked~.inner .cap-all,#i-bgd:checked~.inner .ov-bgd,#i-ion:checked~.inner .ov-ion,#i-tie:checked~.inner .ov-tie,#i-fin:checked~.inner .ov-fin,#i-ddos:checked~.inner .ov-ddos,#i-crs:checked~.inner .ov-crs,#i-all:checked~.inner .ov-all{opacity:0}}
+#i-m:checked~.inner .cap-m,#i-bgd:checked~.inner .cap-bgd,#i-ion:checked~.inner .cap-ion,#i-tie:checked~.inner .cap-tie,#i-fin:checked~.inner .cap-fin,#i-ddos:checked~.inner .cap-ddos,#i-crs:checked~.inner .cap-crs,#i-all:checked~.inner .cap-all{display:block;opacity:1;animation:swapin .8s ease 0.8s both}
+#i-bgd:checked~.inner .ov-bgd,#i-ion:checked~.inner .ov-ion,#i-tie:checked~.inner .ov-tie,#i-fin:checked~.inner .ov-fin,#i-ddos:checked~.inner .ov-ddos,#i-crs:checked~.inner .ov-crs,#i-all:checked~.inner .ov-all{display:inline;opacity:1;animation:swapin .8s ease 0.8s both}
 #i-bgd:checked~.inner .n:not(.in-bgd),#i-ion:checked~.inner .n:not(.in-ion),#i-tie:checked~.inner .n:not(.in-tie),#i-fin:checked~.inner .n:not(.in-fin),#i-ddos:checked~.inner .n:not(.in-ddos),#i-crs:checked~.inner .n:not(.in-crs),#i-all:checked~.inner .n:not(.in-all){opacity:.3}
 
 .vr{position:absolute;opacity:0;pointer-events:none}
@@ -134,10 +132,10 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
    solussa, jotta vaihtuva selite ei hyppää; ilman display-siirtymän tukea vaihto on välitön kuten ennen */
 .cap,.ov{display:none;opacity:0;transition:opacity .8s ease}
 @supports (transition-behavior:allow-discrete){.cap,.ov{transition:opacity .8s ease,display .8s allow-discrete}}
-/* Näkyviin tuleva odottaa, kunnes poistuva on häipynyt (valitun tilan siirtymä: viive SWAP) */
+@keyframes swapin{from{opacity:0}to{opacity:1}}
 .caps{display:grid}.caps>.cap{grid-area:1/1;min-width:0}
 .n{transition:opacity .8s ease .8s}
-@media (prefers-reduced-motion:reduce){.cap,.ov,.n{transition:none}}
+@media (prefers-reduced-motion:reduce){.cap,.ov,.n{transition:none;animation:none!important}}
 .caps{margin-top:14px;font-size:14px}
 .caps p{margin:0}
 .oc{color:var(--g-ink2)}
@@ -229,7 +227,7 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 .dead2{stroke:var(--g-line);stroke-width:2.2;stroke-linecap:round}
 .wdark{fill:var(--g-panel);stroke:var(--g-obj);stroke-width:.8}
 
-.pw,.fl{transition:opacity .8s ease}
+.pw,.fl{transition:opacity .8s ease .8s}
 .pwx2s{fill:none;stroke:var(--g-pwr);stroke-width:1.6;stroke-dasharray:6 4}
 .pwx2,.pwx1{fill:none;stroke:var(--g-pwr);stroke-linecap:butt;animation-timing-function:linear;animation-iteration-count:infinite}
 .pwx2{stroke-dasharray:10 8;animation-name:flow18}
