@@ -70,19 +70,19 @@ html.fs .topbar, html.fs .ph, html.fs footer { display: none; }
 html.fs .inner { max-width: none; padding-top: 10px; }
 html.fs .fig-w svg { max-height: calc(100vh - 190px); }
 #fsw { position: fixed; inset: 0; z-index: 99; background: var(--bg); } #fsw iframe { display: block; width: 100%; height: 100%; border: 0; }
-.zm { display: inline-flex; gap: 2px; align-items: center; } html:not(.fs) .zm { display: none; }
+.zm { display: inline-flex; gap: 2px; align-items: center; } .zm[hidden] { display: none; }
 .zr { min-width: 54px; height: 30px; padding: 0 6px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel);
   color: var(--muted); font: 600 12px/1 inherit; font-variant-numeric: tabular-nums; cursor: pointer; } .zr:hover { color: var(--ink); }
 .zm .theme:disabled { opacity: .4; cursor: default; }
 /* Zoomattu kuva vierii kehyksensä sisällä; hiirellä voi raahata */
-html.fs.zoomed .fig-w, html.fs.zoomed .fig { overflow: auto; max-height: calc(100vh - 150px); overscroll-behavior: contain; }
-html.fs.zoomed .fig-w svg, html.fs.zoomed .fig svg { max-height: none; max-width: none; margin: 0 auto; }
-html.fs.zoomed.pan .fig-w, html.fs.zoomed.pan .fig { cursor: grab; } html.fs.drag .fig-w, html.fs.drag .fig { cursor: grabbing; user-select: none; }
+html.zoomed .fig-w, html.zoomed .fig { overflow: auto; max-height: calc(100vh - 150px); overscroll-behavior: contain; }
+html.zoomed .fig-w svg, html.zoomed .fig svg { max-height: none; max-width: none; margin: 0 auto; }
+html.zoomed.pan .fig-w, html.zoomed.pan .fig { cursor: grab; } html.drag .fig-w, html.drag .fig { cursor: grabbing; user-select: none; }
 .fnote.method { margin-top: 16px; } .fnote ul { margin: 4px 0 0; padding-left: 16px; } .fnote li { margin: 6px 0; }
 .srcs { margin-top: 18px; padding: 14px 18px; border-radius: 16px; border: 1px solid var(--line); background: color-mix(in srgb, var(--panel) 60%, transparent); }
 .srcs h2 { margin: 0 0 6px; font-size: 10.5px; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .srcs ul { margin: 0; padding-left: 16px; } .srcs li { margin: 4px 0; font-size: 12.5px; color: var(--ink-2); } .srcs a { color: var(--accent); }
-footer { margin-top: 24px; font-size: 11.5px; color: var(--muted); } footer a { color: var(--accent); }
+footer { margin-top: 24px; font-size: 11.5px; color: var(--muted); } footer a { color: var(--accent); } footer .sha { margin-top: 6px; }
 .subnav { position: sticky; top: 10px; z-index: 6; display: flex; flex-wrap: wrap; gap: 3px;
   margin: 4px 0 14px; padding: 4px; border-radius: 14px; border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent);
   background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 13%, transparent), color-mix(in srgb, var(--accent) 6%, transparent)),
@@ -417,6 +417,38 @@ function sync() { var c = cur(), h = c === "m" ? "" : "#" + c;
 var h0 = (location.hash || "").slice(1); if (ids.indexOf(h0) >= 0) { var r0 = document.getElementById("i-" + h0); if (r0) { r0.checked = true; } }
 for (var k = 0; k < ids.length; k++) { var rk = document.getElementById("i-" + ids[k]); if (rk) { rk.addEventListener("change", sync); } }
 sync(); })();(function () {
+/* Zoomaus kaikissa tiloissa (Jouni 15.11.2026: myös ilman koko näyttöä): taso 50–300 % tallentuu katsojan omaan
+   selaimeen ja on sama kaikilla sivuilla; 100 % = kuva sovitettuna. Erillään koko näytön koodista. */
+var de = document.documentElement;
+function cur() { return true; }
+var ZK = "ihanus-zoom", zm = document.querySelector(".zm"), zr = zm && zm.querySelector(".zr"), z = 1;
+try { z = parseFloat(localStorage.getItem(ZK)) || 1; } catch (x) {}
+function figs() { var o = [], s = document.querySelectorAll(".fig-w > svg, .fig > svg"); for (var i = 0; i < s.length; i++) { if (s[i].getClientRects().length) { o.push(s[i]); } } return o; }
+function zoom() { var on = !!cur(); de.classList.toggle("zoomed", on && z !== 1); de.classList.toggle("pan", on && z > 1);
+  var s = document.querySelectorAll(".fig-w > svg, .fig > svg"); for (var i = 0; i < s.length; i++) { s[i].style.width = ""; s[i].style.height = ""; }
+  if (zr) { zr.textContent = Math.round(z * 100) + " %"; zm.querySelector('[data-z="-1"]').disabled = z <= 0.5; zm.querySelector('[data-z="1"]').disabled = z >= 3; }
+  if (!on || z === 1) { return; }
+  de.classList.remove("zoomed"); var f = figs(), r = [];
+  for (var j = 0; j < f.length; j++) { var vb = f[j].viewBox.baseVal, bx = f[j].getBoundingClientRect(), k = Math.min(bx.width / vb.width, bx.height / vb.height); r.push([f[j], vb.width * k, vb.height * k]); }
+  de.classList.add("zoomed");
+  for (var m = 0; m < r.length; m++) { r[m][0].style.width = Math.round(r[m][1] * z) + "px"; r[m][0].style.height = Math.round(r[m][2] * z) + "px"; } }
+function setz(nz) { var f = figs()[0], p = f && f.parentNode, cx = 0.5, cy = 0.5;
+  if (p && z !== 1 && p.scrollWidth) { cx = (p.scrollLeft + p.clientWidth / 2) / p.scrollWidth; cy = (p.scrollTop + p.clientHeight / 2) / p.scrollHeight; }
+  z = Math.round(Math.min(3, Math.max(0.5, nz)) * 100) / 100; try { localStorage.setItem(ZK, String(z)); } catch (x) {}
+  zoom(); if (p && z !== 1) { p.scrollLeft = cx * p.scrollWidth - p.clientWidth / 2; p.scrollTop = cy * p.scrollHeight - p.clientHeight / 2; } }
+if (zm) { zm.hidden = false; zm.addEventListener("click", function (ev) { var t = ev.target.closest && ev.target.closest("[data-z]"); if (!t) { return; }
+  var d = +t.getAttribute("data-z"); setz(d === 0 ? 1 : d > 0 ? z * 1.25 : z / 1.25); }); }
+document.addEventListener("keydown", function (ev) { if (!cur() || ev.ctrlKey || ev.metaKey || ev.altKey || /INPUT|TEXTAREA|SELECT/.test(ev.target.tagName)) { return; }
+  if (ev.key === "+" || ev.key === "=") { setz(z * 1.25); ev.preventDefault(); } else if (ev.key === "-") { setz(z / 1.25); ev.preventDefault(); } else if (ev.key === "0") { setz(1); ev.preventDefault(); } });
+var dr = null;
+document.addEventListener("pointerdown", function (ev) { if (!cur() || z <= 1 || ev.pointerType !== "mouse" || ev.button !== 0) { return; }
+  var p = ev.target.closest && ev.target.closest(".fig-w, .fig"); if (!p) { return; } dr = [p, ev.clientX, ev.clientY, p.scrollLeft, p.scrollTop]; de.classList.add("drag"); });
+document.addEventListener("pointermove", function (ev) { if (dr) { dr[0].scrollLeft = dr[3] - (ev.clientX - dr[1]); dr[0].scrollTop = dr[4] - (ev.clientY - dr[2]); } });
+document.addEventListener("pointerup", function () { dr = null; de.classList.remove("drag"); });
+window.addEventListener("storage", function (ev) { if (ev.key === ZK) { z = parseFloat(ev.newValue) || 1; zoom(); } });
+var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(zoom, 150); });
+zoom(); })();
+(function () {
 /* Koko näyttö kehyksessä (Jouni 15.11.2026: "koko näytön tila pomppaa pois, kun ylävalikosta vaihtaa sivua"): selain
    poistuu koko näytöstä aina, kun sivu vaihtuu. Siksi koko näyttöön viedään kehys (#fsw), jossa sivu on upotettuna
    (#fsf); ylävalikon linkit vaihtavat vain kehyksen sivua ja tila säilyy. Poistuttaessa sivusto jää viimeksi
@@ -457,34 +489,7 @@ if (emb) {
   var chg = function () { if (wrap && !fsel()) { shut(); } };
   document.addEventListener("fullscreenchange", chg); document.addEventListener("webkitfullscreenchange", chg);
   return; }
-/* Zoomaus: taso (50–300 %) tallentuu katsojan omaan selaimeen ja on sama kaikilla sivuilla (Jouni 15.11.2026);
-   100 % = kuva sovitettuna näyttöön */
-var ZK = "ihanus-zoom", zm = document.querySelector(".zm"), zr = zm && zm.querySelector(".zr"), z = 1;
-try { z = parseFloat(localStorage.getItem(ZK)) || 1; } catch (x) {}
-function figs() { var o = [], s = document.querySelectorAll(".fig-w > svg, .fig > svg"); for (var i = 0; i < s.length; i++) { if (s[i].getClientRects().length) { o.push(s[i]); } } return o; }
-function zoom() { var on = !!cur(); de.classList.toggle("zoomed", on && z !== 1); de.classList.toggle("pan", on && z > 1);
-  var s = document.querySelectorAll(".fig-w > svg, .fig > svg"); for (var i = 0; i < s.length; i++) { s[i].style.width = ""; s[i].style.height = ""; }
-  if (zr) { zr.textContent = Math.round(z * 100) + " %"; zm.querySelector('[data-z="-1"]').disabled = z <= 0.5; zm.querySelector('[data-z="1"]').disabled = z >= 3; }
-  if (!on || z === 1) { return; }
-  de.classList.remove("zoomed"); var f = figs(), r = [];
-  for (var j = 0; j < f.length; j++) { var vb = f[j].viewBox.baseVal, bx = f[j].getBoundingClientRect(), k = Math.min(bx.width / vb.width, bx.height / vb.height); r.push([f[j], vb.width * k, vb.height * k]); }
-  de.classList.add("zoomed");
-  for (var m = 0; m < r.length; m++) { r[m][0].style.width = Math.round(r[m][1] * z) + "px"; r[m][0].style.height = Math.round(r[m][2] * z) + "px"; } }
-function setz(nz) { var f = figs()[0], p = f && f.parentNode, cx = 0.5, cy = 0.5;
-  if (p && z !== 1 && p.scrollWidth) { cx = (p.scrollLeft + p.clientWidth / 2) / p.scrollWidth; cy = (p.scrollTop + p.clientHeight / 2) / p.scrollHeight; }
-  z = Math.round(Math.min(3, Math.max(0.5, nz)) * 100) / 100; try { localStorage.setItem(ZK, String(z)); } catch (x) {}
-  zoom(); if (p && z !== 1) { p.scrollLeft = cx * p.scrollWidth - p.clientWidth / 2; p.scrollTop = cy * p.scrollHeight - p.clientHeight / 2; } }
-if (zm) { zm.hidden = false; zm.addEventListener("click", function (ev) { var t = ev.target.closest && ev.target.closest("[data-z]"); if (!t) { return; }
-  var d = +t.getAttribute("data-z"); setz(d === 0 ? 1 : d > 0 ? z * 1.25 : z / 1.25); }); }
-document.addEventListener("keydown", function (ev) { if (!cur() || ev.ctrlKey || ev.metaKey || ev.altKey || /INPUT|TEXTAREA|SELECT/.test(ev.target.tagName)) { return; }
-  if (ev.key === "+" || ev.key === "=") { setz(z * 1.25); ev.preventDefault(); } else if (ev.key === "-") { setz(z / 1.25); ev.preventDefault(); } else if (ev.key === "0") { setz(1); ev.preventDefault(); } });
-var dr = null;
-document.addEventListener("pointerdown", function (ev) { if (!cur() || z <= 1 || ev.pointerType !== "mouse" || ev.button !== 0) { return; }
-  var p = ev.target.closest && ev.target.closest(".fig-w, .fig"); if (!p) { return; } dr = [p, ev.clientX, ev.clientY, p.scrollLeft, p.scrollTop]; de.classList.add("drag"); });
-document.addEventListener("pointermove", function (ev) { if (dr) { dr[0].scrollLeft = dr[3] - (ev.clientX - dr[1]); dr[0].scrollTop = dr[4] - (ev.clientY - dr[2]); } });
-document.addEventListener("pointerup", function () { dr = null; de.classList.remove("drag"); });
-var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(zoom, 150); });
-zoom(); })();</script>
+})();</script>
 {% endraw %}{% include analytics-providers/custom.html %}
 </body>
 </html>
