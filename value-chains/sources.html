@@ -62,12 +62,21 @@ h1 { margin: 8px 0 0; font-size: 26px; line-height: 1.15; font-weight: 650; lett
 .theme { display: inline-grid; place-items: center; width: 32px; height: 30px; padding: 0; border-radius: 999px; color: var(--muted); background: var(--panel);
   border: 1px solid var(--line); cursor: pointer; } .theme:hover { color: var(--ink); } .theme svg { width: 16px; height: 16px; }
 html[data-theme="dark"] .t-moon, html[data-theme="light"] .t-sun { display: none; }
-/* Koko näytön tila (kuten uhkaskenaariokartassa): otsikko, välilehdet ja alalaita piiloon, kartta täyttää näytön */
+/* Koko näytön tila (kuten uhkaskenaariokartassa): otsikko ja alalaita piiloon, kartta täyttää näytön; yläpalkin
+   välilehdet ja valinnat jäävät näkyviin (Jouni 15.11.2026) */
 html.fs .fs-max, html:not(.fs) .fs-min { display: none; }
 html.fs { background: var(--bg); } html.fs body { overflow-y: auto; }
-html.fs .topbar, html.fs .ph, html.fs footer, html.fs .subnav .sn { display: none; }
+html.fs .topbar, html.fs .ph, html.fs footer { display: none; }
 html.fs .inner { max-width: none; padding-top: 10px; }
-html.fs .fig-w svg { max-height: calc(100vh - 120px); }
+html.fs .fig-w svg { max-height: calc(100vh - 190px); }
+.zm { display: inline-flex; gap: 2px; align-items: center; } html:not(.fs) .zm { display: none; }
+.zr { min-width: 54px; height: 30px; padding: 0 6px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel);
+  color: var(--muted); font: 600 12px/1 inherit; font-variant-numeric: tabular-nums; cursor: pointer; } .zr:hover { color: var(--ink); }
+.zm .theme:disabled { opacity: .4; cursor: default; }
+/* Zoomattu kuva vierii kehyksensä sisällä; hiirellä voi raahata */
+html.fs.zoomed .fig-w, html.fs.zoomed .fig { overflow: auto; max-height: calc(100vh - 150px); overscroll-behavior: contain; }
+html.fs.zoomed .fig-w svg, html.fs.zoomed .fig svg { max-height: none; max-width: none; margin: 0 auto; }
+html.fs.zoomed.pan .fig-w, html.fs.zoomed.pan .fig { cursor: grab; } html.fs.drag .fig-w, html.fs.drag .fig { cursor: grabbing; user-select: none; }
 .fnote.method { margin-top: 16px; } .fnote ul { margin: 4px 0 0; padding-left: 16px; } .fnote li { margin: 6px 0; }
 .srcs { margin-top: 18px; padding: 14px 18px; border-radius: 16px; border: 1px solid var(--line); background: color-mix(in srgb, var(--panel) 60%, transparent); }
 .srcs h2 { margin: 0 0 6px; font-size: 10.5px; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
@@ -150,7 +159,7 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 .sec{display:inline-block;margin-left:4px;padding:0 6px;border:1px solid var(--g-line);border-radius:999px;font-size:11.5px;color:var(--g-muted);white-space:nowrap}
 .caps .target{margin-top:14px;padding-left:10px;border-left:3px solid var(--g-green)}
 .caps .srcl{margin-top:8px;font-size:13px}
-.srcl a{color:var(--g-accent)}
+.srcl a{color:var(--g-accent)}.srcl .msl{color:var(--g-muted)}.srcl .sep{margin:0 8px;color:var(--g-muted)}
 .legend{list-style:none;display:flex;flex-wrap:wrap;gap:6px 16px;margin:16px 0 0;padding:12px 0 0;border-top:1px solid var(--g-line);font-size:12.5px;color:var(--g-ink2)}
 .legend li{display:inline-flex;align-items:center;gap:6px}
 .legend svg{flex:none}
@@ -213,6 +222,7 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 .rg{fill:none;stroke:var(--g-red);stroke-width:2}
 .cim{fill:none;stroke:var(--g-ink2);stroke-width:2;stroke-dasharray:5 4}
 .ctg{fill:var(--g-panel);stroke:var(--g-line);stroke-width:1.2}.ctgt{fill:var(--g-ink);font-size:11px;font-weight:700}
+.sst{fill:var(--g-panel);stroke:var(--g-bad);stroke-opacity:.55;stroke-width:1}.sstt{fill:var(--g-ink);font-size:10.5px;font-weight:650}
 .ctgp{fill:var(--g-muted);font-size:9.5px;font-weight:700;letter-spacing:.08em}
 .cim2{fill:none;stroke:var(--g-ink2);stroke-width:2}
 .bx{fill:var(--g-red);stroke:var(--g-gnd);stroke-width:1.5}
@@ -360,14 +370,50 @@ section.chs{margin-top:34px;padding-top:6px;border-top:1px solid var(--g-line)}s
 <section class="srcs corr" id="corrections"><h2>Corrections and feedback</h2><p>Spotted an error or a misreading? Let me know on <a href="https://www.linkedin.com/in/jouni-ihanus-71651441/" target="_blank" rel="noopener noreferrer">LinkedIn</a>. Content corrections after publication and changes made in response to feedback are listed here with their dates.</p><p class="none">No corrections recorded yet.</p></section>
 <footer>Compiled by Jouni Ihanus, 14 Nov 2026.<div class="cr" style="margin-top:4px">© 2026 Jouni Ihanus. Texts, maps, drawings and compilations; source data, quotations and icons under their own terms.</div></footer>
 </div>
-<script>document.getElementById("theme").addEventListener("click", function () { var h = document.documentElement, t = h.getAttribute("data-theme") === "dark" ? "light" : "dark"; h.setAttribute("data-theme", t); try { localStorage.setItem("theme", t); } catch (e) {} });(function () { var b = document.getElementById("fs"); if (!b) { return; }
+<script>document.getElementById("theme").addEventListener("click", function () { var h = document.documentElement, t = h.getAttribute("data-theme") === "dark" ? "light" : "dark"; h.setAttribute("data-theme", t); try { localStorage.setItem("theme", t); } catch (e) {} });(function () { var K = "ihanus-fs", want = false;
+try { want = sessionStorage.getItem(K) === "1"; sessionStorage.removeItem(K); } catch (x) {}
+var b = document.getElementById("fs"); if (!b) { return; }
 var de = document.documentElement, req = de.requestFullscreen || de.webkitRequestFullscreen, ex = document.exitFullscreen || document.webkitExitFullscreen;
 if (!req || !ex || !(document.fullscreenEnabled || document.webkitFullscreenEnabled)) { return; }
 function cur() { return document.fullscreenElement || document.webkitFullscreenElement; }
 function lab() { var on = !!cur(); b.title = b.getAttribute(on ? "data-off" : "data-on"); b.setAttribute("aria-label", b.title); b.setAttribute("aria-pressed", on ? "true" : "false"); }
-function sync() { de.classList.toggle("fs", !!cur()); lab(); }
+function sync() { de.classList.toggle("fs", !!cur()); lab(); if (typeof zoom === "function") { zoom(); } }
+function go() { var p = req.call(de); if (p && p.catch) { p.catch(function () {}); } }
 b.hidden = false;
-b.addEventListener("click", function () { var p = cur() ? ex.call(document) : req.call(de); if (p && p.catch) { p.catch(function () {}); } });
+b.addEventListener("click", function () { if (cur()) { var p = ex.call(document); if (p && p.catch) { p.catch(function () {}); } } else { go(); } });
+/* Selain poistuu koko näytöstä sivua vaihdettaessa: yläpalkin linkistä siirryttäessä tila palautuu uudella sivulla
+   ensimmäisestä painalluksesta (koko näyttö vaatii käyttäjän eleen) */
+var nv = document.querySelector(".subnav");
+if (nv) { nv.addEventListener("click", function (ev) { var a = ev.target.closest && ev.target.closest("a[href]");
+  if (a && cur()) { try { sessionStorage.setItem(K, "1"); } catch (x) {} } }); }
+if (want) { var once = function (ev) { if (ev.key === "Escape" || (ev.target.closest && ev.target.closest("#fs"))) { return; } if (!cur()) { go(); } };
+  document.addEventListener("pointerup", once, { once: true }); document.addEventListener("keydown", once, { once: true }); }
+/* Zoomaus: taso (50–300 %) tallentuu katsojan omaan selaimeen sivukohtaisesti; 100 % = kuva sovitettuna näyttöön */
+var ZK = "ihanus-zoom:" + location.pathname.replace(/[^\/]*$/, ""), zm = document.querySelector(".zm"), zr = zm && zm.querySelector(".zr"), z = 1;
+try { z = parseFloat(localStorage.getItem(ZK)) || 1; } catch (x) {}
+function figs() { var o = [], s = document.querySelectorAll(".fig-w > svg, .fig > svg"); for (var i = 0; i < s.length; i++) { if (s[i].getClientRects().length) { o.push(s[i]); } } return o; }
+function zoom() { var on = !!cur(); de.classList.toggle("zoomed", on && z !== 1); de.classList.toggle("pan", on && z > 1);
+  var s = document.querySelectorAll(".fig-w > svg, .fig > svg"); for (var i = 0; i < s.length; i++) { s[i].style.width = ""; s[i].style.height = ""; }
+  if (zr) { zr.textContent = Math.round(z * 100) + " %"; zm.querySelector('[data-z="-1"]').disabled = z <= 0.5; zm.querySelector('[data-z="1"]').disabled = z >= 3; }
+  if (!on || z === 1) { return; }
+  de.classList.remove("zoomed"); var f = figs(), r = [];
+  for (var j = 0; j < f.length; j++) { var vb = f[j].viewBox.baseVal, bx = f[j].getBoundingClientRect(), k = Math.min(bx.width / vb.width, bx.height / vb.height); r.push([f[j], vb.width * k, vb.height * k]); }
+  de.classList.add("zoomed");
+  for (var m = 0; m < r.length; m++) { r[m][0].style.width = Math.round(r[m][1] * z) + "px"; r[m][0].style.height = Math.round(r[m][2] * z) + "px"; } }
+function setz(nz) { var f = figs()[0], p = f && f.parentNode, cx = 0.5, cy = 0.5;
+  if (p && z !== 1 && p.scrollWidth) { cx = (p.scrollLeft + p.clientWidth / 2) / p.scrollWidth; cy = (p.scrollTop + p.clientHeight / 2) / p.scrollHeight; }
+  z = Math.round(Math.min(3, Math.max(0.5, nz)) * 100) / 100; try { localStorage.setItem(ZK, String(z)); } catch (x) {}
+  zoom(); if (p && z !== 1) { p.scrollLeft = cx * p.scrollWidth - p.clientWidth / 2; p.scrollTop = cy * p.scrollHeight - p.clientHeight / 2; } }
+if (zm) { zm.hidden = false; zm.addEventListener("click", function (ev) { var t = ev.target.closest && ev.target.closest("[data-z]"); if (!t) { return; }
+  var d = +t.getAttribute("data-z"); setz(d === 0 ? 1 : d > 0 ? z * 1.25 : z / 1.25); }); }
+document.addEventListener("keydown", function (ev) { if (!cur() || ev.ctrlKey || ev.metaKey || ev.altKey || /INPUT|TEXTAREA|SELECT/.test(ev.target.tagName)) { return; }
+  if (ev.key === "+" || ev.key === "=") { setz(z * 1.25); ev.preventDefault(); } else if (ev.key === "-") { setz(z / 1.25); ev.preventDefault(); } else if (ev.key === "0") { setz(1); ev.preventDefault(); } });
+var dr = null;
+document.addEventListener("pointerdown", function (ev) { if (!cur() || z <= 1 || ev.pointerType !== "mouse" || ev.button !== 0) { return; }
+  var p = ev.target.closest && ev.target.closest(".fig-w, .fig"); if (!p) { return; } dr = [p, ev.clientX, ev.clientY, p.scrollLeft, p.scrollTop]; de.classList.add("drag"); });
+document.addEventListener("pointermove", function (ev) { if (dr) { dr[0].scrollLeft = dr[3] - (ev.clientX - dr[1]); dr[0].scrollTop = dr[4] - (ev.clientY - dr[2]); } });
+document.addEventListener("pointerup", function () { dr = null; de.classList.remove("drag"); });
+var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(zoom, 150); });
 document.addEventListener("fullscreenchange", sync); document.addEventListener("webkitfullscreenchange", sync); })();</script>
 {% endraw %}{% include analytics-providers/custom.html %}
 </body>
