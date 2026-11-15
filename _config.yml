@@ -189,7 +189,7 @@ exclude:
   - gulpfile.js
   - LICENSE
   - local
-  - log
+  # "log" poistettu 15.11.2026: Jekyll vertaa poissulkuja polun alkuun, ja se jätti /logistics-chain/ rakennuksen ulkopuolelle
   - node_modules
   - package.json*
   - Rakefile
