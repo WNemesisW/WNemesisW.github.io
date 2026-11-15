@@ -316,13 +316,21 @@ var ZK = "ihanus-zoom", zm = document.querySelector(".zm"), zr = zm && zm.queryS
 try { z = parseFloat(localStorage.getItem(ZK)) || 1; } catch (x) {}
 function figs() { var o = [], s = document.querySelectorAll(".fig-w > svg, .fig > svg, .fig-panel > svg"); for (var i = 0; i < s.length; i++) { if (s[i].getClientRects().length) { o.push(s[i]); } } return o; }
 function zoom() { var on = !!cur(); de.classList.toggle("zoomed", on && z !== 1); de.classList.toggle("pan", on && z > 1); de.style.setProperty("--zt", String(z));
-  var s = document.querySelectorAll(".fig-w > svg, .fig > svg, .fig-panel > svg"); for (var i = 0; i < s.length; i++) { s[i].style.width = ""; s[i].style.height = ""; }
+  var s = document.querySelectorAll(".fig-w > svg, .fig > svg, .fig-panel > svg"), i;
+  for (i = 0; i < s.length; i++) { s[i].style.width = ""; s[i].style.height = ""; var q = s[i].parentNode.style; q.width = ""; q.maxWidth = ""; q.marginLeft = ""; }
   if (zr) { zr.textContent = Math.round(z * 100) + " %"; zm.querySelector('[data-z="-1"]').disabled = z <= 0.5; zm.querySelector('[data-z="1"]').disabled = z >= 3; }
   if (!on || z === 1) { return; }
-  de.classList.remove("zoomed"); var f = figs(), r = [];
-  for (var j = 0; j < f.length; j++) { var vb = f[j].viewBox.baseVal, bx = f[j].getBoundingClientRect(), k = Math.min(bx.width / vb.width, bx.height / vb.height); r.push([f[j], vb.width * k, vb.height * k]); }
+  de.classList.remove("zoomed"); var f = figs(), r = [], vw = de.clientWidth;
+  for (var j = 0; j < f.length; j++) { var vb = f[j].viewBox.baseVal, bx = f[j].getBoundingClientRect(), k = Math.min(bx.width / vb.width, bx.height / vb.height),
+      p = f[j].parentNode, pr = p.getBoundingClientRect();
+    r.push([f[j], vb.width * k, vb.height * k, p, pr, pr.width - bx.width]); }
   de.classList.add("zoomed");
-  for (var m = 0; m < r.length; m++) { r[m][0].style.width = Math.round(r[m][1] * z) + "px"; r[m][0].style.height = Math.round(r[m][2] * z) + "px"; } }
+  /* Lähennetty kuva levenee palstaa leveämmäksi, jos näkymässä on tilaa (Jouni 15.11.2026), keskitettynä näkymään */
+  for (var m = 0; m < r.length; m++) { var w = Math.round(r[m][1] * z), h = Math.round(r[m][2] * z), pp = r[m][3], rr = r[m][4];
+    r[m][0].style.width = w + "px"; r[m][0].style.height = h + "px";
+    var need = Math.min(w + r[m][5], vw - 32);
+    if (need > rr.width + 1) { var left = Math.max(16, (vw - need) / 2); pp.style.maxWidth = "none"; pp.style.width = Math.round(need) + "px";
+      pp.style.marginLeft = Math.round(left - rr.left + (parseFloat(getComputedStyle(pp).marginLeft) || 0)) + "px"; } } }
 function setz(nz) { var f = figs()[0], p = f && f.parentNode, cx = 0.5, cy = 0.5;
   if (p && z !== 1 && p.scrollWidth) { cx = (p.scrollLeft + p.clientWidth / 2) / p.scrollWidth; cy = (p.scrollTop + p.clientHeight / 2) / p.scrollHeight; }
   z = Math.round(Math.min(3, Math.max(0.5, nz)) * 100) / 100; try { localStorage.setItem(ZK, String(z)); } catch (x) {}
