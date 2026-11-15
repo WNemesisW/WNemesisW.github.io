@@ -558,17 +558,16 @@ var g = document.querySelectorAll("details.guide[open]"); for (var i = 0; i < g.
 var K = "ihanus-mobile-note";
 try { if (localStorage.getItem(K)) { return; } } catch (x) { return; }
 if (window.top !== window) { return; }
-/* Toinen virke sen mukaan, mitä sivulla on: kaupungissa napautettavat kortit (.mc), ketjusivuilla vaihekaista (.tk) */
-var T = {fi: ["Sivu toimii parhaiten isolla näytöllä.", "Napauta korttia, niin sen tiedot avautuvat kuvan alle.", "Vaiheet näkyvät kuvan yläreunassa sitä mukaa kuin tapaus etenee.", "Selvä"],
-  en: ["This page works best on a large screen.", "Tap a card to open its details below the image.", "The steps appear at the top of the image as the incident unfolds.", "Got it"],
-  sv: ["Sidan fungerar bäst på en stor skärm.", "Tryck på ett kort så öppnas uppgifterna under bilden.", "Stegen visas överst i bilden allteftersom händelsen fortskrider.", "Uppfattat"]};
+/* Sama ilmoitus kaikilla sivuilla (Jouni 15.11.2026): vain näytön koko ja varoitus visualisoinneista */
+var T = {fi: ["Tämä sivu toimii parhaiten isolla näytöllä.", "Osa visualisoinneista ei näyttäydy oikein mobiilinäytöllä.", "Selvä"],
+  en: ["This page works best on a large screen.", "Some visualisations do not display correctly on a mobile screen.", "Got it"],
+  sv: ["Den här sidan fungerar bäst på en stor skärm.", "En del visualiseringar visas inte korrekt på en mobilskärm.", "Uppfattat"]};
 var t = T[document.documentElement.lang] || T.fi, inner = document.querySelector(".inner"), nav = document.querySelector(".subnav");
 if (!inner) { return; }
 var d = document.createElement("div"); d.className = "mnote"; d.setAttribute("role", "note");
 var p = document.createElement("p"), b = document.createElement("b"); b.textContent = t[0]; p.appendChild(b);
-var more = document.querySelector(".mc") ? t[1] : document.querySelector(".tk") ? t[2] : "";
-if (more) { p.appendChild(document.createTextNode(" " + more)); }
-var btn = document.createElement("button"); btn.type = "button"; btn.textContent = t[3];
+p.appendChild(document.createTextNode(" " + t[1]));
+var btn = document.createElement("button"); btn.type = "button"; btn.textContent = t[2];
 d.appendChild(p); d.appendChild(btn);
 if (nav && nav.parentNode === inner) { inner.insertBefore(d, nav.nextSibling); } else { inner.insertBefore(d, inner.firstChild); }
 btn.addEventListener("click", function () { try { localStorage.setItem(K, "1"); } catch (x) {} d.parentNode.removeChild(d); });
