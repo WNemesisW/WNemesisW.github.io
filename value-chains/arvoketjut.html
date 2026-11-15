@@ -79,6 +79,7 @@ html.zoomed .fig-w, html.zoomed .fig, html.zoomed .fig-panel { overflow: auto; m
 html.zoomed .fig-w svg, html.zoomed .fig svg, html.zoomed .fig-panel > svg { max-height: none; max-width: none; margin: 0 auto; }
 /* Taulukot (esim. Shodan-tulokset) suurenevat samassa suhteessa; leveä taulukko vierii kehyksessään */
 html.zoomed .tw { overflow: auto; } html.zoomed .tw > table { zoom: var(--zt, 1); }
+html.ztext .inner > :not(.subnav):not(.topbar) { zoom: var(--zt, 1); } html.ztext .tw > table { zoom: 1; }
 html.zoomed.pan .fig-w, html.zoomed.pan .fig, html.zoomed.pan .fig-panel { cursor: grab; } html.drag .fig-w, html.drag .fig, html.drag .fig-panel { cursor: grabbing; user-select: none; }
 /* Kyvykkyyksien ja muiden otsikoiden raja yläpalkissa (Jouni 15.11.2026); kapeassa rivitetyssä palkissa piilossa */
 .snsep { flex: none; align-self: stretch; width: 1.5px; margin: 6px 8px; border-radius: 1px; background: color-mix(in srgb, var(--accent) 55%, transparent); }
@@ -243,7 +244,7 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 .rg{fill:none;stroke:var(--g-red);stroke-width:2}
 .cim{fill:none;stroke:var(--g-ink2);stroke-width:2;stroke-dasharray:5 4}
 .ctg{fill:var(--g-panel);stroke:var(--g-line);stroke-width:1.2}.ctgt{fill:var(--g-ink);font-size:11px;font-weight:700}
-.sst{fill:var(--g-panel);stroke:var(--g-bad);stroke-opacity:.55;stroke-width:1}.sstt{fill:var(--g-ink);font-size:10.5px;font-weight:650}
+.sst{fill:var(--g-red)}.sstt{fill:var(--g-onred);font-size:11px;font-weight:700}
 .ctgp{fill:var(--g-muted);font-size:9.5px;font-weight:700;letter-spacing:.08em}
 .cim2{fill:none;stroke:var(--g-ink2);stroke-width:2}
 .bx{fill:var(--g-red);stroke:var(--g-gnd);stroke-width:1.5}
@@ -432,6 +433,8 @@ function figs() { var o = [], s = document.querySelectorAll(".fig-w > svg, .fig 
 function zoom() { var on = !!cur(); de.classList.toggle("zoomed", on && z !== 1); de.classList.toggle("pan", on && z > 1); de.style.setProperty("--zt", String(z));
   var s = document.querySelectorAll(".fig-w > svg, .fig > svg, .fig-panel > svg"), i;
   for (i = 0; i < s.length; i++) { s[i].style.width = ""; s[i].style.height = ""; var q = s[i].parentNode.style; q.width = ""; q.maxWidth = ""; q.marginLeft = ""; }
+  /* Sivu ilman kuvia (esim. Menetelmä ja lähteet): zoomaus suurentaa sisällön tekstin ja taulukot (Jouni 15.11.2026) */
+  de.classList.toggle("ztext", on && z !== 1 && !document.querySelector(".fig-w > svg, .fig > svg, .fig-panel > svg"));
   if (zr) { zr.textContent = Math.round(z * 100) + " %"; zm.querySelector('[data-z="-1"]').disabled = z <= 0.5; zm.querySelector('[data-z="1"]').disabled = z >= 3; }
   if (!on || z === 1) { return; }
   de.classList.remove("zoomed"); var f = figs(), r = [], vw = de.clientWidth;
