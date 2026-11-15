@@ -69,6 +69,7 @@ html.fs { background: var(--bg); } html.fs body { overflow-y: auto; }
 html.fs .topbar, html.fs .ph, html.fs footer { display: none; }
 html.fs .inner { max-width: none; padding-top: 10px; }
 html.fs .fig-w svg { max-height: calc(100vh - 190px); }
+#fsw { position: fixed; inset: 0; z-index: 99; background: var(--bg); } #fsw iframe { display: block; width: 100%; height: 100%; border: 0; }
 .zm { display: inline-flex; gap: 2px; align-items: center; } html:not(.fs) .zm { display: none; }
 .zr { min-width: 54px; height: 30px; padding: 0 6px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel);
   color: var(--muted); font: 600 12px/1 inherit; font-variant-numeric: tabular-nums; cursor: pointer; } .zr:hover { color: var(--ink); }
@@ -159,6 +160,21 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 .sec{display:inline-block;margin-left:4px;padding:0 6px;border:1px solid var(--g-line);border-radius:999px;font-size:11.5px;color:var(--g-muted);white-space:nowrap}
 .caps .target{margin-top:14px;padding-left:10px;border-left:3px solid var(--g-green)}
 .caps .srcl{margin-top:8px;font-size:13px}
+/* Mikä olisi voinut auttaa: vihreä (puolustus), vaiheen numero ympyrässä */
+.guide{margin-top:16px;padding:14px 16px 6px;border-radius:16px;border:1px solid color-mix(in srgb,var(--g-green) 35%,var(--g-line));
+  background:color-mix(in srgb,var(--g-green) 6%,transparent)}
+.guide h3{display:flex;align-items:center;gap:8px;margin:0;font-size:13.5px;font-weight:700;color:var(--g-ink)}
+.guide h3 svg{width:18px;height:18px;color:var(--g-green);flex:none}
+.guide .glead{margin:4px 0 0;font-size:12.5px;color:var(--g-muted)}
+.guide ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:10px}
+.guide li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start;margin-bottom:6px}
+.guide li p{margin:0;font-size:13.5px}
+.gn{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--g-green);
+  color:var(--g-green);font-size:12px;font-weight:700}
+.gn.off{width:8px;height:8px;margin:7px;border:0;background:var(--g-green)}
+.guide .gs{margin-top:2px;font-size:12.5px}.guide .gs a{color:var(--g-accent)}
+.glate{margin-left:6px;padding:0 6px;border:1px solid var(--g-line);border-radius:999px;font-size:11px;color:var(--g-muted);white-space:nowrap}
+@media (min-width:1000px){.guide ul{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px 28px}}
 .srcl a{color:var(--g-accent)}.srcl .msl{color:var(--g-muted)}.srcl .sep{margin:0 8px;color:var(--g-muted)}
 .legend{list-style:none;display:flex;flex-wrap:wrap;gap:6px 16px;margin:16px 0 0;padding:12px 0 0;border-top:1px solid var(--g-line);font-size:12.5px;color:var(--g-ink2)}
 .legend li{display:inline-flex;align-items:center;gap:6px}
@@ -173,11 +189,11 @@ html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-
 .st .arh{animation:stepin .3s ease calc(var(--d) + 1s) both}
 .st .fl{animation:flow 1.15s linear infinite,stepin .4s ease calc(var(--d) + 1.1s) both}
 .cap .steps li{animation:stepin .6s ease var(--d,0s) both}
-.cap .target,.cap .srcl{animation:stepin .4s ease var(--end,0s) both}
+.cap .target,.cap .srcl,.cap .guide{animation:stepin .4s ease var(--end,0s) both}
 .cap .steps li:nth-child(1){--d:0.95s}.cap .steps li:nth-child(2){--d:2.35s}.cap .steps li:nth-child(3){--d:3.75s}.cap .steps li:nth-child(4){--d:5.15s}.cap .steps li:nth-child(5){--d:6.55s}.cap .steps li:nth-child(6){--d:7.95s}
 @keyframes stepin{from{opacity:0}}
 @keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
-@media (prefers-reduced-motion:reduce){.st,.st .drw,.st .arh,.st .fl,.cap .steps li,.cap .target,.cap .srcl{animation:none}}
+@media (prefers-reduced-motion:reduce){.st,.st .drw,.st .arh,.st .fl,.cap .steps li,.cap .target,.cap .srcl,.cap .guide{animation:none}}
 @media (min-width:460px){.fig{margin:14px auto 0;max-width:430px}}
 @media (min-width:880px){.grid{display:flex;gap:32px;align-items:flex-start}.fig{flex:0 0 430px;margin:14px 0 0}.caps{flex:1;margin-top:28px;position:sticky;top:64px}}
 .fig-w{display:none}
@@ -259,24 +275,47 @@ function sync() { var c = cur(), h = c === "m" ? "" : "#" + c;
   var a = document.querySelectorAll(".lang a[hreflang]"); for (var j = 0; j < a.length; j++) { a[j].setAttribute("href", files[a[j].getAttribute("hreflang")] + h); } }
 var h0 = (location.hash || "").slice(1); if (ids.indexOf(h0) >= 0) { var r0 = document.getElementById("i-" + h0); if (r0) { r0.checked = true; } }
 for (var k = 0; k < ids.length; k++) { var rk = document.getElementById("i-" + ids[k]); if (rk) { rk.addEventListener("change", sync); } }
-sync(); })();(function () { var K = "ihanus-fs", want = false;
-try { want = sessionStorage.getItem(K) === "1"; sessionStorage.removeItem(K); } catch (x) {}
+sync(); })();(function () {
+/* Koko näyttö kehyksessä (Jouni 15.11.2026: "koko näytön tila pomppaa pois, kun ylävalikosta vaihtaa sivua"): selain
+   poistuu koko näytöstä aina, kun sivu vaihtuu. Siksi koko näyttöön viedään kehys (#fsw), jossa sivu on upotettuna
+   (#fsf); ylävalikon linkit vaihtavat vain kehyksen sivua ja tila säilyy. Poistuttaessa sivusto jää viimeksi
+   avatulle sivulle ja valitulle tapaukselle. */
+var de = document.documentElement, W = window, emb = false;
+try { emb = W.top !== W && !!W.frameElement && W.frameElement.id === "fsf"; } catch (x) {}
+if (emb) { de.classList.add("fs"); }
 var b = document.getElementById("fs"); if (!b) { return; }
-var de = document.documentElement, req = de.requestFullscreen || de.webkitRequestFullscreen, ex = document.exitFullscreen || document.webkitExitFullscreen;
-if (!req || !ex || !(document.fullscreenEnabled || document.webkitFullscreenEnabled)) { return; }
-function cur() { return document.fullscreenElement || document.webkitFullscreenElement; }
-function lab() { var on = !!cur(); b.title = b.getAttribute(on ? "data-off" : "data-on"); b.setAttribute("aria-label", b.title); b.setAttribute("aria-pressed", on ? "true" : "false"); }
-function sync() { de.classList.toggle("fs", !!cur()); lab(); if (typeof zoom === "function") { zoom(); } }
-function go() { var p = req.call(de); if (p && p.catch) { p.catch(function () {}); } }
-b.hidden = false;
-b.addEventListener("click", function () { if (cur()) { var p = ex.call(document); if (p && p.catch) { p.catch(function () {}); } } else { go(); } });
-/* Selain poistuu koko näytöstä sivua vaihdettaessa: yläpalkin linkistä siirryttäessä tila palautuu uudella sivulla
-   ensimmäisestä painalluksesta (koko näyttö vaatii käyttäjän eleen) */
-var nv = document.querySelector(".subnav");
-if (nv) { nv.addEventListener("click", function (ev) { var a = ev.target.closest && ev.target.closest("a[href]");
-  if (a && cur()) { try { sessionStorage.setItem(K, "1"); } catch (x) {} } }); }
-if (want) { var once = function (ev) { if (ev.key === "Escape" || (ev.target.closest && ev.target.closest("#fs"))) { return; } if (!cur()) { go(); } };
-  document.addEventListener("pointerup", once, { once: true }); document.addEventListener("keydown", once, { once: true }); }
+var PD = emb ? W.parent.document : document;
+var ex = PD.exitFullscreen || PD.webkitExitFullscreen;
+function fsel() { return PD.fullscreenElement || PD.webkitFullscreenElement; }
+function cur() { return emb; }
+function lab() { b.title = b.getAttribute(emb ? "data-off" : "data-on"); b.setAttribute("aria-label", b.title); b.setAttribute("aria-pressed", emb ? "true" : "false"); }
+if (emb) {
+  b.hidden = false; lab();
+  b.addEventListener("click", function () { var p = ex && ex.call(PD); if (p && p.catch) { p.catch(function () {}); } });
+} else {
+  var de0 = document.createElement("div"), rq = de0.requestFullscreen || de0.webkitRequestFullscreen;
+  if (!rq || !ex || !(document.fullscreenEnabled || document.webkitFullscreenEnabled)) { return; }
+  b.hidden = false; lab();
+  var wrap = null, fr = null;
+  b.addEventListener("click", function () {
+    if (wrap) { return; }
+    wrap = document.createElement("div"); wrap.id = "fsw"; fr = document.createElement("iframe"); fr.id = "fsf";
+    fr.title = document.title; fr.src = location.href; wrap.appendChild(fr); document.body.appendChild(wrap);
+    var p = (wrap.requestFullscreen || wrap.webkitRequestFullscreen).call(wrap);
+    if (p && p.catch) { p.catch(function () { shut(); }); } });
+  var shut = function () {
+    if (!wrap) { return; }
+    var href = null; try { href = fr.contentWindow.location.href; var th = fr.contentDocument.documentElement.getAttribute("data-theme");
+      if (th) { de.setAttribute("data-theme", th); } } catch (x) {}
+    wrap.parentNode.removeChild(wrap); wrap = fr = null;
+    if (!href || href === "about:blank" || href === location.href) { return; }
+    if (href.split("#")[0] === location.href.split("#")[0]) {
+      var h = href.split("#")[1] || "m", r = document.getElementById("i-" + h);
+      if (r) { r.checked = true; r.dispatchEvent(new Event("change", { bubbles: true })); }
+    } else { location.href = href; } };
+  var chg = function () { if (wrap && !fsel()) { shut(); } };
+  document.addEventListener("fullscreenchange", chg); document.addEventListener("webkitfullscreenchange", chg);
+  return; }
 /* Zoomaus: taso (50–300 %) tallentuu katsojan omaan selaimeen sivukohtaisesti; 100 % = kuva sovitettuna näyttöön */
 var ZK = "ihanus-zoom:" + location.pathname.replace(/[^\/]*$/, ""), zm = document.querySelector(".zm"), zr = zm && zm.querySelector(".zr"), z = 1;
 try { z = parseFloat(localStorage.getItem(ZK)) || 1; } catch (x) {}
@@ -303,7 +342,7 @@ document.addEventListener("pointerdown", function (ev) { if (!cur() || z <= 1 ||
 document.addEventListener("pointermove", function (ev) { if (dr) { dr[0].scrollLeft = dr[3] - (ev.clientX - dr[1]); dr[0].scrollTop = dr[4] - (ev.clientY - dr[2]); } });
 document.addEventListener("pointerup", function () { dr = null; de.classList.remove("drag"); });
 var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(zoom, 150); });
-document.addEventListener("fullscreenchange", sync); document.addEventListener("webkitfullscreenchange", sync); })();</script>
+zoom(); })();</script>
 {% endraw %}{% include analytics-providers/custom.html %}
 </body>
 </html>
