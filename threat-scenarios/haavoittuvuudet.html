@@ -76,7 +76,8 @@ h1 { margin: 8px 0 0; font-size: 26px; line-height: 1.15; font-weight: 650; lett
 .sn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .sn .sne { font-size: 11px; opacity: .7; }
 .subnav > .tools { display: flex; gap: 6px; align-items: center; margin-left: auto; padding: 0 3px 0 8px; }
-@media (prefers-reduced-motion: reduce) { .subnav, .subnav:hover, .sn::after { transition: none; transform: none; } }
+/* Välilehden alleviivaukselta poistetaan vain siirtymä; transform none näyttäisi sen joka välilehdessä */
+@media (prefers-reduced-motion: reduce) { .subnav, .subnav:hover { transition: none; transform: none; } .sn::after { transition: none; } }
 /* Painohierarkia (Jouni 15.11.2026: "kevennä"): valitsematon 500, valittu 650 */
 .sn[aria-current="page"] { font-weight: 650; color: var(--ink); background: color-mix(in srgb, var(--accent) 16%, transparent); }
 .sn[aria-current="page"]::after { transform: scaleX(1); }
@@ -231,8 +232,8 @@ footer { margin-top: 16px; font-size: 11.5px; color: var(--muted); }
 <tr class="muted"><td><span class="nm">VNC</span></td><td>VNC-palvelimet<div><span class="tag">palvelu</span></div></td><td class="k"><span class="badge zero">0</span></td><td class="k"><span class="badge zero">0</span></td><td>–</td></tr>
 </tbody></table></div>
 </section>
-<aside class="fnote method"><span class="fn-i" aria-hidden="true">i</span><span class="fn-t"><b>Menetelmä ja varaumat</b><ul><li><b>KEV-luettelo.</b> Yhdysvaltain kyberturvallisuusviraston CISA:n luettelo haavoittuvuuksista, joiden hyödyntämisestä hyökkäyksissä on näyttöä (versio 2026.11.10, 1 779 merkintää).</li><li><b>Rajaus.</b> Palvelu: mukana vain palvelimen etänä hyödynnettävät merkinnät. Laite: laitteen ohjelmiston kaikki merkinnät, koska koko laite on internetissä.</li><li>Protokollia Modbus, IEC 104, BACnet, DICOM, TR-069 ja RTSP ei verrattu luetteloon, koska ne eivät yksilöi tuotetta.</li><li><b>Puuttuva merkintä ei tarkoita turvallista tuotetta:</b> luettelossa ovat vain haavoittuvuudet, joiden hyödyntämisestä CISA:lla on näyttöä.</li></ul></span></aside>
-<section class="srcs"><h2>Lähteet</h2><ul><li>CISA (2026). <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">Known Exploited Vulnerabilities Catalog</a>, versio 2026.11.10.</li><li>NIST. <a href="https://nvd.nist.gov/">National Vulnerability Database</a>.</li></ul></section>
+<aside class="fnote method"><span class="fn-i" aria-hidden="true">i</span><span class="fn-t"><b>Menetelmä ja varaumat</b><ul><li><b>KEV-luettelo.</b> Yhdysvaltain kyberturvallisuusviraston CISA:n luettelo haavoittuvuuksista, joiden hyödyntämisestä hyökkäyksissä on näyttöä (versio 2026.11.13, 1 781 merkintää).</li><li><b>Rajaus.</b> Palvelu: mukana vain palvelimen etänä hyödynnettävät merkinnät. Laite: laitteen ohjelmiston kaikki merkinnät, koska koko laite on internetissä.</li><li>Protokollia Modbus, IEC 104, BACnet, DICOM, TR-069 ja RTSP ei verrattu luetteloon, koska ne eivät yksilöi tuotetta.</li><li><b>Puuttuva merkintä ei tarkoita turvallista tuotetta:</b> luettelossa ovat vain haavoittuvuudet, joiden hyödyntämisestä CISA:lla on näyttöä.</li></ul></span></aside>
+<section class="srcs"><h2>Lähteet</h2><ul><li>CISA (2026). <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">Known Exploited Vulnerabilities Catalog</a>, versio 2026.11.13.</li><li>NIST. <a href="https://nvd.nist.gov/">National Vulnerability Database</a>.</li></ul></section>
 <footer>Shodan-tiedot: Shodan® (shodan.io); aineiston omistus ja tekijänoikeudet kuuluvat Shodanille. Ikonit: Lucide (ISC-lisenssi).<div class="cr" style="margin-top:4px">© 2026 Jouni Ihanus. Tekstit, kartat, piirrokset ja koosteet; lähdeaineistot, lainaukset ja kuvakkeet niiden omien ehtojen mukaan.</div></footer>
 </div>
 <script>document.getElementById("theme").addEventListener("click", function () { var h = document.documentElement, t = h.getAttribute("data-theme") === "dark" ? "light" : "dark"; h.setAttribute("data-theme", t); try { localStorage.setItem("theme", t); } catch (e) {} });</script>

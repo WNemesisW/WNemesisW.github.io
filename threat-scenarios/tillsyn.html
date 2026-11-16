@@ -76,7 +76,8 @@ h1 { margin: 8px 0 0; font-size: 26px; line-height: 1.15; font-weight: 650; lett
 .sn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .sn .sne { font-size: 11px; opacity: .7; }
 .subnav > .tools { display: flex; gap: 6px; align-items: center; margin-left: auto; padding: 0 3px 0 8px; }
-@media (prefers-reduced-motion: reduce) { .subnav, .subnav:hover, .sn::after { transition: none; transform: none; } }
+/* Välilehden alleviivaukselta poistetaan vain siirtymä; transform none näyttäisi sen joka välilehdessä */
+@media (prefers-reduced-motion: reduce) { .subnav, .subnav:hover { transition: none; transform: none; } .sn::after { transition: none; } }
 /* Painohierarkia (Jouni 15.11.2026: "kevennä"): valitsematon 500, valittu 650 */
 .sn[aria-current="page"] { font-weight: 650; color: var(--ink); background: color-mix(in srgb, var(--accent) 16%, transparent); }
 .sn[aria-current="page"]::after { transform: scaleX(1); }

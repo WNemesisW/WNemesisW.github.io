@@ -76,7 +76,8 @@ h1 { margin: 8px 0 0; font-size: 26px; line-height: 1.15; font-weight: 650; lett
 .sn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .sn .sne { font-size: 11px; opacity: .7; }
 .subnav > .tools { display: flex; gap: 6px; align-items: center; margin-left: auto; padding: 0 3px 0 8px; }
-@media (prefers-reduced-motion: reduce) { .subnav, .subnav:hover, .sn::after { transition: none; transform: none; } }
+/* Välilehden alleviivaukselta poistetaan vain siirtymä; transform none näyttäisi sen joka välilehdessä */
+@media (prefers-reduced-motion: reduce) { .subnav, .subnav:hover { transition: none; transform: none; } .sn::after { transition: none; } }
 /* Painohierarkia (Jouni 15.11.2026: "kevennä"): valitsematon 500, valittu 650 */
 .sn[aria-current="page"] { font-weight: 650; color: var(--ink); background: color-mix(in srgb, var(--accent) 16%, transparent); }
 .sn[aria-current="page"]::after { transform: scaleX(1); }
@@ -231,8 +232,8 @@ footer { margin-top: 16px; font-size: 11.5px; color: var(--muted); }
 <tr class="muted"><td><span class="nm">VNC</span></td><td>VNC servers<div><span class="tag">service</span></div></td><td class="k"><span class="badge zero">0</span></td><td class="k"><span class="badge zero">0</span></td><td>–</td></tr>
 </tbody></table></div>
 </section>
-<aside class="fnote method"><span class="fn-i" aria-hidden="true">i</span><span class="fn-t"><b>Method and caveats</b><ul><li><b>The KEV catalog.</b> The US Cybersecurity and Infrastructure Security Agency's list of vulnerabilities with evidence of exploitation in attacks (version 2026.11.10, 1,779 entries).</li><li><b>Scope.</b> Service: only entries exploitable remotely against the server. Device: all entries for the device's software, because the whole device is on the internet.</li><li>The protocols Modbus, IEC 104, BACnet, DICOM, TR-069 and RTSP were not compared with the catalog because they do not identify a product.</li><li><b>A missing entry does not mean a safe product:</b> the catalog lists only vulnerabilities for which CISA has evidence of exploitation.</li></ul></span></aside>
-<section class="srcs"><h2>Sources</h2><ul><li>CISA (2026). <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">Known Exploited Vulnerabilities Catalog</a>, version 2026.11.10.</li><li>NIST. <a href="https://nvd.nist.gov/">National Vulnerability Database</a>.</li></ul></section>
+<aside class="fnote method"><span class="fn-i" aria-hidden="true">i</span><span class="fn-t"><b>Method and caveats</b><ul><li><b>The KEV catalog.</b> The US Cybersecurity and Infrastructure Security Agency's list of vulnerabilities with evidence of exploitation in attacks (version 2026.11.13, 1,781 entries).</li><li><b>Scope.</b> Service: only entries exploitable remotely against the server. Device: all entries for the device's software, because the whole device is on the internet.</li><li>The protocols Modbus, IEC 104, BACnet, DICOM, TR-069 and RTSP were not compared with the catalog because they do not identify a product.</li><li><b>A missing entry does not mean a safe product:</b> the catalog lists only vulnerabilities for which CISA has evidence of exploitation.</li></ul></span></aside>
+<section class="srcs"><h2>Sources</h2><ul><li>CISA (2026). <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">Known Exploited Vulnerabilities Catalog</a>, version 2026.11.13.</li><li>NIST. <a href="https://nvd.nist.gov/">National Vulnerability Database</a>.</li></ul></section>
 <footer>Shodan data: Shodan® (shodan.io); Shodan owns the data and holds its copyright. Icons: Lucide (ISC license).<div class="cr" style="margin-top:4px">© 2026 Jouni Ihanus. Texts, maps, drawings and compilations; source data, quotations and icons under their own terms.</div></footer>
 </div>
 <script>document.getElementById("theme").addEventListener("click", function () { var h = document.documentElement, t = h.getAttribute("data-theme") === "dark" ? "light" : "dark"; h.setAttribute("data-theme", t); try { localStorage.setItem("theme", t); } catch (e) {} });</script>
