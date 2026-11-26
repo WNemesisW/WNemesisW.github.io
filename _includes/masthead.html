@@ -51,5 +51,31 @@
   dd.addEventListener("mouseleave", function () { set(false); });
   dd.addEventListener("focusout", function (e) { if (!dd.contains(e.relatedTarget)) set(false); });
 })();
+(function () {
+  /* Kapealla näytöllä hampurilaispainike peittää rivin oikean pään: rivi jättää sille tilaa (_ihanus.scss, ih-has-more) */
+  var nav = document.getElementById("site-nav"), mb = nav && nav.querySelector("#site-nav > button"); if (!mb) return;
+  function more() { nav.classList.toggle("ih-has-more", !mb.classList.contains("hidden") && getComputedStyle(mb).display !== "none"); }
+  if (window.MutationObserver) new MutationObserver(more).observe(mb, { attributes: true, attributeFilter: ["class"] });
+  more(); window.addEventListener("load", more); window.addEventListener("resize", more);
+})();
+{% if page.url == '/' or page.url == '/index.html' %}
+(function () {
+  /* Etusivun projektikorostus uudelle kävijälle (Jouni 26.11.2026, vaihtoehto B): enintään kolmella käynnillä, kunnes valikko avataan */
+  var K = "ih-proj-hint", n = 0; try { n = parseInt(localStorage.getItem(K), 10) || 0; } catch (x) { return; }
+  var dd = document.querySelector("#site-nav .ih-dd"); if (n >= 3 || !dd) return;
+  try { localStorage.setItem(K, String(n + 1)); } catch (x) {}
+  var b = dd.querySelector(".ih-dd__btn"), m = document.querySelector(".masthead"), tag = document.createElement("p");
+  tag.className = "ih-hint-tag"; tag.setAttribute("aria-hidden", "true");
+  tag.innerHTML = '<span>Check out my projects</span><svg viewBox="0 0 34 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18C12 18 24 14 30 4"/><path d="m24 4 6 0 0 6"/></svg>';
+  dd.classList.add("ih-hint"); document.body.appendChild(tag);
+  function place() { var r = b.getBoundingClientRect(), mr = m.getBoundingClientRect(), w = tag.offsetWidth, below = r.left - w - 2 < 12;
+    tag.classList.toggle("ih-hint-tag--below", below); tag.style.top = (mr.bottom + 6 + window.scrollY) + "px";
+    tag.style.left = Math.round(below ? Math.max(12, r.right - w) : r.left - w - 2) + "px"; }
+  function done() { dd.classList.remove("ih-hint"); if (tag.parentNode) tag.parentNode.removeChild(tag);
+    try { localStorage.setItem(K, "3"); } catch (x) {} window.removeEventListener("resize", place); }
+  place(); window.addEventListener("resize", place); window.addEventListener("load", place);
+  dd.addEventListener("click", done); dd.addEventListener("mouseenter", done); dd.addEventListener("focusin", done);
+})();
+{% endif %}
 </script>
 <!-- /ih-dd -->
