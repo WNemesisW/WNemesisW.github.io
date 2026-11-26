@@ -98,6 +98,8 @@ html.zoomed.pan .fig-w, html.zoomed.pan .fig, html.zoomed.pan .fig-panel { overf
 /* Kosketusnäytöllä vieritys jatkuu kuvan reunalta sivulle, jottei koko näytön täyttävä kuva jää loukuksi */
 @media (hover: none) { html.zoomed.pan .fig-w, html.zoomed.pan .fig, html.zoomed.pan .fig-panel { overscroll-behavior: auto; } }
 html.zoomed .fig-w svg, html.zoomed .fig svg, html.zoomed .fig-panel > svg { max-height: none; max-width: none; margin: 0 auto; }
+/* Lähennetty kuva ei mahdu selitteen viereen: selite kuvan alle (zoom() asettaa luokan zst) */
+html.zoomed .zst { display: block !important; } html.zoomed .zst > .caps, html.zoomed .zst > .cap { position: static !important; max-height: none !important; margin-top: 18px; }
 /* Taulukot (esim. Shodan-tulokset) suurenevat samassa suhteessa; leveä taulukko vierii kehyksessään */
 html.zoomed .tw { overflow: auto; } html.zoomed .tw > table { zoom: var(--zt, 1); }
 html.ztext .inner > :not(.subnav):not(.topbar) { zoom: var(--zt, 1); } html.ztext .tw > table { zoom: 1; }
@@ -362,7 +364,7 @@ var ZK = "ihanus-zoom", zm = document.querySelector(".zm"), zr = zm && zm.queryS
 try { z = parseFloat(localStorage.getItem(ZK)) || 1; } catch (x) {}
 z = Math.min(3, Math.max(0.5, z));
 function figs() { var o = [], s = document.querySelectorAll(".fig-w > svg, .fig > svg, .fig-panel > svg"); for (var i = 0; i < s.length; i++) { if (s[i].getClientRects().length) { o.push(s[i]); } } return o; }
-function zoom() { var on = !!cur(); de.classList.toggle("zoomed", on && z !== 1); de.classList.toggle("pan", on && z > 1); de.style.setProperty("--zt", String(z));
+function zoom(st) { var on = !!cur(); de.classList.toggle("zoomed", on && z !== 1); de.classList.toggle("pan", on && z > 1); de.style.setProperty("--zt", String(z));
   var s = document.querySelectorAll(".fig-w > svg, .fig > svg, .fig-panel > svg"), i;
   for (i = 0; i < s.length; i++) { s[i].style.width = ""; s[i].style.height = ""; var q = s[i].parentNode.style; q.width = ""; q.maxWidth = ""; q.marginLeft = "";
     /* Kohdistettu kuva pysyy kohdistettavana, jotta oikotiet toimivat vielä 100 %:iin palattua */
@@ -370,8 +372,10 @@ function zoom() { var on = !!cur(); de.classList.toggle("zoomed", on && z !== 1)
   /* Sivu ilman kuvia (esim. Menetelmä ja lähteet): zoomaus suurentaa sisällön tekstin ja taulukot (Jouni 15.11.2026) */
   de.classList.toggle("ztext", on && z !== 1 && !document.querySelector(".fig-w > svg, .fig > svg, .fig-panel > svg"));
   if (zr) { zr.textContent = Math.round(z * 100) + " %"; zr.setAttribute("aria-label", zr.title + ": " + zr.textContent); zm.querySelector('[data-z="-1"]').disabled = z <= 0.5; zm.querySelector('[data-z="1"]').disabled = z >= 3; }
+  var inn = document.querySelector(".inner"), zs = document.querySelectorAll(".zst"), n; if (inn) { inn.style.maxWidth = ""; }
+  if (!st) { for (n = 0; n < zs.length; n++) { zs[n].classList.remove("zst"); } }
   if (!on || z === 1) { return; }
-  de.classList.remove("zoomed"); var f = figs(), r = [], vw = de.clientWidth;
+  de.classList.remove("zoomed"); var f = figs(), r = [], vw = de.clientWidth, iw = inn ? inn.getBoundingClientRect().width : 0, grow = 0;
   for (var j = 0; j < f.length; j++) { var vb = f[j].viewBox.baseVal, bx = f[j].getBoundingClientRect(), k = Math.min(bx.width / vb.width, bx.height / vb.height),
       p = f[j].parentNode, pr = p.getBoundingClientRect();
     r.push([f[j], vb.width * k, vb.height * k, p, pr, pr.width - bx.width, parseFloat(getComputedStyle(p).marginLeft) || 0]); }
@@ -384,9 +388,15 @@ function zoom() { var on = !!cur(); de.classList.toggle("zoomed", on && z !== 1)
     var need = Math.min(w + r[m][5], vw - 32), fx = false;
     /* Flex-rivissä (kapea kuva selitteen vieressä, 880–999 px) leveys ei vaikuta, joten kehystä ei levennetä eikä siirretä */
     try { fx = getComputedStyle(pp.parentNode).display.indexOf("flex") >= 0; } catch (x) {}
+    /* Flex-rivissä sivun palsta levenee näkymän leveyteen asti, jotta lähennetty kuva mahtuu selitteen viereen
+       (Jouni 26.11.2026: "anna sivun levitä myös isommalla zoomilla") */
+    if (fx && w + r[m][5] > rr.width + 1) { grow = Math.max(grow, w + r[m][5] - rr.width); }
     if (!fx && need > rr.width + 1) { var left = Math.max(16, (vw - need) / 2); pp.style.maxWidth = "none"; pp.style.width = Math.round(need) + "px";
       /* Marginaali on mitattu ennen levennystä (r[m][6]): levennyksen jälkeen automaattinen marginaali olisi jo muuttunut */
-      pp.style.marginLeft = Math.round(left - rr.left + r[m][6]) + "px"; } } }
+      pp.style.marginLeft = Math.round(left - rr.left + r[m][6]) + "px"; } }
+  if (inn && grow > 0) { inn.style.maxWidth = Math.round(Math.min(vw, iw + grow)) + "px";
+    /* Jos kuva ei mahdu selitteen viereen koko näkymänkään leveydellä, selite siirtyy kuvan alle ja kuva saa koko leveyden */
+    if (!st && iw + grow > vw + 1) { for (n = 0; n < r.length; n++) { r[n][3].parentNode.classList.add("zst"); } zoom(true); } } }
 function setz(nz) { var f = figs()[0], p = f && f.parentNode, cx = 0.5, cy = 0.5;
   if (p && z !== 1 && p.scrollWidth) { cx = (p.scrollLeft + p.clientWidth / 2) / p.scrollWidth; cy = (p.scrollTop + p.clientHeight / 2) / p.scrollHeight; }
   z = Math.round(Math.min(3, Math.max(0.5, nz)) * 100) / 100; if (Math.abs(z - 1) < 0.04) { z = 1; } try { localStorage.setItem(ZK, String(z)); } catch (x) {}
