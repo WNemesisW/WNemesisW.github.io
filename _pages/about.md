@@ -37,7 +37,7 @@ sections:
   - title: "Exercises and teaching"
     text: "Cyber exercises offer a controlled setting for observing decision-making under pressure. I have taken part in NATO CCDCOE's Locked Shields four times, leading different functional areas, and I am co-organiser and scenario lead of ERIK, the annual cyber exercise of the National Defence Training Association of Finland (MPK). At Savonia University of Applied Sciences I teach a master's-level course on communication and influence in comprehensive security."
   - title: "Open situational pictures"
-    text: "Four open, non-commercial views built only from public sources: a map of Finland's national threat scenarios through a cybersecurity lens, a side-by-side comparison of the Nordic and Baltic national risk assessments that shows which risks the countries share and which belong to one country only, maps of how service chains depend on each other and where documented cyberattacks have hit them: power, water, hospitals, banks, food, logistics and office work, and a view of where capabilities typically break, starting with remote access to substations and generation plants."
+    text: "Five open, non-commercial views built only from public sources: a map of Finland's national threat scenarios through a cybersecurity lens, a side-by-side comparison of the Nordic and Baltic national risk assessments that shows which risks the countries share and which belong to one country only, maps of how service chains depend on each other and where documented cyberattacks have hit them: power, water, hospitals, banks, food, logistics and office work, a view of where capabilities typically break, starting with remote access to substations and generation plants, and an anatomy of situation awareness: its three levels and how the picture degrades when driving, in a security operations centre and across society."
     links:
       - title: "Finland's national threat scenario map"
         url: "/threat-scenarios/"
@@ -47,6 +47,8 @@ sections:
         url: "/value-chains/"
       - title: "Where capabilities break"
         url: "/capability-challenges/"
+      - title: "Anatomy of situation awareness"
+        url: "/situation-awareness/"
 interests_label: "Current interests"
 interests:
   - "How AI can support the analysis of security data so that it becomes useful for decision-making."

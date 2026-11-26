@@ -1,0 +1,557 @@
+---
+layout: null
+sitemap: false
+permalink: /situation-awareness/kallor.html
+---
+{% raw %}<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Källor – Lägesbildens anatomi – ihanus.eu</title>
+<meta name="description" content="Alla påståenden på sidorna bygger på publikationerna nedan. Scenarierna är illustrationer, inte beskrivningar av verkliga händelser.">
+<link rel="canonical" href="https://www.ihanus.eu/situation-awareness/kallor.html">
+<link rel="alternate" hreflang="fi" href="https://www.ihanus.eu/situation-awareness/lahteet.html">
+<link rel="alternate" hreflang="sv" href="https://www.ihanus.eu/situation-awareness/kallor.html">
+<link rel="alternate" hreflang="en" href="https://www.ihanus.eu/situation-awareness/sources.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jouni Ihanus">
+<meta property="og:title" content="Källor – Lägesbildens anatomi – ihanus.eu">
+<meta property="og:description" content="Alla påståenden på sidorna bygger på publikationerna nedan. Scenarierna är illustrationer, inte beskrivningar av verkliga händelser.">
+<meta property="og:url" content="https://www.ihanus.eu/situation-awareness/kallor.html">
+<meta property="og:locale" content="sv_FI">
+<meta property="og:locale:alternate" content="fi_FI">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://www.ihanus.eu/situation-awareness/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Lägesbildens tre nivåer, påverkande faktorer och återkopplingen">
+<meta name="twitter:card" content="summary_large_image">
+<script>(function () { var t; try { t = localStorage.getItem("theme"); } catch (e) {} if (t !== "dark" && t !== "light") { t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-theme", t); })();</script>
+<style>
+:root {
+  --bg: #05070d; --panel: rgba(15, 23, 39, .86); --panel-2: rgba(11, 17, 30, .92); --line: rgba(148, 163, 184, .13); --line-2: rgba(148, 163, 184, .22);
+  --ink: #e6edf7; --ink-2: #b4c1d4; --muted: #7c8aa3; --accent: #22d3ee; --out: #22d3ee; --in: #a78bfa; --bi: #fb923c;
+  --p0: #94a3b8; --p2: #60a5fa; --p3: #fbbf24; --p4: #f472b6; --open: #f87171; --open-2: #fca5a5; --info: #34d399;
+  --c0: rgba(34, 211, 238, .09); --c1: rgba(167, 139, 250, .08); --c2: #a5f3fc; --c3: #04121a; --c4: #9fb0c8; --c5: rgba(148, 163, 184, .075); --c6: rgba(34, 211, 238, .035); --c7: rgba(14, 21, 36, .62); --c8: rgba(8, 12, 22, .62); --c9: rgba(148, 163, 184, .11); --c10: rgba(255, 255, 255, .03); --c11: rgba(0, 0, 0, .35); --c12: rgba(0, 0, 0, .32); --c13: rgba(34, 211, 238, .18); --c14: rgba(148, 163, 184, .08); --c15: rgba(167, 139, 250, .55); --c16: rgba(239, 68, 68, .08); --c17: rgba(248, 113, 113, .28); --c18: rgba(239, 68, 68, .16); --c19: rgba(248, 113, 113, .55); --c20: #8aa0bd; --c21: #e0fbff; --c22: #22d3ee; --c23: #f1ebff; --c24: #a78bfa; --c25: #fff1e6; --c26: #fb923c; --c27: rgba(34, 211, 238, .35); --c28: rgba(34, 211, 238, .5); --c29: rgba(34, 211, 238, .28); --c30: rgba(34, 211, 238, .8); --c31: rgba(251, 146, 60, .8); --c32: rgba(167, 139, 250, .8); --c33: rgba(34, 211, 238, .45); --c34: rgba(34, 211, 238, 0); --c35: rgba(34, 211, 238, .25); --c36: rgba(0, 0, 0, .4); --c37: rgba(4, 18, 26, .12); --c38: rgba(15, 23, 39, .5); --c39: rgba(34, 211, 238, .08); --c40: rgba(12, 19, 33, .96); --c41: rgba(0, 0, 0, .5);
+  --edge-m: var(--c20); color-scheme: dark;
+}
+html[data-theme="light"] {
+  --bg: #f5f7fb; --panel: rgba(255, 255, 255, .9); --panel-2: rgba(248, 250, 252, .95); --line: rgba(15, 23, 42, .10); --line-2: rgba(15, 23, 42, .18);
+  --ink: #0f172a; --ink-2: #334155; --muted: #64748b; --accent: #0e7490; --out: #0891b2; --in: #7c3aed; --bi: #ea580c;
+  --p0: #64748b; --p2: #2563eb; --p3: #d97706; --p4: #db2777; --open: #dc2626; --open-2: #b91c1c; --info: #047857;
+  --c0: rgba(8, 145, 178, 0.05); --c1: rgba(124, 58, 237, 0.04); --c2: #0e7490; --c3: #ffffff; --c4: #64748b; --c5: rgba(15, 23, 42, 0.056); --c6: rgba(8, 145, 178, 0.019); --c7: rgba(255, 255, 255, 0.72); --c8: rgba(255, 255, 255, 0.72); --c9: rgba(15, 23, 42, 0.083); --c10: rgba(255, 255, 255, 0.03); --c11: rgba(15, 23, 42, 0.077); --c12: rgba(15, 23, 42, 0.07); --c13: rgba(8, 145, 178, 0.099); --c14: rgba(15, 23, 42, 0.06); --c15: rgba(124, 58, 237, 0.275); --c16: rgba(220, 38, 38, 0.072); --c17: rgba(220, 38, 38, 0.252); --c18: rgba(220, 38, 38, 0.144); --c19: rgba(220, 38, 38, 0.495); --c20: #475569; --c21: #164e63; --c22: #0891b2; --c23: #4c1d95; --c24: #7c3aed; --c25: #7c2d12; --c26: #ea580c; --c27: rgba(8, 145, 178, 0.193); --c28: rgba(8, 145, 178, 0.275); --c29: rgba(8, 145, 178, 0.154); --c30: rgba(8, 145, 178, 0.44); --c31: rgba(234, 88, 12, 0.4); --c32: rgba(124, 58, 237, 0.4); --c33: rgba(8, 145, 178, 0.248); --c34: rgba(8, 145, 178, 0); --c35: rgba(8, 145, 178, 0.138); --c36: rgba(15, 23, 42, 0.088); --c37: rgba(255, 255, 255, 0.192); --c38: rgba(255, 255, 255, 0.6); --c39: rgba(8, 145, 178, 0.044); --c40: rgba(255, 255, 255, 1); --c41: rgba(15, 23, 42, 0.11);
+  color-scheme: light;
+}
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 500; font-display: swap;
+  src: url("/assets/fonts/space-grotesk-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 600; font-display: swap;
+  src: url("/assets/fonts/space-grotesk-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("/assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap;
+  src: url("/assets/fonts/inter-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap;
+  src: url("/assets/fonts/inter-latin-600-normal.woff2") format("woff2"); }
+
+* { box-sizing: border-box; }
+/* Ankkurilinkin kohde ei jää kiinteän yläpalkin alle; tarkka arvo asetetaan palkin korkeudesta (FS_JS) */
+html { background: var(--bg); -webkit-text-size-adjust: 100%; scroll-padding-top: 100px; }
+body { margin: 0; color: var(--ink); font: 14px/1.5 Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; min-height: 100vh;
+  background: radial-gradient(1100px 520px at 8% -8%, var(--c0), transparent 62%), radial-gradient(900px 480px at 100% -4%, var(--c1), transparent 60%), var(--bg); }
+.inner { max-width: 900px; margin: 0 auto; padding: 0 16px 36px; }
+@media (min-width: 1000px) { .inner { max-width: 1400px; padding: 0 28px 36px; } }
+.topbar { padding: 16px 0 0; } .home { font-size: 12px; color: var(--muted); text-decoration: none; } .home:hover { color: var(--accent); }
+.ph { padding: 14px 0 16px; max-width: 980px; }
+.eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+h1 { margin: 8px 0 0; font-size: 26px; line-height: 1.15; font-weight: 650; letter-spacing: -.015em; }
+.sub { margin: 10px 0 0; color: var(--c2); font-size: 14.5px; font-weight: 500; }
+.lang { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--panel); border: 1px solid var(--line); }
+.lang a { font-size: 12px; font-weight: 600; letter-spacing: .06em; line-height: 1.5; color: var(--muted); text-decoration: none; border-radius: 999px; padding: 3px 12px; }
+.lang a:hover { color: var(--ink); } .lang a[aria-current="page"] { color: var(--c3); background: var(--accent); }
+.theme { display: inline-grid; place-items: center; width: 32px; height: 30px; padding: 0; border-radius: 999px; color: var(--muted); background: var(--panel);
+  border: 1px solid var(--line); cursor: pointer; } .theme:hover { color: var(--ink); } .theme svg { width: 16px; height: 16px; }
+html[data-theme="dark"] .t-moon, html[data-theme="light"] .t-sun { display: none; }
+/* Koko näytön tila (kuten uhkaskenaariokartassa): otsikko ja alalaita piiloon, kartta täyttää näytön; yläpalkin
+   välilehdet ja valinnat jäävät näkyviin (Jouni 15.11.2026) */
+.mnote { display: flex; gap: 10px; align-items: center; margin: 4px 0 10px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line);
+  background: var(--panel); font-size: 13px; color: var(--ink2, var(--ink)); } .mnote p { margin: 0; flex: 1; }
+.mnote button { flex: none; padding: 6px 12px; border-radius: 999px; border: 0; background: var(--accent); color: var(--bg); font: inherit; font-weight: 650; cursor: pointer; }
+html.fs .fs-max, html:not(.fs) .fs-min { display: none; }
+html.fs { background: var(--bg); } html.fs body { overflow-y: auto; }
+html.fs .topbar, html.fs .ph, html.fs footer { display: none; }
+html.fs .inner { max-width: none; padding-top: 10px; }
+html.fs .fig-w svg { max-height: calc(100vh - 190px); }
+html.fsh .inner, html.fsh .vr { visibility: hidden; }
+/* Puhelimessa yläpalkki rivittyy 3–4 riville: se kulkee sivun mukana eikä jää peittämään kuvaa. Koko näytössä
+   palkki pysyy kiinteänä, jotta poistumispainike on aina esillä. */
+@media (max-width: 760px) { html:not(.fs) .inner > .subnav { position: static; } }
+#fsw { position: fixed; inset: 0; z-index: 99; background: var(--bg); } #fsw iframe { display: block; width: 100%; height: 100%; border: 0; }
+.zm { display: inline-flex; gap: 2px; align-items: center; } .zm[hidden] { display: none; }
+/* display kumoaisi hidden-attribuutin: koko näyttö -painike pysyy piilossa, jos selain ei tue tilaa (iPhone) */
+.theme[hidden] { display: none; }
+.zr { min-width: 54px; height: 30px; padding: 0 6px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel);
+  color: var(--muted); font: inherit; font-size: 12px; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; cursor: pointer; } .zr:hover { color: var(--ink); }
+.zm .theme:disabled { opacity: .4; cursor: default; }
+/* Lähennetty kuva vierii kehyksensä sisällä; hiirellä voi raahata. Loitonnettu kuva ei tarvitse vierityslaatikkoa. */
+html.zoomed.pan .fig-w, html.zoomed.pan .fig, html.zoomed.pan .fig-panel { overflow: auto; max-height: calc(100vh - 150px); overscroll-behavior: contain; }
+/* Kosketusnäytöllä vieritys jatkuu kuvan reunalta sivulle, jottei koko näytön täyttävä kuva jää loukuksi */
+@media (hover: none) { html.zoomed.pan .fig-w, html.zoomed.pan .fig, html.zoomed.pan .fig-panel { overscroll-behavior: auto; } }
+html.zoomed .fig-w svg, html.zoomed .fig svg, html.zoomed .fig-panel > svg { max-height: none; max-width: none; margin: 0 auto; }
+/* Taulukot (esim. Shodan-tulokset) suurenevat samassa suhteessa; leveä taulukko vierii kehyksessään */
+html.zoomed .tw { overflow: auto; } html.zoomed .tw > table { zoom: var(--zt, 1); }
+html.ztext .inner > :not(.subnav):not(.topbar) { zoom: var(--zt, 1); } html.ztext .tw > table { zoom: 1; }
+html.zoomed.pan .fig-w, html.zoomed.pan .fig, html.zoomed.pan .fig-panel { cursor: grab; } html.drag .fig-w, html.drag .fig, html.drag .fig-panel { cursor: grabbing; user-select: none; }
+/* Kyvykkyyksien ja muiden otsikoiden raja yläpalkissa (Jouni 15.11.2026); kapeassa rivitetyssä palkissa piilossa */
+.snsep { flex: none; align-self: stretch; width: 1.5px; margin: 6px 8px; border-radius: 1px; background: color-mix(in srgb, var(--accent) 55%, transparent); }
+@media (max-width: 900px) { .snsep { display: none; } }
+.fnote.method { margin-top: 16px; } .fnote ul { margin: 4px 0 0; padding-left: 16px; } .fnote li { margin: 6px 0; }
+.srcs { margin-top: 18px; padding: 14px 18px; border-radius: 16px; border: 1px solid var(--line); background: color-mix(in srgb, var(--panel) 60%, transparent); }
+.srcs h2 { margin: 0 0 6px; font-size: 10.5px; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.srcs ul { margin: 0; padding-left: 16px; } .srcs li { margin: 4px 0; font-size: 12.5px; color: var(--ink-2); } .srcs a { color: var(--accent); }
+footer { margin-top: 24px; font-size: 11.5px; color: var(--muted); } footer a { color: var(--accent); } footer .sha { margin-top: 6px; }
+.subnav { position: sticky; top: 10px; z-index: 6; display: flex; flex-wrap: wrap; gap: 3px;
+  margin: 4px 0 14px; padding: 4px; border-radius: 14px; border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 13%, transparent), color-mix(in srgb, var(--accent) 6%, transparent)),
+    color-mix(in srgb, var(--panel) 62%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4); backdrop-filter: blur(16px) saturate(1.4);
+  box-shadow: 0 12px 32px var(--c11), inset 0 1px 0 var(--c10); transition: transform .25s ease, box-shadow .25s ease; }
+.subnav:hover { transform: translateY(-3px); box-shadow: 0 18px 44px var(--c11), 0 0 0 1px var(--c27), inset 0 1px 0 var(--c10); }
+.sn { position: relative; flex: 1 1 auto; display: flex; align-items: center; justify-content: center; gap: 5px; min-height: 32px; padding: 5px 12px;
+  border-radius: 10px; text-decoration: none; text-align: center; white-space: nowrap; color: var(--accent); line-height: 1.2;
+  font: 500 13.5px/1.2 "Space Grotesk", Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: .005em;
+  transition: background .2s, color .2s; }
+.sn::after { content: ""; position: absolute; left: 22%; right: 22%; bottom: 3px; height: 2px; border-radius: 2px; background: var(--accent);
+  transform: scaleX(0); transition: transform .25s ease; }
+.sn:hover { color: var(--ink); background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.sn:hover::after { transform: scaleX(1); }
+.sn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.sn .sne { font-size: 11px; opacity: .7; }
+.subnav > .tools { display: flex; gap: 6px; align-items: center; margin-left: auto; padding: 0 3px 0 8px; }
+/* Välilehden alleviivaukselta poistetaan vain siirtymä; transform none näyttäisi sen joka välilehdessä */
+@media (prefers-reduced-motion: reduce) { .subnav, .subnav:hover { transition: none; transform: none; } .sn::after { transition: none; } }
+/* Painohierarkia (Jouni 15.11.2026: "kevennä"): valitsematon 500, valittu 650 */
+.sn[aria-current="page"] { font-weight: 650; color: var(--ink); background: color-mix(in srgb, var(--accent) 16%, transparent); }
+.sn[aria-current="page"]::after { transform: scaleX(1); }
+html[data-theme="light"] .subnav { background: rgba(255, 255, 255, .62); border-color: rgba(255, 255, 255, .75);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .05), 0 10px 28px rgba(15, 23, 42, .09), inset 0 1px 0 rgba(255, 255, 255, .9); }
+html[data-theme="light"] .subnav:hover { box-shadow: 0 2px 4px rgba(15, 23, 42, .05), 0 16px 38px rgba(15, 23, 42, .12), inset 0 1px 0 rgba(255, 255, 255, .9); }
+html[data-theme="light"] .sn { color: #334155; }
+html[data-theme="light"] .sn:hover { color: #0f172a; background: rgba(255, 255, 255, .7); }
+html[data-theme="light"] .sn::after { display: none; }
+html[data-theme="light"] .sn[aria-current="page"] { color: #fff; background: rgba(14, 116, 144, .92); box-shadow: 0 4px 14px rgba(14, 116, 144, .30); }
+.fnote { display: flex; gap: 12px; align-items: flex-start; margin: 0 0 14px; padding: 10px 16px 11px 12px; border-radius: 14px;
+  background: color-mix(in srgb, var(--panel) 72%, transparent); border: 1px solid var(--line); border-left: 3px solid var(--accent);
+  box-shadow: inset 0 1px 0 var(--c10); font-size: 12px; line-height: 1.45; color: var(--ink-2); }
+.fnote .fn-i { flex: 0 0 auto; display: inline-grid; place-items: center; width: 20px; height: 20px; margin-top: 1px; border-radius: 50%;
+  font: italic 700 12px/1 Georgia, "Times New Roman", serif; color: var(--accent); background: var(--c0); border: 1px solid var(--c13); }
+.fnote b { display: block; margin-bottom: 2px; font-size: 10.5px; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.corr p { margin: 0 0 8px; max-width: 980px; font-size: 12.5px; line-height: 1.55; color: var(--ink-2); }
+.corr p a { font-weight: 600; } .corr li time { font-weight: 600; color: var(--ink); margin-right: 6px; font-variant-numeric: tabular-nums; }
+.corr .none { color: var(--muted); }
+:root { --g-bg:#05070d;--g-gnd:#0b111d;--g-panel:#1c2840;--g-ink:#e6edf7;--g-ink2:#b4c1d4;--g-muted:#8a97ad;--g-accent:#22d3ee;--g-red:#f87171;--g-green:#34d399;--g-pwr:#fbbf24;--g-onred:#05070d;--g-chip:#2e3d5c;--g-line:#2a3548;--g-flowp:#5a2a00;--g-flowr:#5c0b0b;--g-obj:#d6deeb;--g-frame:rgba(148, 163, 184, .30);--g-bad:#f87171;--g-onbad:#05070d; }
+html[data-theme="light"] { --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-ink:#0f172a;--g-ink2:#334155;--g-muted:#586579;--g-accent:#0e7490;--g-red:#dc2626;--g-green:#047857;--g-pwr:#b45309;--g-onred:#ffffff;--g-chip:#d5deea;--g-line:#c9d3e0;--g-flowp:#fff3c4;--g-flowr:#ffffff;--g-obj:#1e293b;--g-frame:rgba(15, 23, 42, .16);--g-bad:#dc2626;--g-onbad:#ffffff; }
+#i-m:checked~.inner label[for=i-m],#i-ua:checked~.inner label[for=i-ua],#i-vs:checked~.inner label[for=i-vs],#i-dk:checked~.inner label[for=i-dk],#i-pl:checked~.inner label[for=i-pl],#i-ai:checked~.inner label[for=i-ai],#i-all:checked~.inner label[for=i-all]{background:var(--g-accent);border-color:var(--g-accent);color:var(--g-bg);font-weight:650}
+#i-m:focus-visible~.inner label[for=i-m],#i-ua:focus-visible~.inner label[for=i-ua],#i-vs:focus-visible~.inner label[for=i-vs],#i-dk:focus-visible~.inner label[for=i-dk],#i-pl:focus-visible~.inner label[for=i-pl],#i-ai:focus-visible~.inner label[for=i-ai],#i-all:focus-visible~.inner label[for=i-all]{outline:2px solid var(--g-ink);outline-offset:2px}
+#i-m:checked~.inner .cap-m,#i-ua:checked~.inner .cap-ua,#i-vs:checked~.inner .cap-vs,#i-dk:checked~.inner .cap-dk,#i-pl:checked~.inner .cap-pl,#i-ai:checked~.inner .cap-ai,#i-all:checked~.inner .cap-all{display:block;opacity:1;animation:swapin .8s ease 0.8s backwards}
+#i-ua:checked~.inner .ov-ua,#i-vs:checked~.inner .ov-vs,#i-dk:checked~.inner .ov-dk,#i-pl:checked~.inner .ov-pl,#i-ai:checked~.inner .ov-ai,#i-all:checked~.inner .ov-all{display:inline;opacity:1;animation:swapin .8s ease 0.8s backwards}
+#i-ua:checked~.inner .n:not(.in-ua),#i-vs:checked~.inner .n:not(.in-vs),#i-dk:checked~.inner .n:not(.in-dk),#i-pl:checked~.inner .n:not(.in-pl),#i-ai:checked~.inner .n:not(.in-ai),#i-all:checked~.inner .n:not(.in-all){opacity:.3}
+
+.vr{position:fixed;top:0;left:0;opacity:0;pointer-events:none}
+.sel{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 0}
+.sel label{padding:7px 12px;border:1px solid var(--g-line);border-radius:999px;cursor:pointer;color:var(--g-ink2);font-weight:500;font-size:13px;background:var(--g-gnd)}
+.sel label:hover{color:var(--g-ink)}
+/* Näkyvyys verkkoon on dataa eikä tapaus: erotetaan välillä ja katkoviivalla (Jouni 14.11.2026) */
+/* Kehystetty taustapaneeli jokaiseen kuvaan, myös mobiilissa (Jouni 14.11.2026): sama pinta kuin riskisivulla */
+.fig,.fig-w{margin:14px -6px 0;padding:8px;border-radius:18px;border:1px solid var(--g-frame);
+  background:radial-gradient(var(--c5) 1px,transparent 1px) 0 0/24px 24px,radial-gradient(900px 420px at 50% 0%,var(--c6),transparent 70%),linear-gradient(180deg,var(--c7),var(--c8));
+  box-shadow:inset 0 1px 0 var(--c10),0 18px 48px var(--c11)}
+.fig svg,.fig-w svg{display:block;width:100%;height:auto;font-family:inherit}
+/* Siirtymät (Jouni 15.11.2026): selite ja tapauksen kerros häipyvät ja ilmestyvät; selitteet samassa ruudukon
+   solussa, jotta vaihtuva selite ei hyppää; ilman display-siirtymän tukea vaihto on välitön kuten ennen */
+.cap,.ov{display:none;opacity:0;transition:opacity .8s ease}
+@supports (transition-behavior:allow-discrete){.cap,.ov{transition:opacity .8s ease,display .8s allow-discrete}}
+@keyframes swapin{from{opacity:0}to{opacity:1}}
+.caps{display:grid}.caps>.cap{grid-area:1/1;min-width:0}
+.n{transition:opacity .8s ease .8s}
+@media (prefers-reduced-motion:reduce){.cap,.ov,.n{transition:none;animation:none!important}}
+.caps{margin-top:14px;font-size:14px}
+.caps p{margin:0}
+.oc{color:var(--g-ink2)}
+.pill{display:inline-block;padding:2px 10px;border:1px solid var(--g-line);border-radius:999px;color:var(--g-ink);font-weight:650;font-size:13.5px}
+.pill.crit{background:var(--g-red);border-color:var(--g-red);color:var(--g-onred)}
+.steps{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:12px}
+.steps li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start}
+.num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--g-bad);color:var(--g-onbad);font-size:12.5px;font-weight:700}
+.num.off{width:8px;height:8px;margin:7px 7px 0;background:var(--g-muted)}
+.stt{margin-left:4px;font-size:12.5px;color:var(--g-muted)}
+.caps .tech{margin-top:2px;font-size:13px;color:var(--g-ink2)}
+.sec{display:inline-block;margin-left:4px;padding:0 6px;border:1px solid var(--g-line);border-radius:999px;font-size:11.5px;color:var(--g-muted);white-space:nowrap}
+.caps .target{margin-top:14px;padding-left:10px;border-left:3px solid var(--g-green)}
+.caps .srcl{margin-top:8px;font-size:13px}
+/* Miten vastaavaa voi estää: vihreä (puolustus), vaiheen numero ympyrässä */
+.guide{margin-top:16px;padding:14px 16px 6px;border-radius:16px;border:1px solid color-mix(in srgb,var(--g-green) 35%,var(--g-line));
+  background:color-mix(in srgb,var(--g-green) 6%,transparent)}
+.guide h3{display:inline-flex;align-items:center;gap:8px;margin:0;font-size:13.5px;font-weight:700;color:var(--g-ink)}
+.guide summary{cursor:pointer;list-style:none}.guide summary::-webkit-details-marker{display:none}
+.guide summary::after{content:"▾";margin-left:8px;color:var(--g-muted);font-size:12px}.guide:not([open]) summary::after{content:"▸"}
+.guide:not([open]){padding-bottom:12px}
+/* Mobiilissa tekniset lisärivit pois (tiivistys); tiedot ovat lähdesivulla */
+@media (max-width:760px){.caps .tech{display:none}}
+.guide h3 svg{width:18px;height:18px;color:var(--g-green);flex:none}
+.guide .glead{margin:4px 0 0;font-size:12.5px;color:var(--g-muted)}
+.guide ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:10px}
+.guide li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start;margin-bottom:6px}
+.guide li p{margin:0;font-size:13.5px}
+.gn{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--g-green);
+  color:var(--g-green);font-size:12px;font-weight:700}
+.gn.off{width:8px;height:8px;margin:7px;border:0;background:var(--g-green)}
+.guide .gs{margin-top:2px;font-size:12.5px}.guide .gs a{color:var(--g-accent)}
+.glate{margin-left:6px;padding:0 6px;border:1px solid var(--g-line);border-radius:999px;font-size:11px;color:var(--g-muted);white-space:nowrap}
+@media (min-width:1000px){.guide ul{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px 28px}}
+.srcl a{color:var(--g-accent)}.srcl .msl{color:var(--g-muted)}.srcl .sep{margin:0 8px;color:var(--g-muted)}
+.legend{list-style:none;display:flex;flex-wrap:wrap;gap:6px 16px;margin:16px 0 0;padding:12px 0 0;border-top:1px solid var(--g-line);font-size:12.5px;color:var(--g-ink2)}
+.legend li{display:inline-flex;align-items:center;gap:6px}
+.legend svg{flex:none}
+.caps .hint{margin-top:8px;font-size:12.5px;color:var(--g-muted)}.caps .hint a{color:var(--g-accent)}
+.notes{margin:12px 0 0;padding-left:18px;display:grid;gap:8px}
+/* Vaiheittainen piirto: valittu tapaus maalautuu vaihe kerrallaan (Jouni 14.11.2026) */
+/* Hidastettu 14.11.2026 (Jouni): vaiheiden väli 1,4 s */
+.s1{--d:0.95s}.s2{--d:2.35s}.s3{--d:3.75s}.s4{--d:5.15s}.s5{--d:6.55s}.s6{--d:7.95s}.s7{--d:9.35s}.s8{--d:10.75s}.s9{--d:12.15s}.s10{--d:13.55s}.s11{--d:14.95s}.s12{--d:16.35s}
+.st{animation:stepin .6s ease var(--d) both}
+.st .drw{stroke-dasharray:1;animation:draw 1.1s ease-in-out var(--d) both}
+.st .arh{animation:stepin .3s ease calc(var(--d) + 1s) both}
+.st .fl{animation:flow 1.15s linear infinite,stepin .4s ease calc(var(--d) + 1.1s) both}
+.cap .steps li{animation:stepin .6s ease var(--d,0s) both}
+.cap .target,.cap .srcl,.cap .guide{animation:stepin .4s ease var(--end,0s) both}
+.cap .steps li:nth-child(1){--d:0.95s}.cap .steps li:nth-child(2){--d:2.35s}.cap .steps li:nth-child(3){--d:3.75s}.cap .steps li:nth-child(4){--d:5.15s}.cap .steps li:nth-child(5){--d:6.55s}.cap .steps li:nth-child(6){--d:7.95s}.cap .steps li:nth-child(7){--d:9.35s}.cap .steps li:nth-child(8){--d:10.75s}.cap .steps li:nth-child(9){--d:12.15s}.cap .steps li:nth-child(10){--d:13.55s}.cap .steps li:nth-child(11){--d:14.95s}.cap .steps li:nth-child(12){--d:16.35s}
+@keyframes stepin{from{opacity:0}}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.st,.st .drw,.st .arh,.st .fl,.cap .steps li,.cap .target,.cap .srcl,.cap .guide{animation:none}}
+@media (min-width:460px){.fig{margin:14px auto 0;max-width:430px}}
+@media (min-width:880px){.grid{display:flex;gap:32px;align-items:flex-start}.fig{flex:0 0 430px;margin:14px 0 0}.caps{flex:1;margin-top:28px;position:sticky;top:100px}}
+.fig-w{display:none}
+@media (min-width:1000px){.fig-w{padding:18px 20px;border-radius:22px;box-shadow:inset 0 1px 0 var(--c10),0 24px 60px var(--c11)}
+ html.fs .fig-w{padding:10px 14px}}
+@media (min-width:1000px){.fig-p{display:none}.fig-w{display:block;margin:16px 0 0}.grid{display:block}.caps{margin-top:18px;position:static}.steps{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.notes{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px 36px}}
+
+.gnd{fill:var(--g-gnd);stroke:var(--g-line);stroke-width:1}
+.rl{fill:var(--g-muted);font-size:10.5px;font-weight:600;letter-spacing:.09em}
+.nt{fill:var(--g-ink);font-size:12.5px;font-weight:650}
+.lb{fill:var(--g-ink2);font-size:10.5px}
+.ol{fill:var(--g-panel);stroke:var(--g-obj);stroke-width:1.5;stroke-linejoin:round}
+.sp{fill:var(--g-chip)}
+.of{fill:var(--g-chip);stroke:var(--g-obj);stroke-width:1}
+.scr{fill:var(--g-chip);stroke:var(--g-obj);stroke-width:1.1}
+.bl{stroke:var(--g-obj);stroke-width:2.6;stroke-linecap:round}
+.dl{fill:none;stroke:var(--g-obj);stroke-width:1.5;stroke-linecap:round}
+.dl2{fill:none;stroke:var(--g-obj);stroke-width:2.2;stroke-linecap:round}
+.dt{fill:none;stroke:var(--g-obj);stroke-width:1.05;stroke-linecap:round;stroke-linejoin:round}
+.dv{fill:var(--g-panel);stroke:var(--g-obj);stroke-width:1.4}
+.dvl{fill:none;stroke:var(--g-obj);stroke-width:1.5}
+.dvc{fill:var(--g-obj)}
+.dot{fill:var(--g-obj)}
+.smoke{fill:none;stroke:var(--g-muted);stroke-width:1.1}
+.wave{fill:none;stroke:var(--g-muted);stroke-width:1.2;stroke-linecap:round}
+.win{fill:var(--g-pwr)}
+.pw{fill:none;stroke:var(--g-pwr);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.pw2{fill:none;stroke:var(--g-pwr);stroke-width:2;stroke-linecap:round}
+.pw3{fill:none;stroke:var(--g-pwr);stroke-width:1.2;stroke-linecap:round}
+.fl{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3 13;animation:flow 1.15s linear infinite}
+.flp{stroke:var(--g-flowp);stroke-width:2}
+.flp2{stroke:var(--g-flowp);stroke-width:1.3}
+.flp3{stroke:var(--g-flowp);stroke-width:.9}
+.flr{stroke:var(--g-flowr);stroke-width:1.5}
+@keyframes flow{to{stroke-dashoffset:-16}}
+@media (prefers-reduced-motion:reduce){.fl{animation:none}}
+.cm{fill:none;stroke:var(--g-muted);stroke-width:1.4;stroke-dasharray:3 4;stroke-linecap:round}
+.net{fill:none;stroke:var(--g-muted);stroke-width:1.6;stroke-linecap:round}
+.ar{fill:none;stroke:var(--g-red);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}
+.ard{stroke-dasharray:5 5}
+.arh{fill:var(--g-red)}
+.rg{fill:none;stroke:var(--g-red);stroke-width:2}
+.cim{fill:none;stroke:var(--g-ink2);stroke-width:2;stroke-dasharray:5 4}
+.ctg{fill:var(--g-panel);stroke:var(--g-line);stroke-width:1.2}.ctgt{fill:var(--g-ink);font-size:11px;font-weight:700}
+.tkb{fill:var(--g-panel);stroke:var(--g-line);stroke-width:1}.tkt{fill:var(--g-ink);font-weight:700}.tks{fill:var(--g-muted);font-weight:600}
+.tk{opacity:0;animation:tkshow var(--len) linear var(--t0) both}.tk.tkl{opacity:1;animation:stepin .5s ease var(--t0) both}
+@keyframes tkshow{0%{opacity:0}6%{opacity:1}90%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.tk,.tk.tkl{animation:none}}
+.sst{fill:var(--g-red)}.sstt{fill:var(--g-onred);font-size:11px;font-weight:700}
+.ctgp{fill:var(--g-muted);font-size:9.5px;font-weight:700;letter-spacing:.08em}
+.cim2{fill:none;stroke:var(--g-ink2);stroke-width:2}
+.bx{fill:var(--g-red);stroke:var(--g-gnd);stroke-width:1.5}
+.bxl{fill:none;stroke:var(--g-onred);stroke-width:1.7;stroke-linecap:round}
+.bd{fill:var(--g-bad);stroke:var(--g-bg);stroke-width:2}
+.bdt{fill:var(--g-onbad);font-size:13px;font-weight:700;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.yb{fill:var(--g-bad);stroke:var(--g-bg);stroke-width:2}
+.ybt{fill:var(--g-onbad);font-size:10px;font-weight:700}
+.xm{fill:var(--g-bg);stroke:none}
+.xml{fill:none;stroke:var(--g-red);stroke-width:2.6;stroke-linecap:round}
+.dead{fill:none;stroke:var(--g-line);stroke-width:3.8;stroke-linecap:round;stroke-linejoin:round}
+.dead2{stroke:var(--g-line);stroke-width:2.2;stroke-linecap:round}
+.wdark{fill:var(--g-panel);stroke:var(--g-obj);stroke-width:.8}
+
+.pw,.fl{transition:opacity .8s ease .8s}
+.pwx2s{fill:none;stroke:var(--g-pwr);stroke-width:1.6;stroke-dasharray:6 4}
+.pwx2,.pwx1{fill:none;stroke:var(--g-pwr);stroke-linecap:butt;animation-timing-function:linear;animation-iteration-count:infinite}
+.pwx2{stroke-dasharray:10 8;animation-name:flow18}
+.pwx1{stroke-dasharray:5 15;animation-name:flow20}
+@keyframes flow18{to{stroke-dashoffset:-18}}@keyframes flow20{to{stroke-dashoffset:-20}}
+@media (prefers-reduced-motion:reduce){.pwx2,.pwx1{animation:none}}
+.shp0{fill:var(--g-panel)}.shp{fill:var(--g-accent);fill-opacity:.1;stroke:var(--g-accent);stroke-width:1.4;stroke-dasharray:5 3}
+.shtag{fill:var(--g-accent);font-size:9px;font-weight:800;letter-spacing:.12em}
+.sht{fill:var(--g-ink2);font-size:11px;font-weight:600}
+.shn{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums}
+.shf{fill:var(--g-ink)}.shs{fill:var(--g-ink2);font-weight:400}.she{fill:var(--g-red)}
+.shl{font-size:12px;font-weight:700}.shl2{fill:var(--g-ink2);font-size:10.5px}
+.svct{width:100%;border-collapse:collapse;font-size:13px;margin:6px 0}.svct th,.svct td{text-align:left;padding:5px 8px;border-bottom:1px solid var(--g-line);vertical-align:top}
+.svct th{color:var(--g-muted);font-weight:650;font-size:12px}
+.ov-nm{--g-red:#f59e0b;--g-onred:#05070d}
+/* Vaalealla taustalla #f59e0b on 2,0:1; tummempi meripihka on 3,2–3,6:1 taustaan ja alueiden pohjaan */
+html[data-theme="light"] .ov-nm{--g-red:#c86800}
+@media print{html[data-theme="dark"] .ov-nm{--g-red:#c86800}}
+
+.tw{overflow-x:auto}
+.shtab{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px}
+.shtab th,.shtab td{padding:6px 8px;border-bottom:1px solid var(--g-line);text-align:left;vertical-align:top}
+.shtab th{font-size:11px;font-weight:650;letter-spacing:.06em;text-transform:uppercase;color:var(--g-muted)}
+.shtab td.nr{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.shtab td.eu{color:var(--g-red);font-weight:700}
+.shtab code{font-size:11.5px;color:var(--g-ink2);overflow-wrap:anywhere}
+.sn.chain:not([aria-current]){font-weight:500}
+
+.sa-n rect{fill:var(--g-panel);stroke:var(--g-line);stroke-width:1.2}
+.sa-lv rect{stroke:var(--g-accent);stroke-width:1.7}
+.sa-fa rect{fill:var(--g-gnd);stroke-dasharray:5 4}
+.sa-env rect{fill:var(--g-gnd)}
+.sa-k{font-size:11px;font-weight:650;letter-spacing:.11em;fill:var(--g-muted)}
+.sa-lv .sa-k{fill:var(--g-accent)}
+.sa-t{font-size:16px;font-weight:650;fill:var(--g-ink)}
+.sa-x{font-size:14.5px;fill:var(--g-ink2)}
+.sa-lab{font-size:12px;font-style:italic;fill:var(--g-muted)}
+.sa-e{fill:none;stroke:var(--g-muted);stroke-width:1.4;opacity:.8}
+.sa-fb{stroke-dasharray:5 5}
+.sa-dl{fill:none;stroke:var(--g-line);stroke-width:1.4;stroke-dasharray:3 4}
+.sa-dt rect{fill:var(--g-gnd);stroke:var(--g-line);stroke-width:1}
+.sa-dtt{font-size:14.5px;font-weight:650;fill:var(--g-ink)}
+.sa-dtx{font-size:13.5px;fill:var(--g-ink2)}
+.sa-ah{fill:var(--g-muted)}.sa-ahr{fill:var(--g-red)}
+.sa-h{fill:none;stroke:var(--g-red);stroke-width:2.6;stroke-dasharray:6 5;animation:sa-flow 1s linear infinite}
+@keyframes sa-flow{to{stroke-dashoffset:-11}}
+.sa-st{animation:stepin .6s ease var(--d) both}
+.sa-cov.c-panel{fill:var(--g-panel)}.sa-cov.c-gnd{fill:var(--g-gnd)}
+.sa-ring{fill:none;stroke-width:2.6}
+.sa-ring.k-hit,.sa-lgr.k-hit{stroke:var(--g-red)}.sa-ring.k-deg,.sa-lgr.k-deg{stroke:var(--g-pwr)}
+.sa-lgr{fill:none;stroke-width:2}
+.sa-bd.k-hit{fill:var(--g-red)}.sa-bd.k-deg{fill:var(--g-pwr)}
+.sa-bdt{font-size:12.5px;font-weight:700;text-anchor:middle;fill:var(--g-bg)}
+.sa-sx{font-size:14px;font-weight:650}
+.sa-sx.k-hit{fill:var(--g-red)}.sa-sx.k-deg{fill:var(--g-pwr)}
+.num.k-deg{background:var(--g-pwr)}
+.sa-dm{display:inline-block;margin-left:4px;padding:0 8px;border-radius:999px;border:1px solid var(--g-pwr);color:var(--g-pwr);font-size:12px;white-space:nowrap}
+.sa-h3{font-size:15px;margin:0 0 6px}.sa-rel{margin-top:14px}
+.sa-read{margin:0;padding-left:18px;display:grid;gap:6px}
+.sa-read a{color:var(--g-accent)}
+.caps .sa-terms{margin-top:10px;font-size:13px;color:var(--g-ink2)}
+.atk{display:flex;gap:10px;margin:14px 0 0}
+.atkbtn{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;border:1px solid var(--g-red);color:var(--g-red);font-weight:650;cursor:pointer;background:transparent}
+.atkbtn:hover{background:var(--g-red);color:var(--g-onred)}
+.atkbtn.k-deg{border-color:var(--g-pwr);color:var(--g-pwr)}.atkbtn.k-deg:hover{background:var(--g-pwr);color:var(--g-bg)}
+.atkback{display:none;padding:8px 16px;border-radius:999px;border:1px solid var(--g-line);cursor:pointer;font-weight:600}
+#i-attack:checked~.inner .atkbtn{display:none}#i-attack:checked~.inner .atkback{display:inline-flex}
+#i-attack:focus-visible~.inner .atkbtn,#i-m:focus-visible~.inner .atkback{outline:2px solid var(--g-ink);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.sa-h,.sa-st{animation:none}}
+@media (min-width:1000px){.sa-g{display:flex;gap:30px;align-items:flex-start}
+ .sa-g .fig-w{flex:1 1 auto;min-width:0;margin:14px 0 0}
+ .sa-g .caps{flex:0 0 340px;margin-top:14px;position:sticky;top:76px;max-height:calc(100vh - 90px);overflow:auto}
+ .sa-g .steps{grid-template-columns:1fr;gap:12px}
+ html.fs .sa-g .fig-w svg{max-height:calc(100vh - 120px)}}
+.srcp section{margin-top:22px}.srcp h2{font-size:18px;margin:0 0 8px}.srcp h3{font-size:14.5px;margin:14px 0 6px}
+.srcp ul,.srcp ol{margin:0;padding-left:20px;display:grid;gap:5px;font-size:14px}
+.srcp a{color:var(--g-accent)}
+.srcp .gap{margin-top:14px;padding-left:10px;border-left:3px solid var(--g-pwr);color:var(--g-ink2);font-size:13.5px}
+@media print {
+  html[data-theme="dark"] { --bg: #f5f7fb; --panel: rgba(255, 255, 255, .9); --panel-2: rgba(248, 250, 252, .95); --line: rgba(15, 23, 42, .10); --line-2: rgba(15, 23, 42, .18);
+  --ink: #0f172a; --ink-2: #334155; --muted: #64748b; --accent: #0e7490; --out: #0891b2; --in: #7c3aed; --bi: #ea580c;
+  --p0: #64748b; --p2: #2563eb; --p3: #d97706; --p4: #db2777; --open: #dc2626; --open-2: #b91c1c; --info: #047857;
+  --c0: rgba(8, 145, 178, 0.05); --c1: rgba(124, 58, 237, 0.04); --c2: #0e7490; --c3: #ffffff; --c4: #64748b; --c5: rgba(15, 23, 42, 0.056); --c6: rgba(8, 145, 178, 0.019); --c7: rgba(255, 255, 255, 0.72); --c8: rgba(255, 255, 255, 0.72); --c9: rgba(15, 23, 42, 0.083); --c10: rgba(255, 255, 255, 0.03); --c11: rgba(15, 23, 42, 0.077); --c12: rgba(15, 23, 42, 0.07); --c13: rgba(8, 145, 178, 0.099); --c14: rgba(15, 23, 42, 0.06); --c15: rgba(124, 58, 237, 0.275); --c16: rgba(220, 38, 38, 0.072); --c17: rgba(220, 38, 38, 0.252); --c18: rgba(220, 38, 38, 0.144); --c19: rgba(220, 38, 38, 0.495); --c20: #475569; --c21: #164e63; --c22: #0891b2; --c23: #4c1d95; --c24: #7c3aed; --c25: #7c2d12; --c26: #ea580c; --c27: rgba(8, 145, 178, 0.193); --c28: rgba(8, 145, 178, 0.275); --c29: rgba(8, 145, 178, 0.154); --c30: rgba(8, 145, 178, 0.44); --c31: rgba(234, 88, 12, 0.4); --c32: rgba(124, 58, 237, 0.4); --c33: rgba(8, 145, 178, 0.248); --c34: rgba(8, 145, 178, 0); --c35: rgba(8, 145, 178, 0.138); --c36: rgba(15, 23, 42, 0.088); --c37: rgba(255, 255, 255, 0.192); --c38: rgba(255, 255, 255, 0.6); --c39: rgba(8, 145, 178, 0.044); --c40: rgba(255, 255, 255, 1); --c41: rgba(15, 23, 42, 0.11);
+  color-scheme: light; --g-bg:#f5f7fb;--g-gnd:#e5ebf3;--g-panel:#ffffff;--g-ink:#0f172a;--g-ink2:#334155;--g-muted:#586579;--g-accent:#0e7490;--g-red:#dc2626;--g-green:#047857;--g-pwr:#b45309;--g-onred:#ffffff;--g-chip:#d5deea;--g-line:#c9d3e0;--g-flowp:#fff3c4;--g-flowr:#ffffff;--g-obj:#1e293b;--g-frame:rgba(15, 23, 42, .16);--g-bad:#dc2626;--g-onbad:#ffffff; }
+  body { background: #fff; }
+  .subnav, .sel, .mnote, .topbar, #fsw { display: none !important; }
+  html.fsh .inner { visibility: visible; }
+  .caps { position: static; }
+  html.zoomed .fig-w, html.zoomed .fig, html.zoomed .fig-panel { overflow: visible !important; max-height: none !important; width: auto !important; max-width: 100% !important; margin-left: 0 !important; }
+  .fig-w > svg, .fig > svg, .fig-panel > svg { width: 100% !important; height: auto !important; max-height: none !important; min-width: 0 !important; }
+}
+</style>
+</head>
+<body>
+<div class="inner srcp">
+<div class="topbar"><a class="home" href="https://www.ihanus.eu/">← www.ihanus.eu</a></div>
+<header class="ph"><div class="eyebrow">Lägesbildens anatomi</div><h1>Källor</h1><p class="sub">Alla påståenden på sidorna bygger på publikationerna nedan. Scenarierna är illustrationer, inte beskrivningar av verkliga händelser.</p></header>
+<nav class="subnav" aria-label="Sidor"><a class="sn" href="bilkorning.html">Bilkörning</a><a class="sn" href="sakerhetscenter.html">Säkerhetscenter</a><a class="sn" href="samhallssakerhet.html">Samhällssäkerhet</a><a class="sn" href="kallor.html" aria-current="page">Källor</a><div class="tools"><div class="lang" role="group" aria-label="Språk"><a href="lahteet.html" lang="fi" hreflang="fi">FI</a><a href="kallor.html" lang="sv" hreflang="sv" aria-current="page">SV</a><a href="sources.html" lang="en" hreflang="en">EN</a></div><button type="button" class="theme" id="theme" aria-label="Byt tema" title="Byt tema"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="t-sun" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="t-moon" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button><div class="zm" role="group" aria-label="Zoom" hidden><button type="button" class="theme" data-z="-1" aria-label="Zooma ut" title="Zooma ut"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="zi" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M8 11h6"/></svg></button><button type="button" class="zr" data-z="0" aria-label="Återställ zoom" title="Återställ zoom">100 %</button><button type="button" class="theme" data-z="1" aria-label="Zooma in" title="Zooma in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="zi" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/></svg></button></div><button type="button" class="theme" id="fs" hidden aria-pressed="false" aria-label="Helskärm" title="Helskärm" data-on="Helskärm" data-off="Avsluta helskärm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="fs-max" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="fs-min" aria-hidden="true"><path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/></svg></button></div></nav>
+<section><h2>Modell</h2><ul><li><b>Omgivningens tillstånd</b> – Lägesbilden gäller alltid en omgivning som också förändras av ens egna handlingar. (<a href="#ref-endsley95">Endsley 1995</a>)</li><li><b>Varseblivning</b> – Att varsebli situationens relevanta element samt deras status och egenskaper. (<a href="#ref-endsley95">Endsley 1995</a>)</li><li><b>Förståelse</b> – Varseblivningarna förenas till en innebörd i ljuset av de egna målen. (<a href="#ref-endsley95">Endsley 1995</a>)</li><li><b>Prognos</b> – Att förutse den närmaste framtiden, vilket gör det möjligt att agera innan situationen är ett faktum. (<a href="#ref-endsley95">Endsley 1995</a>)</li><li><b>Uppmärksamhet, arbetsminne</b> – Arbetsminnet rymmer bara några få saker åt gången, och uppgifter som använder samma resurs konkurrerar. (<a href="#ref-cowan01">Cowan 2001</a>, <a href="#ref-wickens08">Wickens 2008</a>)</li><li><b>Mentala modeller och mål</b> – Modeller som bygger på erfarenhet anger hur varseblivningar kombineras och vad som följer. En felaktig modell snedvrider förståelse och prognos. (<a href="#ref-endsley95">Endsley 1995</a>, <a href="#ref-endsleyjones">Endsley &amp; Jones 2025</a>, <a href="#ref-jones_demons">Jones: SA demons</a>)</li><li><b>Verktyg och automation</b> – Gränssnitt och automation avgör vad som alls kan varseblivas. Automation kan ta människan ur loopen. (<a href="#ref-endsley96">Endsley 1996</a>, <a href="#ref-endsley17">Endsley 2017</a>)</li><li><b>Delad lägesbild</b> – Lägesbilden är fördelad mellan människor och verktyg. Var och en behöver sin del, inte allt. (<a href="#ref-stanton06">Stanton m.fl. 2006</a>, <a href="#ref-salmon08">Salmon m.fl. 2008</a>)</li><li><b>Handling</b> – Handlingen förändrar omgivningen, och återkopplingen startar cykeln på nytt. (<a href="#ref-endsley95">Endsley 1995</a>)</li><li><b>Beslut</b> – Lägesbilden är en förutsättning för beslutet, inte beslutet. En erfaren beslutsfattare känner igen situationen och väljer det första fungerande alternativet. (<a href="#ref-endsley95">Endsley 1995</a>, <a href="#ref-endsley15">Endsley 2015</a>, <a href="#ref-klein91">Klein &amp; Klinger 1991</a>)</li></ul>
+<h3>Den delade lägesbildens fyra riktningar (<a href="#ref-drury06">Drury m.fl. 2006</a>)</h3><ul><li><b>Människa om apparat</b> – Position, skick, uppgift och dess framsteg, prognos och väder.</li><li><b>Människa om människa</b> – Andra operatörers och ledares position, roll och verksamhet.</li><li><b>Apparat om människa</b> – Kommandon och begränsningar som människan har gett.</li><li><b>Apparat om apparat</b> – Andra apparaters planer, avvikelser och omfördelning av uppgifter.</li></ul></section>
+<section><h2>Sammanhang</h2><h3 id="drive">Bilkörning</h3><ul><li><b>Uppmärksamhet, arbetsminne</b>: <a href="#ref-wickens08">Wickens 2008</a></li><li><b>Verktyg och automation</b>: <a href="#ref-endsley96">Endsley 1996</a></li><li><b>Delad lägesbild</b>: <a href="#ref-drury06">Drury m.fl. 2006</a></li></ul><h3 id="soc">Säkerhetscenter</h3><ul><li><b>Uppmärksamhet, arbetsminne</b>: <a href="#ref-chhetri24">Baruwal Chhetri m.fl. 2024</a></li><li><b>Mentala modeller och mål</b>: <a href="#ref-gutzwiller16">Gutzwiller m.fl. 2016</a>, <a href="#ref-damico05">D&#x27;Amico m.fl. 2005</a></li><li><b>Verktyg och automation</b>: <a href="#ref-giacobe10">Giacobe &amp; Braun 2010</a></li><li><b>Delad lägesbild</b>: <a href="#ref-ahmad21">Ahmad m.fl. 2021</a>, <a href="#ref-drury06">Drury m.fl. 2006</a></li><li><b>Förståelse</b>: <a href="#ref-franke14">Franke &amp; Brynielsson 2014</a></li><li><b>Beslut</b>: <a href="#ref-sarjakivi24">Sarjakivi m.fl. 2024</a>, <a href="#ref-sarjakivi25">Sarjakivi m.fl. 2025</a></li></ul><h3 id="total">Samhällssäkerhet</h3><ul><li><b>Omgivningens tillstånd</b>: <a href="#ref-ra26">Kansallinen riskiarvio 2026</a></li><li><b>Delad lägesbild</b>: <a href="#ref-poyhonen23">Pöyhönen &amp; Lehto 2023</a>, <a href="#ref-yts25">Yhteiskunnan turvallisuusstrategia 2025</a>, <a href="#ref-drury06">Drury m.fl. 2006</a></li></ul></section>
+<section><h2>Scenarier</h2><h3 id="drive-scn">Störning av positionering (Bilkörning)</h3><ul><li><a href="#ref-endsley96">Endsley 1996</a>, <a href="#ref-endsley17">Endsley 2017</a>, <a href="#ref-jones_demons">Jones: SA demons</a></li></ul><h3 id="soc-scn">Larmflod och tidspress (Säkerhetscenter)</h3><ul><li><a href="#ref-jones_demons">Jones: SA demons</a>, <a href="#ref-endsley95">Endsley 1995</a></li><li>Steg 1: <a href="#ref-chhetri24">Baruwal Chhetri m.fl. 2024</a>, <a href="#ref-jones_demons">Jones: SA demons</a></li><li>Steg 2: <a href="#ref-jones_demons">Jones: SA demons</a></li><li>Steg 3: <a href="#ref-ihanus26">Ihanus 2026</a>, <a href="#ref-sarjakivi24">Sarjakivi m.fl. 2024</a></li><li>Steg 4: <a href="#ref-jones_demons">Jones: SA demons</a></li><li>Återhämtning: <a href="#ref-chhetri24">Baruwal Chhetri m.fl. 2024</a>, <a href="#ref-endsleyjones">Endsley &amp; Jones 2025</a></li></ul><h3 id="total-scn">Informationspåverkansangrepp (Samhällssäkerhet)</h3><ul><li><a href="#ref-jones_demons">Jones: SA demons</a>, <a href="#ref-stanton06">Stanton m.fl. 2006</a>, <a href="#ref-salmon08">Salmon m.fl. 2008</a>, <a href="#ref-endsley95">Endsley 1995</a>, <a href="#ref-ra26">Kansallinen riskiarvio 2026</a></li><li>Steg 1: <a href="#ref-paul16">Paul &amp; Matthews 2016</a></li><li>Steg 2: <a href="#ref-lewandowsky12">Lewandowsky m.fl. 2012</a></li><li>Steg 3: <a href="#ref-lewandowsky12">Lewandowsky m.fl. 2012</a></li><li>Steg 4: <a href="#ref-bennett20">Bennett &amp; Livingston 2020</a></li><li>Steg 5: <a href="#ref-prochaska23">Prochaska m.fl. 2023</a></li><li>Återhämtning: <a href="#ref-lewandowsky12">Lewandowsky m.fl. 2012</a>, <a href="#ref-debunk20">Lewandowsky m.fl. 2020</a>, <a href="#ref-roozenbeek19">Roozenbeek &amp; van der Linden 2019</a>, <a href="#ref-pamment18">Pamment m.fl. 2018</a>, <a href="#ref-vnk19">Valtioneuvoston kanslia 2019</a></li></ul><p class="gap">Öppet: det finns lite direkt forskning om hur informationspåverkan försvagar prognosen (nivå 3). Steg 3 bygger på forskning som visar att felaktig information påverkar slutsatserna även efter att den har rättats.</p></section>
+<section><h2>Kopplingar till andra sidor</h2><ul><li><a href="/posts/2026/03/SA/">Inlägg: Defining Situation Awareness (12.3.2026)</a> – Termerna på sidan: förmåga och tillstånd, lägesbild och gemensam lägesbild.</li><li><a href="/posts/2026/03/SA2/">Inlägg: The long and painful journey from detection to understanding (26.3.2026)</a> – Klyftan mellan varseblivning och förståelse.</li><li><a href="/posts/2026/05/Thoughts_on_Cyber_Exercises/">Inlägg: Thoughts on Cyber Exercises, Time Compression, and Situation Awareness (2.5.2026)</a> – Tidspress får förståelse och prognos att kollapsa under en övning.</li><li><a href="/threat-scenarios/?lang=sv#fokus=info">Hotscenariokartan: informationspåverkan</a> – Risken i den nationella riskbedömningen 2026 som samhällssäkerhetens scenario bygger på.</li><li><a href="/power-chain/elkedjan.html">Elens servicekedja</a> – Kaskadeffekter som prognosen försöker se i förväg.</li><li><a href="/capability-challenges/el.html">Där förmågan brister</a> – Många aktörer med var sin förbindelse och bild: bristande delad lägesbild i praktiken.</li></ul></section>
+<section><h2>Källor</h2><ul><li id="ref-ahmad21">Ahmad, A. m.fl. (2021). How can organizations develop situation awareness for incident response. Computers &amp; Security, 101, 102122. <a href="https://doi.org/10.1016/j.cose.2020.102122" target="_blank" rel="noopener noreferrer">doi:10.1016/j.cose.2020.102122 ↗</a></li><li id="ref-chhetri24">Baruwal Chhetri, M. m.fl. (2024). Towards human-AI teaming to mitigate alert fatigue in security operations centres. ACM Transactions on Internet Technology. <a href="https://doi.org/10.1145/3670009" target="_blank" rel="noopener noreferrer">doi:10.1145/3670009 ↗</a></li><li id="ref-bennett20">Bennett, W. L. &amp; Livingston, S. (2020). A brief history of the disinformation age: Information wars and the decline of institutional authority. I The Disinformation Age. Cambridge University Press. <a href="https://doi.org/10.1017/9781108914628.001" target="_blank" rel="noopener noreferrer">doi:10.1017/9781108914628.001 ↗</a></li><li id="ref-cowan01">Cowan, N. (2001). The magical number 4 in short-term memory. Behavioral and Brain Sciences, 24(1), 87–114. <a href="https://doi.org/10.1017/S0140525X01003922" target="_blank" rel="noopener noreferrer">doi:10.1017/S0140525X01003922 ↗</a></li><li id="ref-damico05">D&#x27;Amico, A. m.fl. (2005). Achieving cyber defense situational awareness: A cognitive task analysis of information assurance analysts. HFES Annual Meeting.</li><li id="ref-drury06">Drury, J. L., Riek, L. &amp; Rackliffe, N. (2006). A decomposition of UAV-related situation awareness. HRI &#x27;06, 88–94. <a href="https://doi.org/10.1145/1121241.1121258" target="_blank" rel="noopener noreferrer">doi:10.1145/1121241.1121258 ↗</a></li><li id="ref-endsleyjones">Endsley, M. R. &amp; Jones, D. G. (2025). Designing for situation awareness: An approach to user-centered design (3rd ed.). CRC Press. <a href="https://doi.org/10.1201/9781003388234" target="_blank" rel="noopener noreferrer">doi:10.1201/9781003388234 ↗</a></li><li id="ref-endsley95">Endsley, M. R. (1995). Toward a theory of situation awareness in dynamic systems. Human Factors, 37(1), 32–64. <a href="https://doi.org/10.1518/001872095779049543" target="_blank" rel="noopener noreferrer">doi:10.1518/001872095779049543 ↗</a></li><li id="ref-endsley96">Endsley, M. R. (1996). Automation and situation awareness. I R. Parasuraman &amp; M. Mouloua (red.), Automation and human performance. Erlbaum.</li><li id="ref-endsley15">Endsley, M. R. (2015). Situation awareness misconceptions and misunderstandings. Journal of Cognitive Engineering and Decision Making, 9(1), 4–32. <a href="https://doi.org/10.1177/1555343415572631" target="_blank" rel="noopener noreferrer">doi:10.1177/1555343415572631 ↗</a></li><li id="ref-endsley17">Endsley, M. R. (2017). From here to autonomy: Lessons learned from human–automation research. Human Factors, 59(1), 5–27. <a href="https://doi.org/10.1177/0018720816681350" target="_blank" rel="noopener noreferrer">doi:10.1177/0018720816681350 ↗</a></li><li id="ref-franke14">Franke, U. &amp; Brynielsson, J. (2014). Cyber situational awareness – A systematic review of the literature. Computers &amp; Security, 46, 18–31. <a href="https://doi.org/10.1016/j.cose.2014.06.008" target="_blank" rel="noopener noreferrer">doi:10.1016/j.cose.2014.06.008 ↗</a></li><li id="ref-giacobe10">Giacobe, N. A. &amp; Braun, J. (2010). Application of the JDL data fusion process model for cyber security. Proc. SPIE 7710. <a href="https://doi.org/10.1117/12.850275" target="_blank" rel="noopener noreferrer">doi:10.1117/12.850275 ↗</a></li><li id="ref-gutzwiller16">Gutzwiller, R. S., Hunt, S. M. &amp; Lange, D. S. (2016). A task analysis toward characterizing cyber-cognitive situation awareness (CCSA) in cyber defense analysts. IEEE CogSIMA. <a href="https://doi.org/10.1109/COGSIMA.2016.7497780" target="_blank" rel="noopener noreferrer">doi:10.1109/COGSIMA.2016.7497780 ↗</a></li><li id="ref-ihanus26">Ihanus, J. (2026). Thoughts on cyber exercises, time compression, and situation awareness. Kirjoitus, ihanus.eu, 2.5.2026. <a href="https://www.ihanus.eu/posts/2026/05/Thoughts_on_Cyber_Exercises/" target="_blank" rel="noopener noreferrer">https://www.ihanus.eu/posts/2026/05/Thoughts_on_Cyber_Exercises/ ↗</a></li><li id="ref-jones_demons">Jones, D. G. (s.a.). SA demons: The enemies of situation awareness.</li><li id="ref-klein91">Klein, G. &amp; Klinger, D. (1991). Naturalistic decision making. CSERIAC Gateway, 11(3).</li><li id="ref-debunk20">Lewandowsky, S., Cook, J., Ecker, U. K. H. m.fl. (2020). The Debunking Handbook 2020. <a href="https://doi.org/10.17910/b7.1182" target="_blank" rel="noopener noreferrer">doi:10.17910/b7.1182 ↗</a></li><li id="ref-lewandowsky12">Lewandowsky, S., Ecker, U. K. H., Seifert, C. M., Schwarz, N. &amp; Cook, J. (2012). Misinformation and its correction: Continued influence and successful debiasing. Psychological Science in the Public Interest, 13(3), 106–131. <a href="https://doi.org/10.1177/1529100612451018" target="_blank" rel="noopener noreferrer">doi:10.1177/1529100612451018 ↗</a></li><li id="ref-pamment18">Pamment, J., Nothhaft, H., Agardh-Twetman, H. &amp; Fjällhed, A. (2018). Countering information influence activities: The state of the art. MSB och Lundin yliopisto. <a href="https://rib.msb.se/filer/pdf/28697.pdf" target="_blank" rel="noopener noreferrer">https://rib.msb.se/filer/pdf/28697.pdf ↗</a></li><li id="ref-paul16">Paul, C. &amp; Matthews, M. (2016). The Russian “firehose of falsehood” propaganda model. RAND PE-198. <a href="https://www.rand.org/pubs/perspectives/PE198.html" target="_blank" rel="noopener noreferrer">https://www.rand.org/pubs/perspectives/PE198.html ↗</a></li><li id="ref-prochaska23">Prochaska, S. m.fl. (2023). Mobilizing manufactured reality: How participatory disinformation shaped deep stories to catalyze action during the 2020 U.S. presidential election. Proc. ACM HCI, 7(CSCW1), 140. <a href="https://doi.org/10.1145/3579616" target="_blank" rel="noopener noreferrer">doi:10.1145/3579616 ↗</a></li><li id="ref-poyhonen23">Pöyhönen, J. &amp; Lehto, M. (2023). Comprehensive cyber security for port and harbor ecosystems. Frontiers in Computer Science, 5. <a href="https://doi.org/10.3389/fcomp.2023.1154069" target="_blank" rel="noopener noreferrer">doi:10.3389/fcomp.2023.1154069 ↗</a></li><li id="ref-roozenbeek19">Roozenbeek, J. &amp; van der Linden, S. (2019). Fake news game confers psychological resistance against online misinformation. Palgrave Communications, 5, 65. <a href="https://doi.org/10.1057/s41599-019-0279-9" target="_blank" rel="noopener noreferrer">doi:10.1057/s41599-019-0279-9 ↗</a></li><li id="ref-salmon08">Salmon, P. M. m.fl. (2008). What really is going on? Review of situation awareness models for individuals and teams. Theoretical Issues in Ergonomics Science, 9(4), 297–323. <a href="https://doi.org/10.1080/14639220701561775" target="_blank" rel="noopener noreferrer">doi:10.1080/14639220701561775 ↗</a></li><li id="ref-sarjakivi24">Sarjakivi, P., Ihanus, J. &amp; Moilanen, P. (2024). Using wargaming to model cyber defense decision-making: Observation-based research in Locked Shields. ECCWS 2024, 457–464. <a href="https://doi.org/10.34190/eccws.23.1.2270" target="_blank" rel="noopener noreferrer">doi:10.34190/eccws.23.1.2270 ↗</a></li><li id="ref-sarjakivi25">Sarjakivi, P., Ihanus, J. &amp; Moilanen, P. (2025). Demonstration and evaluation of defensive cyber operations decision-making model. ECCWS 2025, 628–637. <a href="https://doi.org/10.34190/eccws.24.1.3540" target="_blank" rel="noopener noreferrer">doi:10.34190/eccws.24.1.3540 ↗</a></li><li id="ref-ra26">Sisäministeriö (2026). Kansallinen riskiarvio 2026. Sisäministeriön julkaisuja 2026:22, luvut 2.4 och 3.1.1. <a href="https://urn.fi/URN:ISBN:978-952-324-888-5" target="_blank" rel="noopener noreferrer">https://urn.fi/URN:ISBN:978-952-324-888-5 ↗</a></li><li id="ref-stanton06">Stanton, N. A. m.fl. (2006). Distributed situation awareness in dynamic systems. Ergonomics, 49(12–13), 1288–1311. <a href="https://doi.org/10.1080/00140130600612762" target="_blank" rel="noopener noreferrer">doi:10.1080/00140130600612762 ↗</a></li><li id="ref-yts25">Turvallisuuskomitea (2025). Yhteiskunnan turvallisuusstrategia. Valtioneuvoston julkaisuja 2025:1. <a href="https://urn.fi/URN:ISBN:978-952-383-762-1" target="_blank" rel="noopener noreferrer">https://urn.fi/URN:ISBN:978-952-383-762-1 ↗</a></li><li id="ref-vnk19">Valtioneuvoston kanslia (2019). Informaatiovaikuttamiseen vastaaminen: Opas viestijöille. VNK:n julkaisuja 2019:11. <a href="https://urn.fi/URN:ISBN:978-952-287-708-6" target="_blank" rel="noopener noreferrer">https://urn.fi/URN:ISBN:978-952-287-708-6 ↗</a></li><li id="ref-wickens08">Wickens, C. D. (2008). Multiple resources and mental workload. Human Factors, 50(3), 449–455. <a href="https://doi.org/10.1518/001872008X288394" target="_blank" rel="noopener noreferrer">doi:10.1518/001872008X288394 ↗</a></li></ul></section>
+<footer><div class="cr" style="margin-top:4px">© 2026 Jouni Ihanus. Texter, kartor, teckningar och sammanställningar; källmaterial, citat och ikoner enligt sina egna villkor.</div></footer>
+</div>
+<script>document.getElementById("theme").addEventListener("click", function () { var h = document.documentElement, t = h.getAttribute("data-theme") === "dark" ? "light" : "dark"; h.setAttribute("data-theme", t); try { localStorage.setItem("theme", t); } catch (e) {} });(function () {
+/* Zoomaus kaikissa tiloissa (Jouni 15.11.2026: myös ilman koko näyttöä): taso 50–300 % tallentuu katsojan omaan
+   selaimeen ja on sama kaikilla sivuilla; 100 % = kuva sovitettuna. Erillään koko näytön koodista. */
+var de = document.documentElement;
+function cur() { return true; }
+/* Koko näytön kehyksessä fs-luokka asetetaan ennen ensimmäistä mittausta: muuten 100 %:n perustaso mitataan tavallisen
+   sivun asettelusta (ei korkeusrajaa), ja tallennettu zoomaus näkyy kehyksessä aivan liian suurena (Jouni 15.11.2026). */
+try { if (window.top !== window && window.frameElement && window.frameElement.id === "fsf") { de.classList.add("fs"); } } catch (x) {}
+var ZK = "ihanus-zoom", zm = document.querySelector(".zm"), zr = zm && zm.querySelector(".zr"), z = 1;
+try { z = parseFloat(localStorage.getItem(ZK)) || 1; } catch (x) {}
+z = Math.min(3, Math.max(0.5, z));
+function figs() { var o = [], s = document.querySelectorAll(".fig-w > svg, .fig > svg, .fig-panel > svg"); for (var i = 0; i < s.length; i++) { if (s[i].getClientRects().length) { o.push(s[i]); } } return o; }
+function zoom() { var on = !!cur(); de.classList.toggle("zoomed", on && z !== 1); de.classList.toggle("pan", on && z > 1); de.style.setProperty("--zt", String(z));
+  var s = document.querySelectorAll(".fig-w > svg, .fig > svg, .fig-panel > svg"), i;
+  for (i = 0; i < s.length; i++) { s[i].style.width = ""; s[i].style.height = ""; var q = s[i].parentNode.style; q.width = ""; q.maxWidth = ""; q.marginLeft = "";
+    /* Kohdistettu kuva pysyy kohdistettavana, jotta oikotiet toimivat vielä 100 %:iin palattua */
+    if (document.activeElement !== s[i].parentNode) { s[i].parentNode.removeAttribute("tabindex"); } }
+  /* Sivu ilman kuvia (esim. Menetelmä ja lähteet): zoomaus suurentaa sisällön tekstin ja taulukot (Jouni 15.11.2026) */
+  de.classList.toggle("ztext", on && z !== 1 && !document.querySelector(".fig-w > svg, .fig > svg, .fig-panel > svg"));
+  if (zr) { zr.textContent = Math.round(z * 100) + " %"; zr.setAttribute("aria-label", zr.title + ": " + zr.textContent); zm.querySelector('[data-z="-1"]').disabled = z <= 0.5; zm.querySelector('[data-z="1"]').disabled = z >= 3; }
+  if (!on || z === 1) { return; }
+  de.classList.remove("zoomed"); var f = figs(), r = [], vw = de.clientWidth;
+  for (var j = 0; j < f.length; j++) { var vb = f[j].viewBox.baseVal, bx = f[j].getBoundingClientRect(), k = Math.min(bx.width / vb.width, bx.height / vb.height),
+      p = f[j].parentNode, pr = p.getBoundingClientRect();
+    r.push([f[j], vb.width * k, vb.height * k, p, pr, pr.width - bx.width, parseFloat(getComputedStyle(p).marginLeft) || 0]); }
+  de.classList.add("zoomed");
+  /* Lähennetty kuva levenee palstaa leveämmäksi, jos näkymässä on tilaa (Jouni 15.11.2026), keskitettynä näkymään */
+  for (var m = 0; m < r.length; m++) { var w = Math.round(r[m][1] * z), h = Math.round(r[m][2] * z), pp = r[m][3], rr = r[m][4];
+    r[m][0].style.width = w + "px"; r[m][0].style.height = h + "px";
+    /* Lähennetty kuva on vierityslaatikko: sarkaimella kohdistettavissa, jolloin nuolinäppäimet vierittävät sitä */
+    if (z > 1) { pp.setAttribute("tabindex", "0"); }
+    var need = Math.min(w + r[m][5], vw - 32), fx = false;
+    /* Flex-rivissä (kapea kuva selitteen vieressä, 880–999 px) leveys ei vaikuta, joten kehystä ei levennetä eikä siirretä */
+    try { fx = getComputedStyle(pp.parentNode).display.indexOf("flex") >= 0; } catch (x) {}
+    if (!fx && need > rr.width + 1) { var left = Math.max(16, (vw - need) / 2); pp.style.maxWidth = "none"; pp.style.width = Math.round(need) + "px";
+      /* Marginaali on mitattu ennen levennystä (r[m][6]): levennyksen jälkeen automaattinen marginaali olisi jo muuttunut */
+      pp.style.marginLeft = Math.round(left - rr.left + r[m][6]) + "px"; } } }
+function setz(nz) { var f = figs()[0], p = f && f.parentNode, cx = 0.5, cy = 0.5;
+  if (p && z !== 1 && p.scrollWidth) { cx = (p.scrollLeft + p.clientWidth / 2) / p.scrollWidth; cy = (p.scrollTop + p.clientHeight / 2) / p.scrollHeight; }
+  z = Math.round(Math.min(3, Math.max(0.5, nz)) * 100) / 100; if (Math.abs(z - 1) < 0.04) { z = 1; } try { localStorage.setItem(ZK, String(z)); } catch (x) {}
+  zoom(); if (p && z !== 1) { p.scrollLeft = cx * p.scrollWidth - p.clientWidth / 2; p.scrollTop = cy * p.scrollHeight - p.clientHeight / 2; } }
+if (zm) { zm.hidden = false; zm.addEventListener("click", function (ev) { var t = ev.target.closest && ev.target.closest("[data-z]"); if (!t) { return; }
+  var d = +t.getAttribute("data-z"); setz(d === 0 ? 1 : d > 0 ? z * 1.25 : z / 1.25); }); }
+/* Oikotiet +, - ja 0 ovat käytössä vain, kun kohdistus on zoomauspainikkeissa tai lähennetyssä kuvassa: yhden merkin
+   oikotie ei saa laueta muualla sivulla esimerkiksi puheohjauksesta (WCAG 2.1.4) */
+document.addEventListener("keydown", function (ev) { var g = ev.target;
+  if (!cur() || ev.ctrlKey || ev.metaKey || ev.altKey || !g || !g.closest || !g.closest(".zm, .fig-w, .fig, .fig-panel")) { return; }
+  if (ev.key === "+" || ev.key === "=") { setz(z * 1.25); ev.preventDefault(); } else if (ev.key === "-") { setz(z / 1.25); ev.preventDefault(); } else if (ev.key === "0") { setz(1); ev.preventDefault(); } });
+var dr = null;
+document.addEventListener("pointerdown", function (ev) { if (!cur() || z <= 1 || ev.pointerType !== "mouse" || ev.button !== 0) { return; }
+  var p = ev.target.closest && ev.target.closest(".fig-w, .fig, .fig-panel"); if (!p) { return; } dr = [p, ev.clientX, ev.clientY, p.scrollLeft, p.scrollTop]; de.classList.add("drag"); });
+/* Raahaus päättyy myös, kun selain keskeyttää sen tai painike on vapautettu ikkunan ulkopuolella */
+function dend() { dr = null; de.classList.remove("drag"); }
+document.addEventListener("pointermove", function (ev) { if (!dr) { return; } if (!(ev.buttons & 1)) { dend(); return; }
+  dr[0].scrollLeft = dr[3] - (ev.clientX - dr[1]); dr[0].scrollTop = dr[4] - (ev.clientY - dr[2]); });
+document.addEventListener("pointerup", dend); document.addEventListener("pointercancel", dend);
+window.addEventListener("storage", function (ev) { if (ev.key === ZK) { z = Math.min(3, Math.max(0.5, parseFloat(ev.newValue) || 1)); zoom(); } });
+/* Uudelleenmittaus säilyttää lähennetyn kuvan vierityskohdan. Pelkkä korkeuden muutos (puhelimen osoitepalkki)
+   vaikuttaa sovitukseen vain koko näytössä, joten muualla se ohitetaan. */
+function rz() { var f = figs()[0], p = f && f.parentNode, sx = p ? p.scrollLeft : 0, sy = p ? p.scrollTop : 0;
+  zoom(); if (p) { p.scrollLeft = sx; p.scrollTop = sy; } }
+var rt, lw = de.clientWidth; window.addEventListener("resize", function () {
+  if (de.clientWidth === lw && !de.classList.contains("fs")) { return; }
+  lw = de.clientWidth; clearTimeout(rt); rt = setTimeout(rz, 150); });
+window.addEventListener("load", rz);
+zoom(); })();
+(function () {
+/* Koko näyttö kehyksessä (Jouni 15.11.2026: "koko näytön tila pomppaa pois, kun ylävalikosta vaihtaa sivua"): selain
+   poistuu koko näytöstä aina, kun sivu vaihtuu. Siksi koko näyttöön viedään kehys (#fsw), jossa sivu on upotettuna
+   (#fsf); ylävalikon linkit vaihtavat vain kehyksen sivua ja tila säilyy. Poistuttaessa sivusto jää viimeksi
+   avatulle sivulle ja valitulle tapaukselle. */
+var de = document.documentElement, W = window, emb = false;
+try { emb = W.top !== W && !!W.frameElement && W.frameElement.id === "fsf"; } catch (x) {}
+if (emb) { de.classList.add("fs"); }
+var b = document.getElementById("fs"); if (!b) { return; }
+var PD = emb ? W.parent.document : document;
+var ex = PD.exitFullscreen || PD.webkitExitFullscreen;
+function fsel() { return PD.fullscreenElement || PD.webkitFullscreenElement; }
+function cur() { return emb; }
+function lab() { b.title = b.getAttribute(emb ? "data-off" : "data-on"); b.setAttribute("aria-label", b.title); b.setAttribute("aria-pressed", emb ? "true" : "false"); }
+if (emb) {
+  b.hidden = false; lab();
+  b.addEventListener("click", function () {
+    /* Jos selain ei mennytkään koko näyttöön, kehys suljetaan suoraan yläsivulta */
+    if (!fsel()) { try { W.frameElement.parentNode.__shut(); } catch (x) {} return; }
+    var p = ex && ex.call(PD); if (p && p.catch) { p.catch(function () {}); } });
+  /* Kehyksen sisäiset sivunvaihdot eivät jätä merkintöjä välilehden historiaan (Takaisin-painike toimii poistuttua).
+     Jos jokin ehto ei täyty, linkki toimii tavalliseen tapaan. */
+  document.addEventListener("click", function (ev) {
+    if (ev.defaultPrevented || ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) { return; }
+    var a = ev.target.closest && ev.target.closest("a[href]");
+    if (!a || typeof a.href !== "string" || a.target) { return; }
+    var u = a.href, o = location.origin + "/";
+    if (!u || u.indexOf(o) !== 0 || u.split("#")[0] === location.href.split("#")[0]) { return; }
+    ev.preventDefault(); location.replace(u); });
+} else {
+  var de0 = document.createElement("div"), rq = de0.requestFullscreen || de0.webkitRequestFullscreen;
+  if (!rq || !ex || !(document.fullscreenEnabled || document.webkitFullscreenEnabled)) { return; }
+  b.hidden = false; lab();
+  var wrap = null, fr = null;
+  b.addEventListener("click", function () {
+    if (wrap) { return; }
+    wrap = document.createElement("div"); wrap.id = "fsw"; fr = document.createElement("iframe"); fr.id = "fsf";
+    fr.title = document.title; fr.src = location.href; wrap.appendChild(fr); document.body.appendChild(wrap);
+    /* Yläsivu pois näkyvistä ja sarkainjärjestyksestä kehyksen ajaksi (html.fsh); kohdistus kehyksen sivulle */
+    var f0 = fr; wrap.__shut = function () { shut(); }; de.classList.add("fsh");
+    f0.addEventListener("load", function () { try { f0.contentWindow.focus(); } catch (x) {} });
+    var p = (wrap.requestFullscreen || wrap.webkitRequestFullscreen).call(wrap);
+    if (p && p.catch) { p.catch(function () { shut(); }); } });
+  var shut = function () {
+    if (!wrap) { return; }
+    var href = null; try { href = fr.contentWindow.location.href; var th = fr.contentDocument.documentElement.getAttribute("data-theme");
+      if (th) { de.setAttribute("data-theme", th); } } catch (x) {}
+    wrap.parentNode.removeChild(wrap); wrap = fr = null; de.classList.remove("fsh");
+    try { b.focus({ preventScroll: true }); } catch (x) {}
+    if (!href || href === "about:blank" || href === location.href) { return; }
+    if (href.split("#")[0] === location.href.split("#")[0]) {
+      var h = href.split("#")[1] || "m", r = document.getElementById("i-" + h);
+      if (r) { r.checked = true; r.dispatchEvent(new Event("change", { bubbles: true })); }
+    } else { location.href = href; } };
+  var chg = function () { if (wrap && !fsel()) { shut(); } };
+  document.addEventListener("fullscreenchange", chg); document.addEventListener("webkitfullscreenchange", chg);
+  return; }
+})();
+(function () {
+/* Mobiilin ensikäynnin ilmoitus (Jouni 15.11.2026): visualisoinnit toimivat parhaiten isolla näytöllä. Näytetään kerran;
+   kuittaus muistetaan katsojan selaimessa. Lisäksi mobiilissa pitkät osiot (ohjeet) alkavat suljettuina. */
+var mq = window.matchMedia && window.matchMedia("(max-width: 760px)");
+if (!mq || !mq.matches) { return; }
+var g = document.querySelectorAll("details.guide[open]"); for (var i = 0; i < g.length; i++) { g[i].removeAttribute("open"); }
+var K = "ihanus-mobile-note";
+try { if (localStorage.getItem(K)) { return; } } catch (x) { return; }
+if (window.top !== window) { return; }
+/* Sama ilmoitus kaikilla sivuilla (Jouni 15.11.2026): vain näytön koko ja varoitus visualisoinneista */
+var T = {fi: ["Tämä sivu toimii parhaiten isolla näytöllä.", "Osa visualisoinneista ei näyttäydy oikein mobiilinäytöllä.", "Selvä"],
+  en: ["This page works best on a large screen.", "Some visualisations do not display correctly on a mobile screen.", "Got it"],
+  sv: ["Den här sidan fungerar bäst på en stor skärm.", "En del visualiseringar visas inte korrekt på en mobilskärm.", "Uppfattat"]};
+var t = T[document.documentElement.lang] || T.fi, inner = document.querySelector(".inner"), nav = document.querySelector(".subnav");
+if (!inner) { return; }
+var d = document.createElement("div"); d.className = "mnote"; d.setAttribute("role", "note");
+var p = document.createElement("p"), b = document.createElement("b"); b.textContent = t[0]; p.appendChild(b);
+p.appendChild(document.createTextNode(" " + t[1]));
+var btn = document.createElement("button"); btn.type = "button"; btn.textContent = t[2];
+d.appendChild(p); d.appendChild(btn);
+if (nav && nav.parentNode === inner) { inner.insertBefore(d, nav.nextSibling); } else { inner.insertBefore(d, inner.firstChild); }
+btn.addEventListener("click", function () { try { localStorage.setItem(K, "1"); } catch (x) {} d.parentNode.removeChild(d); });
+})();
+(function () {
+/* Ankkurilinkin kohde (esim. lähdesivun tapausrivi) ei jää kiinteän yläpalkin alle: vieritysvara palkin korkeudesta */
+var n = document.querySelector(".subnav"); if (!n) { return; }
+function sp() { var st = false; try { st = getComputedStyle(n).position.indexOf("sticky") >= 0; } catch (x) {}
+  document.documentElement.style.scrollPaddingTop = (st ? n.offsetHeight + 24 : 12) + "px"; }
+sp(); window.addEventListener("resize", sp); window.addEventListener("load", sp);
+})();</script>
+{% endraw %}{% include analytics-providers/custom.html %}
+</body>
+</html>
